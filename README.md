@@ -1,1 +1,1 @@
-# discrete
+# Discrete Structures PreTeXt Course Notes
