@@ -1,0 +1,51 @@
+\documentclass{article}  %Need this.
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumerate}
+
+
+\newtheorem{thm}{Theorem}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\title{Reproducing a \LaTeX document \# 2}
+\author{``Your name here"}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\begin{thm}
+The set $\{ x\in\Z : |x-2.5| = 2 \}$ is the empty set.
+\end{thm}
+
+\begin{proof}
+Let $y$ be an integer such that $y \in \{ x\in\Z : |x-2.5| = 2 \}$  Then $y\in \mathbb{Z}$ and $|y-2.5| = 2$.  Since $|y-2.5| = 2$ then $y = 4.5$ or $y=-.5$.  But then $y$ is not an integer.  Therefore the set $\{ x\in\Z : |x-2.5| = 2 \}$ has no elements and
+\[\{ x\in\Z : |x-2.5| = 2 \} = \emptyset.\]
+\end{proof}
+
+\begin{thm}
+There exist two positive irrational numbers $s$ and $t$ such that $s^t$ is rational.
+\end{thm}
+\begin{proof}
+We will consider two cases.  For the first case, suppose that $\sqrt{2}^{\sqrt{2}}$ is rational.  Then we may take $s= t = \sqrt{2}$.  For the second case, suppose that $\sqrt{2}^{\sqrt{2}}$ is irrational.  Let $s= \sqrt{2}^{\sqrt{2}}$ and $t=\sqrt{2}$.  Then 
+$$\left(\sqrt{2}^{\sqrt{2}}\right)^{\sqrt{2}} = \left(\sqrt{2}\right)^2 = 2.$$
+Since $2$ is rational, $s^t$ is rational.  Therefore, there exists irrational numbers $s$ and $t$ such that $s^t$ is rational.
+\end{proof}
+
+\begin{thm}
+Let $n$ be a natural number.  Then $$\sum_{k=1}^n k = \frac{n(n+1)}{2}.$$
+\end{thm}
+
+Consider the following matrix,
+$$\left( \begin{array}{ccc}
+1 &2 &3\\
+4 &5 &6\\
+7 &8 &9
+\end{array}\right)$$
+
+
+
+\end{document}

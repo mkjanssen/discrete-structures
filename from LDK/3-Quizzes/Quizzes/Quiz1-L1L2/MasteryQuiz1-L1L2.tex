@@ -1,0 +1,88 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\includeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 1}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	\item[L1-1] Consider the following conditional statement: 
+	\begin{center}
+	If $n$ is a prime number then $n^2$ has three positive factors.  
+	\end{center}
+	Identify the hypothesis and conclusion.
+	
+\bs \blue{ The hypothesis is ``$n$ is a prime number" and the conclusion is ``$n^2$ has three positive factors". Notice we leave off the if and the then when writing the hypothesis and conclusion.} \end{solution}
+
+	\vspace{1in}
+	Assume the above conditional statement is true. Assuming \emph{only} the conditional statement and that  $6$ is not prime what can you conclude (if anything)? Explain your answer.
+	
+
+\bs \blue{We are given that the conditional statement is true and that $6$ is not prime. The fact that $6$ is not prime tells us that our hypothesis is false. Given a false hypothesis, we know nothing about the conclusion. So we can not conclude anything. We can also look at this from a truth table perspective. Consider the truth table for the conditional statement $P\rightarrow Q$: 
+ }
+ \begin{center}
+ \begin{tabular}{c|c|c}
+$P$ &$Q$ &$P\rightarrow Q$\\
+\hline
+T &T &T\\
+T &F &F\\
+F &T &T\\
+F &F &T
+\end{tabular}
+\end{center} 
+\textcolor{blue}{In the third and fourth rows the hypothesis of the conditional statement is false (that is, $n$ is not a prime number), and the conditional statement is true (that is, if $n$ is a prime number then $n^2$ has $3$ positive factors). Since $Q$ (that is, $n^2$ has $3$ positive factors), is true in the third row and false in the fourth row we can't conclude anything about the truth value of $Q$.} \end{solution}
+
+\vfill
+\newpage
+
+
+\item[L2-1] State the definition of even integer precisely:
+
+An integer $n$ is even provided that...
+
+\bs\textcolor{blue}{ there exists an integer $q$ such that $n=2q$.}\end{solution}
+
+\vfill
+ Then outline a proof that if $x$ is even and $y$ is odd then $x+y$ is odd. (Make sure to include key details - like what things are integers.)
+ 
+ \bs\textcolor{blue}{Suppose $x$ is even and $y$ is odd. Then there exist integers $a,b$ such that $x=2a$ and $y=2b+1$. Then $x+y=(2a)+(2b+1)$ by substitution. By the distributive property $x+y=2(a+b)+1$. Note that $a+b$ is an integer by closure of the integers under addition. Let $q=a+b$. Then $x+y=2q+1$ for the integer $q$ and so $x+y$ is an odd integer.}\end{solution}
+\vfill
+\vfill
+\vfill
+\vfill
+\end{itemize}
+	
+
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass{article}  %Need this.
+
+\usepackage{amsmath,amsthm,amssymb}
+
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cnj}{Conjecture}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{prop}{Proposition}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+
+
+
+
+\title{Proof Portfolio Problem \#  1--  Example--}
+\author{--Dr. Keough --}
+\date{}
+
+\begin{document}
+\maketitle  %This will add the title, author, and date located above
+
+
+Here's the problem: You work for a cell phone company which has just invented a new cell phone protector and wants to advertise that it can be dropped from the $n^{th}$ floor without breaking. 
+If you are given 2 phones and a 100 story building, how do you guarantee you know the highest floor it won't break with the smallest number of trial drops?
+
+
+You might want to try this problem before you read the proof. On the next page I include my scratchwork.
+
+\newpage
+...
+
+\newpage
+
+
+
+\begin{thm}
+If there are 2 cell phones and a 100 story building available then one can test dropping cell phones from 14 stories and find the maximum number of stories the cell phone can be dropped from without breaking.
+\end{thm}
+
+\begin{proof}
+We will describe an algorithm for needing only to drop from 14 stories. Our first step will be to drop the first phone from the $14^{th}$ floor. If the phone breaks from this floor, we will test floors $1$ through $13$, in order, until the cell phone breaks, giving us up to a total of $14$ drops. If the phone does not break on a drop from the $14^{th}$ floor, we will drop the phone from the $27^{th}$ floor. If the phone breaks from the $27^{th}$ floor, we'll need to test floors $15$ through $26$. This is 12 more floors, in addition to the drop from the $14^{th}$ and the drop from the $27^{th}$ again giving us $14$ drops. 
+
+We'll continue this process by dropping from floors $39, 50, 60, 69, 77, 84, 90, 95,$ and finally $99$. If we make it all the way to the $99^{th}$ floor then we will have done $11$ drops. In any other case, we will do $14$ total drops as seen by the following cases, which consider the first floor the phone breaks on from the list $39, 50, 60, 69, 77, 84, 90, 95$:
+	\begin{itemize}
+	\item The phone first breaks on the $39^{th}$ floor: In this case we test floors $14, 27, 39$ and floors $28-38$ giving $14$ total drops.
+	\item The phone first breaks on the $50^{th}$ floor: In this case we test floors $14, 27, 39, 50$ and floors $40-49$ giving $14$ total drops.
+	\item The phone first breaks on the $60^{th}$ floor: In this case we test floors $14, 27, 39, 50, 60$ and floors $51-59$ giving $14$ total drops.
+	\item The phone first breaks on the $69^{th}$ floor: In this case we test floors $14, 27, 39, 50, 60, 69$ and floors $60-68$ giving $14$ total drops.
+	\item The phone first breaks on the $77^{th}$ floor: In this case we test floors $14, 27, 39, 50, 60, 69, 77$ and floors $70-76$ giving $14$ total drops.
+	\item The phone first breaks on the $84^{th}$ floor: In this case we test floors $14, 27, 39, 50, 60, 69, 77, 84$ and floors $78-83$ giving $14$ total drops.
+	\item The phone first breaks on the $90^{th}$ floor: In this case we test floors $14, 27, 39, 50, 60, 69, 77, 84,90$ and floors $85-89$ giving $14$ total drops.
+	\item The phone first breaks on the $95^{th}$ floor: In this case we test floors $14, 27, 39, 50, 60, 69, 77, 84,90,95$ and floors $91-94$ giving $14$ total drops.
+	\end{itemize}
+
+Thus we see that we can figure out the maximum floor where the phone breaks in $14$ total drops.
+\end{proof}
+
+\newpage
+
+\section*{A Couple of Notes}
+
+\begin{enumerate}
+\item Note the proof does not claim that there isn't a better solution. Don't feel like you need to do every piece of a problem. Figure out something cool, and try to prove it.
+\item On that note it's best to check your conjectures with me. I can help you if they are too hard, too obvious, too false, and also brainstorm proof ideas.
+\item Remember that  a proof, at its heart, is just an explanation that other mathematicians believe. Don't feel like you need to adhere to strictly to a specific proof technique. Give a convincing explanation.
+\item Pick a problem you like and start early so that this can be fun and not something you're worried about in the last week of the semester.
+\end{enumerate}
+
+
+
+
+\end{document}

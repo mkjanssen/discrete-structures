@@ -1,0 +1,125 @@
+\documentclass[12pt]{amsart}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage{enumerate}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\newtheorem{thm}{Theorem}
+%\newtheorem{rmk}[thm]{Remark}
+\newenvironment{sol}{\paragraph{{\bf Solution:}}}{\hfill$\square$}
+\newenvironment{act}{\paragraph{{\bf Activity:}}}{\hfill$\square$}
+
+\let\biconditional\leftrightarrow
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\newtheorem*{ex}{Example}
+\newtheorem*{nonex}{Non-example}
+\newtheorem*{rmk}{Remark}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{thmno}{Theorem}
+\newtheorem*{exer}{Exercise}
+
+\usepackage{tikz}
+\usepackage{multicol}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+
+\title{ Final Exam Review}
+
+
+\begin{document}
+\maketitle
+
+\noindent\emph{Disclaimer: These practice problems are based on what the class requested to review for the first two exams plus the most recent material and what my impression of what the class struggled with. You should not assume the final will be exactly like this, but these are good practice problems to try.}\\
+
+
+\noindent\textbf{Ways to study:}
+\begin{itemize} 
+\item Go through the ``self quiz" questions on Blackboard and make sure you can answer them all. 
+\item For any section you struggled with do the practice problems from that section (on Blackboard).
+\item The problems with ** are the potential proofs for the exam. You should definitely do these.
+\item Make sure you know how to do the questions on previous exams.
+\end{itemize}
+Note for all of the above you should be \emph{doing} the mathematics. Reading over worksheet solutions has little to no value - studies have shown this will not improve your performance on the exam.
+		
+%\section{Some Example Proofs}
+%
+%\begin{enumerate}
+%\item For $x,y\in \mathbb{Z}$ define $x\sim y$ if and only if $x+y$ is even. Then $\sim$ is an equivalence relation.\\
+%
+%\item For each $n\in \mathbb{N}$, $7^n$ is odd.\\
+%
+%\item Let $U$ be a set and $A, B,$ and $C$ subsets of some universal set. Then $(A\cap B) - C = (A-C)\cap (B-C)$.\\
+
+
+\section{Induction}
+
+\begin{enumerate}
+
+\item ** For each $n\in\mathbb{N}$, $5^n$ is odd.\\
+
+\item For all $n\in\mathbb{N}$,  $\displaystyle{\sum_{i=1}^n (2i-1) = n^2}$. (This is ``sigma notation" which you may have seen in Calculus 2. We could rewrite this statement as ``For all $n\in\N$, $1+3+5+\cdots + (2n-1) = n^2$.") \\
+
+\item For all natural numbers $n$ with $n\geq 3$, $n^2\geq 2n+3$.\\
+
+\item For any natural number $n$, $3\mid n^3+2n$.\\
+
+\section{Using Cases in Proofs}
+
+\item ** Let $U$ be a set and $A, B,$ and $C$ subsets of some universal set. Then $(A\cup B) - C = (A-C)\cup (B-C)$.\\
+
+\item ** Prove that for each integer $n$, if $n$ is odd then $8\mid n^2-1$.\\
+
+\item For all integers $a$, $b$, and $d$ with $d\neq 0$, if $d \mid a$ or $d\mid b$ then $d\mid ab$.
+
+
+\section{Functions}
+
+\item Define $f: \Z \to \Z$ by $f(x) = 5x+3$. State the domain, codomain and range. Is $f$ an injection? surjection? Prove/disprove.\\
+
+\item ** Define $g: \R\times\R \to\R$ by $g(a,b) = a$. State the domain, codomain and range. Is $g$ an injection? Surjection? Prove/disprove.\\
+
+\item ** Let $A,B,$ and $C$ be nonempty sets and $f:A\to B$ and $g: B\to C$. Prove that if $f$ and $g$ are bijections then $g\circ f$ is a bijection. \\
+
+
+\section{Equivalence Relations and Equivalence Classes}
+
+\item ** For $x,y\in \mathbb{Z}$ define $x\sim y$ if and only if $x+y$ is even. Prove that $\sim$ is an equivalence relation and find the equivalence class of $2$ (denoted $[2]_\sim$).\\
+
+%\item Let $U$ be some universal set. For $A,B \in\mathcal{P}(U)$ define $A\sim B$ if and only if $A\subseteq B$. Is $A$ an equivalence relation?\\
+
+\item ** For $(w,x)$ and $(y,z)$ in $\mathbb{Z}\times \mathbb{Z}$ define $(w,x)\sim (y,z)$ if and only if $w\leq y$ and $x\leq z$. Is $\sim$ an equivalence relation?\\
+
+\item Define a function $f:\mathbb{R} \to\mathbb{R}$ by $f(x)=x^2+1$. For $a,b\in \mathbb{R}$, say $a\sim b$ if and only if $f(a) = f(b)$. Show this is an equivalence relation and then find $[3]_{\sim}$.\\
+
+\item Write the addition and multiplication tables for $\Z_5$ and $\Z_6$. Somewhere you will have written $[0]$ in each table. Does this mean something different in $\Z_5$ and $\Z_6$ or is it the same?
+
+%\section{Proving Set Relationships}
+%
+%\item Let $A,B,$ and $C$ be subsets of some universal set $U$. Prove or disprove: If $A\subset C$ and $B\subset C$ then $A\cup B \subset C$.\\
+%
+%\item Let $A,B,$ and $C$ be subsets of some universal set $U$. Then $A\times (B\cup C) = (A\times B) \cup (A\times C)$\\
+%
+%\item Let $A$ and $B$ be subsets of some universal set $U$. Then $A-(A\cap B^c)\subseteq A\cap B$. (These sets are actually equal, for an extra challenge, show they are equal.)
+
+
+
+
+\end{enumerate}
+
+  \end{document}
+
+
+
+
+
+
+

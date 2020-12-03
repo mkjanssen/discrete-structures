@@ -1,0 +1,174 @@
+\documentclass[12pt]{amsart}
+
+\usepackage[margin=.7in]{geometry}
+
+\usepackage{amsmath}
+
+\usepackage{enumerate}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+%\newtheorem{rmk}[thm]{Remark}
+\newenvironment{sol}{\paragraph{{\bf Solution:}}}{\hfill$\square$}
+\newenvironment{act}{\paragraph{{\bf Activity:}}}{\hfill$\square$}
+\usepackage{bm}
+
+
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\newtheorem*{ex}{Example}
+\newtheorem*{nonex}{Non-example}
+\newtheorem*{rmk}{Remark}
+
+\usepackage{mathtools}
+
+
+\usepackage{tikz}
+
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+
+\title{What to Expect for Exam 2
+}
+
+
+\begin{document}
+MTH 210 - Winter 2020 \hfill Dr. Keough\\
+
+\maketitle
+
+\vspace{-.3in}
+
+\section{Structure }
+Please read the following carefully:
+\begin{itemize}
+\item The exam will be posted on Blackboard on Tuesday, April 7 at 1PM. You should upload a single PDF of your answers by Thursday, April 9 at 5PM. \emph{Please start each section on a new page and make sure you are uploading just one document.}
+\item The exam is open book and notes. On the first attempt, you should not use Blackboard, and no collaboration is allowed (but see the revisions section for how this policy changes on the second attempt). No technology is allowed
+\item There is no time limit on the exam, but my intention is that it will not take you more time than if we took the exam in class.
+\item  There is no regular class on Wednesday, April 8, but I will be in our online classroom during class time in case you have questions about the exam at that time. \item The exam covers Sections 3.3-6.3 (up through the material covered on Wednesday, April 2).
+\end{itemize}
+\vspace{-.2in}
+\section{Grading}
+
+The exam will be organized into 4 sections (see the information Section 3 of this document). Each section will be graded as E(xemplary), S(atisfactory), P(rogressing), I(ncomplete). Here is a description of what each grade means:
+
+\begin{center}
+\begin{tabular}{|c|c|p{4in}|}
+\hline
+Letter &Meaning &Description\\
+\hline
+E &Exemplary &There are no mistakes or errors in the work, including errors in logic and notation, apart from a small number of trivial errors. All solutions are backed up by work that is well written, clearly shown, and easy to read.\\
+\hline
+S &Satisfactory &Understanding of the concepts is evident, although there may be a small number of mistakes in the work that do not significantly affect the overall reasoning. All solutions are backed up by work that is clearly shown and easy to read.\\
+\hline
+P &Progressing &Partial understanding of concepts is evident, and all parts of the solution have a good-faith attempt. But there are significant errors in computation, logic, or writing that affect the overall reasoning. The solution should be revised.\\
+\hline
+I &Incomplete &There are significant omissions in the work, such as parts of the solution left blank intentionally or essential parts of the reasoning behind the answers that are missing or unreadable. Not enough information to determine if the concepts are fully understood. \\
+\hline
+\end{tabular}
+\end{center}
+\hspace{.5in}
+
+The grade on the exam will be either E, S, or P+, or P according to the following table 
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Letter &Meaning &Description\\
+\hline
+E &Exemplary &All sections earned an S or a E including at least one E. \\
+\hline
+S &Satisfactory &All sections earned an S.\\
+\hline
+P+ &Progressing Plus &Earned at least 2 S's or E's, but not all sections earned S's or E's.\\
+\hline
+P &Progressing &Did not earn at least 2 S's or E's.\\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\section{Sections}
+
+The sections are listed below. Each section will have multiple questions, the letter grade will be based on your answers to all questions.
+\vfill
+
+\begin{enumerate}
+\item {\bf Sets}  Properly use the notation $\subset$, $\subseteq$, $\in$, $=$, $\not\subset$, $\not\subseteq$, $\notin$, $=$. Be able to read and write in both roster and set builder notation. Given sets $A$ and $B$ and a universal set $U$ be able to find $A\cap B$, $A\cup B$, $A-B$, $A^c$, $\mathcal{P}(A)$ (the power set of $A$), $A\times B$, $|A|$ (the cardinality of $A$, and combinations of these things. For sets $A$ and $B$, know how to prove $A\subseteq B$, $A\subset B$, $A=B$, $A\neq B$, and $A\cap B = \emptyset$ ($A$ and $B$ disjoint).
+\vfill
+
+\item {\bf Functions} Know the formal definition of function and some examples/non-examples. Know the terms domain, codomain, range, image, and preimage, and be able to use them in sentences about a given function. Be able to create functions with given properties about their domains, codomains, range, images, and or preimages. Articulate what it means for two functions to be equal. Demonstrate using functions that are more general than $f(x) = (rule)$, like functions involving congruence, derivatives, determinants, and functions of two variables. Know the definitions of injection, surjection, and bijection, know how to determine if a function is any of these, and be able to construct examples of each (or combinations of them). Know how to prove that a function is an injection, surjection, or bijection.
+
+
+\vfill
+\item {\bf Which Proof Technique When?}   For this section you will be given 4 theorem statements with which you will need to do 3 things:
+	\begin{itemize}
+	\item State which proof technique you would use.
+	\item Explain your choice of proof technique.
+	\item Outline the steps in a proof using the proof technique (but you should not actually attempt to prove the statement). You should say what you would assume and what you would try to prove. 
+	 
+	\end{itemize}
+	
+	For the first bullet your options for proof techniques are the following:  direct, contrapositive, contradiction, cases, induction.
+	
+	For the second bullet you should be able to state something like ``both the hypothesis and conclusion are stated negatively so I would use proof by contrapositive to make them positive statements".
+
+	In the third bullet you need to be detailed - for a proof by cases, what cases would you use? For a proof by induction, what steps would you use (and what's $P(k)$?)? In each case you need to be as specific as possible - do not say ``I would assume the negation", say what the negation actually is. 
+	
+	\vfill
+	
+\item {\bf Proof Section} \emph{ There will be 2 proofs on the exam.} One of them will be from the following list:
+\begin{enumerate}
+\item For each integer $a$, if $3\mid a^2$ then $3\mid a$.
+\item For each $n\in\N$, $5\mid n^5 + 4n$. (You may use the following lemma without proof:
+	\[ (k+1)^5 = k^5+5k^4+10k^3+10k^2+5k+1.\]
+\item For all real numbers $x$ and $y$, if $x$ is rational and $y$ is irrational then $x+y$ is irrational.
+\end{enumerate}
+You may collaborate on these proofs \emph{before} the exam is posted, but no collaboration is allowed once the exam is posted. You can also ask me about them, again \emph{before} the exam is posted. Recall, you should not copy answers, share any electronic files, or just tell someone how to do the proof.\\
+ 
+\noindent The other theorem you'll be asked to prove will be given to you on the exam.\\
+  
+\noindent \emph{ For both proofs you will need to write according to our writing guidelines.}
+\vfill
+\end{enumerate}
+
+\newpage
+
+\section{Revisions}
+
+The exams will be graded by the end of the day Friday, April 10, with feedback and grades posted on Blackboard. 
+\noindent To revise your exam you should, on separate paper, 
+\begin{itemize}
+\item Redo each question from each section you would like to revise. 
+\item Write 1-2 sentences explaining the mistake that was made on the exam.
+\item Sign up for an appointment for the week of April 13 (I will post the sign up on Blackboard after the exams are graded).
+\item Send me (at keoulaur@gvsu.edu) a PDF of your revised answers at least 24 hours before your appointment.
+\end{itemize}
+The following are the policies for the revisions, some of which are \textbf{different than last time} so read carefully:
+\begin{itemize}
+\item You may collaborate on your revisions with anyone you wish to in addition to using your your notes, text, and Blackboard (no other internet sources though). 
+\item While you are allowed to collaborate, do this in a way that improves your understanding. I will ask additional questions about your answers as well as related, but different problems to test your understanding. 
+\item Your grades on the revised portion replace the original exam score.
+\end{itemize}
+
+\vfill
+
+\section{How to Study}
+
+While you are allowed to use your book and your notes on the exam, it's still a good idea to prepare for the exam. Here are some recommendations for how to study:
+\begin{itemize}
+\item Work on the given proofs for Section 4 before the exam - take advantage of being able to talk through those proofs with a classmate.
+\item Organize your notes! Make a summary sheet and focus on connections between topics using class worksheets, preview activities, synthesis activities, and mastery quizzes 
+\item Make a list of important definitions and notation. See the lists in each of the sections for what you should know. Though math is not about memorization, it certainly helps to know and understand your definitions when trying to do proofs.
+\item Go through the self quiz questions on Blackboard. Look through your notes for ones you can not answer.
+\item Practice!  Look at the extra practice questions on Blackboard, try synthesis activities again (without looking at your solutions), and do exercises on worksheets.  Use the book to find extra exercises on things you are struggling with.
+\item Complete your table of proof techniques.
+\item Write the test! Write yourself a practice exam that you think I would write.  Then take the practice exam.  Feel free to share this with me and I will tell you if you are forgetting big ideas.
+\end{itemize}
+
+\vfill
+\end{document}

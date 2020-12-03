@@ -1,0 +1,80 @@
+\documentclass{article}  %Need this.
+
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage[margin=1in]{geometry}
+
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cnj}{Conjecture}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{prop}{Proposition}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+
+
+
+
+\title{I Heart \LaTeX}
+\author{Me!}
+
+\begin{document}
+\maketitle
+
+
+
+
+Remember your $\$$ signs!  $x^2+y^2=1$, $\frac{a}{b}$.
+
+\section{Lists}
+%%%%%%%%%%%%%%%
+\begin{enumerate}
+\item {\bf First Point (Bold Face)}
+\item {\em Second Point (Italic)}
+\item {\Large Third Point (Large Font)}
+    \begin{enumerate}
+        \item {\small First Subpoint (Small Font)} 
+        \item {\tiny Second Subpoint (Tiny Font)} 
+        \item {\Huge Third Subpoint (Huge Font)} 
+    \end{enumerate}
+\item[$\bullet$] {\sf Bullet Point (Sans Serif)}
+\item[$\circ$] {\sc Circle Point (Small Caps)} 
+\end{enumerate}
+
+
+\section{Equations}
+%%%%%%%%%%%%%%%%%%%
+
+\subsection{Binomial Theorem}
+\begin{thm}[Binomial Theorem]
+For any nonnegative integer $n$, we have
+$$(1+x)^n = \sum_{i=0}^n {n \choose i} x^i$$
+\end{thm}
+
+
+\subsection{Sets}
+
+\begin{thm}
+For any sets $A$, $B$ and $C$, we have
+$$ (A\cup B)-(C-A) = A \cup (B-C)$$
+\end{thm}
+
+\begin{proof}
+\begin{eqnarray*}
+(A\cup B)-(C-A) &=& (A\cup B) \cap (C-A)^c\\
+&=& (A\cup B) \cap (C \cap A^c)^c \\
+&=& (A\cup B) \cap (C^c \cup A) \\
+&=& A \cup (B\cap C^c) \\
+&=& A \cup (B-C)
+\end{eqnarray*}
+\end{proof}
+
+
+
+
+
+\end{document}

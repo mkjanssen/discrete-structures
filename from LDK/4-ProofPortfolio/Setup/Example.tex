@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.7in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+
+\begin{center} \textbf{\Large{Communicating in Mathematics (MTH 210)  - Proof Portfolio Example }} \\
+\end{center}
+
+Each statement will be written in the form of a conjecture (a mathematical claim) among which you will have some choice.  Each conjecture asks you to prove or disprove the conjecture, possibly along with some additional directions. 
+If the proposition is true, your job is to write a complete proof for the proposition.  If it is false, you should provide a counterexample \emph{plus} make reasonable modifications to the stated conjecture so that a new proposition is true.  Then, write a complete proof of your new proposition. You may want to run your new proposition by me before trying to write a proof - this is allowed and encouraged! \\
+
+\noindent On the next page is a sample portfolio problem.\\
+
+\newpage
+
+\title{Proof Portfolio Problem \# X   Draft \# 2}
+\author{--Name --}
+\date{}
+
+\maketitle
+
+\noindent {\bf Conjecture X.}  If  $x$  and  $y$  are real numbers, then   
+$ \displaystyle \frac{x+y}{2} \ge \sqrt{xy}.$
+
+\begin{center} \underline{\hspace{5in}} \end{center}
+
+\noindent This proposition is false as is shown by the following counterexample:  Letting $x = -2$ and $y = -2$, observe that it follows that
+	$$\frac{x+y}{2} = \frac{-2-2}{2} = -2,$$ 
+but $\sqrt{xy} = \sqrt{(-2)(-2)} = 2.$  In this case, $\frac{x+y}{2} < \sqrt{xy}.$  This shows that the given proposition is false, because our example demonstrates that the hypothesis of the conditional statement can be true, and simultaneously have the conclusion of the conditional statement false. % \hfill $\Box$ \\
+
+However, based on a large collection of examples where $x$ and $y$ are both positive or zero, it appears that if   $x$  and  $y$  are nonnegative real numbers, then  $\frac{x+y}{2} \ge \sqrt{xy}.$   We will state this as a theorem and prove it.
+ 
+\bigskip
+
+\noindent {\bf Theorem.}  For all real numbers $x$ and $y$, if  $x$  and  $y$  are nonnegative, then   
+$$\frac{x+y}{2} \ge \sqrt{xy}.$$
+
+\noindent \emph{Proof:}  We argue directly.  Hence, we assume that  $x$  and  $y$  are nonnegative real numbers.  We want to show it follows that $\frac{x+y}{2} \ge \sqrt{xy}.$  Observe that since $x$ and $y$ are real numbers, and $\mathbb{R}$ is closed under subtraction, $(x-y)$ is also a real number.  Further, since the square of any real number is greater than or equal to zero, we know that $(x-y)^2 \ge 0$.  Expanding the left side of this inequality,  we find
+$$x^2 - 2xy + y^2 \ge 0.$$
+
+To introduce the square of $(x+y)$ on the left-hand side of the inequality, we now add $4x$ to both sides of this inequality.   Doing so, we see that
+$$x^2 - 2xy + y^2 + 4xy \ge 4xy,$$
+and therefore
+$$x^2 + 2xy + y^2 \ge 4xy.$$
+Factoring the lefthand side and dividing both sides by 4, we have
+\begin{equation} \label{Eq1}
+\frac{(x+y)^2}{4} \ge xy.
+\end{equation}
+Since the function $g(t) = \sqrt{t}$ is an increasing function, we know that if $0 \le a \le b$, it follows $g(a) \le g(b)$.  Hence, taking the square root of both sides of Inequality~(1), the inequality will be preserved.  Moreover, note that for any real number $a$, $\sqrt{a^2} = |a|$.  Since $x$ and $y$ are both nonnegative, it follows here that $\sqrt{(x+y)^2} = |x+y| = x + y$.  Thus, taking the square root of both sides of Inequality (1) yields
+$$\frac{x+y}{2} \ge \sqrt{xy},$$
+and thus we have indeed shown that if  $x$  and  $y$  are positive  real numbers, then  $\frac{x+y}{2} \ge \sqrt{xy}.$
+\hfill $\Box$
+
+
+
+
+
+
+
+
+\end{document}

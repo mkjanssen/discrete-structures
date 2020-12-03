@@ -1,0 +1,85 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx,amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\excludeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\newtheorem{thm}{Theorem}
+
+\usepackage{enumitem}
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 12}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	
+
+
+
+
+
+\item[S4-3] Let $A$ and $B$ be sets. Carefully complete the definitions of the following terms. (Note: ``no collisions" and ``range=codomain" are helpful ways to think about these, but they are NOT the definitions.)
+		\begin{enumerate}
+		\item  A function $f: A \to B$ is injective provided that...
+		\bs\blue{for all $x,y\in A$ if $x\neq y$ then $f(x) \neq f(y)$}\end{solution}
+		\vspace{1in}
+		\item A function $f: A\to B$ is surjective provided that...
+		\bs \blue{for all $y\in B$, there exists $x\in A$ such that $f(x)=y$}\end{solution}
+		\vspace{1in}
+		\item A function $f: A\to B$ is bijective provided that...
+		\bs\blue{$f$ is both injective and surjective}\end{solution}
+		\vspace{1in}
+		\end{enumerate}
+
+
+\item[S6-3] Let $a,b\in\Z$ and $n\in\N$. State the definitions of the following:
+\begin{enumerate}
+\item $a\mid b$ (for nonzero $a$) \bs\blue{there exists an integer $k$ such that $ak=b$.}\end{solution}
+\vspace{.5in}
+\item  $a \equiv b\pmod{n}$.  
+\bs\blue{$n\mid a-b$}\end{solution}
+\vspace{.5in}
+\end{enumerate}
+
+Give an example of integers $a$ and $b$ such that $a\not\equiv b\pmod{6} $ and $a<0$.
+\bs\blue{$a = 1$ and $b=-1$ are integers and there is no integer $k$ such that $6k = 2$. So $6\nmid 1-(-1)$ and $1\not\equiv -1 \pmod{6}$. There are lots of answers to this question though!}\end{solution}
+\vspace{1in}
+\newpage
+
+
+\item[S5-2] For all $a,b\in \Z$ say $a\sim b$ if and only if $|a-b|<10$.  Is $\sim$ an equivalence relation? Explain.
+\bs \blue{This is not an equivalence relation. To justify you only have to explain one of not being reflexive, symmetric, or transitive. It turns out this reflection is reflexive and symmetric (because for all $a\in\Z$, $|a-a|=0<10$ and if $a,b\in\Z$ then $|a-b|=|b-a|$, so if $|a-b|<10$ then $|b-a|<10$ as well). However, this relation is not transitive, since $0$, $9$, and $18$ are all integers, and $|0-9|<10$, $|9-18|<10$, but $|0-18|\geq 10$.} \end{solution}
+
+\end{itemize}
+
+\end{document}

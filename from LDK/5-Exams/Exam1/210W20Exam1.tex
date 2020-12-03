@@ -1,0 +1,232 @@
+\documentclass[11pt,answers]{exam}
+
+% Preamble % (fold)
+
+\usepackage[paper=letterpaper,margin=.75in,twoside=false,includehead]{geometry}
+
+\usepackage{amsfonts,amsmath,amsthm,amssymb} 
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\usepackage{paralist}
+\usepackage{multicol}
+\usepackage{bm}
+
+
+\let\svthefootnote\thefootnote
+
+\newtheorem*{thm}{Theorem}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\e}{\varepsilon}
+
+
+%\printsolutions
+
+\title{Communicating in Mathematics (MTH 210) Exam 1}
+\date{February 12, 2020}
+
+
+\begin{document}
+
+
+
+\maketitle
+
+\section*{Instructions}  
+
+
+
+\noindent Write your answers in the spaces provided. If you run out of space, continue your work on the back of the page and indicate that you have done so. If you still need additional space then additional sheets are available. If you use scrap paper you must turn in your scrap paper with the exam. \\
+
+\begin{center}
+\textbf{If you aren't sure what to do, take a deep breath and just show me what you know.}
+\end{center}
+\vspace{1in}
+
+
+
+
+\begin{center}
+
+
+\begin{tabular}{|c|c|c|}
+\hline
+Section &Score\\
+\hline
+Definitions and Notation &\\
+&\\
+\hline
+Logic &\\
+&\\
+\hline
+Proofs and Counterexamples &\\
+&\\
+\hline
+Proof Section &\\
+&\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\vspace{1in}
+
+\begin{center}
+Name (print): \underline{\hspace{3in}}  
+\end{center}
+
+
+
+
+\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Definitions and Notation}
+
+\begin{questions}
+
+
+\question Complete the following definition:
+\begin{center}
+A nonzero integer $a$ \emph{divides} an integer $b$, denoted $a\mid b$ provided that...
+\end{center}
+\vfill
+
+\question Using the definition of divides, explain why, for any nonzero $a\in\Z$ we have that $a\mid 0$.
+\vfill
+
+\question Complete the following definition:
+\begin{center}
+Let $n\in\N$ and $a,b\in\Z$. Then $a\equiv b \pmod{n}$ provided that...
+\end{center}
+
+\vfill
+
+%\question Give two integers $a$ and $b$ that are congruent modulo $7$. Briefly explain.
+%\vfill
+
+\question Let $A = \{a \in\Z \mid a\equiv 2 \pmod{3}\}$. Write $A$ in roster notation. Include at least 4 numbers in your roster notation. Include a negative number if it makes sense to.
+\vfill
+
+
+\question Fill in the blank with one of the symbols $\subseteq, =, \in, \not\subseteq, \not\in$:
+	\begin{itemize}
+	\item $1 \underline{\hspace{.5in}} \{1,2\}$\\
+	
+	\item $\{2\} \underline{\hspace{.5in}} \{1,2\}$
+	\end{itemize}
+\end{questions}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Logic}
+
+\begin{questions}
+
+\question For this question consider the following conditional statement:
+	\begin{center}
+	If $a$ is an irrational number and $b$ is an irrational number then $a\cdot b$ is an irrational number.
+	\end{center}
+	\begin{parts}
+	\part State the converse of the statement above. If the original statement is true, must the converse be true?
+	\vfill
+	
+	\part State the contrapositive of the statement above. If the original statement is true, must the contrapositive be true?
+	\vfill
+	
+	\part State the negation of the statement above. (Don't worry about starting a sentence with a math symbol here.) If the original statement is true, what can you say about the truth value of the negation?
+	\vfill
+	
+	\end{parts}
+
+\question Suppose that Sally made the following claim:
+	\begin{center}
+	If it snows then I will go skiing.
+	\end{center}
+	
+You find out that it did not snow, but Sally still went skiing. Is Sally's statement true or false? Justify your answer.
+\vfill
+\end{questions}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Proofs and Counterexamples}
+
+\begin{questions}
+\question Consider the following theorem:
+	\begin{thm}
+	For every integer $z$, if $8\mid z-4$ then $8\nmid z^2 - 1$.
+	\end{thm}
+	
+	\begin{parts}
+	\part If you were going to do a direct proof to prove the given statement is true, what would you assume? What would you try to show? \emph{Do not actually attempt to prove the statement.}
+	
+	Assume:
+	\vfill
+	
+	Show:
+	\vfill
+	
+
+	\part If you were going to do a proof by contrapositive to prove the given statement is true, shat would you assume? What would you try to show?
+
+	Assume:
+	\vfill
+	
+	Show:
+	\vfill
+	
+	\part What would you have to demonstrate in order to prove the statement is false? Be specific, but \emph{do not actually attempt to prove the statement is false.}
+	\vfill
+	
+		\end{parts}
+
+
+\end{questions}
+
+\newpage
+
+\section{Proofs}
+
+IMPORTANT DIRECTIONS: You need to do both of the following proofs. Each proof needs to be written according to our writing guidelines.  There next page is for the first proof (which you can just attach if you already have it) and the page after is for the second proof. You may use this page (and the backs of pages) for scratch work.
+
+\begin{enumerate}
+\item Prove the following theorem. If you did this proof before class you may just attach your work. The proof needs to be written according to our writing guidelines.
+
+\begin{center}
+For all integers $m$, if $m\equiv 1 \pmod{3}$ then $3m^2+7m+12\equiv 1 \pmod{3}$.
+\end{center}
+
+
+\item Prove the following theorem. You should write your proof according to our writing guidelines.
+
+\begin{center}
+For all integers $n$, $n^2$ is odd if and only if $n$ is odd.
+\end{center}
+
+
+\emph{Use the rest of this page for scratch work.}
+
+
+\end{enumerate}
+
+\newpage
+
+\emph{Write your proof for 1 on this page. Make sure to include a theorem statement.}
+
+
+\newpage
+
+\emph{Write your proof for 1 on this page. Make sure to include a theorem statement.}
+
+\end{document}

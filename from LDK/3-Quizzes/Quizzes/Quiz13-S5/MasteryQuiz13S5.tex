@@ -1,0 +1,53 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx,amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\excludeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\newtheorem{thm}{Theorem}
+
+\usepackage{enumitem}
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 13}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	
+
+
+\item[S5-3] For all $a,b\in \Z$ say $a\sim b$ if and only if $a-b\geq 0$.  Is $\sim$ an equivalence relation? Explain.
+\bs \blue{This is not an equivalence relation. To justify you only have to explain one of not being reflexive, symmetric, or transitive. It turns out this reflection is reflexive (because for all $a\in\Z$, $a-a=0\geq 0$. It is not symmetric since $2,4\in\Z$ and $4\sim 2$ (because $4-2=0\geq 0$). However $2\not\sim 4$ since $2-4 = -2<0$. Thus $\sim$ is not an equivalence relation.} \end{solution}
+
+\end{itemize}
+
+\end{document}

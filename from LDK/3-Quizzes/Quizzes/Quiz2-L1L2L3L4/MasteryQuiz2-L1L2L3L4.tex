@@ -1,0 +1,108 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\excludeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 2}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	\item[L1-2] Consider the following (true) conditional statement: 
+	\begin{center}
+	If the function $f$ is continuous at $a$, then $\displaystyle{\lim_{x\to a} f(x)}$ exists.
+\end{center}
+	Identify the hypothesis and conclusion of this conditional statement.
+	
+	\bs\textcolor{blue}{The hypothesis is ``the function $f$ is continuous at $a$" and the conclusion is ``$\displaystyle{\lim_{x\to a} f(x)}$ exists".}\end{solution}
+	\vspace{.5in}
+	
+	
+Assume the above conditional statement is true. Assuming \emph{only} the conditional statement and that a function $f$ is not continuous at $7$, what can you conclude (if anything)?  Explain your answer.
+
+	\bs\textcolor{blue}{Given that the function $f$ is not continuous at $7$ we know the hypothesis of the conditional statement is false. Thus we cannot conclude anything, since the statement makes no promises about what happens if a function is not continuous at a given $a$. See Quiz 1 solutions for an explanation with a truth table.}\end{solution}
+
+\vfill
+
+
+
+\item[L2-1] State the definition of odd integer precisely:
+
+An integer $n$ is odd provided that...
+
+\bs\textcolor{blue}{ there exists an integer $q$ such that $n=2q+1$.}\end{solution}
+
+\vfill
+ Then outline a proof that if $x$ is odd and $y$ is even then $xy$ is even. (Make sure to include key details - like what things are integers.)
+ 
+ \bs\textcolor{blue}{Suppose $x$ is odd and $y$ is even. Then there exist integers $a$ and $b$ such that $x=2a+1$ and $y=2b$. Then $xy=(2a+1)(2b) = 4ab+2b$ by substitution and algebra. By the distributive property $x+y=2(2ab+b)$. Let $q=2ab+b$. Note that $q$ is an integer because $a$ and $b$ are integers and the integers are closed under addition. Then $x+y=2q$ for the integer $q$ and so $x+y$ is an even integer.}\end{solution}
+\vfill
+\vfill
+\vfill
+\vfill
+
+\newpage
+
+\item[L3-1] Construct a truth table for $(\neg P\vee Q) \rightarrow R$.
+
+\bs
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+$P$ &$Q$ &$R$ &$\neg P$ &$\neg P \vee Q$ &$(\neg P \vee Q)\rightarrow R$\\
+\hline
+T &T &T  &F &T &T\\
+T &F &T  &F &F &T\\
+F &T &T  &T &T &T\\
+F &F &T  &T &T &T\\
+T &T &F &F &T &F\\
+T &F &F &F &F &T\\
+F &T &F &T &T &F\\
+F &F &F &T &T &F\\
+\end{tabular}
+\end{center}
+\end{solution}
+\vfill
+\vfill
+\vfill
+
+
+\item[L4-1]  Write the set $\left\{ \sqrt{2}, \left(\sqrt{2}\right)^3, \left(\sqrt{2}\right)^5,\dots\right\}$ in set builder notation.
+
+\bs \textcolor{blue}{One way to do this is write $\{x\in \mathbb{R} \mid x= (\sqrt{2})^n \text{ for some odd natural number } n\}$. Another way is $\{x\in \mathbb{R} \mid x= (\sqrt{2})^{2n-1} \text{ for some } n\in\mathbb{N}\}$. There are several other ways one could correctly describe this set.}
+\end{solution}
+
+\vfill
+\end{itemize}
+	
+
+\end{document}

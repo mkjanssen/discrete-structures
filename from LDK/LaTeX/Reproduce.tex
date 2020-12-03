@@ -1,0 +1,56 @@
+\documentclass{article}  %Need this.
+
+\usepackage{amsmath,amsthm,amssymb}
+
+%\usepackage[margin=1in]{geometry}
+
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cnj}{Conjecture}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{prop}{Proposition}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+
+
+
+
+\title{Reproducing a \LaTeX Document}
+\author{Put your name here}
+\date{}
+
+
+\begin{document}
+\maketitle
+
+\begin{thm}
+If $x$ and $y$ are odd integers then $x+y$ is an even integer.
+\end{thm}
+
+\begin{proof}
+We assume that $x$ and $y$ are odd integers and will prove that $x+y$ is an even integer. Since $x$ and $y$ are odd, there exist integers $m$ and $n$ such that $x=2m+1$ and $y=2n+1$.  By substitution and algebra we obtain
+\begin{align*}
+x+y &= 2m+1 + 2n + 1\\
+&= 2m+2n+2\\
+&=2(m+n+1).
+\end{align*}
+Define $q=m+n+1$.  Since $m$ and $n$ are integers and the integers are closed under addition, we conclude that $q$ is an integer. Since $x+y=2q$ for the integer $q$ we conclude that $x+y$ is an even integer.
+\end{proof}
+
+
+\vspace{.15in}
+
+\section*{Challenge Typing}
+
+
+Suppose that $f:(-1,1)\to \R$ and $f$ is differentiable at $0$. Let sequences $(\alpha_n)_{n\geq1}$ and $(\beta_n)_{n\geq1}$ satisify $-1<\alpha_n<\beta_n<1$ for all $n\geq 1$ and $\displaystyle{\lim_{n\to\infty}} \alpha_n = \displaystyle{\lim_{n\to\infty}} \beta_n = 0$. Set 
+	
+		$$\lambda_n = \frac{f(\beta_n) -f(\alpha_n)}{\beta_n-\alpha_n} . $$
+
+
+
+\end{document}

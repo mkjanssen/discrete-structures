@@ -1,0 +1,110 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx,amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\includeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\newtheorem{thm}{Theorem}
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 8}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	
+
+
+
+
+
+\item [P2-2]  For which of the following situations is it more appropriate to use induction (circle one).
+		\begin{enumerate}
+		\item For all integers $a$ and $b$, 
+		\[(a+b)^2 \equiv (a^2 +b^2) \pmod{2}.\]
+		\item For each natural number $n$, \[1+3+5+\cdots + (2n-1) = n^2.\].
+		\end{enumerate}
+	Explain why you chose that statement to prove by induction.
+	
+	\bs \blue{The second statement makes more sense because it starts ``For each natural number $n$."}\end{solution}
+	\vspace{1in}
+	
+	For the statement you chose, state what your steps would be in a proof by induction.
+	
+	\bs\blue{Let $P(n)$ be the predicate $1+3+5+\cdots + (2n-1) = n^2$. We would first prove $P(1)$ or that $1 = 1^2$. Then we would let $k\in\N$ and assume $P(k)$, or that
+	\[ 1+ 3+ 5 + \cdots + (2k-1) = k^2\]
+and show that $P(k+1)$ is true, or that
+	\[1+3+5+\cdots+(2(k+1)-1) = (k+1)^2.\]}\end{solution}
+\vfill
+
+
+\newpage
+
+\item[S1-1] Let $A = \{ 1,\{2\}, \{3,4\}, 5\}$.  From the list $\in, \notin, =,\neq,\subseteq,\not\subseteq,\subset,\not\subset$, fill in a correct symbol for each of the following:
+		\begin{itemize}
+		\item $\{1\} \underline{\hspace{.25in}} A$  \bs \blue{There's a bunch of answers, one could use $\notin$, $\neq$, $\subseteq$, or $\subset$. I would have gone for $\subset$ since that is phrased positively and is ``stronger" than $\subseteq$. Note that this is a set for which every element is an element of $A$. } \end{solution}
+				\vspace{.5in}
+
+		\item $\{2\} \underline{\hspace{.25in}} A$ \bs \blue{A bunch of answers here too, one could use $\in$, $\neq$, $\not\subseteq$, or $\not\subset$. I would have gone for $\in$ since this is phrased positively. Note this looks a lot like the first one, but in this case, one of the elements of $A$ is $\{2\}$. We could say $\{\{2\}\}\subset A$ since that's a set containing an element of $A$.} \end{solution}
+				\vspace{.5in}
+
+		\item $\{1,2,3,4,5\} \underline{\hspace{.25in}}A$
+		\bs \blue{There are lots of correct answers here, but I would choose $\neq$. Though the order of elements doesn't affect what the set is, and repeated elements don't affect what the set is, the set $\{1,2,3,4,5\}$ has different elements than the set $A$.}\end{solution}
+				\vspace{.5in}
+
+		\end{itemize}
+
+\item[S2-1] Let $U = \{1,2,3,4,5,6,7,8,9,10\}$ be the universal set. Let $A = \{3,4,5,6,7\}$ and $B=\{1,5,7,9\}$.
+		\begin{enumerate}
+		\item Find $A\cap B$
+		
+		\bs \blue{ $A\cap B = \{ 5,7\}$. This is the intersection, or ``and" - so all of the elements that are both in $A$ and in $B$.  } \end{solution}
+		\vspace{1in}
+		\item Find $A \cup B$
+		
+		\bs \blue{ $A\cup B = \{1,3,4,5,6,7,9\}$ This is the union, so ``or" - we take all of the elements that are in one or the other or both.} \end{solution}
+				\vspace{1in}
+
+		\item Find $A^C$
+		
+		\bs \blue{ $A^c = \{ 1,2,8,9,10\}$. This is the complement, so everything that is in $U$ that is not in $A$. Note $U = \{1,2,\dots, 10\}$.} \end{solution}
+				\vspace{1in}
+
+		\item Find $A-B$.
+		
+		\bs \blue{ $A- B = \{ 3,4,6\}$. This is $A$ ``minus" $B$, or all of the elements that are in $A$ that aren't also in $B$.} \end{solution}
+				%\vspace{1in}
+
+		\end{enumerate}
+
+\end{itemize}	
+
+\end{document}

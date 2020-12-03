@@ -1,0 +1,99 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx,amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\excludeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\newtheorem{thm}{Theorem}
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 6}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	
+
+
+\item[P3-3]  The following statement is incorrect:
+		\begin{center}
+For each integer $n$, if $n$ is odd, then $(n^2+1)$ is a prime number.	
+	\end{center}
+			Show the statement is false using a counterexample. You should clearly explain why the counterexample you found shows the statement is false. (If you don't remember what a prime number is just ask!)
+
+
+\bs \textcolor{blue}{This statement is false and there are many counterexamples. As one, let $n=3$. Then $n\in\Z$ and $n$ is odd (since $3=2(1)+1$ and $1\in\Z$). Additionally, $n^2+1=3^2+1 = 10$ which is not prime (since $10=5\cdot 2$). Thus we have found an integer for which the hypothesis is true and the conclusion is false, making the statement false.}\end{solution}
+\vfill
+
+
+
+\item[P1-2] Consider the following statement:
+		\begin{center}
+		For all natural numbers $p$ and $q$, if $p$ and $q$ are twin primes other than $3$ and $5$ , then $pq+1$ is a perfect square and $36$ divides $pq+1$.
+		\end{center}
+	State what you would assume in a direct proof. 
+	
+	\bs\textcolor{blue}{Assume that $p$ and $q$ are natural numbers and $p$ and $q$ are twin primes other than $3$ and $5$. (Basically, we assume the hypothesis.)}\end{solution}
+	
+	\vfill
+	
+	
+	State what you would assume in a proof by contradiction.
+	
+	\bs\textcolor{blue}{Assume that there exist natural numbers $p$ and $q$ such that $p$ and $q$ are twin primes other than $3$ and $5$ and that $pq+1$ is not a perfect square or $36$ does not divide $pq+1$. }\end{solution}
+\vfill
+
+\newpage
+
+
+
+\item [P4-1]  Consider the following proposition and proof. Is the proof correct? If not, explain any major mathematical errors. If so, does the proof meet our writing guidelines? 
+	
+		\begin{thm}
+		If $a$ is an odd integer then $3a+2$ is an odd integer.
+		\end{thm}
+		\begin{proof}
+		We will use a direct proof. For $3a+2$ to be an odd integer there must exist an integer $n$ such that
+			\[3a+2 = 2n+1.\]
+		By subtracting $2$ from both sides of this equation we obtain
+			\begin{align*}
+			3a &= 2n-1\\
+			&=2(n-1)+1.
+			\end{align*}
+		By the closure properties of integers, $n-1$ is an integer, and hence, the last equation implies that $a$ is an odd integer. This proves that if $a$ is an odd integer then $3a+2$ is an odd integer.
+		\end{proof}
+
+\bs \textcolor{blue}{Though the statement is true, the proof is wrong for multiple reasons. For one, they start by assuming the conclusion (by saying there exists an integer $n$ such that $3a+2=2n+1$. Moreover, they only show then that $3a$ is odd, not that $a$ is odd (though showing $a$ is odd so that is the hypothesis anyway, which isn't what they should be trying to show!)} \end{solution}
+
+\end{itemize}
+	
+
+\end{document}

@@ -1,0 +1,121 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\excludeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 3}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	\item[L1-3] 
+	Consider the following conditional statement:
+	\begin{center}
+	If $p$ is a prime number then $p=2$ or $p$ is an odd number.
+	\end{center}
+	Identify the hypothesis and the conclusion of the conditional satement. 
+		\bs\textcolor{blue}{The hypothesis is ``$p$ is a prime number" and the conclusion is ``$p=2$ or $p$ is an odd number".}\end{solution}
+
+	\vspace{.5in}
+	
+	Assume the above conditional statement is true. Assuming \emph{only} the conditional statement and that a given $p$ is odd what can you conclude (if anything)?  Explain your answer.
+
+
+	\bs\textcolor{blue}{Given that $p$ is odd we know the conclusion of the conditional statement is true. But, if we look in a truth table, knowing the conclusion is true says nothing about the hypothesis.}\end{solution}
+
+\vfill
+
+
+
+\item[L2-3] State the definition of even integer precisely:
+
+An integer $n$ is even provided that...
+
+\bs\textcolor{blue}{ there exists an integer $q$ such that $n=2q$.}\end{solution}
+
+\vfill
+Outline a proof that if $x,y\in \Z$ are even integers then $xy$ is even. (Make sure to include key details - like what things are integers.)
+ 
+ \bs\textcolor{blue}{Suppose $x$ is even and $y$ is even. Then there exist integers $a$ and $b$ such that $x=2a$ and $y=2b$. Then $xy=(2a)(2b) = 4ab$ by substitution and algebra. By the distributive property $xy=2(2ab)$. Let $q=2ab$. Note that $q$ is an integer because $a$ and $b$ are integers and the integers are closed under addition. Then $xy=2q$ for the integer $q$ and so $xy$ is an even integer.}\end{solution}
+\vfill
+\vfill
+\vfill
+\vfill
+
+\newpage
+
+\item[L3-2] Construct a truth table for $P \implies (Q\wedge R)$.
+
+\bs
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+$P$ &$Q$ &$R$ &$Q\wedge R$ &$P\rightarrow (Q\wedge R)$\\
+\hline
+T &T &T  &T &T \\
+T &F &T  &F &F \\
+F &T &T  &T &T \\
+F &F &T  &F &T \\
+T &T &F &F&F \\
+T &F &F &F&F \\
+F &T &F &F &T \\
+F &F &F &F &T\\
+\end{tabular}
+\end{center}
+\end{solution}
+\vfill
+\vfill
+\vfill
+
+
+\item[L4-2]  Describe what the set $\{x\in\mathbb{R} \mid 3\leq x\leq 5\}$ is in words. Then write what the set is in roster notation or explain why you can not.
+
+\bs \textcolor{blue}{This is the set of all real numbers between 3 and 5 (including 3 and 5). We can not write this set in roster notation since between any two real numbers there are infinitely many real numbers.}
+\end{solution}
+
+\vfill
+
+\item[L5-1] Write a useful negation of the following statement:
+		\begin{center}
+		There exists $x\in\mathbb{Z}$ such that if $y\in \mathbb{Z}$ then $\frac{y}{x}\in\mathbb{Z}$.
+		\end{center}
+		Useful negations don't start with ``It is not true that..." and avoid the word not in cases where it could be replaced (e.g., don't use ``not even").
+
+\bs \textcolor{blue}{The negation is: ``for all $x\in\mathbb{Z}$, $y\in\mathbb{Z}$ and $\frac{y}{x}\notin\mathbb{Z}$.}
+\end{solution}
+
+\vfill
+
+\end{itemize}
+	
+
+\end{document}

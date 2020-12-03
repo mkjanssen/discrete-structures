@@ -1,0 +1,86 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx,amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\includeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\newtheorem{thm}{Theorem}
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 7}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	
+
+
+
+
+\item[P1-3] Consider the following statement:
+		\begin{center}
+		For all integers $a$ and $b$, if $a\neq 0$ and $a$ does not divide $b$, then $ax^3+bx+(b+a)=0$ does not have a solution that is a natural number.
+		\end{center}
+	State what you would assume in a direct proof. 
+	
+	\bs\textcolor{blue}{Assume that $a$ and $b$ are integers with $a\neq 0$ and that $a$ does not divide $b$. (Basically, we assume the hypothesis.)}\end{solution}
+	
+	\vfill
+	
+	
+	State what you would assume in a proof by contradiction.
+	
+	\bs\textcolor{blue}{Assume that there exist integers $a$ and $b$ such that $a\neq 0$ and $a$ does not divide $b$ and $ax^3+bx+(b+a)=0$ does have a solution that is a natural number. (Basically, we assume the negation.)}\end{solution}
+\vfill
+
+\newpage
+
+
+
+\item [P2-1]  For which of the following situations is it more appropriate to use induction. Explain.
+		\begin{enumerate}
+		\item For all $a\in\Z$ the equation $ax^3+ax + a = 0$ does not have a solution that is a natural number.
+		\item For each natural number $n$, $3$ divides $4^n-1$.
+		\end{enumerate}
+	Circle one and explain why you chose that.
+	
+	\bs \blue{We choose the second statement because it starts "for each natural number $n$". Induction works when you have a base case and a way to get from one step to the next.}\end{solution}
+	\vspace{2in}
+	
+	For the statement you chose, state what your steps would be in a proof by induction.
+	
+	\bs \blue{ We let $P(n)$ be the predicate $3\mid 4^{n} - 1$. Then we prove $P(1)$ which is $3\mid 4^1 - 1$. Next we let $k\in\N$ and assume $P(k)$ or that $3\mid 4^k - 1$. Finally using that we prove that $3\mid 4^{k+1} -1 $.}\end{solution}
+\vfill
+
+
+\end{itemize}	
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass{article}  %Need this.
+
+\usepackage{amsmath,amsthm,amssymb}
+
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cnj}{Conjecture}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{prop}{Proposition}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+
+
+
+
+\title{Practice}
+\author{--Name --}
+\date{}
+
+\begin{document}
+\maketitle  %This will add the title, author, and date located above
+
+\begin{thm}
+If $x$ and $y$ are odd integers then $x+y$ is an even integer.
+\end{thm}
+
+\begin{proof}
+We assume that $x$ and $y$ are odd integers and will prove that $x+y$ is an even integer. Since $x$ and $y$ are odd, there exist integers $m$ and $n$ such that $x=2m+1$ and $y=2n+1$.  By substitution and algebra we obtain
+\begin{align*}
+x+y &= 2m+1 + 2n + 1\\
+&= 2m+2n+2\\
+&=2(m+n+1).
+\end{align*}
+Define $q=m+n+1$.  Since $m$ and $n$ are integers and the integers are closed under addition, we conclude that $q$ is an integer. Since $x+y=2q$ for the integer $q$ we conclude that $x+y$ is an even integer.
+\end{proof}
+
+
+\vspace{.15in}
+
+\section*{Challenge Typing}
+
+
+Suppose that $f:(-1,1)\to \R$ and $f$ is differentiable at $0$. Let sequences $(\alpha_n)_{n\geq1}$ and $(\beta_n)_{n\geq1}$ satisify $-1<\alpha_n<\beta_n<1$ for all $n\geq 1$ and $\displaystyle{\lim_{n\to\infty}} \alpha_n = \displaystyle{\lim_{n\to\infty}} \beta_n = 0$. Set 
+	
+		$$\lambda_n = \frac{f(\beta_n) -f(\alpha_n)}{\beta_n-\alpha_n} . $$
+
+\newpage
+
+\begin{thm}
+The set $\{ x\in\Z : |x-2.5| = 2 \}$ is the empty set.
+\end{thm}
+
+\begin{proof}
+Let $y$ be an integer such that $y \in \{ x\in\Z : |x-2.5| = 2 \}$  Then $y\in \mathbb{Z}$ and $|y-2.5| = 2$.  Since $|y-2.5| = 2$ then $y = 4.5$ or $y=-.5$.  But then $y$ is not an integer.  Therefore the set $\{ x\in\Z : |x-2.5| = 2 \}$ has no elements and
+\[\{ x\in\Z : |x-2.5| = 2 \} = \emptyset.\]
+\end{proof}
+
+\begin{thm}
+There exist two positive irrational numbers $s$ and $t$ such that $s^t$ is rational.
+\end{thm}
+\begin{proof}
+We will consider two cases.  For the first case, suppose that $\sqrt{2}^{\sqrt{2}}$ is rational.  Then we may take $s= t = \sqrt{2}$.  For the second case, suppose that $\sqrt{2}^{\sqrt{2}}$ is irrational.  Let $s= \sqrt{2}^{\sqrt{2}}$ and $t=\sqrt{2}$.  Then 
+$$\left(\sqrt{2}^{\sqrt{2}}\right)^{\sqrt{2}} = \left(\sqrt{2}\right)^2 = 2.$$
+Since $2$ is rational, $s^t$ is rational.  Therefore, there exists irrational numbers $s$ and $t$ such that $s^t$ is rational.
+\end{proof}
+
+\begin{thm}
+Let $n$ be a natural number.  Then $$\sum_{k=1}^n k = \frac{n(n+1)}{2}.$$
+\end{thm}
+
+Consider the following matrix,
+$$\left( \begin{array}{ccc}
+1 &2 &3\\
+4 &5 &6\\
+7 &8 &9
+\end{array}\right)$$
+
+
+
+\end{document}

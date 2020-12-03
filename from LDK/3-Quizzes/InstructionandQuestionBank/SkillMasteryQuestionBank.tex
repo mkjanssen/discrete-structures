@@ -1,0 +1,421 @@
+\documentclass[11pt]{article}
+\usepackage[margin=.75in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{theorem}{Theorem}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\includeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quizzes - Question Bank}} \\
+Communicating in Mathematics (MTH 210-02)\\
+Fall 2017
+\end{center}
+
+
+
+\section*{Skills}
+
+
+\subsection*{Logic}
+
+\begin{itemize}
+\item[L1] Identify the hypothesis and conclusion of a conditional statement, determine its truth value, and apply it.
+	\begin{enumerate}
+	
+			\item[L1-1] Consider the following conditional statement: 
+	\begin{center}
+	If $n$ is a prime number then $n^2$ has three positive factors.  
+	\end{center}
+	Identify the hypothesis and conclusion.  
+	
+	\bs \blue{ The hypothesis is ``$n$ is a prime number" and the conclusion is ``$n^2$ has three positive factors". Notice we leave off the if and the then when writing the hypothesis and conclusion.} \end{solution}
+	
+	Assume the above conditional statement is true. Assuming \emph{only} the conditional statement and that  $6$ is not prime what can you conclude (if anything)? Explain your answer.
+	
+	\bs \blue{We are given that the conditional statement is true and that $6$ is not prime. The fact that $6$ is not prime tells us that our hypothesis is false. Given a false hypothesis, we know nothing about the conclusion. So we can not conclude anything. We can also look at this from a truth table perspective. Consider the truth table for the conditional statement $P\rightarrow Q$: 
+ }
+ \begin{center}
+ \begin{tabular}{c|c|c}
+$P$ &$Q$ &$P\rightarrow Q$\\
+\hline
+T &T &T\\
+T &F &F\\
+F &T &T\\
+F &F &T
+\end{tabular}
+\end{center} 
+\textcolor{blue}{In the third and fourth rows the hypothesis of the conditional statement is false (that is, $n$ is not a prime number), and the conditional statement is true (that is, if $n$ is a prime number then $n^2$ has $3$ positive factors). Since $Q$ (that is, $n^2$ has $3$ positive factors), is true in the third row and false in the fourth row we can't conclude anything about the truth value of $Q$.} \end{solution}
+
+\item[L1-2] Consider the following (true) conditional statement: 
+	\begin{center}
+	If the function $f$ is continuous at $a$, then $\displaystyle{\lim_{x\to a} f(x)}$ exists.
+\end{center}
+	Identify the hypothesis and conclusion of this conditional statement.
+	
+	\textcolor{blue}{The hypothesis is ``the function $f$ is continuous at $a$" and the conclusion is ``$\displaystyle{\lim_{x\to a} f(x)}$ exists".}
+	
+Assume the above conditional statement is true. Assuming \emph{only} the conditional statement and that a function $f$ is not continuous at $7$, what can you conclude (if anything)?  Explain your answer.
+
+	\textcolor{blue}{Given that the function $f$ is not continuous at $7$ we know the hypothesis of the conditional statement is false. Thus we cannot conclude anything, since the statement makes no promises about what happens if a function is not continuous at a given $a$. See Quiz 1 solutions for an explanation with a truth table.}
+	
+\item[L1-2] Consider the following conditional statement: 
+	\begin{center}
+	If $p\neq 2$ and $p$ is an even number, then $p$ is not prime.
+\end{center}
+	Identify the hypothesis and conclusion of this conditional statement.
+	
+Assume the above conditional statement is true. Assuming \emph{only} the conditional statement and that $7$ is not equal to $2$ and is not even what can you conclude (if anything)?  Explain your answer.
+	
+
+	\item[L1-3] If $f: \mathbb{R}\to\mathbb{R}$ is a differentiable function at a real number $a$ then $f$ is a continuous function at $a$.  State the hypothesis and conclusion of this conditional statement.  Suppose you know a function $g: \mathbb{R}\to\mathbb{R}$ is continuous at $5$.  What can you conclude (if anything)?  Explain your answer.
+	
+
+	\item[L1-token]  Consider the following conditional statement:
+	\begin{center}
+	If $p$ is a prime number then $p=2$ or $p$ is an odd number.
+	\end{center}
+	Identify the hypothesis and conclusion. 
+	Assume the above conditional statement is true. Assuming \emph{only} the conditional statement and that $7$ is odd what can you conclude (if anything)?  Explain your answer.
+	
+
+
+
+
+	\end{enumerate}
+	
+	
+	\newpage
+	
+
+\item[L2] State precisely the definition of an even and odd integer and outline the proof of a statement using these terms.
+	\begin{enumerate}
+	\item[L2-1] State the definition of even integer precisely. 
+		An integer $n$ is even provided that...
+	
+	\bs\textcolor{blue}{ there exists an integer $q$ such that $n=2q$.}\end{solution}
+	
+	Then outline a proof that if $x$ is even and $y$ is odd then $x+y$ is odd. (Make sure to include key details - like what things are integers.)
+	
+	\bs\textcolor{blue}{Suppose $x$ is even and $y$ is odd. Then there exist integers $a,b$ such that $x=2a$ and $y=2b+1$. Then $x+y=(2a)+(2b+1)$ by substitution. By the distributive property $x+y=2(a+b)+1$. Note that $a+b$ is an integer by closure of the integers under addition. Let $q=a+b$. Then $x+y=2q+1$ for the integer $q$ and so $x+y$ is an odd integer.}\end{solution}
+	
+	\item[L2-2] State the definition of odd integer precisely. Then outline a proof that if $x,y\in \Z$ are odd integers then $x+y$ is even.
+	\item[L2-3] State the definition of even integer precisely. Then outline a proof that if $x,y\in \Z$ are even integers then $xy$ is even.
+	\item[L2-token] State the definition of odd integer precisely. Then outline a proof that if $x,y\in \Z$ are odd integers then $xy$ is odd.
+	\end{enumerate}
+	
+\newpage
+
+\item[L3] Construct truth tables for statements that use the logical operators and, or, not, and implies.
+	\begin{enumerate}
+	\item  Construct a truth table for $(\neg P\vee Q) \rightarrow R$.
+	\item Construct a truth table for $P \implies (Q\wedge R)$
+	\item Construct a truth table for $P \implies (Q\vee R)$.
+	\end{enumerate}
+
+\newpage
+
+\item[L4] Write sets using set builder notation and interpret sets written in this notation.
+	\begin{enumerate}
+		\item[L4-1] Write the set $\left\{ \sqrt{2}, \left(\sqrt{2}\right)^3, \left(\sqrt{2}\right)^5,\dots\right\}$ in set builder notation.
+
+	\item[L4-2] Describe what the set $\{x\in\mathbb{R} \mid 3\leq x\leq 5\}$ is in words. Then write what the set is in roster notation or explain why you can not.
+
+		\item[L4-3] Write the set $\{\dots, -5,-3,1,1,3,5,\dots\}$ using set builder notation.
+	\end{enumerate}
+
+\newpage	
+
+\item[L5]  Negate a statement with and, or, not, implies, exists, and/or for all.
+	\begin{enumerate}
+		\item[L5-1] Write a useful negation of the following statement:
+		\begin{center}
+		There exists $x\in\mathbb{Z}$ such that if $y\in \mathbb{Z}$ then $\frac{y}{x}\in\mathbb{Z}$.
+		\end{center}
+		Useful negations don't start with ``It is not true that..." and avoid the word not.
+		
+		\item[L5-2] Write a useful negation for the following statement:
+		\begin{center}
+		For every positive real number $\epsilon$ there exists a natural number $n$ with $\frac{1}{n}<\epsilon$.
+		\end{center}
+		Useful negations don't start with ``It is not true that..." and avoid the word not.
+		
+	
+	\item[L5-3] For all integers $n$ and $m$, if $nm$ is even then $n$ is even or $m$ is even.
+		
+	\item[L5-token?]  Write a useful negation of the following statement:
+		\begin{center}
+		For all $m\in\mathbb{Z}$ there exists $n\in\mathbb{Z}$ such that $m>n$.
+		\end{center}
+		Useful negations don't start with ``It is not true that..." and avoid the word not.
+	\end{enumerate}
+\end{itemize}
+
+
+\newpage
+
+\subsection*{Proofs}
+\begin{itemize}
+\item[P1]  Given a theorem, correctly state what will be assumed in a direct proof, proof by contradiction, and proof by contrapositive.
+	\begin{enumerate}
+	\item[P1-1] Consider the following statement:
+		\begin{center}
+		Every even integer greater than $2$ can be expressed as the sum of two (not necessarily distinct) prime numbers.
+		\end{center}
+	State what you would assume in a direct proof. State what you would assume in a proof by contradiction.
+	\item[P1-2]  Consider the following statement:
+		\begin{center}
+		For all natural numbers $p$ and $q$, if $p$ and $q$ are twin primes other than $3$ and $5$ , then $pq+1$ is a perfect square and $36$ divides $pq+1$.
+		\end{center}
+		State what you would assume in a direct proof. State what you would assume in a proof by contradiction.
+	\item[P1-3]  Consider the following statement
+		\begin{center}
+		Let $a$ and $b$ be integers with $a\neq 0$. If $a$ does not divide $b$ then the equation $ax^3+bx+(b+a) = 0$ does not have a solution that is a natural number.
+		\end{center}
+		State what you would assume in a direct proof. State what you would assume in a proof by contradiction.
+	\end{enumerate}
+	
+	
+	\newpage
+	
+	
+\item[P2]  Identify situations in which it is appropriate to use induction and state the procedure for proving a statement by induction.
+
+
+\begin{enumerate}
+	\item[P2-1] For which of the following situations is it more appropriate to use induction. Explain.
+		\begin{enumerate}
+		\item For all $a\in\Z$ the equation $ax^3+ax + a = 0$ does not have a solution that is a natural number.
+		\item Let $a$ and $b$ be integers and $n\in \mathbb{N}$. For all $m\in\mathbb{N}$ if $a\cong b \pmod{n}$ then $a^m \cong b^m \pmod{n}$.
+		\end{enumerate}
+	For the statement you chose, state what your steps would be in a proof by induction.
+
+
+
+	\item[P2-2] For which of the following situations is it more appropriate to use induction. Explain.
+		\begin{enumerate}
+		\item For all integers $a$ and $b$, $(a+b)^2 \equiv (a^2 +b^2) \pmod{2}$
+		\item For each natural number $n$, $3$ divides $4^n-1$.
+		\end{enumerate}
+	For the statement you chose, state what your steps would be in a proof by induction.
+
+	\item[P2-3] For which of the following situations is it more appropriate to use induction. Explain.
+		\begin{enumerate}
+		\item For all $a\in\Z$ the equation $ax^3+ax + a = 0$ does not have a solution that is a natural number.
+		\item For all $n\in\N$, $1+2+3+\cdots + n = \dfrac{n(n+1)}{2}$.
+		\end{enumerate}
+	For the statement you chose, state what your steps would be in a proof by induction.
+	
+\end{enumerate}
+
+\newpage
+
+
+\item[P3] Clearly and correctly disprove a statement using a counterexample.
+
+	\begin{enumerate}
+	\item[P3-1] The following statement is incorrect:
+		\begin{center}
+		If $n$ is an integer then $n^2\equiv 1\pmod{3}$.
+		\end{center}
+			Show the statement is false using a counterexample. You should clearly explain why the counterexample you found shows the statement is false.
+	
+	\item[P3-2] The following statement is incorrect:
+		\begin{center}
+		The set of natural numbers is closed under subtraction.
+		\end{center}
+		Show the statement is false using a counterexample. You should clearly explain why the counterexample you found shows the statement is false.
+		
+		\item[P3-3] The following statement is incorrect:
+		\begin{center}
+		For each integer $n$, $(n^2+1)$ is a prime number.
+		\end{center}
+	Show the statement is false using a counterexample. You should clearly explain why the counterexample you found shows the statement is false.
+	
+	
+		
+	\end{enumerate}
+	
+\newpage
+
+
+\item[P4] Evaluate if a given proof is valid and adheres to our writing guidelines.
+	\begin{enumerate}
+	\item[P4-1] Consider the following proposition and proof. Is the proof correct? If not, explain why not. If so, does the proof meet our writing guidelines? 
+	
+		\begin{proposition}
+		If $m$ is an odd integer then $m+6$ is an odd integer.
+		\end{proposition}
+		\begin{proof}
+		For $m+6$ to be an odd integer there must exist an integer $n$ such that
+			\[m+6 = 2n+1.\]
+		By subtracting $6$ from both sides of this equation we obtain
+			\begin{align*}
+			m &= 2n-6+1\\
+			&=2(n-3)+1.
+			\end{align*}
+		By the closure properties of integers, $n-3$ is an integer, and hence, the last equation implies that $m$ is an odd integer. This proves that if $m$ is an odd integer then $m+6$ is an odd integer.
+		\end{proof}
+		
+\item[P4-2] Considering the following proposition and proof. Is the proof correct? If not, explain why not. If so, does the proof meet our writing guidelines?
+
+	\begin{theorem}
+	For each integer $n$, $3\mid n^2 + 2$.
+	\end{theorem}
+
+	\begin{proof}
+	We will consider two cases, $n\equiv 1\pmod{3}$ and $n\equiv 2\pmod{3}$. When $n\equiv 1 \pmod{3}$, there exists an integer $k$ such that $3k = n-1$. Then 
+		$$n^2+2 = (3k+1)^2 + 2 = 9k^2 + 6k + 1 + 2 = 3(3k^2+2k+1).$$
+	Since integers are closed under addition and multiplication  $3k^2+2k+1$ is an integer. Thus $3\mid n^2+2$ in this case.
+	
+	When $n\equiv 2 \pmod{3}$ there exists an integer $k$ such that $3k=n-2$. Then
+		$$n^2+2 = (3k+2)^2 +2 =9k^2+12k+4+2 = 3(3k^2+4k+2).$$
+	Since integers are closed under addition and multiplication, $3k^2+4k+2$ is an integer. Thus $3\mid n^2+2$ in this case as well.
+	
+	Since we've proven that  $3\mid n^2+2$ in all possible cases we have completed the proof.
+	\end{proof}
+	\end{enumerate}
+	
+
+\item[P4-3]  Considering the following proposition and proof. Is the proof correct? If not, explain why not. If so, does the proof meet our writing guidelines?
+
+	\begin{theorem}
+	For all integers $m$ and $n$, if $mn$ is an even integer, then $m$ is even or $n$ is even.
+	\end{theorem}
+	\begin{proof}
+	For either $m$ or $n$ to be even there exists an integer $k$ such that $m=2k$ or $n=2k$. So if we multiply $m$ and $n$ the product will contain a factor of $2$ and, hence, $mn$ will be even.
+	\end{proof}
+	
+\end{itemize}
+
+\newpage
+
+
+\subsection*{Sets, Functions, and Equivalence Relations}
+\begin{itemize}
+\item[S1] Use the symbols $\in, \notin, =,\neq,\subseteq,\not\subseteq,\subset,\not\subset$ correctly.
+	\begin{enumerate}
+	\item[S1-1] Let $A = \{ 1,\{2\}, \{3,4\}, 5\}$.  Fill in a correct symbol for each of the following:
+		\begin{itemize}
+		\item $\{1\} \underline{\hspace{.25in}} A$
+		\item $\{2\} \underline{\hspace{.25in}} A$
+		\item $\{1,2,3,4,5\} \underline{\hspace{.25in}}A$
+		\end{itemize}
+	\item[S1-2] Let $A = \{1,2,4\}$ and $B = \{1,2,3,5\}$.  Fill in a correct symbol for each of the following:
+		\begin{itemize}
+		\item $A\underline{\hspace{.25in}} B$
+		\item $\emptyset \underline{\hspace{.25in}} A$
+		\item $\{4,2,1\} \underline{\hspace{.25in}} B$
+		\end{itemize}
+	\item[S1-3]  Let $A = \{0,1,2,3,\{4\}\}$.  Fill in a correct symbol   (from $\in$, $\subset$, $\subseteq$, $=$, $\neq$) for each of the following.
+		\begin{itemize}
+		\item $\{4\} \underline{\hspace{.25in}} A$
+		\item $\{2\} \underline{\hspace{.25in}} A$
+		\item $\{1,2,3\} \underline{\hspace{.25in}}A$
+		\end{itemize}
+	\end{enumerate}
+	
+\newpage
+
+\item[S2] Given two sets and a universal set identify the union, intersection, complement, and set difference and find the power set of a given set.
+	\begin{enumerate}
+	\item[S2-1] Let $U = \{1,2,3,4,5,6,7,8,9,10\}$ be the universal set. Let $A = \{3,4,5,6,7\}$ and $B=\{1,5,7,9\}$.
+		\begin{enumerate}
+		\item Find $A\cap B$
+		\item Find $A \cup B$
+		\item Find $A^C$
+		\item Find $A\setminus B$ (or $A-B$).
+		\end{enumerate}
+	\item[S2-2]  Let $U = \Z$. Let $A = \{x\in \Z: x\ge 7\}$ and $B = \{x\in\Z: x is odd\}$.  (Roster method is okay for your answers.)
+		\begin{enumerate}
+		\item Find $A\cap B$
+		\item Find $A \cup B$
+		\item Find $A^C$
+		\item Find $A\setminus B$ (or $A-B$).
+		\end{enumerate}
+	\item[S2-3]  Let $U = \{1,2,3,4,5,6,7,8,9,10\}$ be the universal set.  Let $A= \{2,4,6,8,10\}$ and $B = \{1,3\}$.
+		\begin{enumerate}
+		\item Find $A\cap B$
+		\item Find $A^C$
+		\item Find  $A-B$
+		\item Find $A\cup B$.
+		\end{enumerate}
+	\end{enumerate}
+	
+\newpage
+
+\item[S3] Correctly use function terminology such as domain, codomain, range, dependent variable, independent variable, image, and preimage.
+	\begin{enumerate}
+	\item[S3-1] Let $f: \mathbb{R} \to \mathbb{R}$ be defined by $f(x) = x^2-2x$.
+		\begin{itemize}
+		\item State the domain, codomain, and range of $f$. (Clearly state which one is which.)
+		\item Find the image(s) of $3$ under $f$.
+		\item Find the preimage(s) of $0$.
+		\end{itemize}
+	\item[S3-2] Let $R^* = \{x\in \R: x\ge 0\}$.  Let $s: \R^* \to \R^*$ be defined by $f(x) = x^2$.
+		\begin{itemize}
+		\item State the domain, codomain of $f$. (Clearly state which one is which.)
+		\item Find the image(s) of $3$ under $f$.
+		\item Find the preimage(s) of $4$.
+		\end{itemize}
+	\item[S3-3]  Let $f: \Z\to \Z$ be defined by $f(m) = 3-m$.
+		\begin{itemize}
+		\item State the domain, codomain, and range of $f$. (Clearly state which one is which.)
+		\item Find the image(s) of $3$ under $f$.
+		\item Find the preimage(s) of $0$.
+		\end{itemize}
+	\end{enumerate}
+	
+	\newpage
+	
+\item[S4] State the definition of injection, surjection, and bijection.
+	\begin{enumerate}
+	\item[S4-1] Let $A$ and $B$ be sets. Carefully complete the definitions of the following terms: 
+		\begin{itemize}
+		\item  A function $f: A \to B$ is injective provided that...
+		\item A function $f: A\to B$ is surjective provided that...
+		\item A function $f: A\to B$ is bijective provided that...
+		\end{itemize}
+	\end{enumerate}
+	
+\newpage
+
+\item[S5] Prove or disprove that a given relation is reflexive, symmetric, and/or transitive.
+	\begin{enumerate}
+	\item For all $a,b\in \Z$ say $a\sim b$ if and only if $a\mid b$.  Is $\sim$ an equivalence relation? Explain.
+	\item For all $a,b \in \Z$ say $a\sim b$ if and only if $a\leq b$.  Is $\sim$ an equivalence relation? Explain.
+	\item For all $a,b\in \R$ say $a\sim b$ if and only if $|a-b|<5$.  Is $\sim$ an equivalence relation? Explain.
+	\end{enumerate}
+	
+
+\newpage
+
+\item[S6] State the definition of ``$a$ divides $b$" and ``$a$ is congruent to $b$ modulo $n$" and correctly apply these definitions in examples.
+	\begin{enumerate}
+	\item  Carefully state the definition of $a\mid b$ (for nonzero $a$) and $a \equiv b\pmod{n}$ (for nonzero $n$).  Then give an example of integers $a$ and $b$ such that $a\cong b \pmod{15}$ and $b<0$.
+	\item Carefully state the definition of $a\mid b$ (for nonzero $a$) and $a \equiv b\pmod{n}$ (for nonzero $n$).  Then give an example of integers $a$ and $b$ such that $a \nmid b$.
+	\item Carefully state the definition of $a\mid b$ (for nonzero $a$) and $a \equiv b\pmod{n}$ (for nonzero $n$).  Then give an example of integers $a$ and $b$ such that $a\not\equiv b \pmod{3}$.
+	\end{enumerate}
+\end{itemize}
+
+
+
+
+\end{document}

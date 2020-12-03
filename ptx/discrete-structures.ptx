@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <docinfo>
+<macros>
+{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+</macros>
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\usepackage{pgfplots}
+</latex-image-preamble>
+<!-- <search>
+            <google>
+                <cx>017464805646507420634:civa1brpuu6</cx>
+            </google>
+        </search> -->
+<rename element="principle">Discussion</rename>
+<!-- <rename element="heuristic">Cube Move</rename> -->
+<rename element="insight">Screencast</rename>
+  </docinfo>
+  <book>
+    <title>Discrete Structures Course Notes</title>
+
+    
+      
+    <frontmatter>
+    <titlepage>
+    
+        <author>
+          <personname>Mike Janssen</personname>
+          <department>Mathematics and Statistics Department</department>
+          <institution>Dordt University</institution>
+          <email>mike.janssen@dordt.edu</email>
+        </author>
+    
+    
+    
+        </titlepage>
+
+    
+
+    <preface xml:id="Sec-NoteToInstructors">
+      <title>A Note to Students</title>
+      <p>
+      This work was compiled with some strong opinions.
+      </p>
+      <p>
+      The first is that, as with a sport, instrument, or nearly any other skill, you can't learn mathematics without doing mathematics. Thus, there are few worked-out examples in this book. We would rather spend a long time in productive struggle to understand an idea deeply than be spoon-fed solutions.
+      </p>
+      <p>
+      The second is that most people's ideas of what counts as a mathematical question are far too narrow. Mathematics is not merely geometry, algebra, and calculus (maybe with a dash of statistics for good measure). Mathematics is a way of thinking; it's about abstraction, deductive reasoning, and problem-solving. This way of thinking can be applied in surprising places, and can lead to delight and wonder at the world God has made. We will explore some of these questions this semester.
+      </p>
+      
+    </preface>
+</frontmatter>
+      
+      
+  
+  
+  
+    
+    
+    <chapter xml:id="Week-01">
+      <title>Week 1: Jan. 15</title>
+      
+      <section xml:id="Jan-15">
+        <title>Jan. 15</title>
+        
+        <introduction>
+        
+        <assemblage>
+          <title>Motivating Questions</title>
+          <p>
+          <statement>
+            Here are some questions we'll consider.
+            <ol>
+              <li>Testing 1 2 3</li>
+            </ol>
+          </statement>
+          </p>
+          
+        </assemblage>
+        
+        
+          
+          
+         
+        </introduction>
+        
+        
+        
+        
+      </section>
+      
+    </chapter>
+    
+    
+    <chapter xml:id="Week-02">
+      <title>Week 2: Jan. 18-22</title>
+      
+      <section xml:id="Jan-18">
+        <title>Jan. 18</title>
+        
+        
+        
+        
+      </section>
+      
+      <section xml:id="Jan-20">
+        <title>Jan. 20</title>
+        
+        
+      </section>
+      
+      
+      <section xml:id="Jan-22">
+        <title>Jan. 22</title>
+        
+        
+      </section>
+      
+    </chapter>
+    
+    <chapter xml:id="Week-03">
+      <title>Week 3: Jan. 25-29</title>
+      
+      <section xml:id="Jan-25">
+        <title>Jan. 25</title>
+        
+        
+      </section>
+      
+      <section xml:id="Jan-27">
+        <title>Jan. 27</title>
+        
+        
+      </section>
+      
+      
+      <section xml:id="Jan-29">
+        <title>Jan. 29</title>
+        
+        
+      </section>
+      
+    </chapter>
+
+    
+  
+  
+
+  
+  
+      
+      
+      <chapter xml:id="Week-04">
+        <title>Week 4: Feb. 1-5</title>
+        
+        <section xml:id="Feb-01">
+          <title>Feb. 1</title>
+          
+          
+        </section>
+        
+        <section xml:id="Feb-03">
+          <title>Feb. 3</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Feb-05">
+          <title>Feb. 5</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      <chapter xml:id="Week-05">
+        <title>Week 5: Feb. 8-12</title>
+        
+        <section xml:id="Feb-08">
+          <title>Feb. 8</title>
+          
+          
+        </section>
+        
+        <section xml:id="Feb-10">
+          <title>Feb. 10</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Feb-12">
+          <title>Feb. 12</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      
+      <chapter xml:id="Week-06">
+        <title>Week 6: Feb. 15-19</title>
+        
+        
+        
+        <section xml:id="Feb-17">
+          <title>Feb. 17</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Feb-19">
+          <title>Feb. 19</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      
+      <chapter xml:id="Week-07">
+        <title>Week 7: Feb. 22-26</title>
+        
+        <section xml:id="Feb-22">
+          <title>Feb. 22</title>
+          
+          
+        </section>
+        
+        <section xml:id="Feb-24">
+          <title>Feb. 24</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Feb-26">
+          <title>Feb. 26</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      <chapter xml:id="Week-08">
+        <title>Week 8: Mar. 1-5</title>
+        
+        <section xml:id="Mar-01">
+          <title>Mar. 1</title>
+          
+          
+        </section>
+        
+        <section xml:id="Mar-03">
+          <title>Mar. 3</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Mar-05">
+          <title>Mar. 5</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      
+      <chapter xml:id="Week-09">
+        <title>Week 9: Mar. 8-12</title>
+        
+        <section xml:id="Mar-08">
+          <title>Mar. 8</title>
+          
+          
+        </section>
+        
+        <section xml:id="Mar-10">
+          <title>Mar. 10</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Mar-12">
+          <title>Mar. 12</title>
+          
+          
+        </section>
+        
+      </chapter>
+        
+        
+      <chapter xml:id="Week-10">
+        <title>Week 10: Mar. 15-19</title>
+        
+        <section xml:id="Mar-15">
+          <title>Mar. 15</title>
+          
+          
+        </section>
+        
+        <section xml:id="Mar-17">
+          <title>Mar. 17</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Mar-19">
+          <title>Mar. 19</title>
+          
+          
+        </section>
+        
+      </chapter>
+          
+          
+      <chapter xml:id="Week-11">
+        <title>Week 11: Mar. 22-26</title>
+        
+        <section xml:id="Mar-22">
+          <title>Mar. 22</title>
+          
+          
+        </section>
+        
+        <section xml:id="Mar-24">
+          <title>Mar. 24</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Mar-26">
+          <title>Mar. 26</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      <chapter xml:id="Week-12">
+        <title>Week 12: Mar. 29-Apr. 2</title>
+        
+        <section xml:id="Mar-29">
+          <title>Mar. 29</title>
+          
+          
+        </section>
+        
+        <section xml:id="Mar-31">
+          <title>Mar. 31</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Apr-02">
+          <title>Apr. 02</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      <chapter xml:id="Week-13">
+        <title>Week 13: Apr. 5-Apr. 9</title>
+        
+        <section xml:id="Apr-05">
+          <title>Apr. 5</title>
+          
+          
+        </section>
+        
+        
+        
+        
+        <section xml:id="Apr-09">
+          <title>Apr. 09</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      <chapter xml:id="Week-14">
+        <title>Week 14: Apr. 12-Apr. 16</title>
+        
+        <section xml:id="Apr-12">
+          <title>Apr. 12</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Apr-14">
+          <title>Apr. 14</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Apr-16">
+          <title>Apr. 16</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      
+      <chapter xml:id="Week-15">
+        <title>Week 15: Apr. 19-Apr. 23</title>
+        
+        <section xml:id="Apr-19">
+          <title>Apr. 19</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Apr-21">
+          <title>Apr. 21</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Apr-23">
+          <title>Apr. 23</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+      
+      <chapter xml:id="Week-16">
+        <title>Week 16: Apr. 26-Apr. 30</title>
+        
+        <section xml:id="Apr-26">
+          <title>Apr. 26</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Apr-28">
+          <title>Apr. 28</title>
+          
+          
+        </section>
+        
+        
+        <section xml:id="Apr-30">
+          <title>Apr. 30</title>
+          
+          
+        </section>
+        
+      </chapter>
+      
+    
+    
+  
+  
+  <!--<part>
+    <title>Justice</title>
+      
+      
+      
+
+      
+
+
+    
+    
+  </part>
+  
+  <part xml:id="Part-Power">
+    <title>Power</title>
+    
+      
+  
+  </part>
+  
+
+
+  <part xml:id="Part-Love">
+    <title>Love</title>
+    
+    
+
+  </part>
+  
+  
+  <part xml:id="Part-Beauty">
+    <title>Beauty</title>
+    
+    
+
+  </part> -->
+
+
+
+
+
+
+
+
+    
+    
+    
+    <!--<xi:include href="./Truth.ptx" />
+    <xi:include href="./Justice.ptx" />    
+     <backmatter>
+      <index>
+        <title>Index</title>
+        <index-list />
+      </index>
+    </backmatter>-->
+  </book>
+</pretext>

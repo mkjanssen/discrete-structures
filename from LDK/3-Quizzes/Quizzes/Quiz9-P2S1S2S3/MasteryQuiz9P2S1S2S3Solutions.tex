@@ -1,0 +1,120 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx,amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\includeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\newtheorem{thm}{Theorem}
+
+\usepackage{enumitem}
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 9}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	
+
+
+
+
+
+
+\item [P2-3]  For which of the following situations is it more appropriate to use induction (circle one).
+		\begin{enumerate}
+		\item For all $a\in\Z$ the equation $ax^3+ax + a = 0$ does not have a solution that is a natural number.
+		\item For each natural number $n$, \[3+6+9+\cdots +3n = \frac{3n(n+1)}{2}.\].
+		\end{enumerate}
+	Explain why you chose that statement to prove by induction.
+	
+	\bs \blue{The second statement makes more sense because it starts ``For each natural number $n$."}\end{solution}
+	\vspace{1in}
+	
+	For the statement you chose, state what your steps would be in a proof by induction.
+	
+	\bs\blue{Let $P(n)$ be the predicate $3+6+9+\cdots+3n = \frac{3n(n+1)}{2}$. We would first prove $P(1)$ or that $3 = \frac{3(1)(1+1)}{2}$. Then we would let $k\in\N$ and assume $P(k)$, or that
+	\[ 3+6+9+ \cdots + (3k) = \frac{3k(k+1)}{2}\]
+and show that $P(k+1)$ is true, or that
+	\[3+6+9+\cdots+3(k+1) = \frac{3(k+1)(k+1+1)}{2}.\]}\end{solution}
+\vfill
+
+
+\item[S1-2] Let $A = \{1,2,4\}$ and $B = \{1,2,4,5\}$.  From the list $\in, \notin, =,\neq,\subseteq,\not\subseteq,\subset,\not\subset$, fill in a correct symbol for each of the following:
+		\begin{itemize}
+		\item $A\underline{\hspace{.25in}} B$
+		\item $\emptyset \underline{\hspace{.25in}} A$
+		\item $\{4,2,1\} \underline{\hspace{.25in}} B$
+		\end{itemize}
+		\begin{itemize}
+		\item \begin{solution} \blue{$A\subset B$ adn $A\subseteq B$ would both work.	}	\end{solution}
+
+		\item  \bs \blue{I would use $\emptyset \subset A$ here.} \end{solution}
+
+		\item \bs \blue{I would use $\{4,2,1\} \subset B$ here. Remember order in sets doesn't matter so it's also the case that $\{4,2,1\}=A$.}\end{solution}
+
+		\end{itemize}
+
+\newpage
+
+\item[S2-2] Let $U = \Z$. Let $A = \{x\in \Z: x\ge 7\}$ and $B = \{x\in\Z: x \text{ is odd}\}$.  (Roster method is okay for your answers, but make sure the pattern is clear.)
+		\begin{enumerate}
+		\item Find $A\cap B$ \bs \blue{$A\cap B$ is the set of all integers that are both odd and at least $7$. In roster notation this is $\{7,9,11,\dots\}$}\end{solution}
+		\vfill
+		\item Find $A \cup B$ 
+		\bs \blue{$A\cup B$ is the set of all numbers that are at least $7$ or are odd. In roster notation this is $\{\dots, -3,-1,1,3,5,7,8,9,10,11,\dots\}$} \end{solution}
+		\vfill
+		\item Find $A^C$ 
+		\bs \blue{$A^c$ is the set of all numbers less than $7$. In roster notation this is $\{\dots, 4,5,6\}$.}\end{solution}
+		\vfill
+		\item Find $A-B$ \bs \blue{This is the set of all even numbers that are at least $7$ (because they are in $A$ but not in $B$. So $\{8,10,12,14\dots\}$.}\end{solution}
+\vfill
+		\end{enumerate}
+
+
+\item[S3-1]  Let $f: \mathbb{R} \to \mathbb{R}$ be defined by $f(x) = x^2-2$.
+		\begin{enumerate}
+		\item State the domain, codomain, and range of $f$. (Clearly state which one is which. You can graph this if it helps you.)
+		
+	\bs \blue{The domain and codomain are each given as $\R$. The range is the set of all real numbers that are at least $-2$, which one can see by graphing, these are all the outputs (or $y$ values).}\end{solution}
+		\vfill
+		\item Find the image(s) of $3$ under $f$.
+		\bs \blue{The image of $3$ under $f$ is $f(3) = 3^2-2 = 7$.}\end{solution}
+		\vfill
+		\item Find the preimage(s) of $0$.
+		\bs \blue{To find preimages we solve $0=x^2-2$ which gives $x=\sqrt{2}$ and $x= -\sqrt{2}$.}\end{solution}
+		\vfill
+		\end{enumerate}
+
+
+\end{itemize}	
+
+\end{document}

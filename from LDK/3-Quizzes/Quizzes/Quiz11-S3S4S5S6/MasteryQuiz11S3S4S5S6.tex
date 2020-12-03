@@ -1,0 +1,101 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx,amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\excludeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\newtheorem{thm}{Theorem}
+
+\usepackage{enumitem}
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 11}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	
+
+
+
+
+
+
+
+
+
+\item[S3-3]  Let $f: \Z\to \Z$ be defined by $f(m) = m+3$.
+		\begin{enumerate}
+		\item State the domain, codomain, and range of $f$. (Clearly state which one is which.)
+		\bs\blue{The domain is $\Z$ and the codomain is $\Z$, note these are both given in the definition of the function. The range in this case is also $\Z$ since the outputs will be $\{\dots, -1+3, 0+3,1+3,2+3,\dots\} = \{\dots, 2,3,4,5,\dots\}$.}\end{solution}
+		\vspace{1in}
+		\item Find the image(s) of $-1$ under $f$.
+		\bs\blue{Since $f(-1) = -1+3 = 2$, so the image of $-1$ under $f$ is $2$}\end{solution}
+		\vspace{1in}
+		\item Find the preimage(s) of $4$.
+		\bs\blue{Solve $f(x) = 4$ and take the ones that are in the domain. In this case $4=m+3$ gives only one preimage, $1$.}\end{solution}
+		\vspace{1in}
+		\end{enumerate} 
+
+
+\item[S4-2] Let $A$ and $B$ be sets. Carefully complete the definitions of the following terms. (Note: ``no collisions" and ``range=codomain" are helpful ways to think about these, but they are NOT the definitions.)
+		\begin{enumerate}
+		\item  A function $f: A \to B$ is injective provided that...
+		\bs\blue{for all $x,y\in A$ if $x\neq y$ then $f(x) \neq f(y)$}\end{solution}
+		\vspace{1in}
+		\item A function $f: A\to B$ is surjective provided that...
+		\bs \blue{for all $y\in B$, there exists $x\in A$ such that $f(x)=y$}\end{solution}
+		\vspace{1in}
+		\item A function $f: A\to B$ is bijective provided that...
+		\bs\blue{$f$ is both injective and surjective}\end{solution}
+		\vspace{1in}
+		\end{enumerate}
+
+
+\item[S6-2] Let $x,y\in\Z$ and $n\in\N$. State the definitions of the following:
+\begin{enumerate}
+\item $x\mid y$ (for nonzero $r$) \bs\blue{there exists an integer $k$ such that $xk=y$.}\end{solution}
+\vspace{.5in}
+\item  $x \equiv y\pmod{n}$.  
+\bs\blue{$n\mid x-y$}\end{solution}
+\vspace{.5in}
+\end{enumerate}
+
+Give an example of integers $x$ and $y$ such that $x\nmid y $ and $y<0$.
+\bs\blue{$x = 10$ and $y=-3$ then for all integers $k$, $10k \neq -3$. There are lots of answers to this question though!}\end{solution}
+\vspace{1in}
+
+\item[S5-1] For all $a,b\in \Z$ say $a\sim b$ if and only if $a\mid b$.  Is $\sim$ an equivalence relation? Explain.
+\bs \blue{This is not an equivalence relation. To justify you only have to explain one of not being reflexive or not being symmetric. This relation is not symmetric since $0\in\Z$ and $0\nmid 0$. It is also not symmetric since, for example, $2,6\in\Z$ and $2\mid 6$, but $6\nmid 2$.} \end{solution}
+
+\end{itemize}
+
+\end{document}

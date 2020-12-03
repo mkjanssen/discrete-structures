@@ -1,0 +1,128 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+
+\usepackage{amsmath,amssymb,graphicx,amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cM}{\mathcal{M}}
+\usepackage{xcolor}
+\newcommand{\blue}{\textcolor{blue}}
+
+\usepackage{versions}
+\excludeversion{solution}
+
+\newcommand{\bs}{\begin{solution}}
+\newcommand{\es}{\end{solution}}
+
+\newtheorem{thm}{Theorem}
+
+\usepackage{enumitem}
+
+
+\begin{document}
+\vspace{-1.2in}
+\begin{center} \textbf{\Large{Skill Mastery Quiz 10}} \\
+Communicating in Math (MTH 210-01)\\
+Winter 2020
+\end{center}
+
+
+
+\noindent Name: 
+
+
+
+
+\begin{itemize}
+	
+
+
+
+
+
+
+
+\item[S1-3] Let $A = \{0,1,2,3,\{4\}\}$.  Fill in a correct symbol   (from $\in$, $\subset$, $\subseteq$, $=$, $\neq$) for each of the following.
+		\begin{enumerate}
+		\item $\{4\} \underline{\hspace{.25in}} A$
+		\bs \blue{As usual, there's more than one answer, in this case I'd choose $\in$ since $\{4\}$ is one of the $5$ elements of $A$.}\end{solution}
+		\vspace{.25in}
+		\item $\{2\} \underline{\hspace{.25in}} A$
+		\bs \blue{More than one answer, I'd choose $\subset$ or $\subseteq$.}\end{solution}
+		\vspace{.25in}
+		\item $\{1,2,3\} \underline{\hspace{.25in}}A$
+		\bs\blue{I'd choose $\subseteq$}\end{solution}
+		\vspace{.25in}
+		\end{enumerate}
+
+
+\item[S2-3] Let $U = \{1,2,3,4,5,6,7,8,9,10\}$ be the universal set.  Let $A= \{2,4,6,8,10\}$ and $B = \{1,3\}$.
+		\begin{enumerate}
+		\item Find $A\cap B$.
+		\bs \blue{$A\cap B = \emptyset$ since they have no elements in common}\end{solution}
+		\vfill
+		\item Find $A^C$.
+		\bs \blue{$A^c = \{ 1,3,5,7,9\}$, everything that is in $U$ but not in $A$}\end{solution}
+		\vfill
+		\item Find  $A-B$.
+		\bs\blue{$A-B = \{2,4,6,8,10\}$. In this case $A-B = A$ since $A$ and $B$ have nothing in common.}\end{solution}
+		\vfill
+		\item Find $A\cup B$.
+		\bs\blue{$A\cup B = \{1,2,3,4,6,8,10\}$}\end{solution}
+		\vfill
+		\end{enumerate}
+
+
+
+\item[S3-2]  Let $\R^* = \{x\in \R: x\ge 0\}$.  Let $s: \R^* \to \R^*$ be defined by $f(x) = x^2$.
+		\begin{enumerate}
+		\item State the domain, codomain of $f$. (Clearly state which one is which.)
+		\bs\blue{The domain is $R^*$ and the codomain is $R^*$, note these are both given in the definition of the function. The range in this case is also $R^*$ since the graph shows all nonnegative real numbers are outputs.}\end{solution}
+		\vspace{1in}
+		\item Find the image(s) of $3$ under $f$.
+		\bs\blue{$f(3) = 3^2=9$, so the image of $3$ under $f$ is $9$}\end{solution}
+		\vspace{1in}
+		\item Find the preimage(s) of $4$.
+		\bs\blue{Solve $f(x) = 4$ and take the ones that are in the domain. In this case the only preimage is $2$ (since $-2$ is not in the domain).}\end{solution}
+		\vspace{1in}
+		\end{enumerate} 
+\newpage
+
+
+\item[S4-1] Let $A$ and $B$ be sets. Carefully complete the definitions of the following terms. (Note: ``no collisions" and ``range=codomain" are helpful ways to think about these, but they are NOT the definitions.)
+		\begin{enumerate}
+		\item  A function $f: A \to B$ is injective provided that...
+		\bs\blue{for all $x,y\in A$ if $x\neq y$ then $f(x) \neq f(y)$}\end{solution}
+		\vspace{1in}
+		\item A function $f: A\to B$ is surjective provided that...
+		\bs \blue{for all $y\in B$, there exists $x\in A$ such that $f(x)=y$}\end{solution}
+		\vspace{1in}
+		\item A function $f: A\to B$ is bijective provided that...
+		\bs\blue{$f$ is both injective and surjective}\end{solution}
+		\vspace{1in}
+		\end{enumerate}
+
+
+\item[S6-1] Let $r,s\in\Z$ and $n\in\N$. State the definitions of the following:
+\begin{itemize}
+\item $r\mid s$ (for nonzero $r$) \bs\blue{there exists an integer $k$ such that $rk=s$.}\end{solution}
+\vspace{.5in}
+\item  $r \equiv s\pmod{n}$.  
+\bs\blue{$n\mid r - s$}\end{solution}
+\vspace{.5in}
+\end{itemize}
+
+Give an example of integers $a$ and $b$ such that $a\equiv b \pmod{15}$ and $b<0$.
+\bs\blue{$a = 10$ and $b=-5$ then $10\equiv -5\pmod{15}$ since $15\mid 10-(-5)$. There are lots of answers to this question though!}\end{solution}
+\vspace{1in}
+\end{itemize}
+
+\end{document}

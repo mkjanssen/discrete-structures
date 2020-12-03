@@ -1,0 +1,236 @@
+\documentclass[11pt,answers]{exam}
+
+% Preamble % (fold)
+
+\usepackage[paper=letterpaper,margin=.75in,twoside=false,includehead]{geometry}
+
+\usepackage{amsfonts,amsmath,amsthm,amssymb} 
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\usepackage{paralist}
+\usepackage{multicol}
+\usepackage{bm}
+
+
+\let\svthefootnote\thefootnote
+
+\newtheorem*{thm}{Theorem}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\e}{\varepsilon}
+
+
+%\printsolutions
+
+\title{Communicating in Mathematics (MTH 210) Exam 2}
+\date{April 8, 2020}
+
+
+\begin{document}
+
+
+
+\maketitle
+
+\section*{Instructions}  
+
+
+
+\noindent The following are very important, please read carefully!
+\begin{itemize}
+\item This exam must be uploaded to Blackboard by \textbf{April 9 at 5PM}. Please plan to try to upload before then so you can get help if there are issues.
+\item Your exam should be scanned as a single PDF (with the app of your choosing) in black and white. Other file formats or color scans are sometimes too large for Blackboard to accept, and having to flip through multiple files makes grading difficult for Dr. Keough. You do not want to make grading difficult for your professors :)
+\item You can write your answers on whatever paper you have, or print the exam if you've got a printer. 
+\item You do not need to write down the whole question, but you should do the following:
+	\begin{itemize}
+	\item Start each section on a new page.
+	\item Clearly label at the top of \emph{every} page the section from which the problems are from.
+	\item Number each problem as it is numbered on the exam.
+	\end{itemize}
+\item You may use your notes and your textbook for this exam. However, you may NOT use any other resources, including, but not limited to, your classmates, friends you know in other sections, Blackboard, the internet, your mom, your dog, etc. Violation of this policy will be penalized and could result in failure of the course.
+\item There is no time limit on the exam, and you do not have to take it in one sitting. I do not expect this to take you more than 2 hours though!
+\end{itemize} 
+
+\begin{center}
+\textbf{If you aren't sure what to do, take a deep breath and just show me what you know. You'll be able to revise!}
+\end{center}
+
+
+
+
+\begin{center}
+
+
+\begin{tabular}{|c|c|c|}
+\hline
+Section &Score\\
+\hline
+Sets &\\
+&\\
+\hline
+Functions &\\
+&\\
+\hline
+Which Proof Technique &\\
+&\\
+\hline
+Proof Section &\\
+&\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sets}
+
+\begin{questions}
+
+
+\question This question is about definitions (and their negations) related to sets.  Describe precisely what you need to prove if you were trying to prove the following.
+
+Let $A$ and $B$ be subsets of some universal set $U$.
+
+\begin{parts}
+\part   If I needed to prove that $A\subset B$ I would need to... 
+\vspace{.5in}
+\part  If I needed to prove that $A= B$ I would need to...
+\vspace{.5in}
+\part If I needed to prove that $x\notin A \cap B$ I would need to...
+\vspace{.5in}
+\part  If I needed to prove that $x\in A - B$ I would need to...
+\vspace{.5in}
+\end{parts}
+
+\question Let $U = \{x\in\Z : 1\leq x \leq 20\}$. Define $A = \{1,3,5,7,9,11,13,15,17,19\}$, $B = \{7,10,13\}$, and $C = \{x,y\}$. Make sure to use proper notation in each of the following!
+
+\begin{parts}
+\part Show $B\not\subseteq A$.
+\vfill
+\part Find $\mathcal{P}(C)$.
+\vfill
+\part Find $B\times C$.
+\vfill
+\part Find $|A\cup B|$, that is, the cardinality of $A\cup B$.
+\vfill
+\end{parts}
+
+\end{questions}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Functions}
+
+\begin{questions}
+
+\question 
+
+Let $f: \R\to\R$ be defined by $f(x) = \sin(x)$. (You may use graphing software to graph this.)
+	
+\begin{parts}
+\part Explain why $f$ is a function. You should state the definition of function in your answer.
+\vfill
+\vfill
+\part What is the codomain of $f$?
+\vspace{.2in}
+\part Use the word preimage in a sentence about the function $f$.
+\vfill
+\part Is $f$ an injection? Justify your answer using the definition of injection.
+\vfill
+\part Is $f$ a surjection? Justify your answer using the definition of surjection.
+\vfill
+
+%\part Is $f$ a bijection? Justify your answer using the definition of bijection.
+%\vfill
+\end{parts}
+
+\question Let $A = \{1,2,3\}$ and $B = \{x,w\}$. 
+ Give an example of a function $f:A\to B$ that is a bijection or explain why no such example exists.
+\vfill
+
+
+\end{questions}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Which Proof Technique When?}
+
+Over the next 2 pages are 4 theorem statements with which you will need to do 3 things:
+	\begin{itemize}
+	\item State which proof technique you would use. Your options are: direct, contrapositive, contradiction, cases, and induction.
+	\item Explain your choice of proof technique.\footnote{As a reminder - for the second bullet you should be specific - what was the key? Something about the hypothesis or conclusion?
+}
+	\item Outline the steps in a proof using the proof technique (but you should not actually attempt to prove the statement). You should say what you would assume and what you would try to prove. \footnote{In the third bullet you need to be detailed - for a proof by cases, what cases would you use? For a proof by induction, what steps would you use (and what's $P(k)$?)? In each case you need to be as specific as possible - do not say ``I would assume the negation", say what the negation actually is. }
+	 
+	\end{itemize}
+\emph{You should NOT actually prove any of the following theorems.}
+
+\begin{questions}
+\question Let $f_n$ be the $n^{th}$ Fibonacci number. For all natural numbers $n$, $3\mid f_{4n}$.
+
+\vfill
+
+\question For each integer $a$, $a^3 \equiv a \pmod{3}$.
+\vfill
+\newpage
+
+%\question If $A = \{x\in\Z : x\equiv 0 \pmod{2}\}$ and $B = \{y\in \Z: y \equiv 0\pmod{4}\}$ then $A\subseteq B$.
+%\vfill
+\question For all integers $a$, if $a^2\not\equiv  0\pmod{3}$ then $a\not\equiv 0\pmod{3}$.
+\vfill
+
+\question For all $x,y\in \mathbb{R}$, and for all integers $a$ and $b$ with $b\neq 0$, if $x$ is rational and $y$ is irrational, then $ax+by$ is irrational.
+\vfill
+
+\end{questions}
+
+\newpage
+
+\section{Proofs}
+
+IMPORTANT DIRECTIONS: You need to do both of the following proofs. Each proof needs to be written according to our writing guidelines.  Don't forget to include a theorem statement (which should always be declarative sentences)! The next page is for the first proof and the page after is for the second proof. Please include any scratch work you have in the PDF, but label it ``scratch work".
+
+\begin{enumerate}
+\item Prove the following theorem. The proof needs to be written according to our writing guidelines.
+
+\begin{center}
+For each $n\in\N$, $5\mid n^5+4n$.
+\end{center}
+It will probably be helpful for you to know that 
+\[(k+1)^5 = k^5+5k^4+10k^3+10k^2+5k+1.\]
+You can use this without showing work for it.
+
+
+\item Determine the relationship between the sets $A$ and $B$ and prove it. You should write your proof according to our writing guidelines.
+
+\begin{center}
+Let $A = \{x\in\Z : x\equiv 3 \pmod{6} \}$ and $B = \{ x\in \Z : 4\mid x\}$ . Determine a relationship between the sets $A$ and $B$, state the relationship as a theorem, and prove it.
+\end{center}
+
+
+
+
+\end{enumerate}
+
+\newpage
+
+\emph{If you printed the exam you can write your proof for  on this page. }
+
+
+\newpage
+
+\emph{If you printed the exam you can write your proof for 2 on this page. }
+
+\end{document}
