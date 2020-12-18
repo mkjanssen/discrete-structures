@@ -4,6 +4,7 @@ title: 'Discrete Structures'
 
 ## Course Information
 
+* **Institution**: Dordt University
 * **Course**: Math 212-01 (3 cr.)
 * **Term**: Spring 2021
 * **Instructor**: Dr. Mike Janssen, Associate Professor of Mathematics
@@ -32,11 +33,11 @@ title: 'Discrete Structures'
 
 In this course, students will:
 
-* be a _communicator_ through regular presentations to the Math 212 learning community and growing fluency in the writing of mathematical proofs. (CD)
-* be an _explorer_ by engaging with in-class activities and regular work outside the classroom. (CD)
-* be a _connector_ by building relationships between real-world questions and discrete mathematical tools for answering them. (CS)
-* be a _learner_ by leveraging knowledge of logic, functions, and sets to explore foundational questions in discrete mathematics. (CS)
-* be an _ambassador_ by reflecting on the ways the practice of mathematics can promote human flourishing. (RO, CD, CR)
+* be _communicators_ through regular presentations to the Math 212 learning community and growing fluency in the writing of mathematical proofs. (CD)
+* be _explorers_ by engaging with in-class activities and regular work outside the classroom. (CD)
+* be _connectors_ by building relationships between real-world questions and discrete mathematical tools for answering them. (CS)
+* be _learners_ by leveraging knowledge of logic, functions, and sets to explore foundational questions in discrete mathematics. (CS)
+* be _ambassadors_ by reflecting on the ways the practice of mathematics can promote human flourishing. (RO, CD, CR)
 
 
 

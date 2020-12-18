@@ -1,48 +1,48 @@
-﻿Week,Day,Topic,Work Due
-1,[15-Jan](notes/Jan-15.html),Course intro,
-2,[18-Jan](notes/Jan-18.html),0.2 Statements and Implications,
-2,[20-Jan](notes/Jan-20.html),0.2: Predicates and Quantifiers,
-2,[22-Jan](notes/Jan-22.html),0.3: Sets and Relationships,Quiz; Edfinity 0.2
-3,[25-Jan](notes/Jan-25.html),0.3: Operations on Sets,
-3,[27-Jan](notes/Jan-27.html),Relations and Equivalence Relations,Portfolio Problem 0; Edfinity 0.3
-3,[29-Jan](notes/Jan-29.html),Relations and Equivalence Relations,Quiz
-4,[1-Feb](notes/Feb-01.html),0.4: Functions,M4HF Reflection: Chs. 1-5
-4,[3-Feb](notes/Feb-03.html),**Reading discussion**; 0.4: Functions,Portfolio Problem I
-4,[5-Feb](notes/Feb-05.html),0.4: Functions,Quiz
-5,[8-Feb](notes/Feb-08.html),1.1: Additive and Multiplicative Principles,Edfinity 0.4
-5,[10-Feb](notes/Feb-10.html),1.1: Counting with Sets; PIE,
-5,[12-Feb](notes/Feb-12.html),1.2: Binomial Coefficients I,Quiz; Edfinity 1.1
-6,15-Feb,**No class**,
-6,[17-Feb](notes/Feb-17.html),1.2: Binomial Coefficients II,Portfolio Problem II
-6,[19-Feb](notes/Feb-19.html),1.3: Combinations and Permutations,M4HF Reflection: Chs. 6-7; Quiz; Edfinity 1.2
-7,[22-Feb](notes/Feb-22.html),1.4: Combinatorial Proofs,Edfinity 1.3
-7,[24-Feb](notes/Feb-24.html),1.4: Combinatorial Proofs,
-7,[26-Feb](notes/Feb-26.html),1.5: Stars and Bars,Quiz; Edfinity 1.4
-8,[1-Mar](notes/Mar-01.html),1.6: Advanced Counting with PIE,Edfinity 1.5
-8,[3-Mar](notes/Mar-03.html),Catchup and Review,Portfolio Problem III; Edfinity 1.6
-8,[5-Mar](notes/Mar-05.html),**Midterm I**,
-9,[8-Mar](notes/Mar-08.html),2.1: Sequences,
-9,[10-Mar](notes/Mar-10.html),2.2: Arithmetic and Geometric Sequences,Edfinity 2.1
-9,[12-Mar](notes/Mar-12.html),2.3: Polynomial Fitting,Quiz; Edfinity 2.2
-10,[15-Mar](notes/Mar-15.html),2.4: Recurrence relations,Edfinity 2.3
-10,[17-Mar](notes/Mar-17.html),2.5: Induction I,Portfolio Problem IV; Edfinity 2.4
-10,[19-Mar](notes/Mar-19.html),2.5: Induction II,
-11,[22-Mar](notes/Mar-22.html),3.1: Propositional Logic I,M4HF Reflection: Chs. 8-11; Edfinity 2.5
-11,[24-Mar](notes/Mar-24.html),**Reading discussion**; 3.1: Propositional Logic,
-11,[26-Mar](notes/Mar-26.html),3.2: Direct Proofs,Quiz; Edfinity 3.1
-12,[29-Mar](notes/Mar-29.html),3.2: Proofs by Contrapositive/Proofs by Contradiction,
-12,[31-Mar](notes/Mar-31.html),3.2: Other Proof Techniques,Portfolio Problems V-IX
-12,[2-Apr](notes/Apr-02.html),4.1: Intro to Graph Theory,Quiz; Edfinity 3.2
-13,[5-Apr](notes/Apr-05.html),4.1: Intro to Graph Theory,
-13,7-Apr,**No class**,
-13,[9-Apr](notes/Apr-09.html),Portfolio work,Quiz; Edfinity 4.1
-14,[12-Apr](notes/Apr-12.html),4.2: Trees I,
-14,[14-Apr](notes/Apr-14.html),4.2: Trees II,Portfolio Problems X-XIII
-14,[16-Apr](notes/Apr-16.html),4.3: Planar graphs,Quiz; Edfinity 4.2
-15,[19-Apr](notes/Apr-19.html),4.4: Coloring,Edfinity 4.3
-15,[21-Apr](notes/Apr-21.html),4.5: Euler Paths and Circuits,"M4HF Reflection: Chs. 12-13, Epilogue; Edfinity 4.4"
-15,[23-Apr](notes/Apr-23.html),4.6: Matching in Bipartite Graphs,Quiz; Edfinity 4.5
-16,[26-Apr](notes/Apr-26.html),**Reading discussion**; 5.1: Generating Functions,Edfinity 4.6
-16,[28-Apr](notes/Apr-28.html),5.1: Generating Functions,Portfolio Problems XIV-XV
-16,[30-Apr](notes/Apr-30.html),**Midterm II**,
-Finals,,Portfolio,
+﻿Week,Day,Topic,Work Due,
+1,[15-Jan](notes/Jan-15.html),Course intro,,1
+2,[18-Jan](notes/Jan-18.html),0.2 Statements and Implications,,1
+2,[20-Jan](notes/Jan-20.html),0.2: Predicates and Quantifiers,,1
+2,[22-Jan](notes/Jan-22.html),0.3: Sets and Relationships,Quiz; Edfinity 0.2,3
+3,[25-Jan](notes/Jan-25.html),0.3: Operations on Sets,,1
+3,[27-Jan](notes/Jan-27.html),Relations and Equivalence Relations,Portfolio Problem 0; Edfinity 0.3,1
+3,[29-Jan](notes/Jan-29.html),Relations and Equivalence Relations,Quiz,3
+4,[1-Feb](notes/Feb-01.html),0.4: Functions,M4HF Reflection: Chs. 1-5,1
+4,[3-Feb](notes/Feb-03.html),**Reading discussion**; 0.4: Functions,Portfolio Problem I,1
+4,[5-Feb](notes/Feb-05.html),0.4: Functions,Quiz,3
+5,[8-Feb](notes/Feb-08.html),1.1: Additive and Multiplicative Principles,Edfinity 0.4,1
+5,[10-Feb](notes/Feb-10.html),1.1: Counting with Sets; PIE,,1
+5,[12-Feb](notes/Feb-12.html),1.2: Binomial Coefficients I,Quiz; Edfinity 1.1,3
+6,15-Feb,**No class**,,
+6,[17-Feb](notes/Feb-17.html),1.2: Binomial Coefficients II,Portfolio Problem II,1
+6,[19-Feb](notes/Feb-19.html),1.3: Combinations and Permutations,M4HF Reflection: Chs. 6-7; Quiz; Edfinity 1.2,3
+7,[22-Feb](notes/Feb-22.html),1.4: Combinatorial Proofs,Edfinity 1.3,1
+7,[24-Feb](notes/Feb-24.html),1.4: Combinatorial Proofs,,1
+7,[26-Feb](notes/Feb-26.html),1.5: Stars and Bars,Quiz; Edfinity 1.4,3
+8,[1-Mar](notes/Mar-01.html),1.6: Advanced Counting with PIE,Edfinity 1.5,1
+8,[3-Mar](notes/Mar-03.html),Catchup and Review,Portfolio Problem III; Edfinity 1.6,1
+8,[5-Mar](notes/Mar-05.html),**Midterm I**,,1
+9,[8-Mar](notes/Mar-08.html),2.1: Sequences,,1
+9,[10-Mar](notes/Mar-10.html),2.2: Arithmetic and Geometric Sequences,Edfinity 2.1,1
+9,[12-Mar](notes/Mar-12.html),2.3: Polynomial Fitting,Quiz; Edfinity 2.2,3
+10,[15-Mar](notes/Mar-15.html),2.4: Recurrence relations,Edfinity 2.3,1
+10,[17-Mar](notes/Mar-17.html),2.5: Induction I,Portfolio Problem IV; Edfinity 2.4,1
+10,[19-Mar](notes/Mar-19.html),2.5: Induction II,,3
+11,[22-Mar](notes/Mar-22.html),3.1: Propositional Logic I,M4HF Reflection: Chs. 8-11; Edfinity 2.5,1
+11,[24-Mar](notes/Mar-24.html),**Reading discussion**; 3.1: Propositional Logic,,1
+11,[26-Mar](notes/Mar-26.html),3.2: Direct Proofs,Quiz; Edfinity 3.1,3
+12,[29-Mar](notes/Mar-29.html),3.2: Proofs by Contrapositive/Proofs by Contradiction,,1
+12,[31-Mar](notes/Mar-31.html),3.2: Other Proof Techniques,Portfolio Problems V-IX,1
+12,[2-Apr](notes/Apr-02.html),4.1: Intro to Graph Theory,Quiz; Edfinity 3.2,3
+13,[5-Apr](notes/Apr-05.html),4.1: Intro to Graph Theory,,1
+13,7-Apr,**No class**,,
+13,[9-Apr](notes/Apr-09.html),Portfolio work,Quiz; Edfinity 4.1,3
+14,[12-Apr](notes/Apr-12.html),4.2: Trees I,,1
+14,[14-Apr](notes/Apr-14.html),4.2: Trees II,Portfolio Problems X-XIII,1
+14,[16-Apr](notes/Apr-16.html),4.3: Planar graphs,Quiz; Edfinity 4.2,3
+15,[19-Apr](notes/Apr-19.html),4.4: Coloring,Edfinity 4.3,1
+15,[21-Apr](notes/Apr-21.html),4.5: Euler Paths and Circuits,"M4HF Reflection: Chs. 12-13, Epilogue; Edfinity 4.4",1
+15,[23-Apr](notes/Apr-23.html),4.6: Matching in Bipartite Graphs,Quiz; Edfinity 4.5,3
+16,[26-Apr](notes/Apr-26.html),**Reading discussion**; 5.1: Generating Functions,Edfinity 4.6,1
+16,[28-Apr](notes/Apr-28.html),5.1: Generating Functions,Portfolio Problems XIV-XV,1
+16,[30-Apr](notes/Apr-30.html),**Midterm II**,,1
+Finals,,Portfolio,,70
