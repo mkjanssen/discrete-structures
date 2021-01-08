@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-12-17T13:57:29-06:00       *-->
+<!--*       on 2021-01-08T11:02:46-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Jan. 20</title>
+<title>Jan. 20: Predicates and Quantifiers</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -87,6 +87,8 @@ MathJax.Hub.Config({
 \newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
 \def\p{\varphi}
 \def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
 \def\Gal{\text{Gal}}
 \def\im{\text{im}}
 \def\normal{\vartriangleleft}
@@ -112,7 +114,7 @@ MathJax.Hub.Config({
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Course Notes</span></a></h1>
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Learning Guides</span></a></h1>
 <p class="byline">Mike Janssen</p>
 </div>
 </div></div>
@@ -127,15 +129,18 @@ MathJax.Hub.Config({
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul><li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Students</a></li></ul>
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+</ul>
 </li>
 <li class="link">
-<a href="Week-01.html" data-scroll="Week-01"><span class="codenumber">1</span> <span class="title">Week 1: Jan. 15</span></a><ul><li><a href="Jan-15.html" data-scroll="Jan-15">Jan. 15</a></li></ul>
+<a href="Week-01.html" data-scroll="Week-01"><span class="codenumber">1</span> <span class="title">Week 1: Jan. 15</span></a><ul><li><a href="Jan-15.html" data-scroll="Jan-15">Jan. 15: Course Intro/Statements</a></li></ul>
 </li>
 <li class="link">
 <a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
-<li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18</a></li>
-<li><a href="Jan-20.html" data-scroll="Jan-20" class="active">Jan. 20</a></li>
+<li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20" class="active">Jan. 20: Predicates and Quantifiers</a></li>
 <li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22</a></li>
 </ul>
 </li>
@@ -238,8 +243,89 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Jan-20"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Jan. 20</span>
-</h2></section></div></main>
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Jan. 20: Predicates and Quantifiers</span>
+</h2>
+<section class="introduction" id="introduction-5"><article class="assemblage assemblage-like" id="assemblage-6"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
+<p id="p-33">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-40">How do we introduce variables into our matheamtical statements?</li>
+<li id="li-41">What types of quantifiers exist in matheamtics?</li>
+<li id="li-42">How do we negate quantified statements?</li>
+</ol></p></article></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-34">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#IYE" target="_blank">"Predicates and Quantifiers" part of Section 0.2</a>. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.2.1.1</span> <span class="title">Predicates and Quantifiers</span>
+</h4>
+<p id="p-35">In order to make use of the work we've done on statements to do actual mathematics, we need a way of introducing variables. A sentence with a variable is known as a <dfn class="terminology">predicate</dfn>.</p>
+<p id="p-36">Consider the sentence "\(m\) is composite". Is this true, false, or not a statement?</p>
+<p id="p-37">What we need to do is specify a quantifier and domain of discourse for our variable. In mathematics, we deal with two quantifiers: the existential quantifier and the universal quantifier.</p>
+<article class="assemblage assemblage-like" id="mlh"><h6 class="heading"><span class="title">Universal and Existential Quantifiers.</span></h6>
+<p id="ARC">The existential quantifier is \(\exists\) and is read “there exists” or “there is.” For example, </p>
+<div class="displaymath">
+\begin{equation*}
+\exists x (x \lt 0)
+\end{equation*}
+</div>
+<p data-braille="continuation">asserts that there is a number less than 0.</p>
+<p id="gYL">The universal quantifier is \(\forall\) and is read “for all” or “every.” For example, </p>
+<div class="displaymath">
+\begin{equation*}
+\forall x (x \ge 0)
+\end{equation*}
+</div>
+<p data-braille="continuation">asserts that every number is greater than or equal to 0.</p></article><article class="activity project-like" id="activity-4"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h6>
+<p id="dSK">Translate into English:</p>
+<ol class="decimal">
+<li id="li-43">\(\forall x (E(x) \imp E(x +2))\text{.}\) (The statement "\(E(m)\)" means that \(m\) is even.)</li>
+<li id="li-44">\(\forall x \exists y (\sin(x) = y)\text{.}\)</li>
+<li id="li-45">\(\forall y \exists x (\sin(x) = y)\text{.}\)</li>
+<li id="li-46">\(\forall x \forall y (x^3 = y^3 \imp x = y)\text{.}\)</li>
+</ol></article><article class="activity project-like" id="activity-5"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-41">Determine whether the following sentences are true, false, or not statements. If the sentence is not a statement, can you modify it, e.g., by defining a domain of discourse, which makes it into a statement? Be sure that you can explain your thinking.</p>
+<ol class="decimal">
+<li id="li-47">For all integers \(x, x^3 \ge 0\text{.}\)</li>
+<li id="li-48">For all integers \(y\text{,}\) \(y\) can be written as the sum of distinct powers of 2.</li>
+<li id="li-49">\(\displaystyle \forall x \forall y (x-y \le 0)\)</li>
+<li id="li-50">\(\displaystyle \forall x\forall y(x^2 = y^2 \imp x = y)\)</li>
+</ol></article></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.2.1.2</span> <span class="title">Negating Quantified Statements</span>
+</h4>
+<p id="p-42">Much of the time, quantifiers are relatively straightforward, even implied by a precise way of speaking. One exception to this is when we seek to negate a quantified statement.</p>
+<article class="assemblage assemblage-like" id="Ssq"><h6 class="heading"><span class="title">Quantifiers and Negation.</span></h6>
+<blockquote class="blockquote" id="dBp">
+<p id="Mwa">\(\neg \forall x P(x)\) is equivalent to \(\exists x \neg P(x)\text{.}\)</p>
+<p id="sDj">\(\neg \exists x P(x)\) is equivalent to \(\forall x \neg P(x)
+\text{.}\)</p>
+</blockquote></article><article class="exploration project-like" id="exploration-5"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-45">Determine the best possible negations of the following statements. Focus on negating all predicates that are furthest embedded in the sentence. If the statement is given as an English language sentence, give your negation as an English language sentence. <aside class="aside aside-like" id="aside-2">Note that the symbol \(\in\) means that the variable is in the indicated set; more on sets next time! Moreover, \(\R\) is the set of real numbers, i.e., the number line.</aside></p>
+<ol class="decimal">
+<li id="li-51">\(\displaystyle \forall x\in \R (x&gt;0 \lor x = 0)\)</li>
+<li id="li-52">\(\displaystyle \forall x\in \R \exists y\in \R (x^2 = y^2 \land x\ne y)\)</li>
+<li id="li-53">Every integer \(x\) satisfies the equation \(x+5=3\)</li>
+<li id="li-54">Every integer is even or every integer is odd</li>
+<li id="li-55">Every continuous function is differentiable</li>
+</ol></article></section></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-3"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h6></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-56">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-57">Watch the screencast above.</li>
+<li id="li-58">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-59">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
 </div>
 </body>
 </html>

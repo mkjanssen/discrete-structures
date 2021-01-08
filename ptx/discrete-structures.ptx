@@ -34,6 +34,8 @@
 \newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
 \def\p{\varphi}
 \def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
 \def\Gal{\text{Gal}}
 \def\im{\text{im}}
 \def\normal{\vartriangleleft}
@@ -95,9 +97,14 @@
     
         </titlepage>
 
-    
+    <acknowledgement>
+      <p>
+        We wish to acknowledge Dr. Oscar Levin's excellent <url href="http://discrete.openmathbooks.org/dmoi3.html"><emph>Discrete Mathematics: An Open Introduction</emph></url>, the text on which these notes are based.
+        We also wish to acknowledge the contributions of some activities created/shared by Dr. Lauren Keough, which appear throughout the notes.
+      </p>
+    </acknowledgement>
 
-    <preface xml:id="Sec-NoteToInstructors">
+    <preface xml:id="Sec-NoteToStudents">
       <title>A Note to Students</title>
       <p>
       This work was compiled with some strong opinions.
@@ -121,8 +128,14 @@
     <chapter xml:id="Week-01">
       <title>Week 1: Jan. 15</title>
       
+      <introduction>
+        <p>
+            This week (well, the only day we meet), we'll focus on getting to know one another, getting a sense of what this course will be about, and working in a hands-on fashion on some discrete math problems.
+          </p>
+      </introduction>
+      
       <section xml:id="Jan-15">
-        <title>Jan. 15</title>
+        <title>Jan. 15: Course Intro/Statements</title>
         
         <introduction>
         
@@ -132,7 +145,9 @@
           <statement>
             Here are some questions we'll consider.
             <ol>
-              <li>Testing 1 2 3</li>
+              <li>What is this class about?</li>
+              <li>How will the class run?</li>
+              <li>What are <term>statements</term>?</li>
             </ol>
           </statement>
           </p>
@@ -145,6 +160,124 @@
          
         </introduction>
         
+        <subsection>
+          <title>Outline</title>
+          
+          <p>
+            Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html">Sectino 0.2 of the book</url>, up through "Truth Conditions for Connectives". You're encouraged to read it before coming to class.
+          </p>
+          
+          <p>
+            We'll begin with an overview of the class. Watch the screencast below and read the <url href="https://prof.mkjanssen.org/ds">syllabus</url> for more information. Then, it's math time!
+          </p>
+          
+          
+          
+          
+          
+          <p permid="NfU">
+            <idx><h>statement</h></idx>
+            <idx><h>atomic statement</h></idx>
+            <idx><h>molecular statement</h></idx>
+      
+            Our first definition is that of a <term>statement</term>, which
+            is any declarative sentence which is either true or false.
+            A statement is
+            <term>atomic</term> if it cannot be divided into smaller statements,
+            otherwise it is called
+            <term>molecular</term>.
+          </p>
+          
+          <exploration>
+            <statement>
+              <p>
+                In groups of 2-3, determine whether the following are statements. Be sure you can explain your thinking!
+                
+                <ol>
+                  <li>The integer 3 is odd. </li>
+                \begin{solution}\blue{This is a statement, and it happens to be true.}\end{solution}
+                  <li> Prove the Reimann Hypothesis.</li>
+                
+                  <li> There exists a real number such that <m>x^2 + 4x= 9</m>. </li>
+                
+                  <li> <m>x^2+4x=9</m>. </li>
+                  <li> <m>0=1</m> </li>
+                
+                  <li>All cats are grey. </li>
+                
+                  <li> All cats are adorable. </li>
+                  <li> This is really difficult! </li>
+                
+                  <li> (Challenge) This statement is false.</li>
+                </ol>
+              </p>
+            </statement>
+          </exploration>
+          
+          
+          <activity>
+            <statement>
+              <p>
+                Give an example and a non-example of a statement.
+              </p>
+            </statement>
+            </activity>
+            
+            
+            <p>
+              Our definition of statement above mentions that statements can be <emph>combined</emph> somehow to build molecular statements.
+              This is done via <term>logical connectives</term>.
+              There are five connectives we'll consider (though you can build many more):
+            </p>
+            <ol>
+              <li>and</li>
+              <li>or</li>
+              <li>if..., then...</li>
+              <li>if and only if</li>
+              <li>not</li>
+            </ol>
+          
+          
+          
+          <exploration xml:id="expl-redblue">
+            <statement>
+              <p>
+                A mathematician places a set of four cards on a table, each of which has a number on one side and a colored patch on the other side. She claims the following: 
+                
+                <blockquote>
+                If a card shows an even number on one face, then its opposite face is red.
+                </blockquote>
+                 
+                  The visible faces of the cards show 3, 8, red, and blue. Which card(s) must you turn over in order to test the truth of her claim? Carefully explain.
+              </p>
+            </statement>
+            </exploration>
+          
+          
+        </subsection>
+        
+        <subsection>
+          <title>Today's Screencast</title>
+          
+          
+          <insight>
+          
+          </insight>
+          
+        </subsection>
+        
+        
+        <subsection>
+          <title>If you missed class today</title>
+          
+          <ol>
+            <li>Work through today's outline and read the marked pages in the book.</li>
+            <li>Watch the screencast above.</li>
+            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+          </ol>
+          
+        </subsection>
         
         
         
@@ -156,16 +289,475 @@
     <chapter xml:id="Week-02">
       <title>Week 2: Jan. 18-22</title>
       
+      <introduction>
+        <p>
+            This week, we dive into the building blocks of mathematics: statements and sets.
+            We'll take our first quiz on Friday, and the first Edfinity assingnment will also be due on Friday.
+          </p>
+      </introduction>
+      
       <section xml:id="Jan-18">
-        <title>Jan. 18</title>
+        <title>Jan. 18: Implications</title>
         
+        <introduction>
+          
+          <assemblage>
+            <title>Motivating Questions</title>
+            <p>
+            <statement>
+            Here are some questions we'll consider.
+            <ol>
+              <li>When is a conditional statment <m>P\to Q</m> true?</li>
+              <li>How is a conditional statement related to its converse and contrapositive?</li>
+              <li>What is a logical equivalence?</li>
+            </ol>
+            </statement>
+            </p>
+            
+          </assemblage>
+          
+          
+            
+            
+           
+          </introduction>
+          
+          <subsection>
+            <title>Outline</title>
+            
+            <p>
+            Today's material begins with <q><url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#cRv">Implications</url></q> and concludes right after <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#vET">Example 0.2.9</url>. You're encouraged to read it before coming to class.
+            </p>
+            
+            <subsubsection>
+              <title>Implications</title>
+            
+            
+           <p>
+             We begin with a reminder of the following definition.
+           </p>
+            
+           <assemblage permid="Buf">
+             <title>Implications</title>
+               <idx><h>implication</h></idx>
+               <idx><h>conditional</h></idx>
+               <idx><h>antecedent</h><see>hypothesis</see></idx>
+               <idx><h>consequent</h><see>conclusion</see></idx>
+               <idx>hypothesis</idx>
+               <idx>conclusion</idx>
+       
+             <p permid="QaA">
+               An <term>implication</term> or <term>conditional</term>
+               is a molecular statement of the form
+               <me permid="NPO">
+                 P \to Q
+               </me>
+               where <m>P</m> and <m>Q</m> are statements.
+               We say that
+       
+               <ul permid="LxL">
+                 <li permid="WGK">
+                   <m>P</m> is the <term>hypothesis</term>
+                   (or <term>antecedent</term>).
+                 </li>
+       
+                 <li permid="iVc">
+                   <m>Q</m> is the <term>conclusion</term>
+                   (or <term>consequent</term>).
+                 </li>
+               </ul>
+             </p>
+       
+             <p permid="whJ">
+               An implication is <em>true</em>
+               provided <m>P</m> is false or <m>Q</m> is true
+               (or both),
+               and <em>false</em> otherwise.
+               In particular, the only way for
+               <m>P \to Q</m> to be false is for <m>P</m> to be true
+               <em>and</em> <m>Q</m> to be false.
+             </p>
+           </assemblage>
+           
+           <exploration>
+             <statement>
+               <p>
+                 It is a well known law in the United States that you must be 21 to consume alcohol. Suppose now that four cards are placed on the table each of which has an age on one side and a beverage on the other. The visible faces of the cards show 16, 22, coca-cola, and beer. If each card represents a person at a party, which card(s) must you check to make sure everyone at the party is a law abiding citizen? That is, which card(s) must you turn over to verify the proposition:
+               </p>
+               <blockquote>
+                 if one is consuming an alcoholic beverage then one is over the age of 21
+               </blockquote>
+               <p>
+                 How does this relate to <xref ref="expl-redblue" />?
+               </p>
+             </statement>
+             </exploration>
+           
+           
+           <exploration>
+             <statement>
+               <p>
+                 This exercise is practice with checking if a conditional statement is true. Consider the following conditional statement:
+                 
+                 <blockquote>
+                   If I win the lottery, every student in this class gets an A.
+                 </blockquote>
+                 In this conditional statement, what is the hypothesis and what is the conclusion?
+                 Which of the following circumstances make the conditional statement bolded above false?
+               </p>
+               <ol>
+                 <li>I win the lottery and every student in this class gets an A.</li>
+                 <li>I win the lottery and not every student in this class gets an A.</li>
+                 <li>I don’t win the lottery and everyone in this class gets an A.</li>
+                 <li>I don’t win the lottery and not everyone in this class gets an A.</li>
+               </ol>
+             </statement>
+             </exploration>
+           
+            </subsubsection>
+            
+            <subsubsection> 
+              <title>Causality and Direct Proof</title>
+              
+              <p>
+                Recall that the truth values of molecular statements are determined entirely by the truth values of their parts and the nature of their connectives. There need be no relationship between the parts at all.
+              </p>
+              
+              <activity xml:id="act-imptf">
+                <statement>
+                  <p>
+                    Are the following statements true or false? Explain how you know.
+                  </p>
+                  <ol>
+                    <li>If <m>1+2=3</m>, then John Calvin wrote the Institutes.</li>
+                    <li>If Homer Simpson is the president of Dordt University, then Marge Simpson is the president of Northwestern College.</li>
+                    <li>If <m>0=1</m>, then Dr. Janssen's first cat was named Bethany.</li>
+                  </ol>
+                </statement>
+                </activity>
+                
+                
+            </subsubsection>
+            
+            <subsubsection>
+              <title>Converse and Contrapositive</title>
+            
+            <p>
+              We begin with a definition.
+            </p>
+            
+            <assemblage permid="NIx">
+              <title>Converse and Contrapositive</title>
+              <p permid="Iwb">
+                <ul permid="rEU">
+                  <li permid="Pcl">
+                    <p permid="izD">
+                      The
+                      <term>converse</term>
+                          <idx><h>converse</h></idx>
+                      of an implication
+                      <m>P \imp Q</m> is the implication
+                      <m>Q \imp P</m>.
+                      The converse is
+                      NOT logically equivalent to the original implication.
+                      That is, whether the converse of an implication is true is independent of the truth of the implication.
+                    </p>
+                  </li>
         
+                  <li permid="vju">
+                    <p permid="OGM">
+                      The
+                      <term>contrapositive</term>
+                          <idx><h>contrapositive</h></idx>
+                      of an implication
+                      <m>P \imp Q</m> is the statement
+                      <m>\neg Q \imp \neg P</m>.
+                      An implication and its contrapositive are logically equivalent
+                      (they are either both true or both false).
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </assemblage>
+            
+            <activity>
+              <statement>
+                <p>
+                  Find the converse and contrapositive for each statement in <xref ref="act-imptf" />. Are your new statements true or false? Why?
+                </p>
+              </statement>
+              </activity>
+              
+              <p>
+                When constructing proofs, it is sometimes helpful to prove the contrapositive of a conditional rather than the conditional itself. The downside of this approach is that we generally lose the causal chain; rather than explaining why statement <m>Q</m> follows from <m>P</m>, we show that <m>P</m> could not be true if <m>Q</m> were not. <aside>I recognize that this is pretty abstract! More details when we get to chapter 3.</aside>
+              </p>
+            
+            </subsubsection>
+            
+            
+            <subsubsection>
+              <title>Logical Equivalence</title>
+              
+              <assemblage permid="tPG">
+                <title>If and only if</title>
+                <idx><h>if and only if (logical connective)</h></idx>
+                <idx><h>biconditional</h></idx>
+                <blockquote permid="xug">
+                  <p permid="goR">
+                    <m>P \iff Q</m> is logically equivalent to <m>(P \imp Q) \wedge (Q \imp P)</m>.
+                  </p>
+                </blockquote>
+          
+                <p permid="oDk">
+                  Example: Given an integer <m>n</m>,
+                  it is true that <m>n</m> is even if and only if <m>n^2</m> is even.
+                  That is, if <m>n</m> is even,
+                  then <m>n^2</m> is even, as well as the converse:
+                  if <m>n^2</m> is even, then <m>n</m> is even.
+                </p>
+              </assemblage>
+              
+              
+              
+              
+            </subsubsection>
+            
+            </subsection>
+          
+          <subsection>
+            <title>Today's Screencast</title>
+            
+            
+            <insight>
+            
+            </insight>
+            
+          </subsection>
+          
+          
+          <subsection>
+            <title>If you missed class today</title>
+            
+            <ol>
+            <li>Work through today's outline and read the marked pages in the book.</li>
+            <li>Watch the screencast above.</li>
+            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+            </ol>
+            
+          </subsection>
         
         
       </section>
       
       <section xml:id="Jan-20">
-        <title>Jan. 20</title>
+        <title>Jan. 20: Predicates and Quantifiers</title>
+        
+        
+        <introduction>
+          
+          <assemblage>
+            <title>Motivating Questions</title>
+            <p>
+            <statement>
+            Here are some questions we'll consider.
+            <ol>
+              <li>How do we introduce variables into our matheamtical statements?</li>
+              <li>What types of quantifiers exist in matheamtics?</li>
+              <li>How do we negate quantified statements?</li>
+            </ol>
+            
+            </statement>
+            </p>
+            
+          </assemblage>
+          
+          
+            
+            
+           
+          </introduction>
+          
+          <subsection>
+            <title>Outline</title>
+            
+            <p>
+            Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#IYE">"Predicates and Quantifiers" part of Section 0.2</url>. You're encouraged to read it before coming to class.
+            </p>
+            
+            <subsubsection>
+              <title>Predicates and Quantifiers</title>
+              
+              <p>
+                In order to make use of the work we've done on statements to do actual mathematics, we need a way of introducing variables.
+                A sentence with a variable is known as a <term>predicate</term>.
+              </p>
+              
+              <p>
+                Consider the sentence "<m>m</m> is composite". Is this true, false, or not a statement?
+              </p>
+              
+              <p>
+                What we need to do is specify a <emph>quantifier</emph> and <emph>domain of discourse</emph> for our variable. 
+                In mathematics, we deal with two quantifiers: the existential quantifier and the universal quantifier.
+              </p>
+              
+              <assemblage permid="mlh">
+                <title>Universal and Existential Quantifiers</title>
+                  <idx><h>quantifier</h></idx>
+          
+                <p permid="ARC">
+                  The existential quantifier is
+                  <m>\exists</m> and is read
+                  <q>there exists</q> or
+                  <q>there is.</q> For example,
+                      <idx><h>existential quantifier</h></idx>
+                      <idx><h>quantifier</h><h>there exists</h></idx>
+                      <idx><h>there exists (quantifier)</h></idx>
+          
+                  <notation>
+                    <usage>\exists</usage>
+                    <description>existential quantifier</description>
+                  </notation>
+          
+                  <me permid="aeg">
+                    \exists x (x \lt 0)
+                  </me>
+                  asserts that there is a number less than 0.
+                </p>
+          
+                <p permid="gYL">
+                  The universal quantifier is
+                  <m>\forall</m> and is read
+                  <q>for all</q> or
+                  <q>every.</q> For example,
+                      <idx><h>universal quantifier</h></idx>
+                      <idx><h>quantifier</h><h>for all</h></idx>
+                      <idx><h>for all (quantifier)</h></idx>
+          
+                  <notation>
+                    <usage>\forall</usage>
+                    <description>universal quantifier</description>
+                  </notation>
+          
+                  <me permid="Glp">
+                    \forall x (x \ge 0)
+                  </me>
+                  asserts that every number is greater than or equal to 0.
+                </p>
+              </assemblage>
+              
+              <activity>
+                <statement>
+                  <p permid="dSK">
+                    Translate into English:
+            
+                    <ol>
+                      <li><m>\forall x (E(x) \imp E(x +2))</m>. (The statement "<m>E(m)</m>" means that <m>m</m> is even.)</li>
+            
+                      <li><m>\forall x \exists y (\sin(x) = y)</m>.</li>
+            
+                      <li><m>\forall y \exists x (\sin(x) = y)</m>.</li>
+            
+                      <li><m>\forall x \forall y (x^3 = y^3 \imp x = y)</m>.</li>
+                    </ol>
+                  </p>
+                </statement>
+                </activity>
+              
+              
+              <activity>
+                <statement>
+                  <p>
+                    Determine whether the following sentences are true, false, or not statements. If the sentence is not a statement, can you modify it, e.g., by defining a domain of discourse, which makes it into a statement? Be sure that you can explain your thinking.
+                  </p>
+                  <ol>
+                    <li>For all integers <m>x, x^3 \ge 0</m>.</li>
+                    <li>For all integers <m>y</m>, <m>y</m> can be written as the sum of distinct powers of 2.</li>
+                    <li><m>\forall x \forall y (x-y \le 0)</m></li>
+                    <li><m>\forall x\forall y(x^2 = y^2 \imp x = y)</m></li>
+                  </ol>
+                </statement>
+                </activity>
+              
+                          
+            </subsubsection>
+            
+            
+            <subsubsection>
+              <title>Negating Quantified Statements</title>
+              
+              
+              <p>
+                Much of the time, quantifiers are relatively straightforward, even implied by a precise way of speaking.
+                One exception to this is when we seek to negate a quantified statement.
+              </p>
+              
+              <assemblage permid="Ssq">
+                <title>Quantifiers and Negation</title>
+                <idx><h>quantifier</h><h>interaction with negation</h></idx>
+                <idx><h>negation</h><h>interaction with quantifiers</h></idx>
+                <blockquote permid="dBp">
+                  <p permid="Mwa">
+                    <m>\neg \forall x P(x)</m> is equivalent to
+                    <m>\exists x \neg P(x)</m>.
+                  </p>
+          
+                  <p permid="sDj">
+                    <m>\neg \exists x P(x)</m> is equivalent to
+                    <m>\forall x \neg P(x)
+                    </m>.
+                  </p>
+                </blockquote>
+              </assemblage>
+              
+              <exploration>
+                <statement>
+                  <p>
+                    Determine the best possible negations of the following statements. Focus on negating all predicates that are furthest embedded in the sentence. If the statement is given as an English language sentence, give your negation as an English language sentence. <aside>Note that the symbol <m>\in</m> means that the variable is in the indicated set; more on sets next time! Moreover, <m>\R</m> is the set of real numbers, i.e., the number line.</aside>
+                  </p>
+                  <ol>
+                    
+                    <li><m>\forall x\in \R (x>0 \lor x = 0)</m></li>
+                    <li><m>\forall x\in \R \exists y\in \R (x^2 = y^2 \land x\ne y)</m></li>
+                    <li>Every integer <m>x</m> satisfies the equation <m>x+5=3</m></li>
+                    <li>Every integer is even or every integer is odd</li>
+                    <li>Every continuous function is differentiable</li>
+                  </ol>
+                </statement>
+                </exploration>
+              
+              
+            </subsubsection>
+            
+            
+            
+            
+            
+          </subsection>
+          
+          <subsection>
+            <title>Today's Screencast</title>
+            
+            
+            <insight>
+            
+            </insight>
+            
+          </subsection>
+          
+          
+          <subsection>
+            <title>If you missed class today</title>
+            
+            <ol>
+            <li>Work through today's outline and read the marked pages in the book.</li>
+            <li>Watch the screencast above.</li>
+            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+            </ol>
+            
+          </subsection>
         
         
       </section>
@@ -181,7 +773,14 @@
     
     <chapter xml:id="Week-03">
       <title>Week 3: Jan. 25-29</title>
-      
+      <introduction>
+        <p>
+            This week, we explore a few more mathematical preliminaries. We first dive into the things we can do with sets.
+            Then, we move to relations and equivalence relations, foundational notions both for future work in matheamtics (even in this class).
+            Our first portfolio problem is due on Wednesday; this is really an introduction to <m>\LaTeX</m>, the language in which we'll write our mathematical portfolio work.
+            Also due Wednesday is an Edfinity assignment over <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html">Section 0.3</url>, and we'll take a weekly quiz over the notes on Friday.
+          </p>
+      </introduction>
       <section xml:id="Jan-25">
         <title>Jan. 25</title>
         
