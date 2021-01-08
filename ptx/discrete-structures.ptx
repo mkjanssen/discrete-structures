@@ -52,9 +52,41 @@
 \def\bF{{\mathbb F}}
 \def\Q{{\mathbb Q}}
 \def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
 \def\R{{\mathbb R}}
 \newcommand{\h}[1]{{\textbf{#1}}}
 \def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+
+
 </macros>
 <latex-image-preamble>
 \usepackage{tikz}
@@ -764,8 +796,440 @@
       
       
       <section xml:id="Jan-22">
-        <title>Jan. 22</title>
+        <title>Jan. 22: Sets and Relationships</title>
         
+        <introduction>
+          
+          <assemblage>
+            <title>Motivating Questions</title>
+            <p>
+            <statement>
+            Here are some questions we'll consider.
+            <ol>
+              <li>What are sets? What are some familiar/important sets?</li>
+              <li>What notation can we use to describe sets?</li>
+              <li>What is the difference between elements and subsets?</li>
+            </ol>
+            Then, we'll take our first quiz.
+            </statement>
+            </p>
+            
+          </assemblage>
+          
+          
+            
+            
+           
+          </introduction>
+          
+          <subsection>
+            <title>Outline</title>
+            
+            <p>
+            Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html">Section 0.3</url> of the book. You're encouraged to read it (up to "Relationsihps Between Sets") before coming to class.
+            </p>
+            
+            <subsubsection>
+              <title>Set Notation</title>
+            
+            
+            <question>
+              <p>
+                What is a set?
+              </p>
+            </question>
+            
+           
+           <p>
+             There are two major ways to describe sets: <term>roster notation</term> and <term>set-builder notation</term>.
+           </p>
+           
+           <activity>
+             <statement>
+               <p>
+                 Here are some examples of sets. For each set written in set-builder notation, write it in roster form. For each set in roster form, write it in set-builder notation.
+               </p>
+               <ol>
+                 <li><m>A = \setof{p}{p\text{ is prime and } p \le 10}</m></li>
+                 <li><m>B = \setof{x}{x^2-7x+12=0}</m></li>
+                 <li><m>C = \set{\text{DE},\text{PA},\text{NJ},\text{GA},\text{CT},\text{MA},\text{MD},\text{SC},\text{NH},\text{VA},\text{NY},\text{NC},\text{RI}}</m></li>
+                 <li><m>D= \set{\text{tetrahedron},\text{cube},\text{octahedron},\text{dodecahedron},\text{icosahedron}}</m></li>
+               </ol>
+             </statement>
+             </activity>
+            
+            
+            </subsubsection>
+            
+            <subsubsection>
+              <title>Membership and Subsets</title>
+              
+              <p>
+                Recall that if <m>A</m> is a set and <m>x</m> is an element in <m>A</m>, we write <m>x\in A</m>. Otherwise, <m>x\notin A</m>.
+              </p>
+              
+              <p>
+                If <m>A</m> and <m>B</m> are sets and <emph>every</emph> element of <m>A</m> is an element of <m>B</m>, we say <m>A</m> is a <term>subset</term> of <m>B</m>, written <m>A\subseteq B</m>. The <term>empty set</term> is the set with no elements, denoted <m>\emptyset</m>.
+              </p>
+              
+              <question>
+                <p>
+                  What would it mean for <m>A\not\subseteq B</m>?
+                </p>
+              </question>
+              
+              <exploration>
+                <statement>
+                  <p>
+                    Consider the sets <m>S = \set{1,2,3,4,5}, T = \set{1,\set{2,3},\set{4},\emptyset}</m>.
+                    Determine whether each of the following statements are true or false, and be ready to explain your answers.
+                    <!-- Fill in the blank with the best symbol, or explain why none of these symbols are appropriate: <m>\in, \notin, \subseteq</m>. -->
+                  </p>
+                  <ol>
+                    <li><m>4 \in S</m></li>
+                    <li><m>4\subseteq S</m></li>
+                    <li><m>\set{4}\in S</m></li>
+                    <li><m>\set{4}\subseteq S</m></li>
+                    <li><m>\set{4}\subseteq T</m></li>
+                    <li><m>\set{4}\in T</m></li>
+                    <li><m>\emptyset\subseteq T</m></li>
+                  </ol>
+                </statement>
+                </exploration>
+            
+            
+            </subsubsection>
+            
+            <subsubsection>
+              <title>Some Special Sets</title>
+              
+              <assemblage permid="qdP">
+                <title>Special sets</title>
+                <p permid="Aar">
+                  <dl width="narrow" permid="qNJ">
+                    <li permid="vcd">
+                      <title><m>\emptyset</m></title>
+                      <p permid="jxF">
+                        The <term>empty set</term> is the set which contains no elements.
+          
+                        <notation>
+                          <usage>\emptyset</usage>
+                          <description>the empty set</description>
+                        </notation>
+          
+                          <idx><h>empty set</h></idx>
+                      </p>
+                    </li>
+          
+                    <li permid="bjm">
+                      <title><m>\U</m></title>
+                      <p permid="PEO">
+                        The <term>universe set</term> is the set of all elements.
+          
+                        <notation>
+                          <usage>\U</usage>
+                          <description>universe set (domain of discourse)</description>
+                        </notation>
+                        <idx><h>universe set</h></idx>
+                        <idx><h>domain of discourse</h><see>universe set</see></idx>
+                      </p>
+                    </li>
+          
+                    <li permid="Hqv">
+                      <title><m>\N</m></title>
+                      <p permid="vLX">
+                        The set of natural numbers.
+                        That is, <m>\N = \{0, 1, 2, 3\ldots\}</m>.
+          
+                        <notation>
+                          <usage>\N</usage>
+                          <description>the set of natural numbers</description>
+                        </notation>
+          
+                        <idx><h>natural numbers, set of</h></idx>
+                        <idx><h>set</h><h>of natural numbers</h></idx>
+          
+                      </p>
+                    </li>
+          
+                    <li permid="nxE">
+                      <title><m>\Z</m></title>
+                      <p permid="bTg">
+                        The set of
+                        integers.
+                        That is, <m>\Z = \{\ldots, -2, -1, 0, 1, 2, 3, \ldots\}</m>.
+                          <idx><h>integers, set of</h></idx>
+                          <idx><h>set</h><h>of integers</h></idx>
+                        <notation>
+                          <usage>\Z</usage>
+                          <description>the set of integers</description>
+                        </notation>
+          
+                      </p>
+                    </li>
+          
+                    <li permid="TEN">
+                      <title><m>\Q</m></title>
+                      <p permid="Iap">
+                        The set of rational numbers.
+          
+                        <notation>
+                          <usage>\Q</usage>
+                          <description>the set of rational numbers</description>
+                        </notation>
+          
+                          <idx><h>rational numbers, set of</h></idx>
+                          <idx><h>set</h><h>of rational numbers</h></idx>
+          
+                      </p>
+                    </li>
+          
+                    <li permid="zLW">
+                      <title><m>\R</m></title>
+                      <p permid="ohy">
+                        The set of real numbers.
+                        <notation>
+                          <usage>\R</usage>
+                          <description>the set of real numbers</description>
+                        </notation>
+          
+                          <idx><h>real numbers, set of</h></idx>
+                          <idx><h>set</h><h>of real numbers</h></idx>
+                      </p>
+                    </li>
+          
+                    <li permid="fTf">
+                      <title><m>\pow(A)</m></title>
+                      <p permid="UoH">
+                        The <term>power set</term> of any set <m>A</m> is the set of all subsets of <m>A</m>.
+                            <idx><h>power set</h></idx>
+                        <notation>
+                          <usage>\pow(A)</usage>
+                          <description>the power set of <m>A</m></description>
+                        </notation>
+                        <idx><h>power set</h></idx>
+                        <idx><h>set </h><h>of all subsets</h><see>power set</see></idx>
+                      </p>
+                    </li>
+                  </dl>
+                </p>
+              </assemblage>
+              
+              <p>
+                We've seen some of the notation below; we'll see more of it next time.
+              </p>
+              
+              <assemblage permid="WkY">
+                <title>Set Theory Notation</title>
+                <p permid="ghA">
+                  <dl width="narrow" permid="WUS">
+                    <li permid="Mao">
+                      <title><m>\{, \}</m></title>
+                      <p permid="AvQ">
+                        We use these <term>braces</term> to enclose the elements of a set.
+                        So <m>\{1,2,3\}</m> is the set containing 1, 2, and 3.
+          
+                        <notation>
+                          <usage>\{, \}</usage>
+                          <description>braces, to contain set elements.</description>
+                        </notation>
+          
+                      </p>
+                    </li>
+          
+                    <li permid="shx">
+                      <title><m>\st</m></title>
+                      <p permid="gCZ">
+                        <m>\{x \st x &gt; 2\}</m> is the set of all <m>x</m> <term>such that</term>
+                        <m>x</m> is greater than 2.
+          
+                        <notation>
+                          <usage>\st</usage>
+                          <description><q>such that</q></description>
+                        </notation>
+          
+                      </p>
+                    </li>
+          
+                    <li permid="YoG">
+                      <title><m>\in</m></title>
+                      <p permid="MKi">
+                        <m>2 \in \{1,2,3\}</m> asserts that 2 is
+                        <term>an element of</term>
+                        the set <m>\{1,2,3\}</m>.
+          
+                        <notation>
+                          <usage>\in</usage>
+                          <description><q>is an element of</q></description>
+                        </notation>
+          
+                      </p>
+                    </li>
+          
+                    <li permid="EvP">
+                      <title><m>\not\in</m></title>
+                      <p permid="sRr">
+                        <m>4 \notin \{1,2,3\}</m> because 4
+                        <term>is not an element of</term>
+                        the set <m>\{1,2,3\}</m>.
+                      </p>
+                    </li>
+          
+                    <li permid="kCY">
+                      <title><m>\subseteq</m></title>
+                      <p permid="YYA">
+                        <m>A \subseteq B</m> asserts that
+                        <term><m>A</m> is a subset of <m>B</m></term>:
+                        every element of <m>A</m> is also an element of <m>B</m>.
+          
+                        <notation>
+                          <usage>\subseteq</usage>
+                          <description><q>is a subset of</q></description>
+                        </notation>
+          
+                      </p>
+                    </li>
+          
+                    <li permid="QKh">
+                      <title><m>\subset</m></title>
+                      <p permid="FfJ">
+                        <m>A \subset B</m> asserts that
+                        <term><m>A</m> is a proper subset of <m>B</m></term>:
+                        every element of <m>A</m> is also an element of <m>B</m>,
+                        but <m>A \ne B</m>.
+          
+                        <notation>
+                          <usage>\subset</usage>
+                          <description><q>is a proper subset of</q></description>
+                        </notation>
+          
+                      </p>
+                    </li>
+          
+                    <li permid="wRq">
+                      <title><m>\cap</m></title>
+                      <p permid="lmS">
+                        <m>A \cap B</m> is the <term>intersection of <m>A</m> and <m>B</m></term>:
+                        the set containing all elements which are elements of both <m>A</m> and <m>B</m>.
+          
+                        <notation>
+                          <usage>\cap</usage>
+                          <description>set intersection</description>
+                        </notation>
+          
+                          <idx><h>intersection of sets</h></idx>
+                          <idx><h>set</h><h>intersection</h></idx>
+                      </p>
+                    </li>
+          
+                    <li permid="cYz">
+                      <title><m>\cup</m></title>
+                      <p permid="Rub">
+                        <m>A \cup B</m> is the <term>union of <m>A</m> and <m>B</m></term>:
+                        is the set containing all elements which are elements of <m>A</m> or <m>B</m> or both.
+          
+                        <notation>
+                          <usage>\cup</usage>
+                          <description>set union</description>
+                        </notation>
+          
+                          <idx><h>union of sets</h></idx>
+                          <idx><h>set</h><h>union</h></idx>
+                      </p>
+                    </li>
+          
+                    <li permid="JfI">
+                      <title><m>\times</m></title>
+                      <p permid="xBk">
+                        <m>A \times B</m> is the <term>Cartesian product of <m>A</m> and <m>B</m></term>:
+                        the set of all ordered pairs <m>(a,b)</m> with <m>a \in A</m> and <m>b \in B</m>.
+          
+                        <notation>
+                          <usage>\times</usage>
+                          <description>Cartesian product</description>
+                        </notation>
+                        <idx><h>Cartesian product</h></idx>
+                        <idx><h>set</h><h>product</h><see>Cartesian product</see></idx>
+                      </p>
+                    </li>
+          
+                    <li permid="pmR">
+                      <title><m>\setminus</m></title>
+                      <p permid="dIt">
+                        <m>A \setminus B</m> is <term>set difference between <m>A</m> and <m>B</m></term>:
+                        the set containing all elements of <m>A</m> which are not elements of <m>B</m>.
+          
+                        <notation>
+                          <usage>\setminus</usage>
+                          <description>set difference</description>
+                        </notation>
+                        <idx><h>set</h><h>difference</h></idx>
+                        <idx><h>difference of sets</h></idx>
+                      </p>
+                    </li>
+          
+                    <li permid="Vua">
+                      <title><m>\bar{A}</m></title>
+                      <p permid="JPC">
+                        The <term>complement of <m>A</m></term>
+                        is the set of everything which is not an element of <m>A</m>.
+          
+                        <notation>
+                          <usage>\bar{A}</usage>
+                          <description>the complement of <m>A</m></description>
+                        </notation>
+                        <idx><h>set</h><h>complement</h></idx>
+                        <idx><h>complement of a set</h></idx>
+                      </p>
+                    </li>
+          
+                    <li permid="BBj">
+                      <title><m>\card{A}</m></title>
+                      <p permid="pWL">
+                        The <term>cardinality
+                        (or size)
+                        of <m>A</m></term> is the number of elements in <m>A</m>.
+          
+                        <notation>
+                          <usage>\card{A}</usage>
+                          <description>cardinality (size) of <m>A</m></description>
+                        </notation>
+          
+                          <idx><h>cardinality</h><h>of a set</h></idx>
+                          <idx><h>size of a set</h><h>see cardinality</h></idx>
+                          <idx><h>set</h><h>cardinality</h></idx>
+                      </p>
+                    </li>
+                  </dl>
+                </p>
+              </assemblage>
+              
+            </subsubsection>
+            
+          </subsection>
+          
+          <subsection>
+            <title>Today's Screencast</title>
+            
+            
+            <insight>
+            
+            </insight>
+            
+          </subsection>
+          
+          
+          <subsection>
+            <title>If you missed class today</title>
+            
+            <ol>
+            <li>Work through today's outline and read the marked pages in the book.</li>
+            <li>Watch the screencast above.</li>
+            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+            </ol>
+            
+          </subsection>
         
       </section>
       
@@ -782,20 +1246,509 @@
           </p>
       </introduction>
       <section xml:id="Jan-25">
-        <title>Jan. 25</title>
+        <title>Jan. 25: Operations on Sets</title>
         
+        <introduction>
+          
+          <assemblage>
+            <title>Motivating Questions</title>
+            <p>
+            <statement>
+            Here are some questions we'll consider.
+            <ol>
+              <li>What is the power set of a set?</li>
+              <li>What is the cardinality of a set?</li> 
+              <li>How do we calculate union and intersection of one or more sets?</li>
+              <li>What are the complement and set difference operations?</li>
+              <li>What is the Cartesian product of two sets?</li>
+            </ol>
+            </statement>
+            </p>
+            
+          </assemblage>
+          
+          
+            
+            
+           
+          </introduction>
+          
+          <subsection>
+            <title>Outline</title>
+            
+            <p>
+            Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html#xIo">Section 0.3</url> of the book. You're encouraged to read it before coming to class.
+            </p>
+            
+            <subsubsection>
+              <title>Operations</title>
+              
+              <assemblage>
+                <title>Subset and Power Set</title>
+                <p>
+                  <statement>
+                    A set <m>A</m> is a subset of <m>B</m> if every element of <m>A</m> is a subset of <m>B</m>.
+                    We call the set of all subsets of <m>A</m> the <term>power set</term>
+                    <idx><h>power set</h></idx>
+                of <m>A</m>, and write it <m>\pow(A)</m>.
+                  </statement>
+                </p>
+              </assemblage>
+              
+              <activity>
+                <statement>
+                  <p>
+                    Consider the set <m>A = \set{1,\triangle,\set{5}}</m>.
+                    Calculate <m>\pow(A)</m>.
+                    What is <m>\pow(\emptyset)</m>?
+                  </p>
+                </statement>
+                </activity>
+                
+                <assemblage>
+                  <title>Cardinality</title>
+                  <p>
+                    <statement>
+                     The number of elements in a set <m>A</m> is called its <term>cardinality</term>, denoted <m>\card{A}</m>.
+                     If <m>\card{A}</m> is a finite number, we say <m>A</m> is <term>finite</term>. Otherwise, we say <m>A</m> is infinite.
+                    </statement>
+                  </p>
+                </assemblage>
+                
+                <activity>
+                  <statement>
+                    <p>
+                      Find the cardinality of the following sets.
+                    </p>
+                    <ol>
+                      <li><m>A=\set{20, 21, \ldots, 35}</m></li>
+                      <li><m>T = \set{1,\set{2,3},\set{4},\emptyset}</m></li>
+                      <li><m>X = \set{2, 4, 6, 8, 6, 4, 2}</m></li>
+                      <li><m>\pow(\set{1,\triangle,\set{5}})</m></li>
+                    </ol>
+                  </statement>
+                  </activity>
+                
+                <assemblage>
+                  <title>Union and Intersection</title>
+                  <p>
+                    <statement>
+                      Let <m>A</m> and <m>B</m> be sets.
+                      The <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A\cup B</m>, is the set containing all elements <m>x</m> which are in <m>A</m> or <m>B</m> (or both).
+                      The intersection <m>A\cap B</m> is the set of all elements of <m>x</m> in both <m>A</m> <emph>and</emph> <m>B</m>.
+                    </statement>
+                  </p>
+                </assemblage>
+                
+                <p permid="SNP">
+                  Often when dealing with sets,
+                  we will have some understanding as to what <q>everything</q> is.
+                  Perhaps we are only concerned with natural numbers.
+                  In this case we would say that our
+                  <term>universe</term> is <m>\N</m>.
+                  <idx><h>universe set</h></idx>
+                  Sometimes we denote this universe by <m>\U</m>.
+                  Given this context,
+                  we might wish to speak of all the elements which are
+                  <em>not</em> in a particular set.
+                  We say <m>B</m> is the <term>complement</term>
+                      <idx><h>complement of a set</h></idx>
+                  of <m>A</m>, and write,
+                  <me permid="Czy">
+                    B = \bar A
+                  </me>
+                  when <m>B</m> contains every element not contained in <m>A</m>.
+                  So, if our universe is <m>\{1, 2,\ldots, 9, 10\}</m>,
+                  and <m>A = \{2, 3, 5, 7\}</m>,
+                  then <m>\bar A = \{1, 4, 6, 8, 9,10\}</m>.
+                </p>
+                
+                <p permid="yUY">
+                  Of course we can perform more than one operation at a time.
+                  For example, consider
+                  <me permid="iGH">
+                    A \cap \bar B
+                  </me>.
+                </p>
+            
+                <p permid="fch">
+                  This is the set of all elements which are both elements of <m>A</m> and not elements of <m>B</m>.
+                  What have we done?
+                  We've started with <m>A</m> and removed all of the elements which were in <m>B</m>.
+                  Another way to write this is the
+                  <term>set difference</term>:
+                      <idx><h>set</h><h>difference</h></idx>
+                      <idx><h>difference of sets</h></idx>
+                  <me permid="ONQ">
+                    A \cap \bar B = A \setminus B
+                  </me>.
+                </p>
+                
+                <exploration>
+                  <statement>
+                    <p>
+                      Let <m>A = \set{2,3,4,5}</m> and <m>B=\set{1,5}</m> be subsets of the universe <m>\mathcal{U} = \set{1,2,3,4,5}</m>.
+                      List the elements of the following sets.
+                    </p>
+                    <ol>
+                      <li><m>{\bar A}</m></li>
+                      <li><m>{\bar B}</m></li>
+                      <li><m>A\cup B</m></li>
+                      <li><m>A\cap B</m></li>
+                      <li><m>A\setminus B</m></li>
+                      <li><m>B\setminus A</m></li>
+                    </ol>
+                  </statement>
+                  </exploration>
+                  
+                  <assemblage>
+                    <title>Cartesian Product</title>
+                    <p>
+                      <statement>
+                       The last way we'll combine sets <m>A</m> and <m>B</m> involves making ordered pairs.
+                       We say the <term>Cartesian product</term> of <m>A</m> with <m>B</m> is the set of all ordered pairs <m>(a,b)</m> in which <m>a\in A</m> and <m>b\in B</m>.
+                       That is, <m>A \times B = \{(a,b) \st a \in A \wedge b \in B\}</m>.
+                      </statement>
+                    </p>
+                  </assemblage>
+                  
+                  <activity>
+                    <statement>
+                      <p>
+                        Let <m>A = \set{\square,\triangle,\bigcirc}</m> and <m>B=\set{2,3}</m>.
+                        List the elements of either <m>A\times B</m> or <m>B\times A</m> (your choice). Do the two products have the same elements? Explain. Then calculate <m>\card{A\times A}</m>.
+                      </p>
+                    </statement>
+                    </activity>
+                
+                
+            </subsubsection>
+            
+            
+            
+          </subsection>
+          
+          <subsection>
+            <title>Today's Screencast</title>
+            
+            
+            <insight>
+            
+            </insight>
+            
+          </subsection>
+          
+          
+          <subsection>
+            <title>If you missed class today</title>
+            
+            <ol>
+            <li>Work through today's outline and read the marked pages in the book.</li>
+            <li>Watch the screencast above.</li>
+            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+            </ol>
+            
+          </subsection>
         
       </section>
       
       <section xml:id="Jan-27">
-        <title>Jan. 27</title>
+        <title>Jan. 27: Relations and Equivalence Relations</title>
+        
+        <introduction>
+          
+          <assemblage>
+            <title>Motivating Questions</title>
+            <p>
+            <statement>
+            Here are some questions we'll consider.
+            <ol>
+              <li>What is a relation?</li>
+              <li>What properties might a relation have?</li>
+              <li>What is an equivalence relation, and what are some examples?</li>
+            </ol>
+            </statement>
+            </p>
+            
+          </assemblage>
+          
+          
+            
+            
+           
+          </introduction>
+          
+          <subsection>
+            <title>Outline</title>
+            
+            <p>
+            Today's material is not in our book. For more on relations, feel free to consult Sundstrom's <url href="https://www.tedsundstrom.com/mathematical-reasoning-3"><emph>Mathematical Reasoning</emph></url> book.
+            </p>
+            
+            <assemblage>
+              <title>Relations</title>
+              <p>
+                <statement>
+                  Let <m>S,T</m> be sets.
+                  A <term>relation</term> <m>\mathcal{R}</m> on <m>S</m> and <m>T</m> is a subset of <m>S\times T</m>. That is, <m>\mathcal{R}\subseteq S\times T</m>.
+                  We write <m>(s,t)\in \mathcal{R}</m> to say that <m>s</m> is related to <m>t</m> under the relation.
+                  We sometimes write <m>s \mathcal{R} t</m>.
+                  
+                  The <term>relation class</term> of <m>x\in S</m> is the set of everything related to <m>x</m> from <m>T</m>: <m>[x] = \setof{y\in T}{x\mathcal{R}y}</m>.
+                </statement>
+              </p>
+            </assemblage>
+            
+            <exploration xml:id="expl-relation">
+              <statement>
+                <p>
+                  Define a relation <m>\mathcal{D}</m> on <m>\Z</m> by <m>(m,n)\in \mathcal{D}</m> iff <m>m</m> divides <m>n</m>. Calculate:
+                </p>
+                <ol>
+                  <li><m>[6]</m></li>
+                  <li><m>[10]</m></li>
+                  <li><m>[30]</m></li>
+                  <li><m>[60]</m></li>
+                  <li><m>[6]\cap[10]</m></li>
+                </ol>
+              </statement>
+              </exploration>
+              
+              
+              <assemblage>
+                <title>Properties of Relations</title>
+                <p>
+                  <statement>
+                    Let <m>X</m> be a set and <m>\sim</m> a relation on <m>X</m>, so that if <m>x,y\in X</m> and <m>(x,y)\in \sim</m>, we may write the more conventional <m>x\sim y</m>.
+                    
+                    <ol>
+                      <li>We say that <m>\sim</m> is <term>reflexive</term> if whenever <m>x\in X</m>, <m>x\sim x</m>.</li>
+                      <li>We say that <m>\sim</m> is <term>symmetric</term> if whenever <m>x,y\in X</m> and <m>x\sim y</m>, then <m>y\sim x</m>.</li>
+                      <li>We say that <m>\sim</m> is <term>transitive</term> if whenever <m>x,y,z\in X</m> such that <m>x\sim y</m> and <m>y\sim z</m>, then <m>x\sim z</m>.
+                      </li>
+                    </ol>
+                  </statement>
+                </p>
+              </assemblage>
+              
+              <exploration>
+                <statement>
+                  <p>
+                    Is the relation from <xref ref="expl-relation" /> reflexive? Symmetric? Transitive?
+                  </p>
+                </statement>
+                </exploration>
+                
+                <exploration>
+                  <statement>
+                    <p>
+                      Consider the relation <m>\mathcal{B}</m> defined on the set of all people by <m>(x,y)\in \mathcal{B}</m> iff <m>x</m> and <m>y</m> have the same birthday. Is this relation reflexive? Symmetric? Transitive?
+                    </p>
+                  </statement>
+                  </exploration> 
+                  
+                  <exploration>
+                    <statement>
+                      <p>
+                        Let <m>X = \set{1,2,3,4,5}</m>.
+                      </p>
+                      <ol>
+                        <li>Define a relation <m>\mathcal{R}</m> on <m>X</m> that is reflexive, but not symmetric or transitive.</li>
+                        <li>Define a relation <m>\mathcal{S}</m> on <m>X</m> that is symmetric, but not reflexive or transitive.</li>
+                        <li>Define a relation <m>\mathcal{T}</m> on <m>X</m> that is transitive, but not symmetric or reflexive.</li>
+                      </ol>
+                    </statement>
+                    </exploration>
+                    
+                    
+                    <assemblage>
+                      <title>Equivalence Relation</title>
+                      <p>
+                        <statement>
+                          A relation that is reflexive, symmetric, and transitive is known as a <term>equivalence relation</term>.
+                        </statement>
+                      </p>
+                    </assemblage>
+                    
+                    <activity>
+                      <statement>
+                        <p>
+                          Which of the relations we've seen so far are equivalence relations?
+                          Can you think of any others?
+                        </p>
+                      </statement>
+                      </activity>
+                      
+                      
+                      <example>
+                        <statement>
+                          <p>
+                            Consider the relation <m>\mathcal{P}</m> on <m>\mathbb{Z}</m>.
+                            Then <m>P</m> is an equivalence relation.
+                          </p>
+                        </statement>
+                      </example>
+            
+            
+            
+            
+          </subsection>
+          
+          <subsection>
+            <title>Today's Screencast</title>
+            
+            
+            <insight>
+            
+            </insight>
+            
+          </subsection>
+          
+          
+          <subsection>
+            <title>If you missed class today</title>
+            
+            <ol>
+            <li>Work through today's outline and read the marked pages in the book.</li>
+            <li>Watch the screencast above.</li>
+            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+            </ol>
+            
+          </subsection>
+        
+        
+        
         
         
       </section>
       
       
       <section xml:id="Jan-29">
-        <title>Jan. 29</title>
+        <title>Jan. 29: More on Equivalence Relations</title>
+        
+        <introduction>
+          
+          <assemblage>
+            <title>Motivating Questions</title>
+            <p>
+            <statement>
+            Here are some questions we'll consider.
+            <ol>
+              <li>What are some more (non)examples of equivalence relations?</li>
+              <li>How do we verify whether a given relation is an equivalence relation or not?</li>
+              <li>What are partitions? What do they have to do with equivalence relations?</li>
+            </ol>
+            </statement>
+            </p>
+            
+          </assemblage>
+          
+          
+            
+            
+           
+          </introduction>
+          
+          <subsection>
+            <title>Outline</title>
+            
+            <p>
+            Today's material is not in the book. For more on relations, feel free to consult Sundstrom's <url href="https://www.tedsundstrom.com/mathematical-reasoning-3"><emph>Mathematical Reasoning</emph></url> book.
+            </p>
+            
+            
+            <subsubsection>
+              <title>More on Equivalence Relations</title>
+              
+              <exploration>
+                <statement>
+                  <p>
+                    Verify that the following are equivalence relations on the indicated sets.
+                  </p>
+                  <ol>
+                    <li>The relation <m>\mathcal{M}</m> on <m>\Z</m> defined by <m>(m,n)\in \mathcal{M}</m> iff <m>m-n</m> is evenly divisible by 3.</li>
+                    <li>The relation <m>\mathcal{Q}</m> on <m>\R</m> defined by <m>(s,t)\in \mathcal{Q}</m> iff <m>s-t</m> is rational.</li>
+                    <li>Let <m>X = \set{1,\ldots, 10}</m>, <m>X_n = \set{2n-1,2n}</m> for <m>n=1,2,\ldots, 5</m>. Convince yourself that 
+                    <me>X = X_1 \cup X_2 \cup \cdots \cup X_5.</me> 
+                    Then, define a relation <m>\mathcal{R}</m> on <m>X</m> by <m>(x,y)\in \mathcal{R}</m> iff there exists <m>i\in \set{1,2,\ldots,5}</m> for which <m>x,y\in X_i</m>.</li>
+                  </ol>
+                </statement>
+                </exploration>
+                
+                
+            
+            
+            </subsubsection>
+            
+           
+            
+            
+            
+            <subsubsection>
+              <title>Partitions</title>
+              
+              <assemblage>
+                <title>Partitions</title>
+                <p>
+                  <statement>
+                    Let <m>X</m> be a set.
+                    Then a partition <m>\mathfrak{P}</m> of <m>X</m> is a subsets of <m>\pow(X)</m> satisfying:
+                    <ol>
+                      <li>Each element of <m>\mathfrak{P}</m> is nonempty</li>
+                      <li>If <m>x\in X</m>, then there is some <m>S\in \mathfrak{P}</m> with <m>x\in S</m></li>
+                      <li>The family <m>\mathfrak{P}</m> is <term>pairwise disjoint</term>: if <m>S,T\in \mathfrak{P}</m>, then <m>S\cap T = \emptyset</m></li>
+                    </ol>
+                  </statement>
+                </p>
+              </assemblage>
+              
+              <exploration>
+                <statement>
+                  <p>
+                    Let <m>U</m> denote the set of all cities in the United States, and let <m>I</m> denote the set of all states in the United States.
+                    For each state <m>i</m>, let <m>T_i</m> denote the set of all cities within the state <m>i</m>.
+                    Let <m>\mathcal{F} = \setof{T_i}{i\in I}</m> and let <m>\sim</m> denote the relation associated to <m>\mathcal{F}</m>.
+                  </p>
+                  <ol>
+                    <li>Is <m>\sim</m> reflexive?</li>
+                    <li>Is <m>\sim</m> symmetric?</li>
+                    <li>Is <m>\sim</m> transitive?</li>
+                    <li>Is <m>\mathcal{F}</m> a partition of <m>U</m>?</li>
+                  </ol>
+                </statement>
+                </exploration>
+            
+            
+            </subsubsection>
+            
+            
+            
+          </subsection>
+          
+          <subsection>
+            <title>Today's Screencast</title>
+            
+            
+            <insight>
+            
+            </insight>
+            
+          </subsection>
+          
+          
+          <subsection>
+            <title>If you missed class today</title>
+            
+            <ol>
+            <li>Work through today's outline and read the marked pages in the book.</li>
+            <li>Watch the screencast above.</li>
+            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+            </ol>
+            
+          </subsection>
         
         
       </section>
