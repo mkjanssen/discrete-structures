@@ -8,7 +8,7 @@ title: 'Discrete Structures'
 * **Course**: Math 212-01 (3 cr.)
 * **Term**: Spring 2021
 * **Instructor**: Dr. Mike Janssen, Associate Professor of Mathematics
-* **Classroom**: CL 1143
+* **Classroom**: CL 1321
 * **Class time**: 2:00-2:50pm MWF
 * **Office**: SB 1612
 * **Student Hours**: [Make an appointment](https://calendly.com/mkjanssen/student-hours) or drop by
@@ -113,9 +113,13 @@ advantage; it also means opposing academic dishonesty. Students found to be acad
 
 #### COVID-19 Classroom Protocols
 
-As we begin the semester, Dordt is a mask-required environment. While on Dordt’s campus, you will need to wear a mask in all public places or common indoor spaces, which include: classrooms, hallways, laboratories, restrooms, the Hulst Library and all building lobbies. Should you forget your mask, there may be a disposable paper mask available in the classroom/lab for your use. If not, your instructor will ask you to return to your room to retrieve your mask. Physical distancing practices will also be in effect. Your instructor may also ask for student volunteers to who are willing to take a few minutes to spray cleaning solution on classroom surfaces when class concludes.
+As we begin the Spring 2021 semester, Dordt is a mask-required environment.  While on Dordt’s campus, you will need to wear a mask in all public places or common indoor spaces, which include:  classrooms, hallways, laboratories, restrooms, the Hulst Library and all building lobbies.  
 
-If you are approved by Student Services for accommodations for virtual learning due to COVID-19, your instructor will be notified by Student Services and you will receive information from your instructor about virtual learning during your isolation period.
+Should you forget your mask, there may be a disposable paper mask available in the classroom/lab for your use.  If not, your instructor will ask you to return to your room to retrieve your mask.  Physical distancing practices will also be in effect. Your instructor may also ask for student volunteers who are willing to take a few minutes to spray cleaning solution on classroom surfaces when class concludes. Should you not wear your mask appropriately in class, your instructor will remind you to mask appropriately.  Students who do not mask appropriately may be asked to not attend class (and will be counted absent).  Multiple absences of this nature may result in an Academic Alert and may impact your grade in the course.   
+
+If you are approved by Student Services for accommodations for virtual learning due to COVID-19, your instructor will be notified via the COVID-19 Dashboard, and you will receive information from your instructor about virtual learning during your isolation/quarantine period.  Please be patient as there may be some delay between you being notified of quarantine/isolation, placed on the COVID dashboard, and contacted by your instructor about your status.  Students not approved (or not awaiting approval) for virtual learning should follow normal class attendance policies.  
+
+Major assessments must be completed in-person on the scheduled date unless prior approval for online/remote (or delay) has been approved by Student Services due to isolation, quarantine, or other approved medical reasons. 
 
 
 ### <a id="schedule"></a>Tentative Schedule
@@ -161,10 +165,10 @@ I aim to build a dynamic classroom; as such, the schedule below may be changed a
 | 12     | [2-Apr](notes/Apr-02.html)  | 4.1: Intro to Graph Theory                            | Quiz; Edfinity 3.2                                  |
 | 13     | [5-Apr](notes/Apr-05.html)  | 4.1: Intro to Graph Theory                            |                                                     |
 | 13     | 7-Apr                       | **No class**                                          |                                                     |
-| 13     | [9-Apr](notes/Apr-09.html)  | Portfolio work                                        | Quiz; Edfinity 4.1                                  |
-| 14     | [12-Apr](notes/Apr-12.html) | 4.2: Trees I                                          |                                                     |
-| 14     | [14-Apr](notes/Apr-14.html) | 4.2: Trees II                                         | Portfolio Problems X-XIII                           |
-| 14     | [16-Apr](notes/Apr-16.html) | 4.3: Planar graphs                                    | Quiz; Edfinity 4.2                                  |
+| 13     | [9-Apr](notes/Apr-09.html)  | 4.2: Trees I                                          | Quiz; Edfinity 4.1                                  |
+| 14     | [12-Apr](notes/Apr-12.html) | 4.2: Trees II                                         |                                                     |
+| 14     | [14-Apr](notes/Apr-14.html) | 4.3: Planar graphs                                    | Portfolio Problems X-XIII                           |
+| 14     | [16-Apr](notes/Apr-16.html) | Portfolio work day                                    | Edfinity 4.2                                        |
 | 15     | [19-Apr](notes/Apr-19.html) | 4.4: Coloring                                         | Edfinity 4.3                                        |
 | 15     | [21-Apr](notes/Apr-21.html) | 4.5: Euler Paths and Circuits                         | M4HF Reflection: Chs. 12-13, Epilogue; Edfinity 4.4 |
 | 15     | [23-Apr](notes/Apr-23.html) | 4.6: Matching in Bipartite Graphs                     | Quiz; Edfinity 4.5                                  |

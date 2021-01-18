@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-08T15:27:48-06:00       *-->
+<!--*       on 2021-01-18T14:55:50-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -91,6 +91,7 @@ MathJax.Hub.Config({
 \def\iff{\leftrightarrow}
 \def\Gal{\text{Gal}}
 \def\im{\text{im}}
+\def\ran{\text{ran}}
 \def\normal{\vartriangleleft}
 \renewcommand{\qedsymbol}{$\checkmark$}
 \def\lcm{{\text{lcm}\,}}
@@ -170,7 +171,7 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
 <li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
-<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Predicates and Quantifiers</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
 <li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Sets and Relationships</a></li>
 </ul>
 </li>
@@ -183,9 +184,9 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
-<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1</a></li>
-<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3</a></li>
-<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5</a></li>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
 </ul>
 </li>
 <li class="link">
@@ -276,25 +277,25 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Jan. 29: More on Equivalence Relations</span>
 </h2>
 <section class="introduction" id="introduction-10"><article class="assemblage assemblage-like" id="assemblage-21"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
-<p id="p-102">Here are some questions we'll consider. <ol class="decimal">
-<li id="li-134">What are some more (non)examples of equivalence relations?</li>
-<li id="li-135">How do we verify whether a given relation is an equivalence relation or not?</li>
-<li id="li-136">What are partitions? What do they have to do with equivalence relations?</li>
+<p id="p-104">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-139">What are some more (non)examples of equivalence relations?</li>
+<li id="li-140">How do we verify whether a given relation is an equivalence relation or not?</li>
+<li id="li-141">What are partitions? What do they have to do with equivalence relations?</li>
 </ol></p></article></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">Outline</span>
 </h3>
-<p id="p-103">Today's material is not in the book. For more on relations, feel free to consult Sundstrom's <a class="external" href="https://www.tedsundstrom.com/mathematical-reasoning-3" target="_blank">Mathematical Reasoning</a> book.</p>
+<p id="p-105">Today's material is not in the book. For more on relations, feel free to consult Sundstrom's <a class="external" href="https://www.tedsundstrom.com/mathematical-reasoning-3" target="_blank">Mathematical Reasoning</a> book.</p>
 <section class="subsubsection" id="subsubsection-11"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">3.3.1.1</span> <span class="title">More on Equivalence Relations</span>
 </h4>
-<article class="exploration project-like" id="exploration-12"><h6 class="heading">
+<article class="exploration project-like" id="exploration-13"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-104">Verify that the following are equivalence relations on the indicated sets.</p>
+<p id="p-106">Verify that the following are equivalence relations on the indicated sets.</p>
 <ol class="decimal">
-<li id="li-137">The relation \(\mathcal{M}\) on \(\Z\) defined by \((m,n)\in \mathcal{M}\) iff \(m-n\) is evenly divisible by 3.</li>
-<li id="li-138">The relation \(\mathcal{Q}\) on \(\R\) defined by \((s,t)\in \mathcal{Q}\) iff \(s-t\) is rational.</li>
-<li id="li-139">Let \(X = \set{1,\ldots, 10}\text{,}\) \(X_n = \set{2n-1,2n}\) for \(n=1,2,\ldots, 5\text{.}\) Convince yourself that<div class="displaymath">
+<li id="li-142">The relation \(\mathcal{M}\) on \(\Z\) defined by \((m,n)\in \mathcal{M}\) iff \(m-n\) is evenly divisible by 3.</li>
+<li id="li-143">The relation \(\mathcal{Q}\) on \(\R\) defined by \((s,t)\in \mathcal{Q}\) iff \(s-t\) is rational.</li>
+<li id="li-144">Let \(X = \set{1,\ldots, 10}\text{,}\) \(X_n = \set{2n-1,2n}\) for \(n=1,2,\ldots, 5\text{.}\) Convince yourself that<div class="displaymath">
 \begin{equation*}
 X = X_1 \cup X_2 \cup \cdots \cup X_5.
 \end{equation*}
@@ -303,19 +304,19 @@ X = X_1 \cup X_2 \cup \cdots \cup X_5.
 <span class="type">Subsubsection</span> <span class="codenumber">3.3.1.2</span> <span class="title">Partitions</span>
 </h4>
 <article class="assemblage assemblage-like" id="assemblage-22"><h6 class="heading"><span class="title">Partitions.</span></h6>
-<p id="p-105">Let \(X\) be a set. Then a partition \(\mathfrak{P}\) of \(X\) is a subsets of \(\pow(X)\) satisfying: <ol class="decimal">
-<li id="li-140">Each element of \(\mathfrak{P}\) is nonempty</li>
-<li id="li-141">If \(x\in X\text{,}\) then there is some \(S\in \mathfrak{P}\) with \(x\in S\)</li>
-<li id="li-142">The family \(\mathfrak{P}\) is <dfn class="terminology">pairwise disjoint</dfn>: if \(S,T\in \mathfrak{P}\text{,}\) then \(S\cap T = \emptyset\)</li>
-</ol></p></article><article class="exploration project-like" id="exploration-13"><h6 class="heading">
+<p id="p-107">Let \(X\) be a set. Then a partition \(\mathfrak{P}\) of \(X\) is a subsets of \(\pow(X)\) satisfying: <ol class="decimal">
+<li id="li-145">Each element of \(\mathfrak{P}\) is nonempty</li>
+<li id="li-146">If \(x\in X\text{,}\) then there is some \(S\in \mathfrak{P}\) with \(x\in S\)</li>
+<li id="li-147">The family \(\mathfrak{P}\) is <dfn class="terminology">pairwise disjoint</dfn>: if \(S,T\in \mathfrak{P}\text{,}\) then \(S\cap T = \emptyset\)</li>
+</ol></p></article><article class="exploration project-like" id="exploration-14"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-106">Let \(U\) denote the set of all cities in the United States, and let \(I\) denote the set of all states in the United States. For each state \(i\text{,}\) let \(T_i\) denote the set of all cities within the state \(i\text{.}\) Let \(\mathcal{F} = \setof{T_i}{i\in I}\) and let \(\sim\) denote the relation associated to \(\mathcal{F}\text{.}\)</p>
+<p id="p-108">Let \(U\) denote the set of all cities in the United States, and let \(I\) denote the set of all states in the United States. For each state \(i\text{,}\) let \(T_i\) denote the set of all cities within the state \(i\text{.}\) Let \(\mathcal{F} = \setof{T_i}{i\in I}\) and let \(\sim\) denote the relation associated to \(\mathcal{F}\text{.}\)</p>
 <ol class="decimal">
-<li id="li-143">Is \(\sim\) reflexive?</li>
-<li id="li-144">Is \(\sim\) symmetric?</li>
-<li id="li-145">Is \(\sim\) transitive?</li>
-<li id="li-146">Is \(\mathcal{F}\) a partition of \(U\text{?}\)</li>
+<li id="li-148">Is \(\sim\) reflexive?</li>
+<li id="li-149">Is \(\sim\) symmetric?</li>
+<li id="li-150">Is \(\sim\) transitive?</li>
+<li id="li-151">Is \(\mathcal{F}\) a partition of \(U\text{?}\)</li>
 </ol></article></section></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Today's Screencast</span>
 </h3>
@@ -325,10 +326,10 @@ X = X_1 \cup X_2 \cup \cdots \cup X_5.
 <span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">If you missed class today</span>
 </h3>
 <ol class="decimal">
-<li id="li-147">Work through today's outline and read the marked pages in the book.</li>
-<li id="li-148">Watch the screencast above.</li>
-<li id="li-149">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
-<li id="li-150">
+<li id="li-152">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-153">Watch the screencast above.</li>
+<li id="li-154">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-155">
 <a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
 </ol></section></section></div></main>
 </div>

@@ -38,6 +38,7 @@
 \def\iff{\leftrightarrow}
 \def\Gal{\text{Gal}}
 \def\im{\text{im}}
+\def\ran{\text{ran}}
 \def\normal{\vartriangleleft}
 \renewcommand{\qedsymbol}{$\checkmark$}
 \def\lcm{{\text{lcm}\,}}
@@ -196,7 +197,7 @@
           <title>Outline</title>
           
           <p>
-            Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html">Sectino 0.2 of the book</url>, up through "Truth Conditions for Connectives". You're encouraged to read it before coming to class.
+            Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html">Section 0.2 of the book</url>, up through "Truth Conditions for Connectives". You're encouraged to read it before coming to class.
           </p>
           
           <p>
@@ -293,7 +294,7 @@
           
           
           <insight>
-          
+            <video ee="nbrqvrm" />
           </insight>
           
         </subsection>
@@ -357,9 +358,42 @@
           <subsection>
             <title>Outline</title>
             
+            
+           
+            
             <p>
-            Today's material begins with <q><url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#cRv">Implications</url></q> and concludes right after <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#vET">Example 0.2.9</url>. You're encouraged to read it before coming to class.
+            Today's material includes <q><url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#cRv">Implications</url></q> and concludes right after <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#vET">Example 0.2.9</url>. You're encouraged to read it before coming to class.
             </p>
+            
+            
+            <p>
+              Our definition of statement above mentions that statements can be <emph>combined</emph> somehow to build molecular statements.
+              This is done via <term>logical connectives</term>.
+              There are five connectives we'll consider (though you can build many more):
+            </p>
+            <ol>
+              <li>and</li>
+              <li>or</li>
+              <li>if..., then...</li>
+              <li>if and only if</li>
+              <li>not</li>
+            </ol>
+          
+          
+          
+          <exploration xml:id="expl-redblue">
+            <statement>
+              <p>
+                A mathematician places a set of four cards on a table, each of which has a number on one side and a colored patch on the other side. She claims the following: 
+                
+                <blockquote>
+                If a card shows an even number on one face, then its opposite face is red.
+                </blockquote>
+                 
+                  The visible faces of the cards show 3, 8, red, and blue. Which card(s) must you turn over in order to test the truth of her claim? Carefully explain.
+              </p>
+            </statement>
+            </exploration>
             
             <subsubsection>
               <title>Implications</title>
@@ -414,16 +448,31 @@
            <exploration>
              <statement>
                <p>
-                 It is a well known law in the United States that you must be 21 to consume alcohol. Suppose now that four cards are placed on the table each of which has an age on one side and a beverage on the other. The visible faces of the cards show 16, 22, coca-cola, and beer. If each card represents a person at a party, which card(s) must you check to make sure everyone at the party is a law abiding citizen? That is, which card(s) must you turn over to verify the proposition:
+                 It is a well known law in the United States that you must be 16 years of age or older to drive a car without an adult present. Suppose now that four cards are placed on the table each of which has an age on one side and a vehicle on the other. The visible faces of the cards show 11, 17, a bicycle, and a car. If each card represents a person, which card(s) must you check to make sure everyone is a law abiding citizen? That is, which card(s) must you turn over to verify the proposition:
                </p>
                <blockquote>
-                 if one is consuming an alcoholic beverage then one is over the age of 21
+                 if one is driving a car, then one is 16 years of age or older
                </blockquote>
                <p>
                  How does this relate to <xref ref="expl-redblue" />?
                </p>
              </statement>
              </exploration>
+             
+             
+             <!-- <exploration>
+                <statement>
+                  <p>
+                    It is a well known law in the United States that you must be 21 to consume alcohol. Suppose now that four cards are placed on the table each of which has an age on one side and a beverage on the other. The visible faces of the cards show 16, 22, coca-cola, and beer. If each card represents a person at a party, which card(s) must you check to make sure everyone at the party is a law abiding citizen? That is, which card(s) must you turn over to verify the proposition:
+                  </p>
+                  <blockquote>
+                    if one is consuming an alcoholic beverage then one is over the age of 21
+                  </blockquote>
+                  <p>
+                    How does this relate to <xref ref="expl-redblue" />?
+                  </p>
+                </statement>
+                </exploration> -->
            
            
            <exploration>
@@ -470,6 +519,99 @@
                 
                 
             </subsubsection>
+            
+            
+            
+            
+            <subsubsection>
+              <title>Logical Equivalence</title>
+              
+              <assemblage permid="tPG">
+                <title>If and only if</title>
+                <idx><h>if and only if (logical connective)</h></idx>
+                <idx><h>biconditional</h></idx>
+                <blockquote permid="xug">
+                  <p permid="goR">
+                    <m>P \iff Q</m> is logically equivalent to <m>(P \imp Q) \wedge (Q \imp P)</m>.
+                  </p>
+                </blockquote>
+          
+                <p permid="oDk">
+                  Example: Given an integer <m>n</m>,
+                  it is true that <m>n</m> is even if and only if <m>n^2</m> is even.
+                  That is, if <m>n</m> is even,
+                  then <m>n^2</m> is even, as well as the converse:
+                  if <m>n^2</m> is even, then <m>n</m> is even.
+                </p>
+              </assemblage>
+              
+              
+              
+              
+            </subsubsection>
+            
+            </subsection>
+          
+          <subsection>
+            <title>Today's Screencast</title>
+            
+            
+            <insight>
+              <video ee="xjedheu" />
+            </insight>
+            
+          </subsection>
+          
+          
+          <subsection>
+            <title>If you missed class today</title>
+            
+            <ol>
+            <li>Work through today's outline and read the marked pages in the book.</li>
+            <li>Watch the screencast above.</li>
+            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+            </ol>
+            
+          </subsection>
+        
+        
+      </section>
+      
+      <section xml:id="Jan-20">
+        <title>Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</title>
+        
+        
+        <introduction>
+          
+          <assemblage>
+            <title>Motivating Questions</title>
+            <p>
+            <statement>
+            Here are some questions we'll consider.
+            <ol>
+              <li>How do we introduce variables into our matheamtical statements?</li>
+              <li>What types of quantifiers exist in matheamtics?</li>
+              <li>How do we negate quantified statements?</li>
+            </ol>
+            
+            </statement>
+            </p>
+            
+          </assemblage>
+          
+          
+            
+            
+           
+          </introduction>
+          
+          <subsection>
+            <title>Outline</title>
+            
+            <p>
+            Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#IYE">"Predicates and Quantifiers" part of Section 0.2</url>. You're encouraged to read it before coming to class.
+            </p>
             
             <subsubsection>
               <title>Converse and Contrapositive</title>
@@ -525,97 +667,6 @@
               </p>
             
             </subsubsection>
-            
-            
-            <subsubsection>
-              <title>Logical Equivalence</title>
-              
-              <assemblage permid="tPG">
-                <title>If and only if</title>
-                <idx><h>if and only if (logical connective)</h></idx>
-                <idx><h>biconditional</h></idx>
-                <blockquote permid="xug">
-                  <p permid="goR">
-                    <m>P \iff Q</m> is logically equivalent to <m>(P \imp Q) \wedge (Q \imp P)</m>.
-                  </p>
-                </blockquote>
-          
-                <p permid="oDk">
-                  Example: Given an integer <m>n</m>,
-                  it is true that <m>n</m> is even if and only if <m>n^2</m> is even.
-                  That is, if <m>n</m> is even,
-                  then <m>n^2</m> is even, as well as the converse:
-                  if <m>n^2</m> is even, then <m>n</m> is even.
-                </p>
-              </assemblage>
-              
-              
-              
-              
-            </subsubsection>
-            
-            </subsection>
-          
-          <subsection>
-            <title>Today's Screencast</title>
-            
-            
-            <insight>
-            
-            </insight>
-            
-          </subsection>
-          
-          
-          <subsection>
-            <title>If you missed class today</title>
-            
-            <ol>
-            <li>Work through today's outline and read the marked pages in the book.</li>
-            <li>Watch the screencast above.</li>
-            <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
-            <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
-            </ol>
-            
-          </subsection>
-        
-        
-      </section>
-      
-      <section xml:id="Jan-20">
-        <title>Jan. 20: Predicates and Quantifiers</title>
-        
-        
-        <introduction>
-          
-          <assemblage>
-            <title>Motivating Questions</title>
-            <p>
-            <statement>
-            Here are some questions we'll consider.
-            <ol>
-              <li>How do we introduce variables into our matheamtical statements?</li>
-              <li>What types of quantifiers exist in matheamtics?</li>
-              <li>How do we negate quantified statements?</li>
-            </ol>
-            
-            </statement>
-            </p>
-            
-          </assemblage>
-          
-          
-            
-            
-           
-          </introduction>
-          
-          <subsection>
-            <title>Outline</title>
-            
-            <p>
-            Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#IYE">"Predicates and Quantifiers" part of Section 0.2</url>. You're encouraged to read it before coming to class.
-            </p>
             
             <subsubsection>
               <title>Predicates and Quantifiers</title>
@@ -1585,7 +1636,7 @@
                         <statement>
                           <p>
                             Consider the relation <m>\mathcal{P}</m> on <m>\mathbb{Z}</m>.
-                            Then <m>P</m> is an equivalence relation.
+                            Then <m>\mathcal{P}</m> is an equivalence relation.
                           </p>
                         </statement>
                       </example>
@@ -1644,7 +1695,7 @@
             </p>
             
           </assemblage>
-          
+
           
             
             
@@ -1766,21 +1817,200 @@
       <chapter xml:id="Week-04">
         <title>Week 4: Feb. 1-5</title>
         
+        <introduction>
+          <p>
+              This week, we are all about <term>functions</term>. The notion of function is a foundational idea in all fields of matheamtics, from calculus to abstract algebra and everywhere in between, including the discrete ideas we'll explore this semester. So, this week we take a deep dive into the world of functions.
+            </p>
+        </introduction>
+        
         <section xml:id="Feb-01">
-          <title>Feb. 1</title>
+          <title>Feb. 1: Functions</title>
           
+          <introduction>
+            
+            <assemblage>
+              <title>Motivating Questions</title>
+              <p>
+              <statement>
+              Here are some questions we'll consider.
+              <ol>
+                <li>What is a function?</li>
+                <li>What are some of the key terms needed for clearly describing functions?</li>
+                <li>What are some examples of functions, and how do we calculate domain, codomain, image, range, etc?</li>
+              </ol>
+              </statement>
+              </p>
+              
+            </assemblage>
+            
+            
+              
+              
+             
+            </introduction>
+            
+            <subsection>
+              <title>Outline</title>
+              
+              <p>
+              Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-functions.html">Section 0.4</url> of the book. You're encouraged to read it before coming to class.
+              </p>
+              
+              
+              <subsubsection>
+                <title>The definition of a function</title>
+                
+                <p>
+                  The definition of a function we supply here is slightly different than the <url href="http://discrete.openmathbooks.org/dmoi3/sec_intro-functions.html#sKa">definition given in the book</url>, as we have the language of relations that our book does not develop.
+                </p>
+                
+                <definition>
+                  <statement>
+                    <p>
+                      Let <m>X,Y</m> be nonempty sets.
+                      A <term>function</term> (or <term>map</term>, or <term>mapping</term>) is a relation <m>f</m> on <m>X\times Y</m> in which each element <m>x\in X</m> is related to exactly one element <m>y\in Y</m>. We write <m>y = f(x)</m> and <m>f : X\to Y</m>. We say that <m>X</m> is the <term>domain</term> of <m>f</m>, <m>Y</m> is the <term>codomain</term> of <m>f</m>, <m>y</m> is the <term>image</term> of <m>x</m> under <m>f</m>, and the set <m>\ran(f) = \setof{y\in Y}{\exists x\in X, y=f(x)}</m> is the <term>range</term> of <m>f</m>.
+                    </p>
+                  </statement>
+                </definition>
+                
+                <p>
+                  Wow, that's a lot! Let's spend some time exploring this, first with an example.
+                </p>
+                
+                <example xml:id="example-functiondef">
+                  <statement>
+                    <p>
+                      Consider the following relations. Are they functions? Why or why not?
+                    </p>
+                    <ol>
+                      <li><m>X=\set{0,1,5}, Y = \set{\clubsuit, \spadesuit, \diamondsuit, \heartsuit}</m>, <m>f_1 = \set{(1,\clubsuit), (0, \heartsuit), (5,\heartsuit)}</m></li>
+                      <li><m>X=\set{0,1,5}, Y = \set{\clubsuit, \spadesuit, \diamondsuit, \heartsuit}</m>, <m>f_2 = \set{(1,\clubsuit), (0, \heartsuit), (0,\diamondsuit)}</m></li>
+                      <li><m>X = \set{-3,-2,-1,0,1,2,3}</m>, <m>Y = \set{0,1,2,\ldots,9}</m>, <m>f_3 = \setof{(x,x^2)}{x\in X}</m></li>
+                    </ol>
+                  </statement>
+                </example>
+                
+                
+                <exploration> <!--  From Sundstrom section 6.1 -->
+                  <statement>
+                    <p>
+                      Let <m>b</m> be the function that assigns to each person his or her birthday (month and day).
+                    </p>
+                    <ol>
+                      <li>Explain why <m>b</m> really is a function. We'll call it the <term>birthday function</term>.  What are the domain and codomain of <m>b</m>?</li>
+                      <li>What is <m>\ran(b)</m>?</li>
+                      <li><url href="https://en.wikipedia.org/wiki/Emmy_Noether">Emmy Noether</url> was one of the founders of abstract algebra, and also made significant contributions to mathematical physics via her discovery of <url href="https://en.wikipedia.org/wiki/Noether%27s_theorem">Noether's Theorem</url>. Her birthday was March 23, 1882. Translate this into a function statement, i.e., 
+                      <me>
+                        b(??) = ??
+                      </me></li>
+                      <li>Is the following statement true or false? Explain.
+                      <blockquote>
+                        For each day <m>D</m> of the year, there exists a person <m>x</m> such that <m>b(x)=D</m>.
+                      </blockquote>
+                      </li>
+                      <li>
+                        Is the following statement true or false? Explain.
+                        <blockquote>
+                          For any people <m>x</m> and <m>y</m>, if <m>x</m> and <m>y</m> are different people, then <m>b(x) \ne b(y)</m>.
+                        </blockquote>
+                      </li>
+                    </ol>
+                  </statement>
+                  </exploration>
+                  
+                  
+                  <exploration>
+                    <statement>
+                      <p>
+                        Let <m>\sigma</m> be the function that associates to each positive natural number the sum of its distinct natural number divisors. This is called the <term>sum of the divisors function</term>. For example, the natural number divisors of 6 are 1, 2, 3, and 6. Thus:
+                        <me>
+                          \sigma(6) = 1  + 2 + 3 +6 = 12.
+                        </me>
+                      </p>
+                      <ol>
+                        <li>Calculate <m>\sigma(k)</m> for <m>k = 1, 2, \ldots, 10</m>.</li>
+                        <li>Does there exist a natural number <m>n</m> such that <m>\sigma(n) = 5</m>? Justify your conclusion.</li>
+                        <li>Is it possible to find two different natural numbers <m>m \ne n</m> such that <m>\sigma(m) = \sigma(n)</m>? Explain.</li>
+                      </ol>
+                    </statement>
+                    </exploration>
+              
+              
+              
+              </subsubsection>
+              
+              <subsubsection>
+                <title>Representations of Functions</title>
+                
+                <p>
+                  <em>Definining</em> a function requires three elements: a domain, a codomain, and an assignment of each member of the domain to a unique member of the codomain.
+                  As your experience suggests, there are several ways to <em>represent</em> that assignment, such as via a <q>rule</q> (e.g., those defined by algebraic expressions, though not all algebraic expressions define functions); via a graphical relationship; via a table, or in words (e.g., the birthday function).
+                </p>
+                
+                <p>
+                  In this class, our domains and codomains will generally be discrete sets, such as <m>\N</m> or <m>\Z</m>, and very often they will be <em>finite sets</em>. This allows us to be more explicit about the assignments we make.
+                </p>
+                
+                <example>
+                  <statement>
+                    <p>
+                      Let's represent the functions described in <xref ref="example-functiondef" /> in as many ways as possible.
+                    </p>
+                  </statement>
+                </example>
+                
+                <exploration>
+                  <statement>
+                    <p>
+                      Which of the arrow diagrams given represent functions <m>A\to B</m>, with <m>A = \set{1,2,3,4}</m> and <m>B = \set{a,b,c}</m>? Explain. For those that are functions, determine the range of the function.
+                    </p>
+                    
+                    <image xml:id="img-arrow-diagrams" width="80%" source="./img/arrow-diagrams.png" />
+                  </statement>
+                  </exploration>
+                
+              </subsubsection>
+              
+              
+              
+              
+              
+            </subsection>
+            
+            <subsection>
+              <title>Today's Screencast</title>
+              
+              
+              <insight>
+                
+              </insight>
+              
+            </subsection>
+            
+            
+            <subsection>
+              <title>If you missed class today</title>
+              
+              <ol>
+              <li>Work through today's outline and read the marked pages in the book.</li>
+              <li>Watch the screencast above.</li>
+              <li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+              <li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+              </ol>
+              
+            </subsection>
           
         </section>
         
         <section xml:id="Feb-03">
-          <title>Feb. 3</title>
+          <title>Feb. 3: Functions and Reading Discussion</title>
           
           
         </section>
         
         
         <section xml:id="Feb-05">
-          <title>Feb. 5</title>
+          <title>Feb. 5: Functions</title>
           
           
         </section>

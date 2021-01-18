@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-08T15:27:48-06:00       *-->
+<!--*       on 2021-01-18T14:55:49-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -91,6 +91,7 @@ MathJax.Hub.Config({
 \def\iff{\leftrightarrow}
 \def\Gal{\text{Gal}}
 \def\im{\text{im}}
+\def\ran{\text{ran}}
 \def\normal{\vartriangleleft}
 \renewcommand{\qedsymbol}{$\checkmark$}
 \def\lcm{{\text{lcm}\,}}
@@ -170,7 +171,7 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
 <li><a href="Jan-18.html" data-scroll="Jan-18" class="active">Jan. 18: Implications</a></li>
-<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Predicates and Quantifiers</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
 <li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Sets and Relationships</a></li>
 </ul>
 </li>
@@ -183,9 +184,9 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
-<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1</a></li>
-<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3</a></li>
-<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5</a></li>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
 </ul>
 </li>
 <li class="link">
@@ -283,11 +284,22 @@ MathJax.Hub.Config({
 </ol></p></article></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Outline</span>
 </h3>
-<p id="p-16">Today's material begins with “<a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#cRv" target="_blank">Implications</a>” and concludes right after <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#vET" target="_blank">Example 0.2.9</a>. You're encouraged to read it before coming to class.</p>
-<section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<p id="p-16">Today's material includes “<a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#cRv" target="_blank">Implications</a>” and concludes right after <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html#vET" target="_blank">Example 0.2.9</a>. You're encouraged to read it before coming to class.</p>
+<p id="p-17">Our definition of statement above mentions that statements can be combined somehow to build molecular statements. This is done via <dfn class="terminology">logical connectives</dfn>. There are five connectives we'll consider (though you can build many more):</p>
+<ol class="decimal">
+<li id="li-25">and</li>
+<li id="li-26">or</li>
+<li id="li-27">if..., then...</li>
+<li id="li-28">if and only if</li>
+<li id="li-29">not</li>
+</ol>
+<article class="exploration project-like" id="expl-redblue"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-18">A mathematician places a set of four cards on a table, each of which has a number on one side and a colored patch on the other side. She claims the following: <blockquote class="blockquote" id="blockquote-2">If a card shows an even number on one face, then its opposite face is red.</blockquote> The visible faces of the cards show 3, 8, red, and blue. Which card(s) must you turn over in order to test the truth of her claim? Carefully explain.</p></article><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">2.1.1.1</span> <span class="title">Implications</span>
 </h4>
-<p id="p-17">We begin with a reminder of the following definition.</p>
+<p id="p-19">We begin with a reminder of the following definition.</p>
 <article class="assemblage assemblage-like" id="Buf"><h6 class="heading"><span class="title">Implications.</span></h6>
 <p id="QaA">An <dfn class="terminology">implication</dfn> or <dfn class="terminology">conditional</dfn> is a molecular statement of the form</p>
 <div class="displaymath">
@@ -300,45 +312,34 @@ P \to Q
 <li id="WGK">\(P\) is the <dfn class="terminology">hypothesis</dfn> (or <dfn class="terminology">antecedent</dfn>).</li>
 <li id="iVc">\(Q\) is the <dfn class="terminology">conclusion</dfn> (or <dfn class="terminology">consequent</dfn>).</li>
 </ul>
-<p id="whJ">An implication is <em class="emphasis">true</em> provided \(P\) is false or \(Q\) is true (or both), and <em class="emphasis">false</em> otherwise. In particular, the only way for \(P \to Q\) to be false is for \(P\) to be true <em class="emphasis">and</em> \(Q\) to be false.</p></article><article class="exploration project-like" id="exploration-3"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
-</h6>
-<p id="p-20">It is a well known law in the United States that you must be 21 to consume alcohol. Suppose now that four cards are placed on the table each of which has an age on one side and a beverage on the other. The visible faces of the cards show 16, 22, coca-cola, and beer. If each card represents a person at a party, which card(s) must you check to make sure everyone at the party is a law abiding citizen? That is, which card(s) must you turn over to verify the proposition:</p>
-<blockquote class="blockquote" id="blockquote-2">if one is consuming an alcoholic beverage then one is over the age of 21</blockquote>
-<p id="p-21">How does this relate to <a class="xref" data-knowl="./knowl/expl-redblue.html" title="Exploration 1.1.3">Exploration 1.1.3</a>?</p></article><article class="exploration project-like" id="exploration-4"><h6 class="heading">
+<p id="whJ">An implication is <em class="emphasis">true</em> provided \(P\) is false or \(Q\) is true (or both), and <em class="emphasis">false</em> otherwise. In particular, the only way for \(P \to Q\) to be false is for \(P\) to be true <em class="emphasis">and</em> \(Q\) to be false.</p></article><article class="exploration project-like" id="exploration-4"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
 </h6>
-<p id="p-22">This exercise is practice with checking if a conditional statement is true. Consider the following conditional statement: <blockquote class="blockquote" id="blockquote-3">If I win the lottery, every student in this class gets an A.</blockquote> In this conditional statement, what is the hypothesis and what is the conclusion? Which of the following circumstances make the conditional statement bolded above false?</p>
+<p id="p-22">It is a well known law in the United States that you must be 16 years of age or older to drive a car without an adult present. Suppose now that four cards are placed on the table each of which has an age on one side and a vehicle on the other. The visible faces of the cards show 11, 17, a bicycle, and a car. If each card represents a person, which card(s) must you check to make sure everyone is a law abiding citizen? That is, which card(s) must you turn over to verify the proposition:</p>
+<blockquote class="blockquote" id="blockquote-3">if one is driving a car, then one is 16 years of age or older</blockquote>
+<p id="p-23">How does this relate to <a class="xref" data-knowl="./knowl/expl-redblue.html" title="Exploration 1.1.3">Exploration 1.1.3</a>?</p></article><article class="exploration project-like" id="exploration-5"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-24">This exercise is practice with checking if a conditional statement is true. Consider the following conditional statement: <blockquote class="blockquote" id="blockquote-4">If I win the lottery, every student in this class gets an A.</blockquote> In this conditional statement, what is the hypothesis and what is the conclusion? Which of the following circumstances make the conditional statement bolded above false?</p>
 <ol class="decimal">
-<li id="li-27">I win the lottery and every student in this class gets an A.</li>
-<li id="li-28">I win the lottery and not every student in this class gets an A.</li>
-<li id="li-29">I don’t win the lottery and everyone in this class gets an A.</li>
-<li id="li-30">I don’t win the lottery and not everyone in this class gets an A.</li>
+<li id="li-32">I win the lottery and every student in this class gets an A.</li>
+<li id="li-33">I win the lottery and not every student in this class gets an A.</li>
+<li id="li-34">I don’t win the lottery and everyone in this class gets an A.</li>
+<li id="li-35">I don’t win the lottery and not everyone in this class gets an A.</li>
 </ol></article></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">2.1.1.2</span> <span class="title">Causality and Direct Proof</span>
 </h4>
-<p id="p-23">Recall that the truth values of molecular statements are determined entirely by the truth values of their parts and the nature of their connectives. There need be no relationship between the parts at all.</p>
+<p id="p-25">Recall that the truth values of molecular statements are determined entirely by the truth values of their parts and the nature of their connectives. There need be no relationship between the parts at all.</p>
 <article class="activity project-like" id="act-imptf"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
-</h6>
-<p id="p-24">Are the following statements true or false? Explain how you know.</p>
-<ol class="decimal">
-<li id="li-31">If \(1+2=3\text{,}\) then John Calvin wrote the Institutes.</li>
-<li id="li-32">If Homer Simpson is the president of Dordt University, then Marge Simpson is the president of Northwestern College.</li>
-<li id="li-33">If \(0=1\text{,}\) then Dr. Janssen's first cat was named Bethany.</li>
-</ol></article></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.1.1.3</span> <span class="title">Converse and Contrapositive</span>
-</h4>
-<p id="p-25">We begin with a definition.</p>
-<article class="assemblage assemblage-like" id="NIx"><h6 class="heading"><span class="title">Converse and Contrapositive.</span></h6>
-<ul id="Iwb" class="disc">
-<li id="Pcl"><p id="izD">The <dfn class="terminology">converse</dfn>  of an implication \(P \imp Q\) is the implication \(Q \imp P\text{.}\) The converse is NOT logically equivalent to the original implication. That is, whether the converse of an implication is true is independent of the truth of the implication.</p></li>
-<li id="vju"><p id="OGM">The <dfn class="terminology">contrapositive</dfn>  of an implication \(P \imp Q\) is the statement \(\neg Q \imp \neg P\text{.}\) An implication and its contrapositive are logically equivalent (they are either both true or both false).</p></li>
-</ul></article><article class="activity project-like" id="activity-3"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-29">Find the converse and contrapositive for each statement in <a class="xref" data-knowl="./knowl/act-imptf.html" title="Activity 2.1.3">Activity 2.1.3</a>. Are your new statements true or false? Why?</p></article><p id="p-30">When constructing proofs, it is sometimes helpful to prove the contrapositive of a conditional rather than the conditional itself. The downside of this approach is that we generally lose the causal chain; rather than explaining why statement \(Q\) follows from \(P\text{,}\) we show that \(P\) could not be true if \(Q\) were not. <aside class="aside aside-like" id="aside-1">I recognize that this is pretty abstract! More details when we get to chapter 3.</aside></p></section><section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.1.1.4</span> <span class="title">Logical Equivalence</span>
+<p id="p-26">Are the following statements true or false? Explain how you know.</p>
+<ol class="decimal">
+<li id="li-36">If \(1+2=3\text{,}\) then John Calvin wrote the Institutes.</li>
+<li id="li-37">If Homer Simpson is the president of Dordt University, then Marge Simpson is the president of Northwestern College.</li>
+<li id="li-38">If \(0=1\text{,}\) then Dr. Janssen's first cat was named Bethany.</li>
+</ol></article></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.1.1.3</span> <span class="title">Logical Equivalence</span>
 </h4>
 <article class="assemblage assemblage-like" id="tPG"><h6 class="heading"><span class="title">If and only if.</span></h6>
 <blockquote class="blockquote" id="xug"><p id="goR">\(P \iff Q\) is logically equivalent to \((P \imp Q) \wedge (Q \imp P)\text{.}\)</p></blockquote>
@@ -347,14 +348,15 @@ P \to Q
 </h3>
 <article class="insight remark-like" id="insight-2"><h6 class="heading">
 <span class="type">Screencast</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
-</h6></article></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+</h6>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-2" class="video" allowfullscreen="" src="https://expl.ai/xjedheu?mode=embed"></iframe></div></article></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">If you missed class today</span>
 </h3>
 <ol class="decimal">
-<li id="li-36">Work through today's outline and read the marked pages in the book.</li>
-<li id="li-37">Watch the screencast above.</li>
-<li id="li-38">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
-<li id="li-39">
+<li id="li-39">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-40">Watch the screencast above.</li>
+<li id="li-41">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-42">
 <a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
 </ol></section></section></div></main>
 </div>

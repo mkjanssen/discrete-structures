@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-08T15:27:48-06:00       *-->
+<!--*       on 2021-01-18T14:55:50-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -91,6 +91,7 @@ MathJax.Hub.Config({
 \def\iff{\leftrightarrow}
 \def\Gal{\text{Gal}}
 \def\im{\text{im}}
+\def\ran{\text{ran}}
 \def\normal{\vartriangleleft}
 \renewcommand{\qedsymbol}{$\checkmark$}
 \def\lcm{{\text{lcm}\,}}
@@ -170,7 +171,7 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
 <li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
-<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Predicates and Quantifiers</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
 <li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Sets and Relationships</a></li>
 </ul>
 </li>
@@ -183,9 +184,9 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
-<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1</a></li>
-<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3</a></li>
-<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5</a></li>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
 </ul>
 </li>
 <li class="link">
@@ -276,35 +277,35 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Jan. 25: Operations on Sets</span>
 </h2>
 <section class="introduction" id="introduction-8"><article class="assemblage assemblage-like" id="assemblage-12"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
-<p id="p-78">Here are some questions we'll consider. <ol class="decimal">
-<li id="li-97">What is the power set of a set?</li>
-<li id="li-98">What is the cardinality of a set?</li>
-<li id="li-99">How do we calculate union and intersection of one or more sets?</li>
-<li id="li-100">What are the complement and set difference operations?</li>
-<li id="li-101">What is the Cartesian product of two sets?</li>
+<p id="p-80">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-102">What is the power set of a set?</li>
+<li id="li-103">What is the cardinality of a set?</li>
+<li id="li-104">How do we calculate union and intersection of one or more sets?</li>
+<li id="li-105">What are the complement and set difference operations?</li>
+<li id="li-106">What is the Cartesian product of two sets?</li>
 </ol></p></article></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Outline</span>
 </h3>
-<p id="p-79">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html#xIo" target="_blank">Section 0.3</a> of the book. You're encouraged to read it before coming to class.</p>
+<p id="p-81">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html#xIo" target="_blank">Section 0.3</a> of the book. You're encouraged to read it before coming to class.</p>
 <section class="subsubsection" id="subsubsection-10"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">3.1.1.1</span> <span class="title">Operations</span>
 </h4>
 <article class="assemblage assemblage-like" id="assemblage-13"><h6 class="heading"><span class="title">Subset and Power Set.</span></h6>
-<p id="p-80">A set \(A\) is a subset of \(B\) if every element of \(A\) is a subset of \(B\text{.}\) We call the set of all subsets of \(A\) the <dfn class="terminology">power set</dfn> of \(A\text{,}\) and write it \(\pow(A)\text{.}\)</p></article><article class="activity project-like" id="activity-7"><h6 class="heading">
+<p id="p-82">A set \(A\) is a subset of \(B\) if every element of \(A\) is a subset of \(B\text{.}\) We call the set of all subsets of \(A\) the <dfn class="terminology">power set</dfn> of \(A\text{,}\) and write it \(\pow(A)\text{.}\)</p></article><article class="activity project-like" id="activity-7"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h6>
-<p id="p-81">Consider the set \(A = \set{1,\triangle,\set{5}}\text{.}\) Calculate \(\pow(A)\text{.}\) What is \(\pow(\emptyset)\text{?}\)</p></article><article class="assemblage assemblage-like" id="assemblage-14"><h6 class="heading"><span class="title">Cardinality.</span></h6>
-<p id="p-82">The number of elements in a set \(A\) is called its <dfn class="terminology">cardinality</dfn>, denoted \(\card{A}\text{.}\) If \(\card{A}\) is a finite number, we say \(A\) is <dfn class="terminology">finite</dfn>. Otherwise, we say \(A\) is infinite.</p></article><article class="activity project-like" id="activity-8"><h6 class="heading">
+<p id="p-83">Consider the set \(A = \set{1,\triangle,\set{5}}\text{.}\) Calculate \(\pow(A)\text{.}\) What is \(\pow(\emptyset)\text{?}\)</p></article><article class="assemblage assemblage-like" id="assemblage-14"><h6 class="heading"><span class="title">Cardinality.</span></h6>
+<p id="p-84">The number of elements in a set \(A\) is called its <dfn class="terminology">cardinality</dfn>, denoted \(\card{A}\text{.}\) If \(\card{A}\) is a finite number, we say \(A\) is <dfn class="terminology">finite</dfn>. Otherwise, we say \(A\) is infinite.</p></article><article class="activity project-like" id="activity-8"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h6>
-<p id="p-83">Find the cardinality of the following sets.</p>
+<p id="p-85">Find the cardinality of the following sets.</p>
 <ol class="decimal">
-<li id="li-102">\(\displaystyle A=\set{20, 21, \ldots, 35}\)</li>
-<li id="li-103">\(\displaystyle T = \set{1,\set{2,3},\set{4},\emptyset}\)</li>
-<li id="li-104">\(\displaystyle X = \set{2, 4, 6, 8, 6, 4, 2}\)</li>
-<li id="li-105">\(\displaystyle \pow(\set{1,\triangle,\set{5}})\)</li>
+<li id="li-107">\(\displaystyle A=\set{20, 21, \ldots, 35}\)</li>
+<li id="li-108">\(\displaystyle T = \set{1,\set{2,3},\set{4},\emptyset}\)</li>
+<li id="li-109">\(\displaystyle X = \set{2, 4, 6, 8, 6, 4, 2}\)</li>
+<li id="li-110">\(\displaystyle \pow(\set{1,\triangle,\set{5}})\)</li>
 </ol></article><article class="assemblage assemblage-like" id="assemblage-15"><h6 class="heading"><span class="title">Union and Intersection.</span></h6>
-<p id="p-84">Let \(A\) and \(B\) be sets. The <dfn class="terminology">union</dfn> of \(A\) and \(B\text{,}\) denoted \(A\cup B\text{,}\) is the set containing all elements \(x\) which are in \(A\) or \(B\) (or both). The intersection \(A\cap B\) is the set of all elements of \(x\) in both \(A\)and\(B\text{.}\)</p></article><p id="SNP">Often when dealing with sets, we will have some understanding as to what “everything” is. Perhaps we are only concerned with natural numbers. In this case we would say that our <dfn class="terminology">universe</dfn> is \(\N\text{.}\)  Sometimes we denote this universe by \(\U\text{.}\) Given this context, we might wish to speak of all the elements which are <em class="emphasis">not</em> in a particular set. We say \(B\) is the <dfn class="terminology">complement</dfn>  of \(A\text{,}\) and write,</p>
+<p id="p-86">Let \(A\) and \(B\) be sets. The <dfn class="terminology">union</dfn> of \(A\) and \(B\text{,}\) denoted \(A\cup B\text{,}\) is the set containing all elements \(x\) which are in \(A\) or \(B\) (or both). The intersection \(A\cap B\) is the set of all elements of \(x\) in both \(A\)and\(B\text{.}\)</p></article><p id="SNP">Often when dealing with sets, we will have some understanding as to what “everything” is. Perhaps we are only concerned with natural numbers. In this case we would say that our <dfn class="terminology">universe</dfn> is \(\N\text{.}\)  Sometimes we denote this universe by \(\U\text{.}\) Given this context, we might wish to speak of all the elements which are <em class="emphasis">not</em> in a particular set. We say \(B\) is the <dfn class="terminology">complement</dfn>  of \(A\text{,}\) and write,</p>
 <div class="displaymath">
 \begin{equation*}
 B = \bar A
@@ -323,22 +324,22 @@ A \cap \bar B\text{.}
 A \cap \bar B = A \setminus B\text{.}
 \end{equation*}
 </div>
-<article class="exploration project-like" id="exploration-7"><h6 class="heading">
+<article class="exploration project-like" id="exploration-8"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h6>
-<p id="p-88">Let \(A = \set{2,3,4,5}\) and \(B=\set{1,5}\) be subsets of the universe \(\mathcal{U} = \set{1,2,3,4,5}\text{.}\) List the elements of the following sets.</p>
+<p id="p-90">Let \(A = \set{2,3,4,5}\) and \(B=\set{1,5}\) be subsets of the universe \(\mathcal{U} = \set{1,2,3,4,5}\text{.}\) List the elements of the following sets.</p>
 <ol class="decimal">
-<li id="li-106">\(\displaystyle {\bar A}\)</li>
-<li id="li-107">\(\displaystyle {\bar B}\)</li>
-<li id="li-108">\(\displaystyle A\cup B\)</li>
-<li id="li-109">\(\displaystyle A\cap B\)</li>
-<li id="li-110">\(\displaystyle A\setminus B\)</li>
-<li id="li-111">\(\displaystyle B\setminus A\)</li>
+<li id="li-111">\(\displaystyle {\bar A}\)</li>
+<li id="li-112">\(\displaystyle {\bar B}\)</li>
+<li id="li-113">\(\displaystyle A\cup B\)</li>
+<li id="li-114">\(\displaystyle A\cap B\)</li>
+<li id="li-115">\(\displaystyle A\setminus B\)</li>
+<li id="li-116">\(\displaystyle B\setminus A\)</li>
 </ol></article><article class="assemblage assemblage-like" id="assemblage-16"><h6 class="heading"><span class="title">Cartesian Product.</span></h6>
-<p id="p-89">The last way we'll combine sets \(A\) and \(B\) involves making ordered pairs. We say the <dfn class="terminology">Cartesian product</dfn> of \(A\) with \(B\) is the set of all ordered pairs \((a,b)\) in which \(a\in A\) and \(b\in B\text{.}\) That is, \(A \times B = \{(a,b) \st a \in A \wedge b \in B\}\text{.}\)</p></article><article class="activity project-like" id="activity-9"><h6 class="heading">
+<p id="p-91">The last way we'll combine sets \(A\) and \(B\) involves making ordered pairs. We say the <dfn class="terminology">Cartesian product</dfn> of \(A\) with \(B\) is the set of all ordered pairs \((a,b)\) in which \(a\in A\) and \(b\in B\text{.}\) That is, \(A \times B = \{(a,b) \st a \in A \wedge b \in B\}\text{.}\)</p></article><article class="activity project-like" id="activity-9"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-90">Let \(A = \set{\square,\triangle,\bigcirc}\) and \(B=\set{2,3}\text{.}\) List the elements of either \(A\times B\) or \(B\times A\) (your choice). Do the two products have the same elements? Explain. Then calculate \(\card{A\times A}\text{.}\)</p></article></section></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<p id="p-92">Let \(A = \set{\square,\triangle,\bigcirc}\) and \(B=\set{2,3}\text{.}\) List the elements of either \(A\times B\) or \(B\times A\) (your choice). Do the two products have the same elements? Explain. Then calculate \(\card{A\times A}\text{.}\)</p></article></section></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">Today's Screencast</span>
 </h3>
 <article class="insight remark-like" id="insight-5"><h6 class="heading">
@@ -347,10 +348,10 @@ A \cap \bar B = A \setminus B\text{.}
 <span class="type">Subsection</span> <span class="codenumber">3.1.3</span> <span class="title">If you missed class today</span>
 </h3>
 <ol class="decimal">
-<li id="li-112">Work through today's outline and read the marked pages in the book.</li>
-<li id="li-113">Watch the screencast above.</li>
-<li id="li-114">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
-<li id="li-115">
+<li id="li-117">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-118">Watch the screencast above.</li>
+<li id="li-119">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-120">
 <a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
 </ol></section></section></div></main>
 </div>

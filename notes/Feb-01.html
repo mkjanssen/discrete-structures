@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-08T15:27:48-06:00       *-->
+<!--*       on 2021-01-18T14:55:50-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Feb. 1</title>
+<title>Feb. 1: Functions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -91,6 +91,7 @@ MathJax.Hub.Config({
 \def\iff{\leftrightarrow}
 \def\Gal{\text{Gal}}
 \def\im{\text{im}}
+\def\ran{\text{ran}}
 \def\normal{\vartriangleleft}
 \renewcommand{\qedsymbol}{$\checkmark$}
 \def\lcm{{\text{lcm}\,}}
@@ -170,7 +171,7 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
 <li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
-<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Predicates and Quantifiers</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
 <li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Sets and Relationships</a></li>
 </ul>
 </li>
@@ -183,9 +184,9 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
-<li><a href="Feb-01.html" data-scroll="Feb-01" class="active">Feb. 1</a></li>
-<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3</a></li>
-<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5</a></li>
+<li><a href="Feb-01.html" data-scroll="Feb-01" class="active">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
 </ul>
 </li>
 <li class="link">
@@ -273,8 +274,91 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Feb-01"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Feb. 1</span>
-</h2></section></div></main>
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Feb. 1: Functions</span>
+</h2>
+<section class="introduction" id="introduction-12"><article class="assemblage assemblage-like" id="assemblage-23"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
+<p id="p-110">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-156">What is a function?</li>
+<li id="li-157">What are some of the key terms needed for clearly describing functions?</li>
+<li id="li-158">What are some examples of functions, and how do we calculate domain, codomain, image, range, etc?</li>
+</ol></p></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-111">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-functions.html" target="_blank">Section 0.4</a> of the book. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">4.1.1.1</span> <span class="title">The definition of a function</span>
+</h4>
+<p id="p-112">The definition of a function we supply here is slightly different than the <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_intro-functions.html#sKa" target="_blank">definition given in the book</a>, as we have the language of relations that our book does not develop.</p>
+<article class="definition definition-like" id="definition-1"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-113">Let \(X,Y\) be nonempty sets. A <dfn class="terminology">function</dfn> (or <dfn class="terminology">map</dfn>, or <dfn class="terminology">mapping</dfn>) is a relation \(f\) on \(X\times Y\) in which each element \(x\in X\) is related to exactly one element \(y\in Y\text{.}\) We write \(y = f(x)\) and \(f : X\to Y\text{.}\) We say that \(X\) is the <dfn class="terminology">domain</dfn> of \(f\text{,}\) \(Y\) is the <dfn class="terminology">codomain</dfn> of \(f\text{,}\) \(y\) is the <dfn class="terminology">image</dfn> of \(x\) under \(f\text{,}\) and the set \(\ran(f) = \setof{y\in Y}{\exists x\in X, y=f(x)}\) is the <dfn class="terminology">range</dfn> of \(f\text{.}\)</p></article><p id="p-114">Wow, that's a lot! Let's spend some time exploring this, first with an example.</p>
+<article class="example example-like" id="example-functiondef"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-115">Consider the following relations. Are they functions? Why or why not?</p>
+<ol class="decimal">
+<li id="li-159">\(X=\set{0,1,5}, Y = \set{\clubsuit, \spadesuit, \diamondsuit, \heartsuit}\text{,}\) \(f_1 = \set{(1,\clubsuit), (0, \heartsuit), (5,\heartsuit)}\)</li>
+<li id="li-160">\(X=\set{0,1,5}, Y = \set{\clubsuit, \spadesuit, \diamondsuit, \heartsuit}\text{,}\) \(f_2 = \set{(1,\clubsuit), (0, \heartsuit), (0,\diamondsuit)}\)</li>
+<li id="li-161">\(X = \set{-3,-2,-1,0,1,2,3}\text{,}\) \(Y = \set{0,1,2,\ldots,9}\text{,}\) \(f_3 = \setof{(x,x^2)}{x\in X}\)</li>
+</ol></article><article class="exploration project-like" id="exploration-15"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-116">Let \(b\) be the function that assigns to each person his or her birthday (month and day).</p>
+<ol class="decimal">
+<li id="li-162">Explain why \(b\) really is a function. We'll call it the <dfn class="terminology">birthday function</dfn>.  What are the domain and codomain of \(b\text{?}\)</li>
+<li id="li-163">What is \(\ran(b)\text{?}\)</li>
+<li id="li-164">
+<a class="external" href="https://en.wikipedia.org/wiki/Emmy_Noether" target="_blank">Emmy Noether</a> was one of the founders of abstract algebra, and also made significant contributions to mathematical physics via her discovery of <a class="external" href="https://en.wikipedia.org/wiki/Noether%27s_theorem" target="_blank">Noether's Theorem</a>. Her birthday was March 23, 1882. Translate this into a function statement, i.e.,<div class="displaymath">
+\begin{equation*}
+b(??) = ??
+\end{equation*}
+</div>
+</li>
+<li id="li-165">Is the following statement true or false? Explain. <blockquote class="blockquote" id="blockquote-7">For each day \(D\) of the year, there exists a person \(x\) such that \(b(x)=D\text{.}\)</blockquote>
+</li>
+<li id="li-166">Is the following statement true or false? Explain. <blockquote class="blockquote" id="blockquote-8">For any people \(x\) and \(y\text{,}\) if \(x\) and \(y\) are different people, then \(b(x) \ne b(y)\text{.}\)</blockquote>
+</li>
+</ol></article><article class="exploration project-like" id="exploration-16"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-117">Let \(\sigma\) be the function that associates to each positive natural number the sum of its distinct natural number divisors. This is called the <dfn class="terminology">sum of the divisors function</dfn>. For example, the natural number divisors of 6 are 1, 2, 3, and 6. Thus:</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma(6) = 1  + 2 + 3 +6 = 12.
+\end{equation*}
+</div>
+<ol class="decimal">
+<li id="li-167">Calculate \(\sigma(k)\) for \(k = 1, 2, \ldots, 10\text{.}\)</li>
+<li id="li-168">Does there exist a natural number \(n\) such that \(\sigma(n) = 5\text{?}\) Justify your conclusion.</li>
+<li id="li-169">Is it possible to find two different natural numbers \(m \ne n\) such that \(\sigma(m) = \sigma(n)\text{?}\) Explain.</li>
+</ol></article></section><section class="subsubsection" id="subsubsection-14"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">4.1.1.2</span> <span class="title">Representations of Functions</span>
+</h4>
+<p id="p-118"><em class="emphasis">Definining</em> a function requires three elements: a domain, a codomain, and an assignment of each member of the domain to a unique member of the codomain. As your experience suggests, there are several ways to <em class="emphasis">represent</em> that assignment, such as via a “rule” (e.g., those defined by algebraic expressions, though not all algebraic expressions define functions); via a graphical relationship; via a table, or in words (e.g., the birthday function).</p>
+<p id="p-119">In this class, our domains and codomains will generally be discrete sets, such as \(\N\) or \(\Z\text{,}\) and very often they will be <em class="emphasis">finite sets</em>. This allows us to be more explicit about the assignments we make.</p>
+<article class="example example-like" id="example-3"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-120">Let's represent the functions described in <a class="xref" data-knowl="./knowl/example-functiondef.html" title="Example 4.1.2">Example 4.1.2</a> in as many ways as possible.</p></article><article class="exploration project-like" id="exploration-17"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-121">Which of the arrow diagrams given represent functions \(A\to B\text{,}\) with \(A = \set{1,2,3,4}\) and \(B = \set{a,b,c}\text{?}\) Explain. For those that are functions, determine the range of the function.</p>
+<div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="./img/arrow-diagrams.png" style="width: 100%; height: auto;" alt=""></div></article></section></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-8"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
+</h6></article></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-170">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-171">Watch the screencast above.</li>
+<li id="li-172">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-173">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
 </div>
 </body>
 </html>
