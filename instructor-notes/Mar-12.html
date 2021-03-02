@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-03-01T12:27:12-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mar. 12: Polynomial Fitting</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Learning Guides</span></a></h1>
+<p class="byline">Mike Janssen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Mar-10.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Week-09.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Week-10.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Mar-10.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Week-09.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Week-10.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-01.html" data-scroll="Week-01"><span class="codenumber">1</span> <span class="title">Week 1: Jan. 15</span></a><ul><li><a href="Jan-15.html" data-scroll="Jan-15">Jan. 15: Course Intro/Statements</a></li></ul>
+</li>
+<li class="link">
+<a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
+<li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
+<li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Negations, Sets and Relationships</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-03.html" data-scroll="Week-03"><span class="codenumber">3</span> <span class="title">Week 3: Jan. 25-29</span></a><ul>
+<li><a href="Jan-25.html" data-scroll="Jan-25">Jan. 25: Operations on Sets</a></li>
+<li><a href="Jan-27.html" data-scroll="Jan-27">Jan. 27: Set Operations, Relations, and Equivalence Relations</a></li>
+<li><a href="Jan-29.html" data-scroll="Jan-29">Jan. 29: Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-05.html" data-scroll="Week-05"><span class="codenumber">5</span> <span class="title">Week 5: Feb. 8-12</span></a><ul>
+<li><a href="Feb-08.html" data-scroll="Feb-08">Feb. 8: The Additive and Multiplicative Principles</a></li>
+<li><a href="Feb-10.html" data-scroll="Feb-10">Feb. 10: More Counting with Sets and PIE</a></li>
+<li><a href="Feb-12.html" data-scroll="Feb-12">Feb. 12: Binomial Coefficients I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-06.html" data-scroll="Week-06"><span class="codenumber">6</span> <span class="title">Week 6: Feb. 15-19</span></a><ul>
+<li><a href="Feb-17.html" data-scroll="Feb-17">Feb. 17: Bionomial Coefficients II</a></li>
+<li><a href="Feb-19.html" data-scroll="Feb-19">Feb. 19: Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-07.html" data-scroll="Week-07"><span class="codenumber">7</span> <span class="title">Week 7: Feb. 22-26</span></a><ul>
+<li><a href="Feb-22.html" data-scroll="Feb-22">Feb. 22: Combinatorial Proofs I</a></li>
+<li><a href="Feb-24.html" data-scroll="Feb-24">Feb. 24: Reading Discussion and Combinatorial Proofs II</a></li>
+<li><a href="Feb-26.html" data-scroll="Feb-26">Feb. 26: Stars and Bars</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-08.html" data-scroll="Week-08"><span class="codenumber">8</span> <span class="title">Week 8: Mar. 1-5</span></a><ul>
+<li><a href="Mar-01.html" data-scroll="Mar-01">Mar. 1: Advanced PIE</a></li>
+<li><a href="Mar-03.html" data-scroll="Mar-03">Mar. 3: Review and Catchup</a></li>
+<li><a href="Mar-05.html" data-scroll="Mar-05">Mar. 5: Exam 1</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-09.html" data-scroll="Week-09"><span class="codenumber">9</span> <span class="title">Week 9: Mar. 8-12</span></a><ul>
+<li><a href="Mar-08.html" data-scroll="Mar-08">Mar. 8: Describing Sequences</a></li>
+<li><a href="Mar-10.html" data-scroll="Mar-10">Mar. 10: Arithmetic and Geometric Sequences</a></li>
+<li><a href="Mar-12.html" data-scroll="Mar-12" class="active">Mar. 12: Polynomial Fitting</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22</a></li>
+<li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 02</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-16.html" data-scroll="Week-16"><span class="codenumber">16</span> <span class="title">Week 16: Apr. 26-Apr. 30</span></a><ul>
+<li><a href="Apr-26.html" data-scroll="Apr-26">Apr. 26</a></li>
+<li><a href="Apr-28.html" data-scroll="Apr-28">Apr. 28</a></li>
+<li><a href="Apr-30.html" data-scroll="Apr-30">Apr. 30</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link">
+<a href="appendix-counting.html" data-scroll="appendix-counting"><span class="codenumber">A</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-45.html" data-scroll="section-45">Additive and Multiplicative Principles</a></li>
+<li><a href="section-46.html" data-scroll="section-46">PIE</a></li>
+<li><a href="section-47.html" data-scroll="section-47">Binomial Coefficients</a></li>
+<li><a href="section-48.html" data-scroll="section-48">Permutations</a></li>
+<li><a href="section-49.html" data-scroll="section-49">Stars and Bars</a></li>
+<li><a href="section-50.html" data-scroll="section-50">Anagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Mar-12"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Mar. 12: Polynomial Fitting</span>
+</h2>
+<section class="introduction" id="introduction-30"><article class="assemblage assemblage-like" id="assemblage-57"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
+<p id="p-409">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-474">#</li>
+<li id="li-475">
+<li id="li-476">
+</ol></p></article></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-410">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_polyfit.html" target="_blank">Section 2.3</a> of the book. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-52"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">9.3.1.1</span> <span class="title">Squares on a Chessboard</span>
+</h4>
+<article class="investigation project-like" id="Pkc"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
+</h6>
+<p id="cio">A standard \(8 \times 8\) chessboard contains 64 squares. Actually, this is just the number of unit squares. How many squares of all sizes are there on a chessboard? Start with smaller boards: \(1\times 1\text{,}\) \(2 \times 2\text{,}\) \(3\times 3\text{,}\) etc. Find a formula for the total number of squares in an \(n\times n\) board.</p></article><section class="subsubsection" id="subsubsection-53"><h5 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">\(k\)-th differences</span>
+</h5>
+<article class="definition definition-like" id="definition-3"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-412">Consider a sequence \((a_n)_{n=0}^\infty\text{.}\) The <dfn class="terminology">first difference</dfn> of \((a_n)\) is the sequence \(\Delta^1(a_n) = a_1 - a_0, a_2 - a_1, \ldots\text{.}\) The \(k\)-th difference sequence is the sequence</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta^k(a_n) = \Delta^{k-1}(a_n)_1 - \Delta^{k-1}(a_n)_0, \Delta^{k-1}(a_n)_2 - \Delta^{k-1}(a_n)_1,  \ldots.
+\end{equation*}
+</div></article><article class="theorem theorem-like" id="theorem-3"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-413">If \((a_n)\) is arithmetic, then \(\Delta^1(a_n)\) is a constant sequence.</p></article><p id="p-414">The “squares on an \(n\times n\) chessboard sequence” is</p>
+<div class="displaymath">
+\begin{equation*}
+1, 5, 14, 30, 55, \ldots.
+\end{equation*}
+</div>
+<p id="UDP">This sequence is not arithmetic (or geometric for that matter), but perhaps it's sequence of differences is. For differences we get</p>
+<div class="displaymath">
+\begin{equation*}
+4, 9, 16, 25, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="AKY">Not a huge surprise: one way to count the number of squares in a \(4 \times 4\) chessboard is to notice that there are \(16\) squares with side length 1, 9 with side length 2, 4 with side length 3 and 1 with side length 4. So the original sequence is just the sum of squares. Now this sequence of differences is not arithmetic since it's sequence of differences (the differences of the differences of the original sequence) is not constant. In fact, this sequence of <dfn class="terminology">second differences</dfn> is </p>
+<div class="displaymath">
+\begin{equation*}
+5, 7, 9, \ldots\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which <em class="emphasis">is</em> an arithmetic sequence (with constant difference 2). Notice that our original sequence had <dfn class="terminology">third differences</dfn> (that is, differences of differences of differences of the original) constant. We will call such a sequence \(\Delta^3\)-constant. The sequence \(1, 4, 9, 16, \ldots\) has second differences constant, so it will be a \(\Delta^2\)-constant sequence. In general, we will say a sequence is a <dfn class="terminology">\(\Delta^k\)-constant</dfn>  sequence if the \(k\)th differences are constant.</p>
+<article class="example example-like" id="KAj"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
+</h6>
+<p id="DFE">Which of the following sequences are \(\Delta^k\)-constant for some value of \(k\text{?}\)</p>
+<ol class="decimal">
+<li id="swF">\(2, 3, 7, 14, 24, 37,\ldots\text{.}\)</li>
+<li id="YDO">\(1, 8, 27, 64, 125, 216, \ldots\text{.}\)</li>
+<li id="EKX">\(1,2,4,8,16,32,64,\ldots\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-vrl" id="vrl"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-vrl"><div class="solution solution-like"><ol id="GAk" class="decimal">
+<li id="kSg">This is the sequence from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "example-sum-of-arithmetic" missing or not unique]</code>, in which we found a closed formula by recognizing the sequence as the sequence of partial sums of an arithmetic sequence. Indeed, the sequence of first differences is \(1,4,7, 10, 13,\ldots\text{,}\) which itself has differences \(3,3,3,3,\ldots\text{.}\) Thus \(2, 3, 7, 14, 24, 37,\ldots\) is a \(\Delta^2\)-constant sequence.</li>
+<li id="QZp">These are the perfect cubes. The sequence of first differences is \(7, 19, 37, 61, 91, \ldots\text{;}\) the sequence of second differences is \(12, 18, 24, 30,\ldots\text{;}\) the sequence of third differences is constant: \(6,6,6,\ldots\text{.}\) Thus the perfect cubes are a \(\Delta^3\)-constant sequence.</li>
+<li id="xgy">If we take first differences we get \(1,2,4,8,16,\ldots\text{.}\) Wait, what? That's the sequence we started with. So taking second differences will give us the same sequence again. No matter how many times we repeat this we will always have the same sequence, which in particular means no finite number of differences will be constant. Thus this sequence is not \(\Delta^k\)-constant for any \(k\text{.}\)</li>
+</ol></div></div>
+</div></article><article class="exploration project-like" id="exploration-41"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-419">Prove that every quadratic sequence \(a_n = bn^2 + cn + d\) has an arithmetic first difference.</p></article><article class="question example-like" id="question-10"><h6 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-420">Given a \(\Delta^k\)-constant sequence, can we find a (preferably unique) polynomial that “fits” the sequence?</p></article><p id="p-421">The answer is really delightful: we can, so long as we have enough data points!</p>
+<article class="theorem theorem-like" id="theorem-4"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-422">The closed formula for a sequence will be a degree \(k\) polynomial if and only if the sequence is \(\Delta^k\)-constant.</p></article><p id="p-423">This should remind us of something that you perhaps observed in calculus: the derivative of a degree \(n\) polynomial is constant.</p>
+<article class="example example-like" id="qHs"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.6</span><span class="period">.</span>
+</h6>
+<p id="jMN">Find a formula for the sequence \(3, 7, 14, 24,\ldots\text{.}\) Assume \(a_1 = 3\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-byu" id="byu"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-byu"><div class="solution solution-like">
+<p id="mHt">First, check to see if the formula has constant differences at some level. The sequence of first differences is \(4, 7, 10, \ldots\) which is arithmetic, so the sequence of second differences is constant. The sequence is \(\Delta^2\)-constant, so the formula for \(a_n\) will be a degree 2 polynomial. That is, we know that for some constants \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = an^2 + bn + c\text{.}
+\end{equation*}
+</div>
+<p id="SOC">Now to find \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\) First, it would be nice to know what \(a_0\) is, since plugging in \(n = 0\) simplifies the above formula greatly. In this case, \(a_0 = 2\) (work backwards from the sequence of constant differences). Thus</p>
+<div class="displaymath">
+\begin{equation*}
+a_0 = 2 = a\cdot 0^2 + b \cdot 0 + c\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">so \(c = 2\text{.}\) Now plug in \(n =1\) and \(n = 2\text{.}\) We get</p>
+<div class="displaymath">
+\begin{equation*}
+a_1 = 3 = a + b + 2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+a_2 = 7 = a4 + b 2 + 2\text{.}
+\end{equation*}
+</div>
+<p id="yVL">At this point we have two (linear) equations and two unknowns, so we can solve the system for \(a\) and \(b\) (using substitution or elimination or even matrices). We find \(a = \frac{3}{2}\) and \(b = \frac{-1}{2}\text{,}\) so \(a_n = \frac{3}{2} n^2 - \frac{1}{2}n + 2\text{.}\)</p>
+</div></div>
+</div></article><article class="exploration project-like" id="WOB"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
+</h6>
+<p id="PTW">Find a closed formula for the number of squares on an \(n \times n\) chessboard.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-HFD" id="HFD"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-HFD"><div class="solution solution-like">
+<p id="fcU">We have seen that the sequence \(1, 5, 14, 30, 55, \ldots\) is \(\Delta^3\)-constant, so we are looking for a degree 3 polynomial. That is,</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = an^3 + bn^2 + cn + d\text{.}
+\end{equation*}
+</div>
+<p id="Lkd">We can find \(d\) if we know what \(a_0\) is. Working backwards from the third differences, we find \(a_0 = 0\) (unsurprisingly, since there are no squares on a \(0\times 0\) chessboard). Thus \(d = 0\text{.}\) Now plug in \(n = 1\text{,}\) \(n =2\text{,}\) and \(n =3\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+1 = \amp a + b + c\\
+5 = \amp 8a + 4b + 2c\\
+14 = \amp 27a + 9b + 3c\text{.}
+\end{align*}
+</div>
+<p id="rrm">If we solve this system of equations we get \(a = \frac{1}{3}\text{,}\) \(b = \frac{1}{2}\) and \(c = \frac{1}{6}\text{.}\) Therefore the number of squares on an \(n \times n\) chessboard is \(a_n = \frac{1}{3}n^3 + \frac{1}{2}n^2 + \frac{1}{6}n = \frac{1}{6}n(n+1)(2n+1)\text{.}\)</p>
+</div></div>
+</div></article><article class="exploration project-like" id="exploration-43"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
+</h6>
+<p id="QsI">In their down time, ghost pirates enjoy stacking cannonballs in triangular based pyramids (aka, tetrahedrons), like those pictured here:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:8%;margin-right:8%;">
+<div class="sbspanel" style="width:9.523809523809524%;justify-content:flex-end;"><img src="./img/image-58.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:21.4285714285714%;justify-content:flex-end;"><img src="./img/image-59.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:30.952380952381%;justify-content:flex-end;"><img src="./img/image-60.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="wzR">Note, these are solid tetrahedrons, so there will be some cannonballs obscured from view (the picture on the right has one cannonball in the back not shown in the picture, for example)</p>
+<p id="cHa">The pirates wonder how many cannonballs would be required to build a pyramid 15 layers high (thus breaking the world cannonball stacking record). Can you help?</p>
+<ol class="decimal">
+<li id="UsH"><p id="sVr">Let \(P(n)\) denote the number of cannonballs needed to create a pyramid \(n\) layers high. So \(P(1) = 1\text{,}\) \(P(2) = 4\text{,}\) and so on. Calculate \(P(3)\text{,}\) \(P(4)\) and \(P(5)\text{.}\)</p></li>
+<li id="AzQ"><p id="ZcA">Use polynomial fitting to find a closed formula for \(P(n)\text{.}\) Show your work.</p></li>
+<li id="gGZ"><p id="FjJ">Answer the pirate's question: how many cannonballs do they need to make a pyramid 15 layers high?</p></li>
+<li id="MOi"><p id="lqS">Bonus: Locate this sequence in Pascal's triangle. Why does that make sense? </p></li>
+</ol></article></section></section></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.3.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-22"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">9.3.7</span><span class="period">.</span>
+</h6></article></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.3.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-487">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-488">Watch the screencast above.</li>
+<li id="li-489">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-490">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
+</div>
+</body>
+</html>

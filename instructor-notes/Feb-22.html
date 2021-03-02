@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-03-01T12:27:10-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Feb. 22: Combinatorial Proofs I</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Learning Guides</span></a></h1>
+<p class="byline">Mike Janssen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Week-07.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Week-07.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Feb-24.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Week-07.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Week-07.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Feb-24.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-01.html" data-scroll="Week-01"><span class="codenumber">1</span> <span class="title">Week 1: Jan. 15</span></a><ul><li><a href="Jan-15.html" data-scroll="Jan-15">Jan. 15: Course Intro/Statements</a></li></ul>
+</li>
+<li class="link">
+<a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
+<li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
+<li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Negations, Sets and Relationships</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-03.html" data-scroll="Week-03"><span class="codenumber">3</span> <span class="title">Week 3: Jan. 25-29</span></a><ul>
+<li><a href="Jan-25.html" data-scroll="Jan-25">Jan. 25: Operations on Sets</a></li>
+<li><a href="Jan-27.html" data-scroll="Jan-27">Jan. 27: Set Operations, Relations, and Equivalence Relations</a></li>
+<li><a href="Jan-29.html" data-scroll="Jan-29">Jan. 29: Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-05.html" data-scroll="Week-05"><span class="codenumber">5</span> <span class="title">Week 5: Feb. 8-12</span></a><ul>
+<li><a href="Feb-08.html" data-scroll="Feb-08">Feb. 8: The Additive and Multiplicative Principles</a></li>
+<li><a href="Feb-10.html" data-scroll="Feb-10">Feb. 10: More Counting with Sets and PIE</a></li>
+<li><a href="Feb-12.html" data-scroll="Feb-12">Feb. 12: Binomial Coefficients I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-06.html" data-scroll="Week-06"><span class="codenumber">6</span> <span class="title">Week 6: Feb. 15-19</span></a><ul>
+<li><a href="Feb-17.html" data-scroll="Feb-17">Feb. 17: Bionomial Coefficients II</a></li>
+<li><a href="Feb-19.html" data-scroll="Feb-19">Feb. 19: Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-07.html" data-scroll="Week-07"><span class="codenumber">7</span> <span class="title">Week 7: Feb. 22-26</span></a><ul>
+<li><a href="Feb-22.html" data-scroll="Feb-22" class="active">Feb. 22: Combinatorial Proofs I</a></li>
+<li><a href="Feb-24.html" data-scroll="Feb-24">Feb. 24: Reading Discussion and Combinatorial Proofs II</a></li>
+<li><a href="Feb-26.html" data-scroll="Feb-26">Feb. 26: Stars and Bars</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-08.html" data-scroll="Week-08"><span class="codenumber">8</span> <span class="title">Week 8: Mar. 1-5</span></a><ul>
+<li><a href="Mar-01.html" data-scroll="Mar-01">Mar. 1: Advanced PIE</a></li>
+<li><a href="Mar-03.html" data-scroll="Mar-03">Mar. 3: Review and Catchup</a></li>
+<li><a href="Mar-05.html" data-scroll="Mar-05">Mar. 5: Exam 1</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-09.html" data-scroll="Week-09"><span class="codenumber">9</span> <span class="title">Week 9: Mar. 8-12</span></a><ul>
+<li><a href="Mar-08.html" data-scroll="Mar-08">Mar. 8: Describing Sequences</a></li>
+<li><a href="Mar-10.html" data-scroll="Mar-10">Mar. 10: Arithmetic and Geometric Sequences</a></li>
+<li><a href="Mar-12.html" data-scroll="Mar-12">Mar. 12: Polynomial Fitting</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22</a></li>
+<li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 02</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-16.html" data-scroll="Week-16"><span class="codenumber">16</span> <span class="title">Week 16: Apr. 26-Apr. 30</span></a><ul>
+<li><a href="Apr-26.html" data-scroll="Apr-26">Apr. 26</a></li>
+<li><a href="Apr-28.html" data-scroll="Apr-28">Apr. 28</a></li>
+<li><a href="Apr-30.html" data-scroll="Apr-30">Apr. 30</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link">
+<a href="appendix-counting.html" data-scroll="appendix-counting"><span class="codenumber">A</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-45.html" data-scroll="section-45">Additive and Multiplicative Principles</a></li>
+<li><a href="section-46.html" data-scroll="section-46">PIE</a></li>
+<li><a href="section-47.html" data-scroll="section-47">Binomial Coefficients</a></li>
+<li><a href="section-48.html" data-scroll="section-48">Permutations</a></li>
+<li><a href="section-49.html" data-scroll="section-49">Stars and Bars</a></li>
+<li><a href="section-50.html" data-scroll="section-50">Anagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Feb-22"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Feb. 22: Combinatorial Proofs I</span>
+</h2>
+<section class="introduction" id="introduction-22"><article class="assemblage assemblage-like" id="assemblage-45"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
+<p id="p-231">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-300">What is a combinatorial proof?</li>
+<li id="li-301">How can we improve at writing combinatorial proofs?</li>
+</ol></p></article></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-232">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_comb-proofs.html" target="_blank">Section 1.4</a> of the book. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-37"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">7.1.1.1</span> <span class="title">From Last Time</span>
+</h4>
+<article class="exploration project-like" id="exploration-30"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-233">Prof. Clark is once again getting ready to order pizzas for the next Pizza and Presentation. Recall from <a class="xref" data-knowl="./knowl/invest-pizzas.html" title="Investigation 5.1.2">Investigation 5.1.2</a> that there are:</p>
+<ul class="disc">
+<li id="li-302">Three choices for crusts (thin, hand-tossed, thick)</li>
+<li id="li-303">Three choices for sauce (red, white, BBQ)</li>
+<li id="li-304">Fifteen choices for toppings</li>
+</ul>
+<p id="p-234">How many different pizzas are possible if Prof. Clark can make one choice for crust, one choice for sauce, and then choose any number of toppings?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-235">The main problem is to figure out the number of choices for toppings. We will assume no repeated toppings (or at least that, e.g., double pepperoni is the same as single pepperoni for the purposes of counting combinations of toppings). We also assume that the order in which toppings are added does not matter (possibly contentious!). Note that for \(0 \le k \le 15\text{,}\) there are \(\binom{15}{k}\) ways to make a \(k\)-topping pizza. Then there are</p>
+<div class="displaymath">
+\begin{equation*}
+3\cdot 3\cdot \sum\limits_{k=0}^{15} \binom{15}{k} = 294,912
+\end{equation*}
+</div>
+<p data-braille="continuation">possible pizzas.</p>
+</div></div>
+</div></article></section><section class="subsubsection" id="subsubsection-38"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">7.1.1.2</span> <span class="title">A motivating investigation</span>
+</h4>
+<article class="investigation project-like" id="UJt"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="period">.</span>
+</h6>
+<ol id="bwU" class="decimal">
+<li id="fSs">
+<p id="adg">The Stanley Cup is decided in a best of 7 tournament between two teams. In how many ways can your team win? Let's answer this question two ways:</p>
+<ol class="lower-alpha">
+<li id="dWb"><p id="xOS">How many of the 7 games does your team need to win? How many ways can this happen?</p></li>
+<li id="LZB"><p id="Gkp">What if the tournament goes all 7 games? So you win the last game. How many ways can the first 6 games go down?</p></li>
+<li id="sgK"><p id="mry">What if the tournament goes just 6 games? How many ways can this happen? What about 5 games? 4 games?</p></li>
+<li id="YnT"><p id="SyH">What are the two different ways to compute the number of ways your team can win? Write down an equation involving binomial coefficients (that is, \({n \choose k}\)'s). What pattern in <a href="Feb-17.html#lOI" class="internal" title="[image] [STRUCT].[NUM]">Pascal's triangle</a> is this an example of?</p></li>
+</ol>
+</li>
+<li id="tVX"><p id="yFQ">Generalize. What if the rules changed and you played a best of \(9\) tournament (5 wins required)? What if you played an \(n\) game tournament with \(k\) wins required to be named champion?</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><ol class="decimal">
+<li id="li-311"><ol class="lower-alpha">
+<li id="li-312">This is the same as counting the number of weight 4 bit strings of length 7, which is \(\binom{7}{4} = 35\text{.}\)</li>
+<li id="li-313">This is the same as counting the number of weight 3 bitstrings of length 6, which is \(\binom{6}{3} = 20 ways\text{.}\)</li>
+<li id="li-314">This is the number of weight 4 bitstrings of length 6, which is \(\binom{6}{4} = 15\text{.}\) The same for 5 games (5 ways) and 4 games (1 way).</li>
+<li id="li-315">One way is \(\binom{7}{4}\text{.}\) Another is \(\binom{6}{3} + \binom{6}{4}\text{.}\)</li>
+</ol></li>
+<li id="li-316">In general, as we've seen, \(\binom{n}{k} = \binom{n-1}{k-1}+\binom{n-1}{k}\text{.}\)</li>
+</ol></div></div>
+</div></article><p id="p-243">This is an example of a <dfn class="terminology">combinatorial proof</dfn>, which seeks to establish an identity (that is, an equation) by asking a counting question, and answering it in two different ways. Since the two methods answer the same question, they must in fact be equal. We now explore some additional examples.</p></section><section class="subsubsection" id="subsubsection-39"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">7.1.1.3</span> <span class="title">Pascal's Triangle, revisited</span>
+</h4>
+<article class="exploration project-like" id="exploration-31"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-244">Recall Pascal's triangle:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="./img/pascal-large.svg" style="width: 100%; height: auto;" alt=""></div>
+<p id="nLm">There are lots of patterns hidden away in the triangle, enough to fill a reasonably sized book. Here are just a few of the most obvious ones:</p>
+<ol class="decimal">
+<li id="Evc"><p id="eMZ">The entries on the border of the triangle are all 1.</p></li>
+<li id="kCl"><p id="KUi">Any entry not on the border is the sum of the two entries above it.</p></li>
+<li id="QJu"><p id="rbr">The triangle is symmetric. In any row, entries on the left side are mirrored on the right side.</p></li>
+<li id="wQD"><p id="XiA">The sum of all entries on a given row is a power of 2. (You should check this!)</p></li>
+</ol>
+<p data-braille="continuation">We can state these identities in terms of binomial coefficients as follows.</p>
+<ol class="decimal">
+<li id="cXM">\({n \choose 0} = 1\) and \({n \choose n} = 1\text{.}\)</li>
+<li id="JeV">\({n \choose k} = {n-1 \choose k-1} + {n-1 \choose k}\text{.}\)</li>
+<li id="pme">\({n \choose k} = {n \choose n-k}\text{.}\)</li>
+<li id="Vtn">\({n\choose 0} + {n \choose 1} + {n \choose 2} + \cdots + {n \choose n} = 2^n\text{.}\)</li>
+</ol>
+<p id="p-250">Try to establish at least one by answering a question in two different ways.</p></article></section><section class="subsubsection" id="subsubsection-40"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">7.1.1.4</span> <span class="title">More Examples</span>
+</h4>
+<p id="p-251">Note that in many cases, we <em class="emphasis">can</em> use algebra to establish these identities.</p>
+<article class="example example-like" id="LpH"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
+</h6>
+<p id="KyJ">Give an algebraic proof for the binomial identity</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose k} = {n-1\choose k-1} + {n-1 \choose k}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-AQC" id="AQC"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-AQC"><div class="solution solution-like">
+<article class="hiddenproof" id="gXL"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-gXL"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-gXL"><article class="hiddenproof"><p id="vLk">By the definition of \({n \choose k}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+{n-1 \choose k-1} = \frac{(n-1)!}{(n-1-(k-1))!(k-1)!} = \frac{(n-1)!}{(n-k)!(k-1)!}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+{n-1 \choose k} = \frac{(n-1)!}{(n-1-k)!k!}\text{.}
+\end{equation*}
+</div>
+<p id="bSt">Thus, starting with the right-hand side of the equation:</p>
+<div class="displaymath">
+\begin{align*}
+{n-1 \choose k-1} + {n-1 \choose k} \amp = \frac{(n-1)!}{(n-k)!(k-1)!}+ \frac{(n-1)!}{(n-1-k)!\,k!}\\
+\amp = \frac{(n-1)!k}{(n-k)!\,k!} + \frac{(n-1)!(n-k)}{(n-k)!\,k!}\\
+\amp = \frac{(n-1)!(k+n-k)}{(n-k)!\,k!}\\
+\amp = \frac{n!}{(n-k)!\, k!}\\
+\amp = {n \choose k}\text{.}
+\end{align*}
+</div>
+<p id="HZC">The second line (where the common denominator is found) works because \(k(k-1)! = k!\) and \((n-k)(n-k-1)! = (n-k)!\text{.}\)</p></article></div>
+</div></div>
+</div></article><article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="period">.</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+1\cdot 8 + 2\cdot 7 + 3\cdot 6 + \cdots + 8\cdot 1 = \binom{10}{3}.
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-256">The question we ask is: how many 3-element subsets of \(A= \set{1,2,\ldots, 10}\) are there? One answer (based on previous work) is \(\binom{10}{3}\text{.}\)</p>
+<p id="p-257">For the other answer, consider a three element subset \(\set{a,b,c}\) with \(a \lt b \lt c\text{.}\) We count based on values for \(b\text{.}\)</p>
+<ul class="disc">
+<li id="li-325">If \(b=2\text{,}\) then there is one choice for \(a\) and 8 choices for \(c\text{,}\) so \(1\cdot 8\) choices in total.</li>
+<li id="li-326">If \(b=3\text{,}\) there there are 2 choicesa for \(a\) and \(7\) choices for \(c\text{,}\) so \(2\cdot 7\) choices in total.</li>
+<li id="li-327">Etc. etc.</li>
+</ul>
+<p id="p-258">The identity is established.</p></article></div>
+<article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="period">.</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\binom{n}{k} \binom{n-k}{r} = \binom{n}{r} \binom{n-r}{k}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-259">Suppose Prof. Clark, fresh off the success of Pizza and a Presentation, is looking to establish two committees of people interested in helping organize future versions: a pizza-planning committee for choosing the pizzas and consisting of \(k\) members; and a speaker-planning committee for choosing speakers and consisting of \(r\) members. A total of \(n\) people have expressed interest in serving on one of the committees, and Prof. Clark decides that no one should be on both committees. How many ways are there for him to assign members to the committees?</p>
+<p id="p-260">On the one hand, there are \(\binom{n}{k}\) ways to construct the pizza-planning committee. Then, there are \(n-k\) volunteers remaining, so there are \(\binom{n-k}{r}\) ways to construct the speaker-planning committee and so \(\binom{n}{k} \binom{n-k}{r}\) ways of constructing both committees.</p>
+<p id="p-261">On the other hand, perhaps we construct the speaker-planning committee first; there are \(\binom{n}{r}\) ways to do so. Then we choose the \(k\)-member pizza-planning committee from the remaining \(n-r\) interested volunteers.</p></article></div></section></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-16"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">7.1.4</span><span class="period">.</span>
+</h6>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-16" class="video" allowfullscreen="" src="https://expl.ai/mwfqlfw?mode=embed"></iframe></div></article></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">7.1.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-328">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-329">Watch the screencast above.</li>
+<li id="li-330">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-331">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
+</div>
+</body>
+</html>

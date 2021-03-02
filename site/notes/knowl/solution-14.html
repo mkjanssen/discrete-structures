@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-02-28T18:13:57-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.1.1.1</span><span class="period">.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Without the “no more than 3” restriction, this is a stars and bars problem. There are \(\binom{14}{4}\) ways to distribute 10 cookies to 5 kids. However, this is too many, as it includes instances of, e.g., giving all 10 cookies to a single kid, so let's remove such aberrant possibilities.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Start by giving <em class="emphasis">one</em> kid 4 cookies. Then distribute the remaining 6 to all 5 kids with no restrictions. There are 5 choices for the kid who gets too many, and then \(5\cdot\binom{10}{4}\) ways to distribute the cookies—but be careful! We have counted the outcomes where two kids get at least four cookies multiple times. Thus, we need PIE. There are \(\binom{5}{2}\) ways to select which two kids will get spoiled. Then there are two cookies left to distribute to 5 kids, which can happen in \(\binom{6}{4}\) ways.</p>
+<p>We are not able to give three kids four or more cookies, as we only have 10 to go around. Thus, the number of ways is:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{14}{4} - \left[\binom{5}{1} \binom{10}{4} + \binom{5}{2}\binom{6}{4}\right] = 101.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="Mar-01.html#solution-14">in-context</a></span>
+</body>
+</html>

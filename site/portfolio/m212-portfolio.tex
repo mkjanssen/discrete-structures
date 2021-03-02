@@ -1,0 +1,191 @@
+\documentclass[11pt,titlepage]{article}		% The percent symbol in your code starts a comment.  The comment ends at the next linebreak.
+
+\usepackage[english]{babel} 		% Packages add functionality and style conventions to your documents. Don't edit this section!
+\usepackage{fullpage}				% Eliminates wasted space
+\usepackage[utf8]{inputenc}			% Necessary for character encoding
+\usepackage{amsmath, amssymb,amsthm}% Required math packages
+\usepackage{graphicx}				% For handling graphics
+\usepackage[colorinlistoftodos]{todonotes}	% For the fancy "todo" stuff
+\usepackage{hyperref}				% For clickable links in the final PDF
+%\usepackage{titling}				% To take less space at the top of the page with the title
+%\setlength{\droptitle}{-2cm}
+%\pretitle{\Large\scshape}%{\begin{flushright}\Large\scshape}
+%\posttitle{\par\end{flushright}}
+%\preauthor{\large\scshape}
+%\postauthor{\par\end{flushright}}
+%\predate{\large\scshape}
+%\postdate{\par\end{flushright}}
+\linespread{1.5}
+
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+
+\def\rubric{\textbf{Evaluation:} \makebox[0.75in]{\hrulefill}
+
+\vspace{.3in}
+
+\textbf{Opening:} \makebox[0.75in]{\hrulefill}
+
+\vspace{.3in}
+
+\textbf{Logical Correctness:} \makebox[0.75in]{\hrulefill}
+
+\vspace{.3in}
+
+\textbf{Reasons:} \makebox[0.75in]{\hrulefill}
+
+\vspace{.3in}
+
+\textbf{Use of Notation:} \makebox[0.75in]{\hrulefill}
+
+\vspace{.3in}
+
+\textbf{Clarity and Writing:} \makebox[0.75in]{\hrulefill}
+
+\vspace{.3in}
+
+\textbf{\LaTeX\ Formatting:} \makebox[0.75in]{\hrulefill}
+
+\vspace{.3in}
+
+\textbf{Stating the Conclusion:} \makebox[0.75in]{\hrulefill}
+
+\vspace{.3in}
+
+\textbf{Other Comments:}
+
+\vspace{1in}
+
+}
+
+% Type `\C' for the complex numbers, `\H' for the quarternions, etc.
+\def\C{{\mathbb C}}
+\def\H{{\mathbb H}}
+\def\Z{{\mathbb Z}}
+\def\Q{{\mathbb Q}}
+\def\R{{\mathbb R}}
+\def\N{{\mathbb N}}
+
+
+%\Alpha{homeworkresults}
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}
+\renewcommand*{\thetheorem}{\Roman{theorem}}
+%\setcounter{theorem}{2}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+
+
+
+\title{\sc Math 212 Portfolio}
+
+\author{Your name goes here}
+
+\date{Draft date: \today}
+
+\begin{document}
+
+\maketitle
+
+
+\noindent\textbf{Changelog:} \emph{List the changes you've made since the last draft, with special attention paid to problems that have received significant revisions since the last draft (i.e., more than fixing typos). If there is any additional information you'd like me to consider as I review this submission, please say so now.}
+
+\noindent\textbf{Instructions:} Each of the problems below is/will be presented as a conjecture. Each conjecture asks you to prove or disprove the conjecture, possibly along with some additional directions. 
+
+\bigskip
+
+\begin{itemize}  
+	\item If the conjecture is true, your job is to write a complete proof for the proposition. If there are multiple parts, you should consider each part in turn.
+	\item If it is false, you should provide a counterexample plus make reasonable modifications to the stated conjecture so that a new proposition is true. Then, write a complete proof of your new proposition. You may want to run your new proposition by me before trying to write a proof--this is allowed and encouraged!
+\end{itemize}
+
+
+\noindent\textbf{Academic Honesty Policy:}
+The portfolio is an independent project in which no outside resources or collaboration is allowed. You may not ask other professors or discuss the problems with anyone besides me. You should not discuss even which problem you chose. Violation of this policy is grounds for failing the course. The point is that you need to be confident and competent in writing proofs for future courses.
+
+
+
+
+
+
+\clearpage
+
+\begin{conjecture}
+	Let $A$ and $B$ be subsets of some universe $\mathcal{U}$.
+	Then:
+	\begin{enumerate}
+		\item $A\setminus (A\cap \overline{B}) = A\cap B$
+		\item $\overline{(\overline{A}\cup B)} \cap A = A\setminus B$
+		\item $(A\cup B)\setminus A = B\setminus A$
+		\item $(A\cup B) \setminus B = A\setminus (A\cap B)$
+	\end{enumerate}
+\end{conjecture}
+
+\begin{proof}
+
+\end{proof}
+
+
+\rubric
+
+
+\clearpage
+
+
+\begin{conjecture}
+	Define $f: \N\setminus\set{0}\to\Z$ as follows: for each $n\in \N\setminus \set{0}$,
+	\[
+		f(n) = \frac{1+(-1)^n (2n-1)}{4}.
+	\]
+	Then $f$ is a bijection.
+\end{conjecture}
+
+\begin{proof}
+
+\end{proof}
+
+\rubric
+
+
+
+\clearpage
+
+
+\begin{example}
+For the following example, choose two of the four problems to do.Exactly one of your choices should be a combinatorial proof.
+
+\begin{enumerate}
+    \item (Combinatorial) For $n\ge 1$,
+    \[
+        \sum\limits_{k=0}^n k \binom{n}{k} = n 2^{n-1}.
+    \]
+    
+    \item (Combinatorial) For $0\le k \le n$,
+    \[
+        \sum\limits_{m=k}^n \binom{m}{k} = \binom{n+1}{k+1}
+    \]
+    \item Consider the alphabet $\{a,b,c,d,e,f\}$ and make words without repetition of letters allowed.
+        \begin{enumerate}
+            \item How many six-letter words are there?
+            \item How many words begin with \textit{d} or \textit{e}?
+            \item How many words end in \textit{b} or \textit{a}?
+            \item How many words begin with \textit{d} or \textit{e} and end in \textit{b} or \textit{a}?
+            \item How many have first letter neither \textit{d} nor \textit{e} and last letter nether \textit{b} nor \textit{a}?
+        \end{enumerate}
+    \item We wish to improve upon the ogre's distribution of 43 cupcakes to 12 baby mice by ensuring that every baby mouse gets at least \textit{two} cupcakes. How many ways are there to accomplish this?
+\end{enumerate}
+
+\end{example}
+\begin{proof}
+\end{proof}
+\rubric
+
+
+
+
+\end{document}

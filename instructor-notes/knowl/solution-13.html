@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-03-01T12:27:19-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.1.1.1</span><span class="period">.</span>
+</h6>
+<ol class="decimal">
+<li>This is a stars and bars problem; there are \(\binom{11+3}{3} = 364\) ways to distribute the pies.</li>
+<li>Suppose Al gets 4 pies. Now he is guaranteed too many. There are 7 pies left to distribute among the four children; there are \(\binom{7 + 3}{3} = 120\) ways for Al to get too many pies. Since there are 4 children, there are \(\binom{4}{1} \cdot \binom{10}{3}\) ways for at least one child to get too many pies.</li>
+<li>Now suppose we give two children too many pies. There are \(\binom{4}{2}\) ways to choose the children. We'll give each four pies, leaving 3 to be distributed in \(\binom{3+3}{3}\) ways. There are then \(\binom{4}{2}\cdot \binom{6}{3}\) ways four two or more children to get too many pies.</li>
+<li>It is not possible for three or more kids to get too many pies; thus the number we calculated in the previous part was the number of ways for exactly two kids to get too many pies.</li>
+<li>There are \(\binom{14}{3}\) total ways to distribute the pies without restriction. There are \(\binom{4}{1}\binom{10}{3}\) ways that one or more kids get too many pies, but we are double-counting the situations in which two kids get too many pies. So we add back the number of times two kids get too many pies, \(\binom{4}{2}\cdot \binom{6}{3}\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{14}{3} - \binom{4}{1}\binom{10}{3} + \binom{4}{2}\cdot \binom{6}{3}= 4.
+\end{equation*}
+</div>This makes sense. The only way to ensure that no one is getting more than 3 is to give 3 to 3 kids and 2 to one. There are 4 ways to choose the kids who gets 2 pies.</li>
+<li>Presumably there are seven ways.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{19}{6} - \binom{7}{1}\binom{16}{6} + \binom{7}{2}\binom{13}{6}-\binom{7}{3}\binom{10}{6}+\binom{7}{4}\binom{7}{6} = 7.
+\end{equation*}
+</div>
+</li>
+</ol>
+</div>
+<span class="incontext"><a href="Mar-01.html#solution-13">in-context</a></span>
+</body>
+</html>

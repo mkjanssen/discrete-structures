@@ -1,0 +1,268 @@
+\documentclass[11pt,answers,addpoints]{exam}
+\usepackage{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,parskip,xypic}
+\geometry{letterpaper}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{tikz}
+\usepackage{verbatim}
+
+%\def\le{\mkern3mu\mathrel{\vrule height 1.5ex\joinrel
+ % \mkern-3mu\raise.2ex\hbox{$=$}\joinrel
+  %\mkern-4mu\vrule height 1.5ex}\mkern3mu}
+%\def\li{\mkern3mu\mathrel{\vrule height 1.5ex\joinrel
+%  \mkern-3mu\raise.2ex\hbox{$=$}}\mkern3mu}
+
+\usepackage{coordsys}
+
+
+\usetikzlibrary{positioning}
+
+\newcommand{\bipgraph}[2]{%
+    \begin{tikzpicture}[every node/.style={circle,draw}]
+    \foreach \xitem in {1,2,...,#1}
+    {%
+    % first set
+    \node at (0,\xitem) (a\xitem) {};
+    % second set
+    \node at (2,\xitem) (b\xitem) {};   
+    }%
+
+    % connections
+    \foreach \x [count=\xi] in {#2}
+    {% 
+    \foreach \tritem in \x % <-- Here no braces to make it a foreach list also not \xi but \x
+    \draw(a\xi) -- (b\tritem);
+    }
+    \end{tikzpicture}  
+}
+
+
+%\pagestyle{empty}
+%\setlength{\oddsidemargin}{.05in}
+%\setlength{\evensidemargin}{-.50in}
+%\setlength{\textwidth}{7in}
+%\setlength{\topmargin}{-.250in}
+%\setlength{\headheight}{0in}
+%\setlength{\headsep}{.25in}
+%\setlength{\topskip}{0in}
+%\setlength{\textheight}{9.05in}
+%\setlength{\parindent}{0in}
+%\font\bigbf = cmbx10 scaled \magstep1
+%\font\medbf = cmbx10 scaled \magstephalf
+
+
+
+\newcommand{\class}{Math 212}
+\newcommand{\term}{Spring 2021}
+\newcommand{\examnum}{Exam 1}
+\newcommand{\examdate}{Mar.~5, 2021}
+\newcommand{\timelimit}{50 minutes}
+
+
+
+%\shadedsolutions
+
+
+% Include answers?
+\noprintanswers
+%\printanswers
+
+%\bracketedpoints
+
+
+% Where should the points be?
+% Default
+%\nopointsinmargin
+% Left margin
+\pointsinmargin
+\marginpointname{ \points}
+% Right margin
+%\pointsinrightmargin
+
+
+
+
+
+
+% Nice way to TeX sets
+\def\set#1{\left\{ {#1} \right\}}
+\def\setof#1#2{{\left\{#1\,|\,#2\right\}}}
+
+\def\i{{\bold i}}
+
+\def\j{{\bold j}}
+
+\def\k{{\bold k}}
+
+%\def\vec{u}{{\bold u}}
+
+%\def\vec{v}{{\bold v}}
+
+\def\w{{\bold w}}
+
+\def\n{{\bold n}}
+
+\def\d{{\partial}}
+
+
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\F{{\mathbb F}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\R{{\mathbb R}}
+\def\P{{\mathbb P}}
+\def\N{{\mathbb N}}
+
+
+
+
+
+\begin{document}
+
+\runningheader{\bfseries Math ZZZ}{}{\bfseries Quiz \#X (Continued)} 
+
+
+
+\header{\bfseries\large \class}%\\Michael Janssen} 
+{\bfseries\large \examnum} 
+{\bfseries\large \examdate} 
+
+
+%Name: \makebox[4.15in]{\hrulefill} Section: \makebox[0.75in]{\hrulefill} % Section:\enspace\hrulefill}
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+
+%\vec{v}space{0.3in} 
+%\makebox[\textwidth]{Section:\enspace\hrulefill}
+
+\vspace{0.2in}
+
+\textbf{Instructions: } This exam has \numquestions\ questions for a total of \numpoints\ points. Answer each question as completely and clearly as you can. Make sure to use complete sentences. Take care to not oversimplify any problems. You have \timelimit.
+%Your responses do not need to be typed, but you are encouraged to do so.
+
+%\textbf{The only resources you are allowed} are your notes and discussions with your professor (both of which you are encouraged to make use of)! No discussions with your peers, tutors, consultation of other books, websites, etc., are allowed. If there is any reason to believe you have consulted with a forbidden source, you will earn a zero on the take-home component of this exam and the matter will be reported to the Student Life Committee.
+%Answer each question completely on the sheets provided. Take care to not oversimplify each problem.
+
+\vspace{2in}
+
+\begin{center} 
+\gradetable[v]%[pages] 
+\end{center}
+
+\hfill
+
+\newpage
+
+
+
+
+
+\medskip
+
+\begin{questions}
+
+
+
+
+
+
+
+\question[10] Suppose you have 42 identical toy pink ducks and 7 identical toy purple ducks. How many ways are there to arrange them in a line so that no two purple ducks are next to one another?%There are 20 plants in your garden but only enough fertilizer spray to boost 8 of them. How many ways are there to fertilize the plants? Justify your answer.
+
+\vfill
+
+\question[15] One college sent another a report saying that 119 students took Calculus I in a Fall semester. The report notes that during the next term, 96 of these studnets took Calculus II, 53 took Discrete Mathematics, and 39 took Physics II. The report says that 48 of the students took Calculus II and Discrete Mathematics, 31 of the students took both Discrete Mathematics and Physics II, 32 of the students took both Calculus II and Physics II, and 22 of the students took all three courses. We examine the report and sense an error is present. Why?
+
+\begin{solution}
+
+\end{solution}
+
+\vfill
+
+\newpage
+
+\question[8] Let $f : \set{1,2,3,4,5} \to \set{a,b,c,d}$ be a function. Justify your answers to the following questions.
+
+\begin{parts}
+\part How many such functions $f$ exist?
+
+\vfill 
+
+\part How many such functions are injective?
+
+\vfill 
+
+
+\part How many such functions are surjective?
+
+\vfill 
+
+
+\part How many such functions are bijective?
+
+\vfill 
+\end{parts}
+
+\newpage
+
+\question[10] Let $S = \set{a,b,c,d}$, $T= \set{1,2,3}$, and $U = \set{b,2}$. Which of the following statements is true? Which is false? Explain.
+
+\begin{parts}
+\part $\set{a}\in S$
+
+\begin{solution}[1in]
+\end{solution}
+
+\part $\set{a,c,2,3}\subseteq S\cup T$
+
+\begin{solution}[1in]
+\end{solution}
+
+\part $U\in \mathcal{P}(S\cup T)$
+
+\begin{solution}[1in]
+\end{solution}
+
+\part $\emptyset \subseteq \mathcal{P}(S)$
+
+\begin{solution}[1in]
+\end{solution}
+
+\part $\set{\emptyset} \subseteq \mathcal{P}(S)$
+
+\begin{solution}[1in]
+\end{solution}
+
+
+
+
+
+
+\end{parts}
+
+\clearpage
+
+\question[8] Consider the relation $<$ (less than) on the set of integers $\Z$. Is $<$ an equivalence relation? Justify your answer.
+
+\begin{solution}[2.5in]
+\end{solution}
+
+
+
+
+\end{questions}
+
+
+
+
+
+
+
+
+
+\end{document}  
