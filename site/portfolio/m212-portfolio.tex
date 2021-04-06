@@ -79,6 +79,9 @@
 \newtheorem{example}[theorem]{Example}
 \newtheorem{conjecture}[theorem]{Conjecture}
 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
 
 
 
@@ -185,6 +188,94 @@ For the following example, choose two of the four problems to do.Exactly one of 
 \end{proof}
 \rubric
 
+
+\clearpage
+
+\begin{theorem}
+    Consider the recurrence relation $a_n = s a_{n-1}+d$, where $s\ne 1$.
+    Prove that
+    \[
+        a_n = \left(a_0 + \frac{d}{s-1}\right) s^n - \frac{d}{s-1}
+    \]
+    is a solution. Then use this theorem to solve for a closed formula for the recurrence $a_n = 5 a_{n-1} + 3$ where $a_0 = 1$.
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
+\rubric
+
+
+\clearpage
+
+
+\begin{conjecture}
+    For all $n\ge 1$,
+    \[
+        \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \cdots + \frac{1}{n\cdot(n+1)} = \frac{n}{n+1}
+    \]
+\end{conjecture}
+
+\begin{proof}
+(By induction.)
+\end{proof}
+
+\rubric
+
+
+\clearpage
+
+For Theorem \ref{thm:modular-squares}, we will use the following definition.
+
+\begin{definition}
+    Let $a,b,\in\Z$ and $m\in \N$ with $m > 1$.
+    We say that $a$ is \emph{congruent to $b$ modulo $m$} if $m|(a-b)$.
+    We write $a \equiv b\mod m$.
+\end{definition}
+
+Thus, e.g., $11\equiv 3\mod 4$, since $4|11-3$, but $9\not\equiv 3\mod 4$ since $4\nmid 9-3$.
+
+\begin{theorem}\label{thm:modular-squares}
+    Suppose $a,b\in \Z$ and $m\in \N$ with $m > 1$ such that $a\equiv b\mod m$.
+    Then $a^2 \equiv b^2\mod m$.
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
+\rubric
+
+
+
+\clearpage
+
+
+
+\begin{conjecture}
+    If $a$, $b$, and $c$ are integers, then $ab+ac$ is even.
+\end{conjecture}
+
+\begin{proof}
+
+\end{proof}
+
+
+\rubric
+
+
+\clearpage
+
+\begin{conjecture}
+    If $r$ is any real number and $\xi$ is irrational, then $r + \xi$ is irrational or $-r + \xi$ is irrational.\footnote{You may assume without proof that the sum of two rational numbers is rational.}
+\end{conjecture}
+
+\begin{proof}
+
+\end{proof}
+
+\rubric
 
 
 

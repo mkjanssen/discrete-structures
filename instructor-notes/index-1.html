@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-01T12:27:15-06:00       *-->
+<!--*       on 2021-04-05T11:29:42-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -228,41 +228,41 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
-<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15</a></li>
-<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17</a></li>
-<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19</a></li>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15: Recurrence Relations</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17: Induction I</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19: Induction II</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
-<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22</a></li>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22: Propositional Logic I</a></li>
 <li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
-<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26: Direct Proofs</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
-<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29</a></li>
-<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31</a></li>
-<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 02</a></li>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29: Proof by Contradiction</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31: Other Types of Proof</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 2: Intro to Graph Theory</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
-<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5</a></li>
-<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09</a></li>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5: Further Background in Graph Theory</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09: Trees I</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
-<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12</a></li>
-<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14</a></li>
-<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16</a></li>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12: Trees II</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14: Planarity</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16: Independent Portfolio Work Day</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
-<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19</a></li>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
 <li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
 <li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
 </ul>
@@ -292,9 +292,13 @@ MathJax.Hub.Config({
 <span class="type">Index</span> <span class="codenumber"></span> <span class="title">Index</span>
 </h2>
 <div class="indexletter" id="indexletter-a">
+<div class="indexitem">absolute value<span class="indexknowl">, <a class="xref" data-knowl="./knowl/definition-6.html" title="Definition 12.2.4">Definition</a></span>
+</div>
 <div class="indexitem">additive principle<span class="indexknowl">, <a class="xref" data-knowl="./knowl/additive-principle.html" title="Assemblage: Additive Principle">Assemblage</a></span>
 </div>
 <div class="subindexitem">using sets<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-33.html" title="Assemblage: Additive Principle (with sets)">Assemblage</a></span>
+</div>
+<div class="indexitem">ancestor (in a rooted tree)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-717.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">antecedent<span class="indexknowl">. <span class="see"><em>See</em> hypothesis</span></span>
 </div>
@@ -304,6 +308,8 @@ MathJax.Hub.Config({
 </div>
 </div>
 <div class="indexletter" id="indexletter-b">
+<div class="indexitem">base case<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-522.html" title="Item 1">Item</a> <a class="xref" data-knowl="./knowl/li-533.html" title="Item 1">Item</a></span>
+</div>
 <div class="indexitem">biconditional<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-4.html" title="Assemblage: If and only if">Assemblage</a></span>
 </div>
 <div class="indexitem">binomial coefficient<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-40.html" title="Assemblage: Binomial Coefficients">Assemblage</a></span>
@@ -314,8 +320,14 @@ MathJax.Hub.Config({
 </div>
 <div class="subindexitem">recurrence relation for<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-41.html" title="Assemblage: Recurrence relation for \({n \choose k}\)">Assemblage</a></span>
 </div>
+<div class="indexitem">bipartite graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-669.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">bit string</div>
 <div class="subindexitem">relation to stars and bars<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-287.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">breadth first search<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-725.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">Brooks' Theorem<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-14.html" title="Theorem 15.1.4: Brooks' Theorem">Theorem</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-c">
@@ -341,11 +353,24 @@ MathJax.Hub.Config({
 <div class="indexitem">chessboard</div>
 <div class="subindexitem">rook paths<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-4.html" title="Investigation 5.3.1">Investigation</a></span>
 </div>
+<div class="indexitem">child (in a rooted tree)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-716.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">chordal graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-784.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">chromatic index<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-788.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">chromatic number<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">clique<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-782.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">closed formula<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-51.html" title="Assemblage: Closed formula">Assemblage</a></span>
 </div>
 <div class="subindexitem">for arithmetic sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-55.html" title="Assemblage: Arithmetic Sequences">Assemblage</a></span>
 </div>
 <div class="subindexitem">for geometric sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-56.html" title="Assemblage: Geometric Sequences">Assemblage</a></span>
+</div>
+<div class="indexitem">coloring</div>
+<div class="subindexitem">vertices<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">combination</div>
 <div class="subindexitem">closed formula for<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-44.html" title="Assemblage: Closed formula for \({n \choose k}\)">Assemblage</a></span>
@@ -358,6 +383,10 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">complement of a set<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-105.html" title="Item: \(\bar{A}\)">Item</a> <a class="xref" data-knowl="./knowl/p-88.html" title="Paragraph">Paragraph</a></span>
 </div>
+<div class="indexitem">complete bipartite graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-669.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
+</div>
+<div class="indexitem">complete graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-651.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
+</div>
 <div class="indexitem">conclusion<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-3.html" title="Assemblage: Implications">Assemblage</a></span>
 </div>
 <div class="indexitem">conditional<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-3.html" title="Assemblage: Implications">Assemblage</a></span>
@@ -368,42 +397,140 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">converse<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-46.html" title="Item">Item</a></span>
 </div>
+<div class="indexitem">counting</div>
+<div class="subindexitem">edges in a graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/lem-handshake.html" title="Lemma 13.1.2: Handshake Lemma">Lemma</a></span>
+</div>
+<div class="indexitem">cycle</div>
+<div class="subindexitem">type of graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
+</div>
 </div>
 <div class="indexletter" id="indexletter-d">
-<div class="indexitem">\(\Delta^k\)-constant<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-416.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-652.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">degree sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-659.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">maximum<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">sum formula<span class="indexknowl">, <a class="xref" data-knowl="./knowl/lem-handshake.html" title="Lemma 13.1.2: Handshake Lemma">Lemma</a></span>
+</div>
+<div class="indexitem">\(\Delta^k\)-constant<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-417.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">depth first search<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-726.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">descendant (in a rooted tree)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-717.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">difference of sets<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-104.html" title="Item: \(\setminus\)">Item</a> <a class="xref" data-knowl="./knowl/p-90.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">differences of a sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-416.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">differences of a sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-417.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">domain of discourse<span class="indexknowl">. <span class="see"><em>See</em> universe set</span></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-e">
+<div class="indexitem">edge<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-71.html" title="Assemblage: Graph Definition">Assemblage</a></span>
+</div>
 <div class="indexitem">empty set<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-88.html" title="Item: \(\emptyset\)">Item</a></span>
+</div>
+<div class="indexitem">equality of graphs<span class="indexknowl">, <a class="xref" data-knowl="./knowl/example-34.html" title="Example 12.3.2">Example</a></span>
+</div>
+<div class="indexitem">Euler's formula for planar graphs<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-8.html" title="Theorem 14.2.1: Euler's Formula for Planar Graphs">Theorem</a></span>
 </div>
 <div class="indexitem">existential quantifier<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-7.html" title="Assemblage: Universal and Existential Quantifiers">Assemblage</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-f">
+<div class="indexitem">face (planar graph)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-19.html" title="Investigation 14.2.1">Investigation</a> <a class="xref" data-knowl="./knowl/p-739.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">factorial<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-219.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Fibonacci sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-commonsequences.html" title="Assemblage: Common Sequences">Assemblage</a></span>
 </div>
 <div class="indexitem">for all (quantifier)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-7.html" title="Assemblage: Universal and Existential Quantifiers">Assemblage</a></span>
 </div>
+<div class="indexitem">forest<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-75.html" title="Assemblage: Definition of a Tree">Assemblage</a></span>
+</div>
+<div class="indexitem">Four Color Theorem<span class="indexknowl">, <a class="xref" data-knowl="./knowl/thm-four-color.html" title="Theorem 15.1.2: The Four Color Theorem">Theorem</a></span>
+</div>
 <div class="indexitem">function</div>
 <div class="subindexitem">counting<span class="indexknowl">, <a href="Mar-01.html#subsubsection-47" class="internal" title="Subsubsection 8.1.1.3: Counting Functions">Subsubsection</a></span>
 </div>
 </div>
-<div class="indexletter" id="indexletter-g"><div class="indexitem">geometric sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-56.html" title="Assemblage: Geometric Sequences">Assemblage</a></span>
-</div></div>
-<div class="indexletter" id="indexletter-h"><div class="indexitem">hypothesis<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-3.html" title="Assemblage: Implications">Assemblage</a></span>
-</div></div>
+<div class="indexletter" id="indexletter-g">
+<div class="indexitem">geometric sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-56.html" title="Assemblage: Geometric Sequences">Assemblage</a></span>
+</div>
+<div class="indexitem">graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-71.html" title="Assemblage: Graph Definition">Assemblage</a></span>
+</div>
+<div class="subindexitem">bipartite<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-669.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">chordal<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-784.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">chromatic index<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-788.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">chromatic number<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/thm-four-color.html" title="Theorem 15.1.2: The Four Color Theorem">Theorem</a></span>
+</div>
+<div class="subindexitem">clique<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-782.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">complete<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-651.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
+</div>
+<div class="subindexitem">complete bipartite<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
+</div>
+<div class="subindexitem">cycle<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
+</div>
+<div class="subindexitem">degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-652.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">degree sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-659.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">edge<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-71.html" title="Assemblage: Graph Definition">Assemblage</a></span>
+</div>
+<div class="subindexitem">equal vs isomorphic<span class="indexknowl">, <a class="xref" data-knowl="./knowl/example-36.html" title="Example 12.3.4">Example</a></span>
+</div>
+<div class="subindexitem">equality<span class="indexknowl">, <a class="xref" data-knowl="./knowl/example-34.html" title="Example 12.3.2">Example</a></span>
+</div>
+<div class="subindexitem">isomorphic (precise definition)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-72.html" title="Assemblage: Isomorphic Graphs">Assemblage</a></span>
+</div>
+<div class="subindexitem">maximum degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">path<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
+</div>
+<div class="subindexitem">perfect<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-784.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">subgraph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-73.html" title="Assemblage: Subgraphs">Assemblage</a></span>
+</div>
+<div class="subindexitem">vertex<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-71.html" title="Assemblage: Graph Definition">Assemblage</a></span>
+</div>
+<div class="subindexitem">vertex coloring<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a></span>
+</div>
+</div>
+<div class="indexletter" id="indexletter-h">
+<div class="indexitem">handshake lemma<span class="indexknowl">, <a class="xref" data-knowl="./knowl/lem-handshake.html" title="Lemma 13.1.2: Handshake Lemma">Lemma</a></span>
+</div>
+<div class="indexitem">hypothesis<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-3.html" title="Assemblage: Implications">Assemblage</a></span>
+</div>
+</div>
 <div class="indexletter" id="indexletter-i">
 <div class="indexitem">if and only if (logical connective)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-4.html" title="Assemblage: If and only if">Assemblage</a></span>
 </div>
 <div class="indexitem">implication<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-3.html" title="Assemblage: Implications">Assemblage</a></span>
+</div>
+<div class="indexitem">induced subgraph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-73.html" title="Assemblage: Subgraphs">Assemblage</a></span>
+</div>
+<div class="indexitem">induction<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-61.html" title="Assemblage: Induction Proof Structure">Assemblage</a></span>
+</div>
+<div class="subindexitem">base case<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-522.html" title="Item 1">Item</a></span>
+</div>
+<div class="subsubindexitem">for strong induction<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-533.html" title="Item 1">Item</a></span>
+</div>
+<div class="subindexitem">inductive case<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-523.html" title="Item 2">Item</a></span>
+</div>
+<div class="subsubindexitem">for strong induction<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-534.html" title="Item 2">Item</a></span>
+</div>
+<div class="subindexitem">proof structure<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-61.html" title="Assemblage: Induction Proof Structure">Assemblage</a></span>
+</div>
+<div class="subindexitem">strong<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-63.html" title="Assemblage: Strong Induction Proof Structure">Assemblage</a></span>
+</div>
+<div class="indexitem">inductive case<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-523.html" title="Item 2">Item</a> <a class="xref" data-knowl="./knowl/li-534.html" title="Item 2">Item</a></span>
+</div>
+<div class="indexitem">inductive hypothesis<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-523.html" title="Item 2">Item</a></span>
 </div>
 <div class="indexitem">initial condition<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-52.html" title="Assemblage: Recursive definition">Assemblage</a></span>
 </div>
@@ -417,17 +544,38 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">intersection of sets<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-101.html" title="Item: \(\cap\)">Item</a></span>
 </div>
+<div class="indexitem">isomorphic</div>
+<div class="subindexitem">precise definition<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-72.html" title="Assemblage: Isomorphic Graphs">Assemblage</a></span>
 </div>
-<div class="indexletter" id="indexletter-k"><div class="indexitem">\(k\)-permutation of \(n\) elements<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-43.html" title="Assemblage: \(k\)-permutations of \(n\) elements">Assemblage</a></span>
-</div></div>
+<div class="indexitem">isomorphism of graphs<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-72.html" title="Assemblage: Isomorphic Graphs">Assemblage</a></span>
+</div>
+</div>
+<div class="indexletter" id="indexletter-k">
+<div class="indexitem">\(k\)-permutation of \(n\) elements<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-43.html" title="Assemblage: \(k\)-permutations of \(n\) elements">Assemblage</a></span>
+</div>
+<div class="indexitem">\(K_n\)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-651.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">knights and knaves<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-15.html" title="Investigation 11.1.1">Investigation</a></span>
+</div>
+</div>
 <div class="indexletter" id="indexletter-l">
 <div class="indexitem">lattice path<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-196.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">lattice, integer<span class="indexknowl">. <span class="see"><em>See</em> integer lattice</span></span>
 </div>
+<div class="indexitem">law of logic<span class="indexknowl">, <a class="xref" data-knowl="./knowl/example-29.html" title="Example 11.1.6">Example</a></span>
+</div>
+<div class="indexitem">leaf<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-696.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">logically valid<span class="indexknowl">. <span class="see"><em>See</em> law of logic</span></span>
+</div>
 </div>
 <div class="indexletter" id="indexletter-m">
+<div class="indexitem">maximum degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">molecular statement<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-9.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">monochromatic<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-2.html" title="Paragraphs: Ramsey Theory">Paragraphs</a></span>
 </div>
 <div class="indexitem">multiplicative principle<span class="indexknowl">, <a class="xref" data-knowl="./knowl/multiplicative-principle.html" title="Assemblage: Multiplicative Principle">Assemblage</a></span>
 </div>
@@ -442,9 +590,22 @@ MathJax.Hub.Config({
 <div class="indexitem">negation</div>
 <div class="subindexitem">interaction with quantifiers<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-8.html" title="Assemblage: Quantifiers and Negation">Assemblage</a></span>
 </div>
+<div class="indexitem">non-planar graph<span class="indexknowl">, <a href="Apr-14.html#subsubsection-74" class="internal" title="Subsubsection 14.2.1.2: Non-planar graphs">Subsubsection</a></span>
+</div>
+<div class="subindexitem">\(K_{3,3}\)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-10.html" title="Theorem 14.2.3">Theorem</a></span>
+</div>
+<div class="subindexitem">\(K_5\)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-9.html" title="Theorem 14.2.2">Theorem</a></span>
+</div>
 </div>
 <div class="indexletter" id="indexletter-p">
-<div class="indexitem">Pascal's triangle<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-208.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/li-486.html" title="Item 4">Item</a></span>
+<div class="indexitem">parent (in a rooted tree)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-716.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">Pascal's triangle<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-208.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/li-488.html" title="Item 4">Item</a></span>
+</div>
+<div class="indexitem">path</div>
+<div class="subindexitem">type of graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
+</div>
+<div class="indexitem">perfect graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-784.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">permutation<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-43.html" title="Assemblage: \(k\)-permutations of \(n\) elements">Assemblage</a></span>
 </div>
@@ -452,14 +613,34 @@ MathJax.Hub.Config({
 </div>
 <div class="subindexitem">vs combination<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-229.html" title="Paragraph">Paragraph</a></span>
 </div>
+<div class="indexitem">planar graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-19.html" title="Investigation 14.2.1">Investigation</a> <a class="xref" data-knowl="./knowl/p-738.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">chromatic number of<span class="indexknowl">, <a class="xref" data-knowl="./knowl/thm-four-color.html" title="Theorem 15.1.2: The Four Color Theorem">Theorem</a></span>
+</div>
+<div class="subindexitem">non-planar graph<span class="indexknowl">, <a href="Apr-14.html#subsubsection-74" class="internal" title="Subsubsection 14.2.1.2: Non-planar graphs">Subsubsection</a></span>
+</div>
+<div class="subsubindexitem">\(K_{3,3}\)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-10.html" title="Theorem 14.2.3">Theorem</a></span>
+</div>
+<div class="subsubindexitem">\(K_5\)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-9.html" title="Theorem 14.2.2">Theorem</a></span>
+</div>
+<div class="indexitem">planar region<span class="indexknowl">. <span class="see"><em>See</em> face (planar graph)</span></span>
+</div>
 <div class="indexitem">power set<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-94.html" title="Item: \(\pow(A)\)">Item</a> <a class="xref" data-knowl="./knowl/li-94.html" title="Item: \(\pow(A)\)">Item</a> <a class="xref" data-knowl="./knowl/assemblage-13.html" title="Assemblage: Subset and Power Set">Assemblage</a></span>
 </div>
 <div class="indexitem">powers of 2<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-commonsequences.html" title="Assemblage: Common Sequences">Assemblage</a> <a class="xref" data-knowl="./knowl/example-10.html" title="Example 9.1.2">Example</a></span>
+</div>
+<div class="indexitem">prime numbers<span class="indexknowl">, <a class="xref" data-knowl="./knowl/example-23.html" title="Example 10.3.1">Example</a></span>
 </div>
 <div class="indexitem">principle of inclusion/exclusion</div>
 <div class="subindexitem">for 2 sets<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-36.html" title="Assemblage: Cardinality of a union (2 sets)">Assemblage</a></span>
 </div>
 <div class="subindexitem">for 3 sets<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-37.html" title="Assemblage: Cardinality of a union (3 sets)">Assemblage</a></span>
+</div>
+<div class="indexitem">proof</div>
+<div class="subindexitem">by indcution<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-61.html" title="Assemblage: Induction Proof Structure">Assemblage</a></span>
+</div>
+<div class="indexitem">puzzle</div>
+<div class="subindexitem">knights and knaves<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-15.html" title="Investigation 11.1.1">Investigation</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-q">
@@ -473,6 +654,8 @@ MathJax.Hub.Config({
 </div>
 </div>
 <div class="indexletter" id="indexletter-r">
+<div class="indexitem">Ramsey theory<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-2.html" title="Paragraphs: Ramsey Theory">Paragraphs</a></span>
+</div>
 <div class="indexitem">rational numbers, set of<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-92.html" title="Item: \(\Q\)">Item</a></span>
 </div>
 <div class="indexitem">real numbers, set of<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-93.html" title="Item: \(\R\)">Item</a></span>
@@ -495,10 +678,21 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">recursively defined function<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-28.html" title="Assemblage: Recursively Defined Functions">Assemblage</a></span>
 </div>
+<div class="indexitem">region (graph)<span class="indexknowl">. <span class="see"><em>See</em> face (planar graph)</span></span>
+</div>
 <div class="indexitem">rook paths<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-4.html" title="Investigation 5.3.1">Investigation</a></span>
+</div>
+<div class="indexitem">root (in a tree)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-715.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">rooted tree<span class="indexknowl">, <a href="Apr-12.html#subsubsection-71" class="internal" title="Subsubsection 14.1.1.1: Rooted Trees">Subsubsection</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-s">
+<div class="indexitem">search</div>
+<div class="subindexitem">breadth first<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-725.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">depth first<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-726.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-334.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">as function<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-336.html" title="Paragraph">Paragraph</a></span>
@@ -534,8 +728,12 @@ MathJax.Hub.Config({
 </div>
 <div class="subindexitem">union<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-102.html" title="Item: \(\cup\)">Item</a></span>
 </div>
+<div class="indexitem">sibling (in a rooted tree)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-718.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">size of a set</div>
 <div class="subindexitem">see cardinality<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-106.html" title="Item: \(\card{A}\)">Item</a></span>
+</div>
+<div class="indexitem">spanning tree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-spanningtree.html" title="Assemblage: Spanning tree">Assemblage</a></span>
 </div>
 <div class="indexitem">square numbers<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-commonsequences.html" title="Assemblage: Common Sequences">Assemblage</a></span>
 </div>
@@ -544,6 +742,8 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">statement<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-9.html" title="Paragraph">Paragraph</a></span>
 </div>
+<div class="indexitem">subgraph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-73.html" title="Assemblage: Subgraphs">Assemblage</a></span>
+</div>
 <div class="indexitem">surjection<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-393.html" title="Item 3">Item</a></span>
 </div>
 <div class="subindexitem">counting<span class="indexknowl">, <a class="xref" data-knowl="./knowl/example-8.html" title="Example 8.1.3">Example</a></span>
@@ -551,6 +751,14 @@ MathJax.Hub.Config({
 </div>
 <div class="indexletter" id="indexletter-t">
 <div class="indexitem">there exists (quantifier)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-7.html" title="Assemblage: Universal and Existential Quantifiers">Assemblage</a></span>
+</div>
+<div class="indexitem">tree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-75.html" title="Assemblage: Definition of a Tree">Assemblage</a></span>
+</div>
+<div class="subindexitem">number of edges and vertices<span class="indexknowl">, <a class="xref" data-knowl="./knowl/prop-tree-edge-vertex.html" title="Proposition 13.2.4">Proposition</a></span>
+</div>
+<div class="subindexitem">rooted<span class="indexknowl">, <a href="Apr-12.html#subsubsection-71" class="internal" title="Subsubsection 14.1.1.1: Rooted Trees">Subsubsection</a></span>
+</div>
+<div class="subindexitem">spanning<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-spanningtree.html" title="Assemblage: Spanning tree">Assemblage</a></span>
 </div>
 <div class="indexitem">triangular numbers<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-commonsequences.html" title="Assemblage: Common Sequences">Assemblage</a> <a class="xref" data-knowl="./knowl/example-10.html" title="Example 9.1.2">Example</a> <a class="xref" data-knowl="./knowl/example-19.html" title="Example 10.1.2">Example</a></span>
 </div>
@@ -563,6 +771,18 @@ MathJax.Hub.Config({
 <div class="indexitem">universal quantifier<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-7.html" title="Assemblage: Universal and Existential Quantifiers">Assemblage</a></span>
 </div>
 <div class="indexitem">universe set<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-89.html" title="Item: \(\U\)">Item</a> <a class="xref" data-knowl="./knowl/p-88.html" title="Paragraph">Paragraph</a></span>
+</div>
+</div>
+<div class="indexletter" id="indexletter-v">
+<div class="indexitem">vertex<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-71.html" title="Assemblage: Graph Definition">Assemblage</a></span>
+</div>
+<div class="indexitem">vertex coloring<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">vertex degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-652.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">degree sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-659.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">Vizing's Theorem<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-15.html" title="Theorem 15.1.6: Vizing's Theorem">Theorem</a></span>
 </div>
 </div></section></div></main>
 </div>

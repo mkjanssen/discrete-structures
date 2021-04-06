@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-05T11:29:50-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">10.1.2.1</span><span class="period">.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">To get a feel for the recurrence relation, write out the first few terms of the sequence: \(4, 5, 7, 10, 14, 19, \ldots\text{.}\) Look at the difference between terms. \(a_1 - a_0 = 1\) and \(a_2 - a_1 = 2\) and so on. The key thing here is that the difference between terms is \(n\text{.}\) We can write this explicitly: \(a_n - a_{n-1} = n\text{.}\) Of course, we could have arrived at this conclusion directly from the recurrence relation by subtracting \(a_{n-1}\) from both sides.</p>
+<p>Now use this equation over and over again, changing \(n\) each time:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+a_1 - a_0 \amp = 1\\
+a_2 - a_1 \amp = 2\\
+a_3 - a_2 \amp = 3\\
+\vdots \quad \amp \quad \vdots\\
+a_n - a_{n-1} \amp = n\text{.}
+\end{align*}
+</div>
+<p>Add all these equations together. On the right-hand side, we get the sum \(1 + 2 + 3 + \cdots + n\text{.}\) We already know this can be simplified to \(\frac{n(n+1)}{2}\text{.}\) What happens on the left-hand side? We get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a_1 - a_0) + (a_2 - a_1) + (a_3 - a_2) + \cdots (a_{n-1} - a_{n-2})+ (a_n - a_{n-1})\text{.}
+\end{equation*}
+</div>
+<p>This sum telescopes. We are left with only the \(-a_0\) from the first equation and the \(a_n\) from the last equation. Putting this all together we have \(-a_0 + a_n = \frac{n(n+1)}{2}\) or \(a_n = \frac{n(n+1)}{2} + a_0\text{.}\) But we know that \(a_0 = 4\text{.}\) So the solution to the recurrence relation, subject to the initial condition is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a_n = \frac{n(n+1)}{2} + 4\text{.}
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">(Now that we know that, we should notice that the sequence is the result of adding 4 to each of the triangular numbers.) </p>
+</div>
+<span class="incontext"><a href="Mar-15.html#pgA">in-context</a></span>
+</body>
+</html>

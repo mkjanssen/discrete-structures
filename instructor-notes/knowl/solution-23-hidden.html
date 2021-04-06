@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-01T12:27:21-06:00       *-->
+<!--*       on 2021-04-05T11:29:49-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,56 +14,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">The idea is to mimic how we found the formula for triangular numbers. If we add the first and last terms, we get 472. The second term and second-to-last term also add up to 472. To keep track of everything, we might express this as follows. Call the sum \(S\text{.}\) Then,</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
-<tr>
-<td class="r m b0 r0 l0 t0 lines">\(S  =\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(2\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(5\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(8\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(467\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">470</td>
-</tr>
-<tr>
-<td class="r m b1 r0 l0 t0 lines">\(+ \quad S  =\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(470\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(467\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(464\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(5\)</td>
-<td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">2</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines">\(2S  =\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+ \cdots +\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
-<td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(472\)</td>
-</tr>
-</table></div></div></div>
-<p>To find \(2S\) then we add 472 to itself a number of times. What number? We need to decide how many terms (<dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">summands</dfn>) are in the sum. Since the terms form an arithmetic sequence, the \(n\)th term in the sum (counting \(2\) as the 0th term) can be expressed as \(2 + 3n\text{.}\) If \(2 + 3n = 470\) then \(n = 156\text{.}\) So \(n\) ranges from 0 to 156, giving 157 terms in the sum. This is the number of 472's in the sum for \(2S\text{.}\) Thus</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-2S = 157\cdot 472 = 74104\text{.}
-\end{equation*}
-</div>
-<p>It is now easy to find \(S\text{:}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-S = 74104/2 = 37052\text{.}
-\end{equation*}
-</div>
+<p>Start by checking that these sequences really are geometric by dividing each term by its previous term. If this ratio really is constant, we will have found \(r\text{.}\)</p>
+<ol class="decimal">
+<li>\(6/3 = 2\text{,}\) \(12/6 = 2\text{,}\) \(24/12 = 2\text{,}\) etc. Yes, to get from any term to the next, we multiply by \(r = 2\text{.}\) So the recursive definition is \(a_n = 2a_{n-1}\) with \(a_0 = 3\text{.}\) The closed formula is \(a_n = 3\cdot 2^{n}\text{.}\)</li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">The common ratio is \(r = 1/3\text{.}\) So the sequence has recursive definition \(a_n = \frac{1}{3}a_{n-1}\) with \(a_0 = 27\) and closed formula \(a_n = 27\cdot \frac{1}{3}^{n}\text{.}\)</p></li>
+</ol>
 </div></body>
 </html>

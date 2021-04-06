@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-05T15:03:40-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">This is an “if and only if” statement, so we must prove two implications.  We start by proving that if \(T\) is a tree, then between every pair of distinct vertices there is a unique path.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Assume \(T\) is a tree, and let \(u\) and \(v\) be distinct vertices (if \(T\) only has one vertex, then the conclusion is satisfied automatically).  We must show two things to show that there is a unique path between \(u\) and \(v\text{:}\) that there is a path, and that there is not more than one path.  The first of these is automatic, since \(T\) is a tree, it is connected, so there is a path between any pair of vertices.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">To show the path is unique, we suppose there are two paths between \(u\) and \(v\text{,}\) and get a contradiction.  The two paths might start out the same, but since they are different, there is some first vertex \(u'\) after which the two paths diverge.  However, since the two paths both end and \(v\text{,}\) there is some first vertex after \(u'\) that they have in common, call it \(v'\text{.}\)  Now consider the two paths from \(u'\) to \(v'\text{.}\)  Taken together, these form a cycle, which contradicts our assumption that \(T\) is a tree.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Now we consider the converse: if between every pair of distinct vertices of \(T\) there is a unique path, then \(T\) is a tree.  So assume the hypothesis: between every pair of distinct vertices of \(T\) there is a unique path.  To prove that \(T\) is a tree, we must show it is connected and contains no cycles.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The first half of this is easy: \(T\) is connected, because there is a path between every pair of vertices.  To show that \(T\) has no cycles, we assume it does, for the sake of contradiction.  Let \(u\) and \(v\) be two distinct vertices in a cycle of \(T\text{.}\)  Since we can get from \(u\) to \(v\) by going clockwise or counterclockwise around the cycle, there are two paths from \(u\) and \(v\text{,}\) contradicting our assumption.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">We have established both directions so we have completed the proof.</p></article><span class="incontext"><a href="Apr-09.html#zbP">in-context</a></span>
+</body>
+</html>

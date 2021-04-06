@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-28T18:13:49-06:00       *-->
+<!--*       on 2021-04-05T15:03:20-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -229,41 +229,41 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
-<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15</a></li>
-<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17</a></li>
-<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19</a></li>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15: Recurrence Relations</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17: Induction I</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19: Induction II</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
-<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22</a></li>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22: Propositional Logic I</a></li>
 <li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
-<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26: Direct Proofs</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
-<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29</a></li>
-<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31</a></li>
-<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 02</a></li>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29: Proof by Contradiction</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31: Other Types of Proof</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 2: Intro to Graph Theory</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
-<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5</a></li>
-<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09</a></li>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5: Further Background in Graph Theory</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09: Trees I</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
-<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12</a></li>
-<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14</a></li>
-<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16</a></li>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12: Trees II</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14: Planarity</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16: Independent Portfolio Work Day</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
-<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19</a></li>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
 <li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
 <li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
 </ul>
@@ -296,7 +296,6 @@ MathJax.Hub.Config({
 <p id="p-332">Here are some questions we'll consider. <ol class="decimal">
 <li id="li-407">What is a sequence? How does it differ from a set?</li>
 <li id="li-408">What are the two main ways we can describe sequences?</li>
-<li id="li-409">
 </ol></p></article></section><section class="subsection" id="subsection-57"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.1.1</span> <span class="title">Outline</span>
 </h3>
@@ -310,7 +309,7 @@ MathJax.Hub.Config({
 a_0, a_1, a_2, a_3, \ldots\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">To refer to the <em class="emphasis">entire</em> sequence at once, we will write \((a_n)_{n\in\N}\) or \((a_n)_{n\ge 0}\text{,}\) or sometimes if we are being sloppy, just \((a_n)\) (in which case we assume we start the sequence with \(a_0\)). </p>
+<p class="continuation">To refer to the <em class="emphasis">entire</em> sequence at once, we will write \((a_n)_{n\in\N}\) or \((a_n)_{n\ge 0}\text{,}\) or sometimes if we are being sloppy, just \((a_n)\) (in which case we assume we start the sequence with \(a_0\)). </p>
 <p id="sZi">We might replace the \(a\) with another letter, and sometimes we omit \(a_0\text{,}\) starting with \(a_1\text{,}\) in which case we would use \((a_n)_{n \ge 1}\) to refer to the sequence as a whole. The numbers in the subscripts are called <dfn class="terminology">indices</dfn> (the plural of <dfn class="terminology">index</dfn>).</p>
 <p id="Zgr"> While we often just think of a sequence as an ordered list of numbers, it is really a type of function. Specifically, the sequence \((a_n)_{n\ge 0}\) is a function with domain \(\N\) where \(a_n\) is the image of the natural number \(n\text{.}\) Later we will manipulate sequences in much the same way you have manipulated functions in algebra or calculus. We can shift a sequence up or down, add two sequences, or ask for the rate of change of a sequence. These are done exactly as you would for functions.</p>
 <p id="FnA">That said, while keeping the rigorous mathematical definition in mind is helpful, we often describe sequences by writing out the first few terms.</p>
@@ -398,16 +397,17 @@ a_0, a_1, a_2, a_3, \ldots\text{.}
 </div></article></section></section><section class="subsection" id="subsection-58"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.1.2</span> <span class="title">Today's Screencast</span>
 </h3>
-<article class="insight remark-like" id="insight-20"><h6 class="heading">
+<article class="insight remark-like" id="insight-21"><h6 class="heading">
 <span class="type">Screencast</span><span class="space"> </span><span class="codenumber">9.1.3</span><span class="period">.</span>
-</h6></article></section><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
+</h6>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-20" class="video" allowfullscreen="" src="https://expl.ai/qatluln?mode=embed"></iframe></div></article></section><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.1.3</span> <span class="title">If you missed class today</span>
 </h3>
 <ol class="decimal">
-<li id="li-450">Work through today's outline and read the marked pages in the book.</li>
-<li id="li-451">Watch the screencast above.</li>
-<li id="li-452">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
-<li id="li-453">
+<li id="li-449">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-450">Watch the screencast above.</li>
+<li id="li-451">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-452">
 <a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
 </ol></section></section></div></main>
 </div>

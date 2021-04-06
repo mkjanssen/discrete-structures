@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-01T12:27:12-06:00       *-->
+<!--*       on 2021-04-05T11:29:32-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -228,41 +228,41 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
-<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15</a></li>
-<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17</a></li>
-<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19</a></li>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15: Recurrence Relations</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17: Induction I</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19: Induction II</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
-<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22</a></li>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22: Propositional Logic I</a></li>
 <li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
-<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26: Direct Proofs</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
-<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29</a></li>
-<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31</a></li>
-<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 02</a></li>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29: Proof by Contradiction</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31: Other Types of Proof</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 2: Intro to Graph Theory</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
-<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5</a></li>
-<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09</a></li>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5: Further Background in Graph Theory</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09: Trees I</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
-<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12</a></li>
-<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14</a></li>
-<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16</a></li>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12: Trees II</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14: Planarity</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16: Independent Portfolio Work Day</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
-<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19</a></li>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
 <li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
 <li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
 </ul>
@@ -292,14 +292,14 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Mar. 12: Polynomial Fitting</span>
 </h2>
 <section class="introduction" id="introduction-30"><article class="assemblage assemblage-like" id="assemblage-57"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
-<p id="p-409">Here are some questions we'll consider. <ol class="decimal">
-<li id="li-474">#</li>
-<li id="li-475">
-<li id="li-476">
+<p id="p-410">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-476">#</li>
+<li id="li-477">
+<li id="li-478">
 </ol></p></article></section><section class="subsection" id="subsection-63"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title">Outline</span>
 </h3>
-<p id="p-410">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_polyfit.html" target="_blank">Section 2.3</a> of the book. You're encouraged to read it before coming to class.</p>
+<p id="p-411">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_polyfit.html" target="_blank">Section 2.3</a> of the book. You're encouraged to read it before coming to class.</p>
 <section class="subsubsection" id="subsubsection-52"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">9.3.1.1</span> <span class="title">Squares on a Chessboard</span>
 </h4>
@@ -312,7 +312,7 @@ MathJax.Hub.Config({
 <article class="definition definition-like" id="definition-3"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-412">Consider a sequence \((a_n)_{n=0}^\infty\text{.}\) The <dfn class="terminology">first difference</dfn> of \((a_n)\) is the sequence \(\Delta^1(a_n) = a_1 - a_0, a_2 - a_1, \ldots\text{.}\) The \(k\)-th difference sequence is the sequence</p>
+<p id="p-413">Consider a sequence \((a_n)_{n=0}^\infty\text{.}\) The <dfn class="terminology">first difference</dfn> of \((a_n)\) is the sequence \(\Delta^1(a_n) = a_1 - a_0, a_2 - a_1, \ldots\text{.}\) The \(k\)-th difference sequence is the sequence</p>
 <div class="displaymath">
 \begin{equation*}
 \Delta^k(a_n) = \Delta^{k-1}(a_n)_1 - \Delta^{k-1}(a_n)_0, \Delta^{k-1}(a_n)_2 - \Delta^{k-1}(a_n)_1,  \ldots.
@@ -320,7 +320,7 @@ MathJax.Hub.Config({
 </div></article><article class="theorem theorem-like" id="theorem-3"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-413">If \((a_n)\) is arithmetic, then \(\Delta^1(a_n)\) is a constant sequence.</p></article><p id="p-414">The “squares on an \(n\times n\) chessboard sequence” is</p>
+<p id="p-414">If \((a_n)\) is arithmetic, then \(\Delta^1(a_n)\) is a constant sequence.</p></article><p id="p-415">The “squares on an \(n\times n\) chessboard sequence” is</p>
 <div class="displaymath">
 \begin{equation*}
 1, 5, 14, 30, 55, \ldots.
@@ -338,7 +338,7 @@ MathJax.Hub.Config({
 5, 7, 9, \ldots\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">which <em class="emphasis">is</em> an arithmetic sequence (with constant difference 2). Notice that our original sequence had <dfn class="terminology">third differences</dfn> (that is, differences of differences of differences of the original) constant. We will call such a sequence \(\Delta^3\)-constant. The sequence \(1, 4, 9, 16, \ldots\) has second differences constant, so it will be a \(\Delta^2\)-constant sequence. In general, we will say a sequence is a <dfn class="terminology">\(\Delta^k\)-constant</dfn>  sequence if the \(k\)th differences are constant.</p>
+<p class="continuation">which <em class="emphasis">is</em> an arithmetic sequence (with constant difference 2). Notice that our original sequence had <dfn class="terminology">third differences</dfn> (that is, differences of differences of differences of the original) constant. We will call such a sequence \(\Delta^3\)-constant. The sequence \(1, 4, 9, 16, \ldots\) has second differences constant, so it will be a \(\Delta^2\)-constant sequence. In general, we will say a sequence is a <dfn class="terminology">\(\Delta^k\)-constant</dfn>  sequence if the \(k\)th differences are constant.</p>
 <article class="example example-like" id="KAj"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
 </h6>
@@ -357,14 +357,14 @@ MathJax.Hub.Config({
 </div></article><article class="exploration project-like" id="exploration-41"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-419">Prove that every quadratic sequence \(a_n = bn^2 + cn + d\) has an arithmetic first difference.</p></article><article class="question example-like" id="question-10"><h6 class="heading">
+<p id="p-420">Prove that every quadratic sequence \(a_n = bn^2 + cn + d\) has an arithmetic first difference.</p></article><article class="question example-like" id="question-10"><h6 class="heading">
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-420">Given a \(\Delta^k\)-constant sequence, can we find a (preferably unique) polynomial that “fits” the sequence?</p></article><p id="p-421">The answer is really delightful: we can, so long as we have enough data points!</p>
+<p id="p-421">Given a \(\Delta^k\)-constant sequence, can we find a (preferably unique) polynomial that “fits” the sequence?</p></article><p id="p-422">The answer is really delightful: we can, so long as we have enough data points!</p>
 <article class="theorem theorem-like" id="theorem-4"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-422">The closed formula for a sequence will be a degree \(k\) polynomial if and only if the sequence is \(\Delta^k\)-constant.</p></article><p id="p-423">This should remind us of something that you perhaps observed in calculus: the derivative of a degree \(n\) polynomial is constant.</p>
+<p id="p-423">The closed formula for a sequence will be a degree \(k\) polynomial if and only if the sequence is \(\Delta^k\)-constant.</p></article><p id="p-424">This should remind us of something that you perhaps observed in calculus: the \(n\)th derivative of a degree \(n\) polynomial is constant.</p>
 <article class="example example-like" id="qHs"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.6</span><span class="period">.</span>
 </h6>
@@ -383,7 +383,7 @@ a_n = an^2 + bn + c\text{.}
 a_0 = 2 = a\cdot 0^2 + b \cdot 0 + c\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">so \(c = 2\text{.}\) Now plug in \(n =1\) and \(n = 2\text{.}\) We get</p>
+<p class="continuation">so \(c = 2\text{.}\) Now plug in \(n =1\) and \(n = 2\text{.}\) We get</p>
 <div class="displaymath">
 \begin{equation*}
 a_1 = 3 = a + b + 2
@@ -434,19 +434,39 @@ a_n = an^3 + bn^2 + cn + d\text{.}
 <li id="AzQ"><p id="ZcA">Use polynomial fitting to find a closed formula for \(P(n)\text{.}\) Show your work.</p></li>
 <li id="gGZ"><p id="FjJ">Answer the pirate's question: how many cannonballs do they need to make a pyramid 15 layers high?</p></li>
 <li id="MOi"><p id="lqS">Bonus: Locate this sequence in Pascal's triangle. Why does that make sense? </p></li>
-</ol></article></section></section></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like"><ol class="decimal">
+<li id="li-489">\(P(3) = P(2) + T_3 = 4 + 6 = 10\text{,}\) \(P(4) = 10 + T_4 = 20\text{,}\) \(P(5) = 20 + T_5 = 20 + 15 = 35\text{.}\)</li>
+<li id="li-490">The sequence is \(1, 4, 10, 20, 35, \ldots\text{.}\) The first difference is \(3, 6, 10, 15\ldots\text{,}\) so the second is \(3, 4, 5\text{,}\) an arithmetic sequence. Thus, the sequence is \(\Delta^3\)-constant and will be described by a cubic, \(P_n = a n^3 + b n^2 + cn + d\text{.}\)</li>
+<li id="li-491">
+<p id="p-440">We can solve the system of equations:</p>
+<div class="displaymath">
+\begin{align*}
+a + b + c + d \amp= 1\\
+2^3 a + 2^2 b + 2c + 1 \amp=4\\
+3^3 a + 3^2 b + 3c + 1 \amp=10\\
+4^3 a + 4^2 b + 4c + 1 \amp=20
+\end{align*}
+</div>
+<p id="p-441">We get \(P_n = \frac{1}{6}n^3 + \frac{1}{2}n^2 + \frac{1}{3}n\text{.}\)</p>
+</li>
+<li id="li-492">\(\displaystyle P_{15} = 680.\)</li>
+</ol></div></div>
+</div></article></section></section></section><section class="subsection" id="subsection-64"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.2</span> <span class="title">Today's Screencast</span>
 </h3>
-<article class="insight remark-like" id="insight-22"><h6 class="heading">
+<article class="insight remark-like" id="insight-23"><h6 class="heading">
 <span class="type">Screencast</span><span class="space"> </span><span class="codenumber">9.3.7</span><span class="period">.</span>
-</h6></article></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
+</h6>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-22" class="video" allowfullscreen="" src="https://expl.ai/bbzzhlg?mode=embed"></iframe></div></article></section><section class="subsection" id="subsection-65"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.3</span> <span class="title">If you missed class today</span>
 </h3>
 <ol class="decimal">
-<li id="li-487">Work through today's outline and read the marked pages in the book.</li>
-<li id="li-488">Watch the screencast above.</li>
-<li id="li-489">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
-<li id="li-490">
+<li id="li-493">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-494">Watch the screencast above.</li>
+<li id="li-495">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-496">
 <a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
 </ol></section></section></div></main>
 </div>

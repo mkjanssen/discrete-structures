@@ -297,7 +297,7 @@
           
           
           
-          <exploration xml:id="expl-redblue">
+          <exploration xml:id="expl-redblue1">
             <statement>
               <p>
                 A mathematician places a set of four cards on a table, each of which has a number on one side and a colored patch on the other side. She claims the following: 
@@ -4950,8 +4950,12 @@
             </p>
             <ul>
                 <li><url href="./Exam1Guide.pdf">Study Guide</url></li>
-                <li>Study Guide solutions (forthcoming)</li>
+                <li><url href="./Exam1Guide-solutions.pdf">Study Guide solutions</url></li>
             </ul>
+            
+            <insight>
+                <video ee="uhctygy" />
+            </insight>
 
 
           
@@ -4994,7 +4998,7 @@
 	<ol>
 	  <li>What is a sequence? How does it differ from a set?</li>
 	  <li>What are the two main ways we can describe sequences?</li>
-	  <li></li>
+	  
 	</ol>
   </statement>
   </p>
@@ -5456,7 +5460,7 @@
   
   
   <insight>
-  
+    <video ee="qatluln" />
   </insight>
   
 </subsection>
@@ -5520,6 +5524,10 @@
 						            Let's do the <url href="./Activity07-DotsToSequences.pdf">dots activity</url>.
 						        </p>
 						    </statement>
+						    <solution>
+						        <url href="./Activity07-DotsToSequences-solutions.pdf">Solutions here</url>
+						    </solution>
+
 						</exploration>
         
       <assemblage permid="KlB">
@@ -5662,6 +5670,7 @@
     <title>Sums of Arithmetic and Geometric Sequences</title>
     
     <investigation xml:id="investigation-seqcandy" permid="Ewp">
+        <statement>
         <p permid="lXm">
           Your neighborhood grocery store has a candy machine full of Skittles.
 
@@ -5704,6 +5713,28 @@
             </li>
           </ol>
         </p>
+        </statement>
+        <solution>
+            <ol>
+                <li>510 skittles; Yes? After 93 quarters?</li>
+                <li>This seems to be an arithmetic sequence: <m>s_n = 3n+4, n \ge 1</m>. We can add to get <m>\frac{(7+3\cdot 20+4)\cdot 20}{2} = 710</m> skittles given out. Since there are only 650 skittles to give away, they are all gone.</li>
+                <li>This one is trickier! Notice that the terms themselves are each <m>a_n  = 3 + \sum_{k=1}^n (2k-1), n\ge 1</m>. Obviously, 20 3's is 60, so we need the sum
+                <me>
+                    \sum\limits_{n=1}^{20} \left(\sum\limits_{k=1}^n 2k-1\right).
+                </me>
+                Consider the sum <m>S_n = \sum\limits_{k=1}^n 2k-1 = 1 + 3 + 5 + \cdots + 2n-1</m>.
+                Then 
+                    <me>
+                        2S_n = \underbrace{2n+2n+2n+\cdots+2n}_{\text{n times}} = 2n^2,
+                    </me>
+                    so <m>S_n = n^2</m>.
+                Thus, we want to find <m>60 + \sum\limits_{n=1}^{20} n^2 = 60 + 2870 = 2930</m>.
+            </li>
+        </ol>
+
+                
+                </solution>
+
       </investigation>
       
       <p>
@@ -5837,7 +5868,10 @@
     
     <example>
         <statement>
-            <m>0.\overline{9} = 1.</m>
+            <p>
+                <m>0.\overline{9} = 1.</m>
+            </p>
+
         </statement>
     </example>
 
@@ -5857,7 +5891,7 @@
   
   
   <insight>
-  
+    <video ee="tvcanrd" />
   </insight>
   
 </subsection>
@@ -6085,7 +6119,7 @@
     </theorem>
     
     <p>
-        This should remind us of something that you perhaps observed in calculus: the derivative of a degree <m>n</m> polynomial is constant.
+        This should remind us of something that you perhaps observed in calculus: the <m>n</m>th derivative of a degree <m>n</m> polynomial is constant.
     </p>
 
 
@@ -6246,6 +6280,26 @@
         </ol>
       </p>
     </statement>
+    <solution>
+        <ol>
+            <li><m>P(3) = P(2) + T_3 = 4 + 6 = 10</m>, <m>P(4) = 10 + T_4 = 20</m>, <m>P(5) = 20 + T_5 = 20 + 15 = 35</m>.</li>
+            <li>The sequence is <m>1, 4, 10, 20, 35, \ldots</m>. The first difference is <m>3, 6, 10, 15\ldots</m>, so the second is <m>3, 4, 5</m>, an arithmetic sequence. Thus, the sequence is <m>\Delta^3</m>-constant and will be described by a cubic, <m>P_n = a n^3 + b n^2 + cn + d</m>.</li>
+            <li><p>We can solve the system of equations:</p>
+            <md>
+                <mrow> a + b + c + d \amp= 1</mrow>
+                <mrow> 2^3 a + 2^2 b + 2c + 1 \amp=4</mrow>
+                <mrow> 3^3 a + 3^2 b + 3c + 1 \amp=10</mrow>
+                <mrow> 4^3 a + 4^2 b + 4c + 1 \amp=20</mrow>
+            </md>
+            <p>We get <m>P_n = \frac{1}{6}n^3 + \frac{1}{2}n^2 + \frac{1}{3}n</m>.</p>
+            
+        </li>
+        <li><m>P_{15} = 680.</m></li>
+        </ol>
+
+   
+    </solution>
+
     </exploration>
 
 
@@ -6269,7 +6323,7 @@
   
   
   <insight>
-  
+    <video ee="bbzzhlg" />
   </insight>
   
 </subsection>
@@ -6297,7 +6351,7 @@
         <title>Week 10: Mar. 15-19</title>
         
         <section xml:id="Mar-15">
-          <title>Mar. 15</title>
+          <title>Mar. 15: Recurrence Relations</title>
           
                     <introduction>
 
@@ -6307,9 +6361,9 @@
   <statement>
 	Here are some questions we'll consider.
 	<ol>
-	  <li>#</li>
-	  <li></li>
-	  <li></li>
+	  <li>What does it mean to <q>solve</q> a recurrence relation?</li>
+	  <li>What is the characteristic polynomial associated to a homogeneous linear recurrence relation?</li>
+
 	</ol>
   </statement>
   </p>
@@ -6333,6 +6387,7 @@
     <title>Solving Recurrence Relations</title>
     
     <investigation permid="wKZ">
+    <statement>
       <p permid="GOF">
         Consider the recurrence relation
         <me permid="elW">
@@ -6363,6 +6418,17 @@
           </li>
         </ol>
       </p>
+      </statement>
+
+      <solution>
+        <ol>
+            <li>This is the powers of 2.</li>
+            <li>This is the powers of 3.</li>
+            <li>This one is the sum of the previous 2.</li>
+        </ol>
+
+      </solution>
+
     </investigation>
     
     <p>
@@ -6659,7 +6725,7 @@
   
   
   <insight>
-  
+    <video ee="jfcsvcx" />
   </insight>
   
 </subsection>
@@ -6681,15 +6747,613 @@
         </section>
         
         <section xml:id="Mar-17">
-          <title>Mar. 17</title>
+          <title>Mar. 17: Induction I</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>What is the principle of mathematical induction?</li>
+	  <li>What is the structure of an inductive proof?</li>
+	  <li></li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_seq-induction.html">Section 2.5</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Introduction</title>
+    
+    <investigation>
+        <statement>
+            <p>
+                Let <m>P(n)</m> represent the open statement
+            </p>
+            <blockquote>
+                4 divides <m>5^n - 1</m>
+            </blockquote>
+            <ol>
+                <li>Does this open statement become a true statement when <m>n=1</m>? That is, is <m>P(1)</m> true?</li>
+                <li>Does this open statement become a true statement when <m>n=2</m>? That is, is <m>P(2)</m> true?</li>
+                <li>Choose at least four more natural numbers and determine whether the open statement is true or false for each of your choices.</li>
+                <li>Suppose now that we know that <m>P(k)</m> is true. Can we <em>use</em> this fact to argue that <m>P(k+1)</m> is true?</li>
+            </ol>
+        </statement>
+    </investigation>
+
+     <p permid="dJg">
+      Here is the general structure of a proof by mathematical induction:
+    </p>
+
+    <assemblage permid="UaZ">
+      <title>Induction Proof Structure</title>
+      <idx><h>induction</h><h>proof structure</h></idx>
+      <idx><h>proof</h><h>by indcution</h></idx>
+      <p permid="bTT">
+            <idx><h>induction</h></idx>
+        Start by saying what the statement is that you want to prove: <q>Let <m>P(n)</m> be the statement<ellipsis/></q> To prove that <m>P(n)</m> is true for all <m>n \ge 0</m>, you must prove two facts:
+
+        <ol permid="zcP">
+          <li permid="DMI">
+            <p permid="oDK">
+	      <idx><h>base case</h></idx>
+	      <idx><h>induction</h><h>base case</h></idx>
+              Base case: Prove that <m>P(0)</m> is true.
+              You do this directly.
+              This is often easy.
+            </p>
+          </li>
+
+          <li permid="jTR">
+            <p permid="UKT">
+	      <idx><h>inductive case</h></idx>
+	      <idx><h>induction</h><h>inductive case</h></idx>
+              Inductive case: Prove that
+              <m>P(k) \imp P(k+1)</m> for all <m>k \ge 0</m>.
+              That is, prove that for any <m>k \ge 0</m> if <m>P(k)</m> is true,
+              then <m>P(k+1)</m> is true as well.
+              This is the proof of an if
+              <ellipsis/> then
+              <ellipsis/> statement,
+              so you can assume <m>P(k)</m> is true (<m>P(k)</m> is called the
+              <em>inductive hypothesis</em>).
+                <idx><h>inductive hypothesis</h></idx>
+            You must then explain why <m>P(k+1)</m> is also true, given that assumption.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p permid="Ibc">
+        Assuming you are successful on both parts above,
+        you can conclude,
+        <q>Therefore by the principle of mathematical induction,
+        the statement <m>P(n)</m> is true for all <m>n \ge 0</m>.</q>
+      </p>
+    </assemblage>
+
+    <p permid="JQp">
+      Sometimes the statement <m>P(n)</m> will only be true for values of <m>n \ge 4</m>,
+      for example, or some other value.
+      In such cases, replace all the 0's above with 4's
+      (or the other value).
+    </p>
+
+    <p permid="pXy">
+      The other advantage of formalizing inductive proofs is it allows us to verify that the logic behind this style of argument is valid.
+      Why does induction work?
+      Think of a row of dominoes set up standing on their edges.
+      We want to argue that in a minute,
+      all the dominoes will have fallen down.
+      For this to happen, you will need to push the first domino.
+      That is the base case.
+      It will also have to be that the dominoes are close enough together that when any particular domino falls,
+      it will cause the next domino to fall.
+      That is the inductive case.
+      If both of these conditions are met,
+      you push the first domino over and each domino will cause the next to fall,
+      then all the dominoes will fall.
+    </p>
+
+    <p permid="WeH">
+      Induction is powerful!
+      Think how much easier it is to knock over dominoes when you don't have to push over each domino yourself.
+      You just start the chain reaction,
+      and the rely on the relative nearness of the dominoes to take care of the rest.
+    </p>
+
+    <p permid="ClQ">
+      Think about our study of sequences.
+      It is easier to find recursive definitions for sequences than closed formulas.
+      Going from one case to the next is easier than going directly to a particular case.
+      That is what is so great about induction.
+      Instead of going directly to the (arbitrary) case for <m>n</m>,
+      we just need to say how to get from one case to the next.
+    </p>
+
+    <p permid="isZ">
+      When you are asked to prove a statement by mathematical induction,
+      you should first think about <em>why</em> the statement is true,
+      using inductive reasoning.
+      Explain why induction is the right thing to do,
+      and roughly why the inductive case will work.
+      Then, sit down and write out a careful,
+      formal proof using the structure above.
+    </p>
+    
+    
+    
+    </subsubsection>
+    
+    <subsubsection>
+        <title>Examples</title>
+        
+        
+        <example permid="sDJ">
+      <statement>
+        <p permid="SAh">
+          Prove for each natural number <m>n \ge 1</m> that <m>1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}</m>.
+        </p>
+      </statement>
+      <solution permid="JBU">
+        <p permid="Ngu">
+          First, let's think inductively about this equation.
+          In fact, we know this is true for other reasons
+          (reverse and add comes to mind).
+          But why might induction be applicable?
+          The left-hand side adds up the numbers from 1 to <m>n</m>.
+          If we know how to do that,
+          adding just one more term (<m>n+1</m>) would not be that hard.
+          For example, if <m>n = 100</m>,
+          suppose we know that the sum of the first 100 numbers is <m>5050</m>
+          (so <m>1 + 2 + 3 + \cdots + 100 = 5050</m>, which is true).
+          Now to find the sum of the first 101 numbers,
+          it makes more sense to just add 101 to 5050,
+          instead of computing the entire sum again.
+          We would have <m>1 + 2 + 3 + \cdots + 100 + 101 = 5050 + 101 = 5151</m>.
+          In fact, it would always be easy to add just one more term.
+          This is why we should use induction.
+        </p>
+
+        <proof permid="pJd">
+          <p permid="ZuM">
+            Let <m>P(n)</m> be the statement <m>1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}</m>.
+            We will show that <m>P(n)</m> is true for all natural numbers <m>n \ge 1</m>.
+          </p>
+
+          <p permid="FBV">
+            Base case: <m>P(1)</m> is the statement
+            <m>1 = \frac{1(1+1)}{2}</m> which is clearly true.
+          </p>
+
+          <p permid="lJe">
+            Inductive case: Let <m>k \ge 1</m> be a natural number.
+            Assume (for induction) that <m>P(k)</m> is true.
+            That means <m>1 + 2 + 3 + \cdots + k = \frac{k(k+1)}{2}</m>.
+            We will prove that <m>P(k+1)</m> is true as well.
+            That is, we must prove that <m>1 + 2 + 3 + \cdots + k + (k+1) = \frac{(k+1)(k+2)}{2}</m>.
+            To prove this equation,
+            start by adding <m>k+1</m> to both sides of the inductive hypothesis:
+            <me permid="NuP">
+              1 + 2 + 3 + \cdots + k + (k+1) = \frac{k(k+1)}{2} + (k+1)
+            </me>.
+          </p>
+
+          <p permid="RQn">
+            Now, simplifying the right side we get:
+            <md permid="lXz">
+              <mrow>\frac{k(k+1)}{2} + k+1 \amp = \frac{k(k+1)}{2} + \frac{2(k+1)}{2}</mrow>
+              <mrow>\amp = \frac{k(k+1) + 2(k+1)}{2}</mrow>
+              <mrow>\amp = \frac{(k+2)(k+1)}{2}</mrow>
+            </md>.
+          </p>
+
+          <p permid="xXw">
+            Thus <m>P(k+1)</m> is true,
+            so by the principle of mathematical induction <m>P(n)</m> is true for all natural numbers <m>n \ge 1</m>.
+          </p>
+        </proof>
+
+      </solution>
+    </example>
+    
+    <exploration>
+        <statement>
+            <p>
+                Establish the following via induction.
+            </p>
+            <ol>
+                <li>For each natural number <m>n\ge 1</m>,
+                <me>
+                    1^2 + 2^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}.
+                </me>
+                </li>
+                <li>
+                    For every natural number <m>n\ge 1</m>, <m>2\cdot 6\cdot 10 \cdot 14 \cdots (4n-2) = \frac{(2n)!}{n!}</m>.
+                </li>
+                <li>
+                    For every natural number <m>n\ge 5</m>, <m>n^2 \lt 2^n</m>.
+                </li>
+            </ol>
+        </statement>
+    </exploration>
+    
+    <example>
+        <statement>
+            <p>
+                Consider the following <q>proof</q> by induction of the statement:
+            </p>
+            <blockquote>
+                Every cat is the same color.
+            </blockquote>
+            <solution>
+                <p>
+                    We'll rephrase this as <q>for every <m>n\ge 1</m>, any collection of <m>n</m> cats has the same color</q>.
+                    Then, we just need to take <m>n</m> large enough to contain all cats.
+                </p>
+                <p>
+                    Start with a collection of <m>n=1</m> cats.
+                    Clearly every cat in the collection has the same color as the others, so we are done with the base case.
+                </p>
+                <p>
+                    For the inductive case, assume that whenever we have a collection of <m>k</m> cats, they all have the same color.
+                    Consider a collection of <m>k+1</m> cats, and put them all in a line (cats are very good listeners).
+                    By the inductive hypothesis, we know the first <m>k</m> cats, ignoring the last one, have the same color.
+                    Also by the inductive hypothesis, the last <m>k</m> cats, ignoring the first one, have the same color.
+                    Thus, the first and last cats have the same color as some cat in the middle, so all <m>k+1</m> cats must have the same color.
+                </p>
+                <p>
+                    Therefore, any collection of <m>n</m> cats has the same color.
+                </p>
+            </solution>
+        </statement>
+        </example>
+
+
+
+        
+        
+        
+    </subsubsection>
+
+
+  
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+  
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
         
         
         <section xml:id="Mar-19">
-          <title>Mar. 19</title>
+          <title>Mar. 19: Induction II</title>
           
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>What is strong induction?</li>
+	  <li>For what kinds of problems can strong induction be used?</li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_seq-induction.html">Section 2.5</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Strong Induction</title>
+ 
+    <assemblage permid="gpr">
+      <title>Strong Induction Proof Structure</title>
+      <idx><h>induction</h><h>strong</h></idx>
+
+      <p permid="oil">
+        Again, start by saying what you want to prove:
+        <q>Let <m>P(n)</m> be the statement<ellipsis/></q>
+        Then establish two facts:
+
+        <ol permid="fjY">
+          <li permid="Qba">
+            <p permid="ASc">
+              Base case: Prove that <m>P(0)</m> is true.
+	      <idx><h>base case</h></idx>
+	      <idx><h>induction</h><h>base case</h><h>for strong induction</h></idx>
+            </p>
+          </li>
+
+          <li permid="wij">
+            <p permid="gZl">
+              Inductive case: Assume <m>P(k)</m> is true for all <m>k \lt n</m>.
+              Prove that <m>P(n)</m> is true.
+	      <idx><h>inductive case</h></idx>
+	      <idx><h>induction</h><h>inductive case</h><h>for strong induction</h></idx>
+
+            </p>
+          </li>
+        </ol>
+
+        Conclude, <q>therefore, by strong induction,
+        <m>P(n)</m> is true for all <m>n \gt 0</m>.</q>
+      </p>
+    </assemblage>
+    
+    <example permid="Rgt">
+      <statement>
+        <p permid="KVI">
+          Prove that any natural number greater than 1 is either prime
+              <idx><h>prime numbers</h></idx>
+          or can be written as the product of primes.
+        </p>
+      </statement>
+      <solution permid="usW">
+        <p permid="sik">
+          First, the idea:
+          if we take some number <m>n</m>, maybe it is prime.
+          If so, we are done.
+          If not, then it is composite,
+          so it is the product of two smaller numbers.
+          Each of these factors is smaller than <m>n</m>
+          (but at least 2),
+          so we can repeat the argument with these numbers.
+          We have reduced to a smaller case.
+        </p>
+
+        <p permid="Ypt">
+          Now the formal proof:
+        </p>
+
+        
+          <p permid="EwC">
+            Let <m>P(n)</m> be the statement,
+            <q><m>n</m> is either prime or can be written as the product of primes.</q>
+            We will prove <m>P(n)</m> is true for all <m>n \ge 2</m>.
+          </p>
+
+          <p permid="kDL">
+            Base case: <m>P(2)</m> is true because <m>2</m> is indeed prime.
+          </p>
+
+          <p permid="QKU">
+            Inductive case: assume <m>P(k)</m> is true for all <m>k \lt n</m>.
+            We want to show that <m>P(n)</m> is true.
+            That is, we want to show that <m>n</m> is either prime or is the product of primes.
+            If <m>n</m> is prime, we are done.
+            If not, then <m>n</m> has more than 2 divisors,
+            so we can write <m>n = m_1 \cdot m_2</m>,
+            with <m>m_1</m> and <m>m_2</m> less than <m>n</m>
+            (and greater than 1).
+            By the inductive hypothesis,
+            <m>m_1</m> and <m>m_2</m> are each either prime or can be written as the product of primes.
+            In either case,
+            we have that <m>n</m> is written as the product of primes.
+          </p>
+
+          <p permid="wSd">
+            Thus by the strong induction,
+            <m>P(n)</m> is true for all <m>n \ge 2</m>.
+          </p>
+        
+
+      </solution>
+    </example>
+    
+    <activity>
+        <statement>
+            <p>
+                Use strong induction to prove that every positive integer can be written as a sum of distinct powers of 2.
+            </p>
+        </statement>
+        <solution permid="DBA">
+      <p permid="ywi">
+        The proof will be by strong induction.
+      </p>
+
+      <proof permid="jIJ">
+        <p permid="eDr">
+          Let <m>P(n)</m> be the statement
+          <q><m>n</m> is either a power of 2 or can be written as the sum of distinct powers of 2.</q>
+          We will show that <m>P(n)</m> is true for all <m>n \ge 1</m>.
+        </p>
+
+        <p permid="KKA">
+          Base case: <m>1 = 2^0</m> is a power of 2, so <m>P(1)</m> is true.
+        </p>
+
+        <p permid="qRJ">
+          Inductive case: Suppose <m>P(k)</m> is true for all <m>k \lt n</m>.
+          Now if <m>n</m> is a power of 2, we are done.
+          If not, let <m>2^x</m> be the largest power of 2 strictly less than <m>n</m>.
+          Consider <m>n - 2^x</m>,
+          which is a smaller number, in fact smaller than both <m>n</m> and <m>2^x</m>.
+          Thus <m>n-2^x</m> is either a power of 2 or can be written as the sum of distinct powers of 2, but none of them are going to be <m>2^x</m>,
+          so the together with <m>2^x</m> we have written <m>n</m> as the sum of distinct powers of 2.
+        </p>
+
+        <p permid="WYS">
+          Therefore, by the principle of (strong) mathematical induction,
+          <m>P(n)</m> is true for all <m>n \ge 1</m>.
+        </p>
+      </proof>
+
+    </solution>
+    </activity>
+    
+    <exploration>
+        <statement>
+            <p>
+                Determine which postage amounts can be created using the stamps of 3 and 5 cents. Prove your conjecture with strong induction.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Anything amount <m>n\ge 8</m>.
+                Observe that we can create postage in the amounts of 8, 9, 10, 11, and 12 cents.
+                Assume that for all <m>12 \le k \lt n</m> cents we can create postage in that amount.
+                Note that this means we can create postage in the amount of <m>n-3</m> cents; add a 3 cent stamp to make postage in the amount of <m>n</m> cents.
+            </p>
+        </solution>
+    </exploration>
+    
+    <exploration permid="FMm">
+    <statement>
+      <p permid="XIM">
+        What is wrong with the following
+        <q>proof</q> of the <q>fact</q>
+        that <m>n+3 = n+7</m> for all values of <m>n</m> (besides of course that the thing it is claiming to prove is false)?
+      </p>
+
+      
+        <p permid="JFh">
+          Proof. Let <m>P(n)</m> be the statement that <m>n + 3 = n + 7</m>.
+          We will prove that <m>P(n)</m> is true for all <m>n \in \N</m>.
+          Assume, for induction that <m>P(k)</m> is true.
+          That is, <m>k+3 = k+7</m>.
+          We must show that <m>P(k+1)</m> is true.
+          Now since <m>k + 3 = k + 7</m>, add 1 to both sides.
+          This gives <m>k + 3 + 1 = k + 7 + 1</m>.
+          Regrouping <m>(k+1) + 3 = (k+1) + 7</m>.
+          But this is simply <m>P(k+1)</m>.
+          Thus by the principle of mathematical induction <m>P(n)</m> is true for all <m>n \in \N</m>.
+        </p>
+      
+
+    </statement>
+    <solution permid="OaF">
+      <p permid="ZTy">
+        The only problem is that we never established the base case.
+        Of course, when <m>n = 0</m>, <m>0+3 \ne 0+7</m>.
+      </p>
+    </solution>
+  </exploration>
+
+
+
+
+    
+  </subsubsection>
+
+  
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+    <video ee="wstkruu" />
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
+
+<exercises>
+    <p>
+        Determine whether the following statements are true or false.
+        If they're true, supply a proof by induction.
+        If they're false, supply a counterexample.
+    </p>
+    <exercise>
+        <p>For all <m>n\ge 1</m>, <m>2 + 4 + \cdots + 2n = n^2 + n</m>.</p>
+    </exercise>
+    <exercise>
+        <p>For all <m>n\ge 1</m>, <m>1+3+5+\cdots+(2n-1) = n^2</m>.</p>
+    </exercise>
+    <exercise>
+        <p>For all <m>n\ge 1</m>, <m>1^3 + 2^3 + 3^3 + \cdots + n^3 = \left[\frac{n(n+1)}{2}\right]^2</m>.</p>
+    </exercise>
+    <exercise>
+        <p>Every natural number is even or odd.</p>
+    </exercise>
+    <exercise>
+        <p>Suppose <m>a</m> and <m>r</m> are real numbers with <m>r\ne 1</m>. If <m>n</m> is a nonnegative integer, then
+        <me>
+            a + ar + \cdots + ar^n = \frac{a(r^{n+1}-1)}{r-1}.
+        </me></p>
+    </exercise>
+    <exercise>
+        <p>If <m>n\ge 4</m>, then <m>3^n \gt 2n^2 + 3n</m>.</p>
+    </exercise>
+
+</exercises>
+
           
         </section>
         
@@ -6700,7 +7364,852 @@
         <title>Week 11: Mar. 22-26</title>
         
         <section xml:id="Mar-22">
-          <title>Mar. 22</title>
+          <title>Mar. 22: Propositional Logic I</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>What are propositions? How do we decide if a proposition is true?</li>
+	  <li>How can we use truth tables to decide the formal truth of a proposition?</li>
+	  <li>What are deduction rules? How can deduction rules be employed to make valid logical inferences?</li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_propositional.html">Section 3.1</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  
+  <investigation permid="kKC">
+    <idx><h>knights and knaves</h></idx>
+    <idx><h>puzzle</h><h>knights and knaves</h></idx>
+      <p permid="YaL">
+        You stumble upon two trolls playing Stratego<registered/>.
+        They tell you:
+      </p>
+
+      <blockquote permid="NXf">
+        <p permid="xIO">
+          Troll 1: If we are cousins, then we are both knaves.
+        </p>
+
+        <p permid="dPX">
+          Troll 2: We are cousins or we are both knaves.
+        </p>
+      </blockquote>
+
+      <p permid="EhU">
+        Could both trolls be knights?
+        Recall that all trolls are either always-truth-telling knights or always-lying knaves.
+      </p>
+    </investigation>
+    
+    <subsubsection>
+        <title>Truth Tables and Logical Equivalence</title>
+        
+    <p>
+        Mathematical propositions are often stated in conditional or biconditional form. However, we have seen that they can be more complicated than this. The premises or conclusion (or both!) of the proposition could have multiple substatements joined by connectives.
+        How do we know if a given complex proposition is true?
+        Formally, we decide the truth value of the proposition purely in terms of the truth values of the premises, conclusions, and the structure of the connectives joining them.
+        Thus, it is helpful to understand the truth values of the logical connectives themselves.
+    </p>
+
+    
+    <p permid="meq">
+      Since the truth value of a statement is completely determined by the truth values of its parts and how they are connected,
+      all you really need to know is the truth tables for each of the logical connectives.
+      Here they are:
+    </p>
+
+    <sidebyside width="20%" margins="auto" permid="tuu">
+
+      <tabular halign="center" permid="zcC">
+        <col right="minor"/>
+        <col right="medium"/>
+        <col/>
+        <row bottom="minor">
+          <cell><m>P</m></cell>
+          <cell><m>Q</m></cell>
+          <cell><m>P\wedge Q</m></cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+      </tabular>
+
+      <tabular halign="center" permid="fjL">
+        <col right="minor"/>
+        <col right="medium"/>
+        <col/>
+        <row bottom="minor">
+          <cell><m>P</m></cell>
+          <cell><m>Q</m></cell>
+          <cell><m>P\vee Q</m></cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+      </tabular>
+
+      <tabular halign="center" permid="LqU">
+        <col right="minor"/>
+        <col right="medium"/>
+        <col/>
+        <row bottom="minor">
+          <cell><m>P</m></cell>
+          <cell><m>Q</m></cell>
+          <cell><m>P\imp Q</m></cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+      </tabular>
+
+      <tabular halign="center" permid="ryd">
+        <col right="minor"/>
+        <col right="medium"/>
+        <col/>
+        <row bottom="minor">
+          <cell><m>P</m></cell>
+          <cell><m>Q</m></cell>
+          <cell><m>P\iff Q</m></cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+      </tabular>
+
+    </sidebyside>
+
+    <p permid="Slz">
+      The truth table for negation looks like this:
+    </p>
+
+    <sidebyside permid="ZBD">
+
+      <tabular halign="center" permid="XFm">
+        <col right="medium"/>
+        <col/>
+        <row bottom="minor">
+          <cell><m>P</m></cell>
+          <cell><m>\neg P</m></cell>
+        </row>
+        <row>
+          <cell>T</cell>
+          <cell>F</cell>
+        </row>
+        <row>
+          <cell>F</cell>
+          <cell>T</cell>
+        </row>
+        <row>
+          <cell/>
+        </row>
+      </tabular>
+
+    </sidebyside>
+
+    <p permid="ysI">
+      None of these truth tables should come as a surprise;
+      they are all just restating the definitions of the connectives.
+      Let's try another one.
+    </p>
+    
+        <example xml:id="ex-imp-disj" permid="hgc">
+      <statement>
+        <p permid="CsH">
+          Make a truth table for the statement <m>\neg P \vee Q</m>.
+        </p>
+      </statement>
+      <solution permid="QRL">
+        <p permid="mzP">
+          Note that this statement is not <m>\neg(P \vee Q)</m>,
+          the negation belongs to <m>P</m> alone.
+          Here is the truth table:
+        </p>
+
+        <sidebyside permid="FIM">
+
+          <tabular halign="center" permid="DMv">
+            <col right="minor"/>
+            <col right="medium"/>
+            <col right="minor"/>
+            <col/>
+            <row bottom="minor">
+              <cell><m>P</m></cell>
+              <cell><m>Q</m></cell>
+              <cell><m>\neg P</m></cell>
+              <cell><m>\neg P \vee Q</m></cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+          </tabular>
+
+        </sidebyside>
+
+        <p permid="SGY">
+          We added a column for <m>\neg P</m> to make filling out the last column easier.
+          The entries in the <m>\neg P</m> column were determined by the entries in the <m>P</m> column.
+          Then to fill in the final column,
+          look only at the column for <m>Q</m> and the column for <m>\neg P</m> and use the rule for <m>\vee</m>.
+        </p>
+      </solution>
+    </example>
+    
+    <example>
+        <statement>
+            <p>
+                Let's check the truth value of the proposition <m>(P\to Q) \lor (Q\to R)</m>.
+            </p>
+        </statement>
+    </example>
+
+    
+    <p>
+        Two molecular statements are <term>logically equivalent</term> if they have the exact same truth values.
+        To check logical equivalence, make a truth table for each and check whether the columns corresponding to the truth values of the statements are identical.
+    </p>
+    
+    <exploration>
+        <statement>
+            <p>
+                Are the following pairs of statements logically equivalent? Justify.
+            </p>
+            <ol>
+                <li><m>P\land (Q\lor R)</m> and <m>(P\land Q) \lor (P\land R)</m></li>
+                <li><m>P\lor (Q\land R)</m> and <m>(P\lor Q) \land (P\lor R)</m></li>
+                <li><m>\neg(P\land Q)</m> and <m>(\neg P) \lor (\neg Q)</m></li>
+                <li><m>\neg(P\lor Q)</m> and <m>(\neg P) \land (\neg Q)</m></li>
+                <li><m>P\imp Q</m> and <m>(\neg P) \lor Q</m></li>
+                <li><m>\neg (P\imp Q)</m> and <m>P\land (\neg Q)</m></li>
+                <li><m>P\imp (Q\lor R)</m> and <m>(P\land (\neg Q))\imp R</m></li>
+                <li><m>P\imp Q</m> and <m>Q\imp P</m></li>
+                <li><m>P\imp Q</m> and <m>(\neg Q)\imp (\neg P)</m></li>
+                <li><m>(P\lor Q)\imp R</m> and <m>(P\imp R)\lor (Q\imp R)</m></li>
+            </ol>
+
+        </statement>
+    </exploration>
+    
+  
+  
+  </subsubsection>
+  
+  
+  <subsubsection>
+    <title>Rules of Inference</title>
+    
+    
+        <investigation permid="gaJ">
+      <p permid="Qwm">
+        Holmes owns two suits: one black and one tweed.
+        He always wears either a tweed suit or sandals.
+        Whenever he wears his tweed suit and a purple shirt,
+        he chooses to not wear a tie.
+        He never wears the tweed suit unless he is also wearing either a purple shirt or sandals.
+        Whenever he wears sandals, he also wears a purple shirt.
+        Yesterday, Holmes wore a bow tie.
+        What else did he wear?
+      </p>
+    </investigation>
+    
+    <p>
+        Perhaps the two most famous logical inference rules are <term>modus ponens</term><fn><em>modus ponendo ponens</em>, <q>mode that by affirming affirms</q></fn> and <term>modus tollens</term><fn><em>modus tollendo tollens</em>, <q>mode that by denying denies</q></fn>
+    </p>
+   
+    
+    
+    <assemblage>
+        <title>Modus Ponens</title>
+        <p>
+            <statement>
+                <sidebyside permid="Pcy">
+
+      <tabular halign="center" permid="Iwo">
+        <row>
+          <cell/>
+          <cell><m>P \imp Q</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell/>
+          <cell><m>P</m></cell>
+        </row>
+        <row>
+          <cell><m>\therefore</m></cell>
+          <cell><m>Q</m></cell>
+        </row>
+      </tabular>
+
+    </sidebyside>
+    </statement>
+</p>
+    </assemblage>
+    
+    <assemblage>
+        <title>Modus Tollens</title>
+        <p>
+            <statement>
+                <sidebyside permid="Pcy">
+
+      <tabular halign="center" permid="Iwo">
+        <row>
+          <cell/>
+          <cell><m>P \imp Q</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell/>
+          <cell><m>\neg Q</m></cell>
+        </row>
+        <row>
+          <cell><m>\therefore</m></cell>
+          <cell><m>\neg P</m></cell>
+        </row>
+      </tabular>
+
+    </sidebyside>
+    </statement>
+</p>
+    </assemblage>
+
+<p>
+How can we verify that these are valid modes of reasoning? With truth tables!
+</p>
+
+
+<example permid="COg">
+      <statement>
+        <p permid="HcA">
+          Show that
+        </p>
+
+        <sidebyside permid="bqQ">
+
+          <tabular halign="center" permid="UKG">
+            <row>
+              <cell/>
+              <cell><m>P \imp Q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\neg P \imp Q</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>Q</m></cell>
+            </row>
+          </tabular>
+
+        </sidebyside>
+
+        <p permid="njJ">
+          is a valid deduction rule.
+        </p>
+      </statement>
+      <solution permid="VBE">
+        <p permid="opc">
+          We make a truth table which contains all the lines of the argument form:
+        </p>
+
+        <sidebyside permid="HxZ">
+
+          <tabular halign="center" permid="ARP">
+            <col right="minor"/>
+            <col right="medium"/>
+            <col right="minor"/>
+            <col right="minor"/>
+            <col/>
+            <row bottom="minor">
+              <cell><m>P</m></cell>
+              <cell><m>Q</m></cell>
+              <cell><m>P\imp Q</m></cell>
+              <cell><m>\neg P</m></cell>
+              <cell><m>\neg P \imp Q</m></cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+          </tabular>
+
+        </sidebyside>
+
+        <p permid="Uwl">
+          (we include a column for <m>\neg P</m> just as a step to help getting the column for <m>\neg P \imp Q</m>).
+        </p>
+
+        <p permid="ADu">
+          Now look at all the rows for which both
+          <m>P \imp Q</m> and <m>\neg P \imp Q</m> are true.
+          This happens only in rows 1 and 3.
+          Hey!
+          In those rows <m>Q</m> is true as well,
+          so the argument form is valid
+          (it is a valid deduction rule).
+        </p>
+      </solution>
+    </example>
+    
+    <example permid="iVp">
+      <statement>
+        <p permid="TqS">
+          Decide whether
+        </p>
+
+        <sidebyside permid="nFi">
+
+          <tabular halign="center" permid="gYY">
+            <row>
+              <cell/>
+              <cell><m>P \imp R</m></cell>
+            </row>
+            <row>
+              <cell/>
+              <cell><m>Q \imp R</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>R</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>P \vee Q</m></cell>
+            </row>
+          </tabular>
+
+        </sidebyside>
+
+        <p permid="zyb">
+          is a valid deduction rule.
+        </p>
+      </statement>
+      <solution permid="BIN">
+        <p permid="gKD">
+          Let's make a truth table containing all four statements.
+        </p>
+
+        <sidebyside permid="TMr">
+
+          <tabular halign="center" permid="Ngh">
+            <col right="minor"/>
+            <col right="minor"/>
+            <col right="medium"/>
+            <col right="minor"/>
+            <col right="minor"/>
+            <col/>
+            <row bottom="minor">
+              <cell><m>P</m></cell>
+              <cell><m>Q</m></cell>
+              <cell><m>R</m></cell>
+              <cell><m>P \imp R</m></cell>
+              <cell><m>Q \imp R</m></cell>
+              <cell><m>P \vee Q</m></cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+          </tabular>
+
+        </sidebyside>
+
+        <p permid="MRM">
+          Look at the second to last row.
+          Here all three premises of the argument are true,
+          but the conclusion is false.
+          Thus this is not a valid deduction rule.
+        </p>
+
+        <p permid="sYV">
+          While we have the truth table in front of us, look at rows 1, 3, and 5.
+          These are the only rows in which all of the statements <m>P \imp R</m>,
+          <m>Q \imp R</m>, and <m>P\vee Q</m> are true.
+          It also happens that <m>R</m> is true in these rows as well.
+          Thus we have discovered a new deduction rule we know <em>is</em> valid:
+        </p>
+
+        <sidebyside permid="zTA">
+
+          <tabular halign="center" permid="tnq">
+            <row>
+              <cell/>
+              <cell><m>P \imp R</m></cell>
+            </row>
+            <row>
+              <cell/>
+              <cell><m>Q \imp R</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell/>
+              <cell><m>P \vee Q</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>R</m></cell>
+            </row>
+          </tabular>
+
+        </sidebyside>
+      </solution>
+    </example>
+    
+</subsubsection>
+
+<subsubsection>
+    <title>Predicate Logic</title>
+    
+     <p permid="ERO">
+      As we saw at the beginning of the semester,
+      not every statement can be analyzed using logical connectives alone.
+      For example, we might want to work with the statement:
+    </p>
+
+    <blockquote permid="GsG">
+      <p permid="Wly">
+        All primes greater than 2 are odd.
+      </p>
+    </blockquote>
+
+    <p permid="kYX">
+      To write this statement symbolically, we must use quantifiers.
+      We can translate as follows:
+      <me permid="usJ">
+        \forall x ((P(x) \wedge x \gt 2) \imp O(x))
+      </me>.
+      In this case, we are using <m>P(x)</m> to denote
+      <q><m>x</m> is prime</q>
+      and <m>O(x)</m> to denote <q><m>x</m> is odd.</q>
+      These are not propositions,
+      since their truth value depends on the input <m>x</m>.
+      Better to think of <m>P</m> and <m>O</m> as denoting
+      <em>properties</em> of their input.
+      The technical term for these is <term>predicates</term>
+      and when we study them in logic,
+      we need to use <term>predicate logic</term>.
+    </p>
+    
+    <example permid="MhS">
+      <statement>
+        <p permid="fFk">
+          Suppose we claim that there is no smallest number.
+          We can translate this into symbols as
+          <me permid="azS">
+            \neg \exists x \forall y (x \le y)
+          </me>
+          (literally, <q>it is not true that there is a number <m>x</m> such that for all numbers <m>y</m>,
+          <m>x</m> is less than or equal to <m>y</m></q>).
+        </p>
+
+        <p permid="LMt">
+          However, we know how negation interacts with quantifiers:
+          we can pass a negation over a quantifier by switching the quantifier type
+          (between universal and existential).
+          So the statement above should be
+          <em>logically equivalent</em> to
+          <me permid="GHb">
+            \forall x \exists y (y \lt x)
+          </me>.
+          Notice that <m>y \lt x</m> is the negation of <m>x \le y</m>.
+          This literally says,
+          <q>for every number <m>x</m> there is a number <m>y</m> which is smaller than <m>x</m>.</q>
+          We see that this is another way to make our original claim.
+        </p>
+      </statement>
+    </example>
+
+    <example permid="spb">
+      <statement>
+        <p permid="rTC">
+          Can you switch the order of quantifiers?
+          For example, consider the two statements:
+          <me permid="mOk">
+            \forall x \exists y P(x,y) \qquad \mathrm{ and } \qquad \exists y \forall x P(x,y)
+          </me>.
+          Are these logically equivalent?
+        </p>
+      </statement>
+      <solution permid="hPW">
+        <p permid="Zge">
+          These statements are NOT logically equivalent.
+          To see this,
+          we should provide an interpretation of the predicate <m>P(x,y)</m> which makes one of the statements true and the other false.
+        </p>
+
+        <p permid="Fnn">
+          Let <m>P(x,y)</m> be the predicate <m>x \lt y</m>.
+          It is true, in the natural numbers,
+          that for all <m>x</m> there is some <m>y</m> greater than that <m>x</m>
+          (since there are infinitely many numbers).
+          However, there is not a natural number <m>y</m> which is greater than every number <m>x</m>.
+          Thus it is possible for <m>\forall x \exists y P(x,y)</m> to be true while <m>\exists y \forall x P(x,y)</m> is false.
+        </p>
+
+        <p permid="luw">
+          We cannot do the reverse of this though.
+          If there is some <m>y</m> for which every <m>x</m> satisfies <m>P(x,y)</m>,
+          then certainly for every <m>x</m> there is some <m>y</m> which satisfies <m>P(x,y)</m>.
+          The first is saying we can find one <m>y</m> that works for every <m>x</m>.
+          The second allows different <m>y</m>'s to work for different <m>x</m>'s, but there is nothing preventing us from using the same <m>y</m> that work for every <m>x</m>.
+          In other words,
+          while we don't have logical equivalence between the two statements,
+          we do have a valid deduction rule:
+        </p>
+
+        <sidebyside permid="Ywk">
+
+          <tabular halign="center" permid="Zuz">
+            <row bottom="minor">
+              <cell/>
+              <cell><m>\exists y \forall x P(x,y)</m></cell>
+            </row>
+            <row>
+              <cell><m>\therefore</m></cell>
+              <cell><m>\forall x \exists y P(x,y)</m></cell>
+            </row>
+          </tabular>
+
+        </sidebyside>
+
+        <p permid="RBF">
+          Put yet another way, this says that the single statement
+          <me permid="SVt">
+            \exists y \forall x P(x,y) \imp \forall x \exists y P(x,y)
+          </me>
+          is always true.
+          This is sort of like a tautology,
+          although we reserve that term for necessary truths in propositional logic.
+          A statement in predicate logic that is necessarily true gets the more prestigious designation of a <term>law of logic</term>
+              <idx>law of logic</idx>
+          (or sometimes <term>logically valid</term>,
+              <idx><h>logically valid</h><see>law of logic</see></idx>
+          but that is less fun).
+        </p>
+      </solution>
+    </example>
+    
+    
+</subsubsection>
+
+
+
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+  
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
@@ -6713,7 +8222,288 @@
         
         
         <section xml:id="Mar-26">
-          <title>Mar. 26</title>
+          <title>Mar. 26: Direct Proofs</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>What is a direct proof?</li>
+	  <li>What characteristics make for a good proof?</li>
+
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_logic-proofs.html">Section 3.2</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <investigation permid="XTu">
+      <p permid="mlu">
+        Decide which of the following are valid proofs of the following statement:
+      </p>
+
+      <blockquote permid="WOb">
+        <p permid="EoY">
+          If <m>a b</m> is an even number,
+          then <m>a</m> or <m>b</m> is even.
+        </p>
+      </blockquote>
+
+      <p permid="SsD">
+        <ol permid="PjC">
+          <li permid="bxU">
+            <p permid="dnh">
+              Suppose <m>a</m> and <m>b</m> are odd.
+              That is, <m>a=2k+1</m> and <m>b=2m+1</m> for some integers <m>k</m> and <m>m</m>.
+              Then
+              <md permid="GOf">
+                <mrow>ab \amp =(2k+1)(2m+1)</mrow>
+                <mrow>\amp =4km+2k+2m+1</mrow>
+                <mrow>\amp =2(2km+k+m)+1</mrow>
+              </md>.
+            </p>
+
+            <p permid="Juq">
+              Therefore <m>ab</m> is odd.
+            </p>
+          </li>
+
+          <li permid="HFd">
+            <p permid="pBz">
+              Assume that <m>a</m> or <m>b</m> is even - say it is <m>a</m>
+              (the case where <m>b</m> is even will be identical).
+              That is, <m>a=2k</m> for some integer <m>k</m>.
+              Then
+              <md permid="mVo">
+                <mrow>ab \amp =(2k)b</mrow>
+                <mrow>\amp =2(kb)</mrow>
+              </md>.
+            </p>
+
+            <p permid="VII">
+              Thus <m>ab</m> is even.
+            </p>
+          </li>
+
+          <li permid="nMm">
+            <p permid="BPR">
+              Suppose that <m>ab</m> is even but <m>a</m> and <m>b</m> are both odd.
+              Namely, <m>ab = 2n</m>,
+              <m>a=2k+1</m> and <m>b=2j+1</m> for some integers <m>n</m>,
+              <m>k</m>,
+              and <m>j</m>.
+              Then
+              <md permid="Tcx">
+                <mrow>2n \amp =(2k+1)(2j+1)</mrow>
+                <mrow>2n \amp =4kj+2k+2j+1</mrow>
+                <mrow>n \amp = 2kj+k+j+\frac{1}{2}</mrow>
+              </md>.
+            </p>
+
+            <p permid="hXa">
+              But since <m>2kj+k+j</m> is an integer,
+              this says that the integer <m>n</m> is equal to a non-integer,
+              which is impossible.
+            </p>
+          </li>
+
+          <li permid="TTv">
+            <p permid="Oej">
+              Let <m>ab</m> be an even number,
+              say <m>ab=2n</m>, and <m>a</m> be an odd number, say <m>a=2k+1</m>.
+              <md permid="zjG">
+                <mrow>ab \amp =(2k+1)b</mrow>
+                <mrow>2n \amp =2kb+b</mrow>
+                <mrow>2n-2kb\amp =b</mrow>
+                <mrow>2(n-kb)\amp =b</mrow>
+              </md>.
+            </p>
+
+            <p permid="uls">
+              Therefore <m>b</m> must be even.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    
+    <p>
+        There are three main styles of proof we'll discuss (aside from combinatorial and inductive proofs, which we've already looked at): <term>direct proofs</term>, <term>proofs by contradiction</term>, and <term>proofs by contrapositive</term>. Direct proofs are the most common, while proofs by contradiction are perhaps the most fun, and proofs by contrapositive feel a bit like magic. There are other special techniques as well, and we'll discuss them as we encounter examples of them.
+    </p>
+    
+    <p>
+        Before looking at some examples, let's consider two definitions.
+    </p>
+
+
+    <definition>
+        <statement>
+            <p>
+                Let <m>a,b\in\Z</m>. We say <m>a</m> <term>divides</term> <m>b</m>, written <m>a | b</m>, if there exist <m>c\in\Z</m> such that <m>ac = b</m>.
+                In this case, we say that <m>b</m> is a <term>multiple</term> of <m>a</m> and that <m>b</m> is <term>divisible</term> by <m>a</m>.
+            </p>
+        </statement>
+    </definition>
+    <definition>
+        <statement>
+            <p>
+                We say an integer <m>m\in\Z</m> is <term>even</term> if <m>m</m> is divisible by 2, i.e., there exists <m>k\in\Z</m> such that <m>m = 2k</m>.
+                We say an integer <m>n\in\Z</m> is <term>odd</term> if <m>n</m> is not divisible by 2, i.e., there exists <m>j\in\Z</m> such that <m>n = 2j+1</m>.
+            </p>
+        </statement>
+    </definition>
+    
+    <example permid="Weh">
+      <statement>
+        <p permid="cRI">
+          Prove: For all integers <m>n</m>,
+          if <m>n</m> is even, then <m>n^2</m> is even.
+        </p>
+      </statement>
+      <solution permid="EaD">
+        <p permid="rqM">
+          The format of the proof will be this: Let <m>n</m> be an arbitrary integer.
+          Assume that <m>n</m> is even.
+          Explain explain explain.
+          Therefore <m>n^2</m> is even.
+        </p>
+
+        <p permid="XxV">
+          To fill in the details,
+          we will basically just explain what it means for <m>n</m> to be even,
+          and then see what that means for <m>n^2</m>.
+          Here is a complete proof.
+        </p>
+
+        <proof permid="khM">
+          <p permid="DFe">
+            Let <m>n</m> be an arbitrary integer.
+            Suppose <m>n</m> is even.
+            Then <m>n = 2k</m> for some integer <m>k</m>.
+            Now <m>n^2 = (2k)^2 = 4k^2 = 2(2k^2)</m>.
+            Since <m>2k^2</m> is an integer, <m>n^2</m> is even.
+          </p>
+        </proof>
+
+      </solution>
+    </example>
+    
+    <exploration>
+        <statement>
+            <p>
+                Write clear proofs of each of the following statements. Then swap yours with a friend's and offer feedback on their correctness and clarity.
+            </p>
+            <ol>
+                <li>For all integers <m>n</m>, if <m>n</m> is odd, then <m>n^2</m> is odd.</li>
+                <li>For all odd integers <m>m,n</m>, <m>m+n</m> is even.</li>
+<!--                 <li>For all even integers <m>m,n</m>, <m>m+n</m> is even.</li> -->
+<!--                 <li>For all integers <m>n</m>, <m>n(n+1)</m> is even. [Hint: perhaps consider two cases for <m>n</m>?]</li> -->
+                <li>Let <m>x</m> be an integer. Then <m>x</m> is odd if and only if there exists an integer <m>\ell</m> for which <m>x = 2\ell -1</m>.</li>
+                <li>Let <m>a,b,c\in\Z</m> with <m>a|b</m> and <m>a|c</m>. Then <m>a|(b+c)</m>.</li>
+                <li>Let <m>a,b,c\in\Z</m> with <m>a|b</m> and <m>a|c</m>. Then <m>a|bc</m>.</li>
+                <li>Let <m>a,b,c\in\Z</m> with <m>a|b</m> and <m>b|c</m>. Then <m>a|c</m>.</li>
+                </ol>
+            </statement>
+            </exploration>
+    
+    
+    <activity>
+        <statement>
+            <p>
+                Evaluate the following proofs. 
+                <ul>
+                    <li>If a proposition is false, the proposed proof, is, of course, incorrect. In this situation, find the error in the proof and then provide a counterexample showing that the proposition is false.</li>
+                    <li>If a proposition is true, the proposed proof may still be incorrect. In this case, you are to determine why the proof is incorrect and then write a correct proof using the writing guidelines that have been presented in this book.</li>
+                    <li>If a proposition is true and the proof is correct, you are to decide if the proof is well written or not. If it is well written, then you simply must indicate that this is an excellent proof and needs no revision. On the other hand, if the proof is not well written, then you must then revise the proof by writing it according to the guidelines presented in this text.</li>
+                </ul>
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        If <m>m</m> is an even integer, then <m>5m+4</m> is an even integer.
+                    </p>
+                    <solution>
+                        <p>
+                            We see that <m>5m+4 = 10n +4 = 2(5n+2)</m>. Therefore <m>5m+4</m> is an even integer.
+                        </p>
+
+                    </solution>
+                </li>
+                
+                <li>
+                    <p>
+                        For all integers <m>a,b,c</m>, if <m>a|bc</m>, then <m>a|b</m> or <m>a|c</m>.
+                    </p>
+                    <solution>
+                        <p>
+                            We assume that <m>a,b,c\in\Z</m> and that <m>a|bc</m>.
+                            Then there is an integer <m>k</m> such that <m>ak=bc</m>.
+                            We now factor <m>k</m> as <m>k=mn</m>, where <m>m,n</m> are integers. We then see that
+                            <me>
+                                bc = mna.
+                            </me>
+                            This means that <m>b=ma</m> or <m>c=na</m> and hence, <m>a|b</m> or <m>a|c</m>.
+                        </p>
+
+                    </solution>
+
+
+                </li>
+
+            </ol>
+        </statement>
+    </activity>
+
+
+
+                
+
+  
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+  
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
@@ -6725,21 +8515,816 @@
         <title>Week 12: Mar. 29-Apr. 2</title>
         
         <section xml:id="Mar-29">
-          <title>Mar. 29</title>
+          <title>Mar. 29: Proof by Contradiction</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>How does a proof by contradiction differ from a direct proof?</li>
+	  <li>What is the logical structure of a proof by contradiction?</li>
+	  <li>What are some examples of a proof by contradiction?</li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_logic-proofs.html">Section 3.2</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Two Examples</title>
+    
+    <theorem>
+        <author>Euclid</author>
+        <statement>
+        <p>
+            There are infinitely many prime numbers.
+        </p>
+        </statement>        
+    </theorem>
+    
+    
+    <theorem>
+
+        <statement>
+        <p>
+            There is no rational number <m>a/b</m> such that <m>\sqrt{2} = a/b</m>.
+        </p>
+        </statement>        
+    </theorem>
+
+    
+    </subsubsection>
+    
+    <subsubsection>
+        <title>Explorations</title>
+        
+        <exploration>
+            <statement>
+                <p>
+                    Prove the <term>Pigeonhole Principle</term>: If more than <m>n</m> pigeons fly into <m>n</m> pigeon holes, then at least one pigeon hole will contain at least two pigeons.
+                </p>
+            </statement>
+        </exploration>
+        
+        <exploration>
+            <statement>
+                <p>
+                    Prove that <m>\sqrt{3}</m> is irrational.
+                </p>
+            </statement>
+        </exploration>
+        
+        <exploration>
+            <statement>
+                <p>
+                    Consider the following proposition: For all integers <m>m,n</m>, if <m>n</m> is odd, then the equation
+                    <me>
+                        x^2 + 2mx + 2n = 0
+                    </me>
+                    has no integer solution for <m>x</m>.
+                </p>
+                <ol>
+                    <li>What are the solutions of the equation when <m>m=1</m> and <m>n=-1</m>? That is, what are the solutions of the equation <m>x^2 + 2x - 2 = 0</m>?.</li>
+                    <li>What are the solutions of the equation when <m>m=2</m> and <m>n=3</m>? That is, what are the solutions of the equation <m>x^2 + 4x +6 = 0</m>?.</li>
+                    <li>Solve the resulting quadratic equation for at least two more examples using values of <m>m</m> and <m>n</m> that satisfy the hypotheses of the proposition.</li>
+                    <li>For this proposition, why does it seem reasonable to try a proof by contradiction?</li>
+                    <li>For this proposition, state clearly the assumptions that need to be made at the beginning of a proof by contradiction.</li>
+                    <li>Use a proof by contradiction to prove this proposition.</li>
+                    </ol>
+                </statement>
+            </exploration>
+
+                    
+        
+        
+        
+        <activity>
+        <statement>
+            <p>
+                Evaluate the following proofs. 
+                <ul>
+                    <li>If a proposition is false, the proposed proof, is, of course, incorrect. In this situation, find the error in the proof and then provide a counterexample showing that the proposition is false.</li>
+                    <li>If a proposition is true, the proposed proof may still be incorrect. In this case, you are to determine why the proof is incorrect and then write a correct proof using the writing guidelines that have been presented in this book.</li>
+                    <li>If a proposition is true and the proof is correct, you are to decide if the proof is well written or not. If it is well written, then you simply must indicate that this is an excellent proof and needs no revision. On the other hand, if the proof is not well written, then you must then revise the proof by writing it according to the guidelines presented in this text.</li>
+                </ul>
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        For all real numbers <m>x,y</m>, if <m>x</m> is irrational and <m>y</m> is rational, then <m>x+y</m> is irrational.
+                    </p>
+                    <solution>
+                        <p>
+                           Proof: We will use a proof by contradiction. So we assume that the proposition is false, which means there exist real numbers <m>x,y</m> where <m>x\notin \Q</m>, <m>y\in \Q</m>, and <m>x+y\in \Q</m>. Since the rational numbers are closed under subtraction and <m>x+y,y\in\Q</m>, we see that
+                           
+                           <me>
+                            (x+y)-y\in\Q.
+                            </me>
+                            However, <m>(x+y)-y = x</m>, and hence we can conclude that <m>x\in\Q</m>. This is a contradiction to the assumption that <m>x\notin \Q</m>. Therefore, the proposition is false, and we have proven that for all real numbers <m>x,y</m>, if <m>x</m> is irrational and <m>y</m> is rational, then <m>x+y</m> is irrational.
+
+                        </p>
+
+                    </solution>
+                </li>
+                
+                <li>
+                    <p>
+                        For each real number <m>x</m>, <m>x(1-x) \le \frac{1}{4}</m>.
+                    </p>
+                    <solution>
+                        <p>
+                            A proof by contradiction will be used. So we assume the proposition is false. This means that there exists a real number <m>x</m> such that <m>x(1-x) \gt \frac{1}{4}</m>. If we multiply both sides of this inequality by <m>4</m>, we obtain <m>4x(1-x) > 1</m>. However, if we let <m>x=3</m>, we then see that 
+                            <md>
+                                <mrow> 4x (1-x) \amp \gt 1</mrow>
+                                <mrow>4\cdot 3(1-3) \amp\gt 1 </mrow>
+                                <mrow>-12 \amp \gt 1. </mrow>
+                            </md>
+                            The last inequality is clearly a contradiction and so we have proved the proposition.
+
+                        </p>
+
+                    </solution>
+
+
+                </li>
+
+            </ol>
+        </statement>
+    </activity>
+
+        
+        
+    </subsubsection>
+
+
+  
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+    <video ee="erzmhdt" />
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
         
         <section xml:id="Mar-31">
-          <title>Mar. 31</title>
+          <title>Mar. 31: Other Types of Proof</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>#</li>
+	  <li></li>
+	  <li></li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_logic-proofs.html">Section 3.2</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Proof by Contrapositive</title>
+    
+    <example permid="isz">
+      <statement>
+        <p permid="pga">
+          Is the statement <q>for all integers <m>n</m>,
+          if <m>n^2</m> is even, then <m>n</m> is even</q> true?
+        </p>
+      </statement>
+      <!-- 
+<solution permid="cDn">
+        <p permid="chO">
+          This is the converse of the statement we proved above using a direct proof.
+          From trying a few examples, this statement definitely appears to be true.
+          So let's prove it.
+        </p>
+
+        <p permid="IoX">
+          A direct proof of this statement would require fixing an arbitrary <m>n</m> and assuming that <m>n^2</m> is even.
+          But it is not at all clear how this would allow us to conclude anything about <m>n</m>.
+          Just because <m>n^2 = 2k</m> does not in itself suggest how we could write <m>n</m> as a multiple of 2.
+        </p>
+
+        <p permid="owg">
+          Try something else: write the contrapositive of the statement.
+          We get, for all integers <m>n</m>,
+          if <m>n</m> is odd then <m>n^2</m> is odd.
+          This looks much more promising.
+          Our proof will look something like this:
+        </p>
+
+        <p permid="UDp">
+          Let <m>n</m> be an arbitrary integer.
+          Suppose that <m>n</m> is not even.
+          This means that
+          <ellipsis/>.
+          In other words
+          <ellipsis/>.
+          But this is the same as saying
+          <ellipsis/>.
+          Therefore <m>n^2</m> is not even.
+        </p>
+
+        <p permid="AKy">
+          Now we fill in the details:
+        </p>
+
+        <proof permid="IKw">
+          <p permid="gRH">
+            We will prove the contrapositive.
+            Let <m>n</m> be an arbitrary integer.
+            Suppose that <m>n</m> is not even, and thus odd.
+            Then <m>n= 2k+1</m> for some integer <m>k</m>.
+            Now <m>n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1</m>.
+            Since <m>2k^2 + 2k</m> is an integer,
+            we see that <m>n^2</m> is odd and therefore not even.
+          </p>
+        </proof>
+
+      </solution>
+ -->
+    </example>
+
+    <example permid="OzI">
+      <statement>
+        <p permid="Vnj">
+          Prove: for all integers <m>a</m> and <m>b</m>,
+          if <m>a + b</m> is odd, then <m>a</m> is odd or <m>b</m> is odd.
+        </p>
+      </statement>
+      <!-- 
+<solution permid="oRF">
+        <p permid="MYQ">
+          The problem with trying a direct proof is that it will be hard to separate <m>a</m> and <m>b</m> from knowing something about <m>a+b</m>.
+          On the other hand,
+          if we know something about <m>a</m> and <m>b</m> separately,
+          then combining them might give us information about <m>a+b</m>.
+          The contrapositive of the statement we are trying to prove is:
+          for all integers <m>a</m> and <m>b</m>,
+          if <m>a</m> and <m>b</m> are even, then <m>a+b</m> is even.
+          Thus our proof will have the following format:
+        </p>
+
+        <p permid="tfZ">
+          Let <m>a</m> and <m>b</m> be integers.
+          Assume that <m>a</m> and <m>b</m> are both even. la la la.
+          Therefore <m>a+b</m> is even.
+        </p>
+
+        <p permid="Zni">
+          Here is a complete proof:
+        </p>
+
+        <proof permid="UYO">
+          <p permid="Fur">
+            Let <m>a</m> and <m>b</m> be integers.
+            Assume that <m>a</m> and <m>b</m> are even.
+            Then <m>a = 2k</m> and <m>b = 2l</m> for some integers <m>k</m> and <m>l</m>.
+            Now <m>a + b = 2k + 2l = 2(k+1)</m>.
+            Since <m>k + l</m> is an integer,
+            we see that <m>a + b</m> is even, completing the proof.
+          </p>
+        </proof>
+
+        <p permid="lBA">
+          Note that our assumption that <m>a</m> and <m>b</m> are even is really the negation of <m>a</m> or <m>b</m> is odd.
+          We used De Morgan's law here.
+        </p>
+      </solution>
+ -->
+    </example>
+    
+</subsubsection>
+
+
+    <subsubsection>
+        <title>Proof by Cases</title>
+        
+        <p>
+            It often feels like we don't quite have enough information to complete a proof. It is possible to make additional assumptions locally in <em>cases</em>, provided that our cases are exhaustive.
+        </p>
+
+        
+        <example>
+            <statement>
+                <p>
+                    If <m>n\in\Z</m>, then <m>n^2+n</m> is even.
+                </p>
+            </statement>
+        </example>
+        
+        <exploration>
+            <statement>
+                <p>
+                    For all real numbers <m>a,b</m>, if <m>ab=0</m>, then <m>a=0</m> or <m>b=0</m>.
+                </p>
+                <hint>
+                    First assume that <m>a=0</m>. What are the remaining case(s)?
+                </hint>
+
+            </statement>
+            <solution>
+                <p>
+                    First assume that <m>a=0</m>. Then that <m>a\ne 0</m>.
+                </p>
+            </solution>
+        </exploration>
+        
+        <definition>
+            <idx>absolute value</idx>
+            <statement>
+                <p>
+                    For any <m>x\in\R</m>, the <term>absolute value of <m>x</m></term>, denoted <m>|x|</m>, is defined to be
+                    <me>
+                        |x| = \begin{cases} x \amp \text{if } x\ge 0\\ -x \amp \text{if } x\lt 0\end{cases}
+                    </me>
+                </p>
+            </statement>
+        </definition>
+        
+        <exploration>
+            <statement>
+                <p>
+                    Let <m>a</m> be a positive real number. Prove that <m>|x| = a</m> if and only if <m>x=a</m> or <m>x=-a</m>.
+                </p>
+            </statement>
+        </exploration>
+
+
+
+
+
+        
+    </subsubsection>
+    
+    
+    <subsubsection>
+        <title>Miscellany</title>
+        
+        <exploration>
+            <statement>
+                <p>
+                    Consider the statement, <q>For each odd negative integer <m>x</m> that is a multiple of 6, we have <m>2|(x+1)</m></q>. Is this true or false? Justify.
+                </p>
+                </statement>
+                </exploration>
+                
+        <exploration>
+            <statement>
+                <p>
+                    Consider the statement <q>For all integers <m>a,b</m>, if <m>a+b</m> is odd, then <m>a</m> is odd or <m>b</m> is odd</q>. Is this statement true? What about the converse?
+                </p>
+                </statement>
+            </exploration>
+
+                    
+
+        
+        
+    </subsubsection>
+
+
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+    <video ee="bkhnqrj" />
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
         
         
         <section xml:id="Apr-02">
-          <title>Apr. 02</title>
+          <title>Apr. 2: Intro to Graph Theory</title>
           
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>#</li>
+	  <li></li>
+	  <li></li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_gt-intro.html">Section 4.1</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+    <subsubsection>
+        <title>Definitions</title>
+    
+            <assemblage permid="AgV">
+                <title>Graph Definition</title>
+                <idx><h>graph</h></idx>
+                <idx><h>graph</h><h>vertex</h></idx>
+                <idx><h>graph</h><h>edge</h></idx>
+                <idx><h>vertex</h></idx>
+                <idx><h>edge</h></idx>
+                <p permid="rLy">
+                  A <term>graph</term> is an ordered pair
+                  <m>G = (V, E)</m> consisting of a nonempty set <m>V</m>
+                  (called the <term>vertices</term>)
+                  and a set <m>E</m>
+                  (called the <term>edges</term>)
+                  of two-element subsets of <m>V</m>.
+                </p>
+              </assemblage>
+              
+              
+              <question>
+                <statement>
+                    <p>
+                        What does it mean for two graphs to be the same?
+                    </p>
+                </statement>
+            </question>
+            
+            
+            <p permid="hmt">
+    We should be careful about what it means for two graphs to be
+    <q>the same.</q> Actually,
+    given our definition, this is easy: Are the vertex sets equal?
+    Are the edge sets equal?
+    We know what it means for sets to be equal,
+    and graphs are nothing but a pair of two special sorts of sets.
+  </p>
+
+  <example permid="kXX">
+  <idx><h>equality of graphs</h></idx>
+  <idx><h>graph</h><h>equality</h></idx>
+    <statement>
+      <p permid="xAK">
+        Are the graphs below equal?
+        <me permid="EJK">
+          G_1 = (\{a,b,c\}, \{\{a,b\}, \{b,c\}\}); \qquad G_2 = (\{a,b,c\}, \{\{a,c\}, \{c, b\}\})
+        </me>.
+      </p>
+    </statement>
+    <solution permid="XEm">
+      <p permid="PEo">
+        No.
+        Here the vertex sets of each graph are equal, which is a good start.
+        Also, both graphs have two edges.
+        In the first graph, we have edges <m>\{a,b\}</m> and <m>\{b,c\}</m>,
+        while in the second graph we have edges	<m>\{a,c\}</m> and 	<m>\{c,b\}</m>.
+        Now we do have <m>\{b,c\} = \{c,b\}</m>,
+        so that is not the problem.
+        The issue is that <m>\{a,b\} \ne \{a,c\}</m>.
+        Since the edge sets of the two graphs are not equal
+        (as sets),
+        the graphs are not equal
+        (as graphs).
+      </p>
+    </solution>
+  </example>
+  
+  <example permid="Rfg">
+    <statement>
+      <p permid="dHT">
+        Consider the graphs:
+
+        <me permid="kQT">
+          G_1 = (V_1, E_1) \text{ where }
+          V_1 = \{a, b, c\} \text{ and } E_1 = \{\{a,b\}, \{a,c\}, \{b,c\}\};
+        </me>
+
+        <me permid="QYc">
+          G_2 = (V_2, E_2) \text{ where }
+          V_2 = \{u,v,w\} \text{ and }E_2 = \{\{u,v\}, \{u,w\}, \{v,w\}\}.
+        </me>
+      </p>
+
+      <p permid="JPc">
+        Are these graphs the same?
+      </p>
+    </statement>
+    <solution permid="DLv">
+      <p permid="vLx">
+        The two graphs are NOT equal.
+        It is enough to notice that <m>V_1 \ne V_2</m> since
+        <m>a \in V_1</m> but <m>a \notin V_2</m>.
+        However, both of these graphs consist of three vertices with edges connecting every pair of vertices.
+        We can draw them as follows:
+      </p>
+
+      <sidebyside width="25%" margins="auto" valign="bottom" permid="ayS">
+
+        <image permid="jLA">
+
+					<latex-image>
+						\begin{tikzpicture}
+	\draw  (90:1) \va{\(a\)} -- (210:1) \vl{\(b\)} -- (-30:1) \vr{\(c\)} -- (90:1);
+	\end{tikzpicture}
+					</latex-image>
+        </image>
+
+        <image permid="PSJ">
+
+					<latex-image>
+						\begin{tikzpicture}
+	\draw  (90:1) \va{\(u\)} -- (210:1) \vl{\(v\)} -- (-30:1) \vr{\(w\)} -- (90:1);
+	\end{tikzpicture}
+					</latex-image>
+        </image>
+
+      </sidebyside>
+
+      <p permid="bSG">
+        Clearly we want to say these graphs are basically the same,
+        so while they are not equal, they will be <em>isomorphic</em>.
+        We can rename the vertices of one graph and get the second graph as the result.
+      </p>
+    </solution>
+  </example>
+  
+  <assemblage permid="goe">
+      <idx><h>isomorphism of graphs</h></idx>
+      <idx><h>isomorphic</h><h>precise definition</h></idx>
+      <idx><h>graph</h><h>isomorphic (precise definition)</h></idx>
+    <title>Isomorphic Graphs</title>
+    <p permid="XSH">
+      An <term>isomorphism</term>
+      between two graphs <m>G_1</m> and <m>G_2</m> is a bijection
+      <m>f:V_1 \to V_2</m> between the vertices of the graphs such that
+      <m>\{a,b\}</m> is an edge in <m>G_1</m> if and only if <m>\{f(a), f(b)\}</m> is an edge in <m>G_2</m>.
+    </p>
+
+    <p permid="DZQ">
+      Two graphs are <term>isomorphic</term> if there is an isomorphism between them.
+      In this case we write <m>G_1 \isom G_2</m>.
+    </p>
+  </assemblage>
+
+  <p permid="FPd">
+    An isomorphism is simply a function which renames the vertices.
+    It must be a bijection so every vertex gets a new name.
+    These newly named vertices must be connected by edges precisely when they were connected by edges with their old names.
+  </p>
+  
+  <example permid="xmp">
+    <idx><h>graph</h><h>equal vs isomorphic</h></idx>
+    <statement>
+      <p permid="pWl">
+        Decide whether the graphs <m>G_1 = (V_1, E_1)</m> and
+        <m>G_2 = (V_2, E_2)</m> are equal or isomorphic.
+      </p>
+
+      <p permid="Wdu">
+        <m>V_1 = \{a,b,c,d\}</m>,
+        <m>E_1 = \{\{a,b\}, \{a,c\}, \{a,d\}, \{c,d\}\}</m>
+      </p>
+
+      <p permid="CkD">
+        <m>V_2 = \{a,b,c,d\}</m>,
+        <m>E_2 = \{\{a,b\}, \{a,c\}, \{b,c\}, \{c,d\}\}</m>
+      </p>
+    </statement>
+    <solution permid="jSE">
+      <p permid="HZP">
+        The graphs are NOT equal,
+        since <m>\{a,d\} \in E_1</m> but <m>\{a,d\} \notin E_2</m>.
+        However, since both graphs contain the same number of vertices and same number of edges,
+        they <em>might</em> be isomorphic
+        (this is not enough in most cases, but it is a good start).
+      </p>
+
+      <p permid="ogY">
+        We can try to build an isomorphism.
+        How about we say <m>f(a) = b</m>,
+        <m>f(b) = c</m>, <m>f(c) = d</m> and <m>f(d) = a</m>.
+        This is definitely a bijection,
+        but to make sure that the function is an isomorphism,
+        we must make sure it <em>respects the edge relation</em>.
+        In <m>G_1</m>,
+        vertices <m>a</m> and <m>b</m> are connected by an edge.
+        In <m>G_2</m>, <m>f(a) = b</m> and
+        <m>f(b) = c</m> are connected by an edge.
+        So far, so good, but we must check the other three edges.
+        The edge <m>\{a,c\}</m> in <m>G_1</m> corresponds to
+        <m>\{f(a),
+        f(c)\} = \{b,d\}</m>, but here we have a problem.
+        There is no edge between <m>b</m> and <m>d</m> in <m>G_2</m>.
+        Thus <m>f</m> is NOT an isomorphism.
+      </p>
+
+      <p permid="Uoh">
+        Not all hope is lost, however.
+        Just because <m>f</m> is not an isomorphism does not mean that there is no isomorphism at all.
+        We can try again.
+        At this point it might be helpful to draw the graphs to see how they should match up.
+      </p>
+
+      <sidebyside widths="23% 23%" margins="auto" valign="bottom" permid="GGb">
+
+        <image permid="vZS">
+
+						<latex-image>
+
+							\begin{tikzpicture}
+								\coordinate (a) at (90:1);
+								\coordinate (b) at (0:1);
+								\coordinate (c) at (-90:1);
+								\coordinate (d) at (180:1);
+
+								\draw (a) -- (b) (a) -- (c) (a) -- (d) (c) --(d);
+								\draw (a) \va{\footnotesize $a$} (b) \vr{\footnotesize $b$} (c)\vb{\footnotesize $c$} (d) \vl{\footnotesize $d$};
+								\node at (-1,1) {$G_1$:};
+							\end{tikzpicture}
+
+						</latex-image>
+        </image>
+
+        <image permid="chb">
+
+						<latex-image>
+
+							\begin{tikzpicture}
+								\coordinate (a) at (90:1);
+								\coordinate (b) at (0:1);
+								\coordinate (c) at (-90:1);
+								\coordinate (d) at (180:1);
+
+								\draw (a) -- (b) (a) -- (c) (b) -- (c) (c) --(d);
+								\draw (a) \va{\footnotesize $a$} (b) \vr{\footnotesize $b$} (c)\vb{\footnotesize $c$} (d) \vl{\footnotesize $d$};
+								\node at (-1,1) {$G_2$:};
+							\end{tikzpicture}
+
+						</latex-image>
+        </image>
+
+      </sidebyside>
+
+      <p permid="Avq">
+        Alternatively, notice that in <m>G_1</m>,
+        the vertex <m>a</m> is adjacent to every other vertex.
+        In <m>G_2</m>,
+        there is also a vertex with this property: <m>c</m>.
+        So build the bijection <m>g:V_1 \to V_2</m> by defining <m>g(a) = c</m> to start with.
+        Next, where should we send <m>b</m>?
+        In <m>G_1</m>,
+        the vertex <m>b</m> is only adjacent to vertex <m>a</m>.
+        There is exactly one vertex like this in <m>G_2</m>, namely <m>d</m>.
+        So let <m>g(b) = d</m>.
+        As for the last two, in this example, we have a free choice:
+        let <m>g(c) = b</m> and <m>g(d) = a</m>
+        (switching these would be fine as well).
+      </p>
+
+      <p permid="gCz">
+        We should check that this really is an isomorphism.
+        It is definitely a bijection.
+        We must make sure that the edges are respected.
+        The four edges in <m>G_1</m> are
+        <me permid="xfl">
+          \{a,b\}, \{a,c\}, \{a,d\}, \{c,d\}
+        </me>.
+      </p>
+
+      <p permid="MJI">
+        Under the proposed isomorphism these become
+        <me permid="dmu">
+          \{g(a), g(b)\}, \{g(a), g(c)\}, \{g(a), g(d)\}, \{g(c), g(d)\}
+        </me>
+        <me permid="JtD">
+          \{c,d\}, \{c,b\}, \{c,a\}, \{b,a\}
+        </me>,
+        which are precisely the edges in <m>G_2</m>.
+        Thus <m>g</m> is an isomorphism, so <m>G_1 \cong G_2</m>
+      </p>
+    </solution>
+  </example>
+  
+  
+</subsubsection>
+
+  
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+    <video ee="yerbpjp" />
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
         </section>
         
@@ -6750,8 +9335,384 @@
         <title>Week 13: Apr. 5-Apr. 9</title>
         
         <section xml:id="Apr-05">
-          <title>Apr. 5</title>
+          <title>Apr. 5: Further Background in Graph Theory</title>
           
+          
+
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_gt-intro.html">Section 4.1</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Subgraphs</title>
+  
+  <proposition>
+    <statement>
+        <p>
+            The relation <q>is isomorphic to</q> is an equivalence relation on the collection of all graphs.
+        </p>
+    </statement>
+</proposition>
+
+<assemblage permid="Mvn">
+    <title>Subgraphs</title>
+      <idx><h>subgraph</h></idx>
+      <idx><h>graph</h><h>subgraph</h></idx>
+      <idx><h>induced subgraph</h></idx>
+    <p oldPERMID="cBa" permid="kgZ">
+      We say that <m>G' = (V', E')</m> is a <term>subgraph</term>
+      of <m>G = (V, E)</m>, and write <m>G' \subseteq G</m>,
+      provided <m>V' \subseteq V</m> and <m>E' \subseteq E</m>.
+    </p>
+
+    <p oldPERMID="IIj" permid="Qoi">
+      We say that <m>G' = (V', E')</m> is an
+      <term>induced subgraph</term>
+      of <m>G = (V, E)</m> provided
+      <m>V' \subseteq V</m> and every edge in <m>E</m> whose vertices are still in <m>V'</m> is also an edge in <m>E'</m>.
+    </p>
+  </assemblage>
+
+  <p permid="qGf">
+    Notice that every induced subgraph is also an ordinary subgraph,
+    but not conversely.
+    Think of a subgraph as the result of deleting some vertices and edges from the larger graph.
+    For the subgraph to be an induced subgraph,
+    we can still delete vertices,
+    but now we only delete those edges that included the deleted vertices.
+  </p>
+  
+  <p permid="PiP">
+    <idx><h>complete graph</h></idx>
+    <idx><h>graph</h><h>complete</h></idx>
+    <idx><h sortby="kn"><m>K_n</m></h></idx>
+    Vertices in a graph do not always have edges between them.
+    If we add all possible edges,
+    then the resulting graph is called <term>complete</term>.
+    That is, a graph is complete if every pair of vertices is connected by an edge.
+    Since a graph is determined completely by which vertices are adjacent to which other vertices,
+    there is only one complete graph with a given number of vertices.
+    We give these a special name: <m>K_n</m>
+
+    <notation>
+      <usage>K_n</usage>
+      <description>the complete graph on <m>n</m> vertices</description>
+    </notation>
+
+    is the complete graph on <m>n</m> vertices.
+  </p>
+
+  <p permid="vpY">
+  <idx><h>vertex degree</h></idx>
+  <idx><h>degree</h></idx>
+  <idx><h>graph</h><h>degree</h></idx>
+    Each vertex in <m>K_n</m> is adjacent to <m>n-1</m> other vertices.
+    We call the number of edges emanating from a given vertex the
+    <term>degree</term> of that vertex.
+    So every vertex in <m>K_n</m> has degree <m>n-1</m>.
+    How many edges does <m>K_n</m> have?
+    One might think the answer should be <m>n(n-1)</m>,
+    since we count <m>n-1</m> edges <m>n</m> times
+    (once for each vertex).
+    However, each edge is incident to 2 vertices,
+    so we counted every edge exactly twice.
+    Thus there are <m>n(n-1)/2</m> edges in <m>K_n</m>.
+    Alternatively, we can say there are <m>{n \choose 2}</m> edges,
+    since to draw an edge we must choose 2 of the <m>n</m> vertices.
+  </p>
+
+  <p permid="bxh">
+    In general, if we know the degrees of all the vertices in a graph,
+    we can find the number of edges.
+    The sum of the degrees of all vertices will always be
+    <em>twice</em> the number of edges,
+    since each edge adds to the degree of two vertices.
+    Notice this means that the sum of the degrees of all vertices in any graph must be even!
+  </p>
+  
+  <p permid="HEq">
+    This is our first example of a general result about all graphs.  It seems innocent enough, but we will use it to prove all sorts of other statements.  So let's give it a name and state it formally.
+  </p>
+  
+  <lemma xml:id="lem-handshake" permid="EQO">
+    <title>Handshake Lemma</title> 
+    <idx><h>handshake lemma</h></idx>   
+    <idx><h>degree</h><h>sum formula</h></idx>
+    <idx><h>counting</h><h>edges in a graph</h></idx>
+    <statement>
+      <p permid="RtB">
+        In any graph, the sum of the degrees of vertices in the graph is always twice the number of edges.
+      </p>
+    </statement>
+    <proof>
+        <p>
+            We will use a combinatorial proof.
+	    </p>
+        <p>
+	Suppose <m>V = \set{v_1,\ldots,v_n}</m>.
+	We can create an <m>n\times n</m> matrix as follows: set the entry in row <m>i</m> and column <m>j</m> to 1 if <m>v_i</m> is adjacent to <m>v_j</m> and 0 otherwise.
+	We ask: how many 1s are in this matrix?
+	
+	Note that for every edge there are two 1s corresponding to the end points. Thus the answer is <m>2|E|</m>.
+	
+	Consider a given row of the matrix corresponding to <m>v_i</m>; there is a 1 in this row for each neighbor of <m>v_i</m>. Thus, the number of 1s in this row is exactly <m>d(v_i)</m>, so the number of 1s in the entire matrix is <m>\sum_{i=1}^n d(v_i)</m>.
+	</p>
+</proof>
+
+  </lemma>
+  
+  <p permid="nLz">
+    The handshake lemma<fn>A <em>lemma</em> is a mathematical statement that is primarily of importance in that it is used to establish other results.</fn> is sometimes called the <em>degree sum formula</em>, and can be written symbolically as <me permid="pAM">
+      \sum_{v\in V} d(v) = 2e
+    </me>.
+    Here we are using the notation <m>d(v)</m> for the degree of the vertex <m>v</m>.
+  </p>
+  
+  <p permid="TSI">
+    <idx><h>degree</h><h>degree sequence</h></idx>
+    <idx><h>graph</h><h>degree sequence</h></idx>
+    <idx><h>vertex degree</h><h>degree sequence</h></idx>
+    One use for the lemma is to actually find the number of edges in a graph.  To do this, you must be given the <term>degree sequence</term> for the graph (or be able to find it from other information).  This is a list of every degree of every vertex in the graph, generally written in non-increasing order.
+  </p>
+  
+  <example permid="JAH">
+    <statement>
+      <p permid="aNn">
+        How many vertices and edges must a graph have if its degree sequence is <me permid="VHV">
+          (4, 4, 3, 3, 3, 2, 1)
+        </me>?
+      </p>
+    </statement>
+    <solution permid="PZN">
+      <p permid="sQR">
+        The number of vertices is easy to find: it is the number of degrees in the sequence: 7.  To find the number of edges, we compute the degree sum:
+        <me permid="BPe">
+          4 + 4 + 3 + 3 + 3 + 2 + 1 = 20
+        </me>,
+        so the number of edges is half this: 10.
+      </p>
+    </solution>
+  </example>
+
+  <p permid="zZR">
+    The handshake lemma also tells us what is not possible.  
+  </p>
+
+  <example permid="pHQ">
+    <statement>
+      <p permid="GUw">
+        At a recent math seminar, 9 mathematicians greeted each other by shaking hands.
+        Is it possible that each mathematician shook hands with exactly 7 people at the seminar?
+      </p>
+    </statement>
+    <solution permid="wgW">
+      <p permid="YYa">
+        It seems like this should be possible.
+        Each mathematician chooses one person to not shake hands with.
+        But this cannot happen.
+        We are asking whether a graph with 9 vertices can have each vertex have degree 7.
+        If such a graph existed,
+        the sum of the degrees of the vertices would be <m>9\cdot 7 = 63</m>.
+        This would be twice the number of edges (handshakes) resulting in a graph with <m>31.5</m> edges.
+        That is impossible.
+        Thus at least one
+        (in fact an odd number)
+        of the mathematicians must have shaken hands with an <em>even</em>
+        number of people at the seminar.
+      </p>
+    </solution>
+  </example>
+
+  <p permid="gha">
+    We can generalize the previous example to get the following proposition.<fn>A <term>proposition</term> is a general statement in mathematics, similar to a theorem, although generally of lesser importance.</fn> 
+  </p>
+  
+  <proposition xml:id="prop-evensum" permid="YJF">
+    <statement>
+      <p permid="lms">
+        In any graph, the number of vertices with odd degree must be even.
+      </p>
+    </statement>
+    <proof permid="rxd">
+      <p permid="Ffj">
+        Suppose there were a graph with an odd number of vertices with odd degree.  Then the sum of the degrees in the graph would be odd, which is impossible, by the handshake lemma.
+      </p>
+    </proof>
+  </proposition>
+
+  <p permid="Moj">
+    We will consider further applications of the handshake lemma in the exercises.
+  </p>
+
+  <p permid="svs">
+    <idx><h>bipartite graph</h></idx>
+    <idx><h>graph</h><h>bipartite</h></idx>
+    <idx><h>complete bipartite graph</h></idx>
+    One final definition: we say a graph is <term>bipartite</term>
+    if the vertices can be divided into two sets, <m>A</m> and <m>B</m>,
+    with no two vertices in <m>A</m> adjacent and no two vertices in <m>B</m> adjacent.
+    The vertices in <m>A</m> can be adjacent to some or all of the vertices in <m>B</m>.
+    If each vertex in <m>A</m> is adjacent to all the vertices in <m>B</m>,
+    then the graph is a <term>complete bipartite graph</term>,
+    and gets a special name:
+    <m>K_{m,n}</m>, where <m>|A| = m</m> and <m>|B| = n</m>.
+    The graph in the houses and utilities puzzle is <m>K_{3,3}</m>.
+  </p>
+
+	<!-- TODO: give picture example of bipartite and not bipartite graphs -->
+  <paragraphs permid="nSD">
+    <title>Named Graphs</title>
+    <idx><h>complete graph</h></idx>
+    <idx><h>complete bipartite graph</h></idx>
+    <idx><h>cycle</h><h>type of graph</h></idx>
+    <idx><h>path</h><h>type of graph</h></idx>
+    <idx><h>graph</h><h>complete</h></idx>
+    <idx><h>graph</h><h>complete bipartite</h></idx>
+    <idx><h>graph</h><h>path</h></idx>
+    <idx><h>graph</h><h>cycle</h></idx>
+    <p permid="fxg">
+      Some graphs are used more than others, and get special names.
+      <dl width="narrow" permid="Ivo">
+        <li permid="gXY">
+          <title><m>K_n</m></title>
+          <p permid="kCy">
+            The complete graph on <m>n</m> vertices.
+
+            <notation>
+              <usage>K_n</usage>
+              <description>the complete graph on <m>n</m> vertices.</description>
+            </notation>
+
+          </p>
+        </li>
+
+        <li permid="Nfh">
+          <title><m>K_{m,n}</m></title>
+          <p permid="QJH">
+            The complete bipartite graph with sets of <m>m</m> and <m>n</m> vertices.
+
+            <notation>
+              <usage>K_{m,n}</usage>
+              <description>the complete bipartite graph of <m>m</m> and <m>n</m> vertices.</description>
+            </notation>
+
+          </p>
+        </li>
+
+        <li permid="tmq">
+          <title><m>C_n</m></title>
+          <p permid="wQQ">
+            The cycle on <m>n</m> vertices, just one big loop.
+
+            <notation>
+              <usage>C_n</usage>
+              <description>the cycle on <m>n</m> vertices</description>
+            </notation>
+
+          </p>
+        </li>
+
+        <li oldPERMID="Kjb" permid="Ztz">
+          <title><m>P_n</m></title>
+          <p oldPERMID="NNB" permid="cXZ">
+            The path on <m>n+1</m> vertices
+            (so <m>n</m> edges),
+            just one long path.
+
+            <notation>
+              <usage>P_n</usage>
+              <description>the path on <m>n+1</m> vertices</description>
+            </notation>
+
+          </p>
+        </li>
+      </dl>
+    </p>
+
+    <sidebyside widths="18% 20% 15% 24%" margins="auto" valign="bottom" permid="sCw">
+
+      <image permid="FtE">
+
+				<latex-image>
+					\begin{tikzpicture}[scale=1]
+	  \path (0,0) +(18:1) coordinate (a);
+	  \path (0,0) +(90:1) coordinate (b);
+	  \path (0,0) +(162:1) coordinate (c);
+	  \path (0,0) +(234:1) coordinate (d);
+	  \path (0,0) +(306:1) coordinate (e);
+	  \draw  (a) \v -- (b) \v -- (c) \v -- (d) \v -- (e) \v -- (a) -- (c) -- (e) -- (b) -- (d) -- (a);
+	  \draw (0,-1.35) node[below]{ \(K_5\)};
+	\end{tikzpicture}
+				</latex-image>
+      </image>
+
+      <image permid="lAN">
+
+				<latex-image>
+					\begin{tikzpicture}[scale=.6, xscale=1.5]
+	 \draw  (-1, 0) \v -- (-.5,2) \v -- (0,0) \v -- (.5, 2) \v -- (1,0) \v -- (-.5,2) (.5,2) -- (-1,0);
+	 \draw (0,-.5) node[below]{ \(K_{2,3}\)};
+	  \end{tikzpicture}
+				</latex-image>
+      </image>
+
+      <image permid="RHW">
+
+				<latex-image>
+					\begin{tikzpicture}[scale=.6]
+	  \draw  (0:1) \v -- (60:1) \v -- (120:1) \v -- (180:1) \v -- (240:1) \v -- (300:1) \v -- cycle;
+	  \draw (270:1.5) node[below]{ \(C_6\)};
+	\end{tikzpicture}
+				</latex-image>
+      </image>
+
+      <image oldPERMID="gPu" permid="xPf">
+
+				<latex-image>
+					\begin{tikzpicture}[scale=.6]
+	  \draw  (-2,0) \v -- (-1,.5) \v -- (0,0) \v -- (1,.75) \v -- (.5,1.5) \v -- (2,2) \v;
+	  \draw (0,-.5) node[below]{ \(P_5\)};
+	\end{tikzpicture}
+				</latex-image>
+      </image>
+
+    </sidebyside>
+  </paragraphs>
+
+
+    
+    </subsubsection>
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+    <video ee="lnutrbv" />
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
         </section>
         
@@ -6759,7 +9720,287 @@
         
         
         <section xml:id="Apr-09">
-          <title>Apr. 09</title>
+          <title>Apr. 09: Trees I</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>#</li>
+	  <li></li>
+	  <li></li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_trees.html">Section 4.2</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Properties of Trees</title>
+    
+        <investigation permid="SUG">
+      <p permid="Yot">
+        Consider the graph drawn below.
+      </p>
+      
+      <sidebyside width="35%" permid="azf">
+        <image permid="RtO" source="./img/image-107.svg" />
+          
+      </sidebyside>
+      <p permid="EvC">
+        <ol permid="DLI">
+          <li permid="jSR">
+            <p permid="cos">
+              Find a subgraph with the smallest number of edges that is still connected and contains all the vertices.
+            </p>
+          </li>
+          <li permid="Qaa">
+            <p permid="IvB">
+              Find a subgraph with the largest number of edges that doesn't contain any cycles.
+            </p>
+          </li>
+          <li permid="whj">
+            <p permid="oCK">
+              What do you notice about the number of edges in your examples above?  Is this a coincidence?
+            </p>
+          </li>
+        </ol>  
+      </p>
+    </investigation>
+    
+    <assemblage permid="kYk">
+      <title>Definition of a Tree</title>
+      <idx><h>tree</h></idx>
+      <idx><h>forest</h></idx>
+
+      <p permid="QJU">
+        A <term>tree</term> is a connected graph containing no cycles.<fn>
+        Sometimes this is stated as <q>a tree is an acyclic connected graph;</q> <q>acyclic</q>
+        is just a fancy word for <q>containing no cycles.</q>
+        </fn>
+      </p>
+      
+      <p permid="wRd">
+        A <term>forest</term> is a graph containing no cycles.   Note that this means that a connected forest is a tree.
+      </p>
+    </assemblage>
+    
+    <activity>
+        <statement>
+            <ol> 
+                <li>Draw all trees on five vertices.</li>
+                <li>Draw a tree with exactly two leaves.</li>
+                <li>Draw a tree with exactly three leaves.</li>
+                <li>What must be true about the degree sequence of a tree?</li>
+            </ol>
+        </statement>
+    </activity>
+    
+    
+    <p permid="NPo">
+      We wish to really understand trees.
+      This means we should discover properties of trees;
+      what makes them special and what is special about them.
+    </p>
+
+    <p permid="tWx">
+      A tree is a connected graph with no cycles.
+      Is there anything else we can say?
+      It would be nice to have other equivalent conditions for a graph to be a tree.
+      That is, we would like to know whether there are any graph theoretic properties that all trees have,
+      and perhaps even that <em>only</em> trees have.
+    </p>
+
+    <p permid="adG">
+      To get a feel for the sorts of things we can say, we will consider three <em>propositions</em> about trees.  These will also illustrate important proof techniques that apply to graphs in general, and happen to be a little easier for trees.
+    </p>
+    
+    <p permid="GkP">
+      Our first proposition gives an alternate definition for a tree.  That is, it gives necessary and sufficient conditions for a graph to be a tree.
+    </p>
+    
+    <proposition xml:id="prop-unique-paths-trees" permid="Rft">
+      <statement>
+        <p permid="vbQ">
+          A graph <m>T</m> is a tree if and only if between every pair of distinct vertices of <m>T</m> there is a unique path.
+        </p>
+      </statement>
+      
+      <proof permid="zbP">
+        <p permid="Nfu">
+          This is an <q>if and only if</q> statement, so we must prove two implications.  We start by proving that if <m>T</m> is a tree, then between every pair of distinct vertices there is a unique path.
+        </p>
+        
+        <p permid="tmD">
+          Assume <m>T</m> is a tree, and let <m>u</m> and <m>v</m> be distinct vertices (if <m>T</m> only has one vertex, then the conclusion is satisfied automatically).  We must show two things to show that there is a unique path between <m>u</m> and <m>v</m>: that there is a path, and that there is not more than one path.  The first of these is automatic, since <m>T</m> is a tree, it is connected, so there is a path between any pair of vertices.  
+        </p>
+        
+        <p permid="ZtM">
+          To show the path is unique, we suppose there are two paths between <m>u</m> and <m>v</m>, and get a contradiction.  The two paths might start out the same, but since they are different, there is some first vertex <m>u'</m> after which the two paths diverge.  However, since the two paths both end and <m>v</m>, there is some first vertex after <m>u'</m> that they have in common, call it <m>v'</m>.  Now consider the two paths from <m>u'</m> to <m>v'</m>.  Taken together, these form a cycle, which contradicts our assumption that <m>T</m> is a tree.
+        </p>
+        
+        <p permid="FAV">
+          Now we consider the converse: if between every pair of distinct vertices of <m>T</m> there is a unique path, then <m>T</m> is a tree.  So assume the hypothesis: between every pair of distinct vertices of <m>T</m> there is a unique path.  To prove that <m>T</m> is a tree, we must show it is connected and contains no cycles.
+        </p>
+        
+        <p permid="lIe">
+          The first half of this is easy: <m>T</m> is connected, because there is a path between every pair of vertices.  To show that <m>T</m> has no cycles, we assume it does, for the sake of contradiction.  Let <m>u</m> and <m>v</m> be two distinct vertices in a cycle of <m>T</m>.  Since we can get from <m>u</m> to <m>v</m> by going clockwise or counterclockwise around the cycle, there are two paths from <m>u</m> and <m>v</m>, contradicting our assumption.
+        </p>
+        
+        <p permid="RPn">
+          We have established both directions so we have completed the proof.
+        </p>
+      </proof>
+    </proposition>
+    
+     <corollary xml:id="cor-unique-paths-forests" permid="JAU">
+      <statement>
+        <p permid="nxr">
+          A graph <m>F</m> is a forest if and only if between any pair of vertices in <m>F</m> there is at most one path.
+        </p>
+      </statement>
+    </corollary>
+    
+    <p permid="eNz">
+    <idx><h>leaf</h></idx>
+      Our second proposition tells us that all trees have <term>leaves</term>: vertices of degree one.
+    </p>
+    
+    <proposition xml:id="prop-leaves-in-trees" permid="xmC">
+      <statement>
+        <p permid="biZ">
+          Any tree with at least two vertices has at least two vertices of degree one.
+        </p>
+      </statement>
+      <proof permid="fiY">
+        <p permid="xWw">
+          We give a proof by contradiction.  Let <m>T</m> be a tree with at least two vertices, and suppose, contrary to stipulation, that there are not two vertices of degree one.  
+        </p>
+        
+        <p permid="edF">
+          Let <m>P</m> be a path in <m>T</m> of longest possible length.  Let <m>u</m> and <m>v</m> be the endpoints of the path.  Since <m>T</m> does not have two vertices of degree one, at least one of these must have degree two or higher.  Say that it is <m>u</m>.  We know that <m>u</m> is adjacent to a vertex in the path <m>P</m>, but now it must also be adjacent to another vertex, call it <m>u'</m>.  
+        </p>
+        
+        <p permid="KkO">
+          Where is <m>u'</m>?  It cannot be a vertex of <m>P</m>, because if it was, there would be two distinct paths from <m>u</m> to <m>u'</m>: the edge between them, and the first part of <m>P</m> (up to <m>u'</m>).  But <m>u'</m> also cannot be outside of <m>P</m>, for if it was, there would be a path from <m>u'</m> to <m>v</m> that was longer than <m>P</m>, which has longest possible length.  
+        </p>
+        
+        <p permid="qrX">
+          This contradiction proves that there must be at least two vertices of degree one.  In fact, we can say a little more: <m>u</m> and <m>v</m> must <em>both</em> have degree one.  
+        </p>
+      </proof>
+    </proposition>
+    
+    <p permid="KUI">
+      The proposition is quite useful when proving statements about trees, because we often prove statements about trees by <em>induction</em>.  To do so, we need to reduce a given tree to a smaller tree (so we can apply the inductive hypothesis).  Getting rid of a vertex of degree one is an obvious choice, and now we know there is always one to get rid of.
+    </p>
+    
+    <p permid="rbR">
+      To illustrate how induction is used on trees, we will consider the relationship between the number of vertices and number of edges in trees.  Is there a tree with exactly 7 vertices and 7 edges?  Try to draw one.  Could a tree with 7 vertices have only 5 edges?  There is a good reason that these seem impossible to draw.
+    </p>
+    
+    <proposition xml:id="prop-tree-edge-vertex" permid="dtL">
+      <idx><h>tree</h><h>number of edges and vertices</h></idx>
+      <statement>
+        <p permid="Hqi">
+          Let <m>T</m> be a tree with <m>v</m> vertices and <m>e</m> edges.  Then <m>e = v-1</m>. 
+        </p>
+      </statement>
+      <proof permid="Lqh">
+        <p permid="Wzg">
+          We will give a proof by induction on the number of vertices in the tree.  That is, we will prove that every tree with <m>v</m> vertices has exactly <m>v-1</m> edges, and then use induction to show this is true for all <m>v \ge 1</m>.
+        </p>
+        
+        <p permid="CGp">
+          For the base case, consider all trees with <m>v = 1</m> vertices.  There is only one such tree: the graph with a single isolated vertex.  This graph has <m>e = 0</m> edges, so we see that <m>e = v-1</m> as needed.
+        </p>
+        
+        <p permid="iNy">
+          Now for the inductive case, fix <m>k \ge 1</m> and assume that all trees with <m>v=k</m> vertices have exactly <m>e=k-1</m> edges.  Now consider an arbitrary tree <m>T</m> with <m>v = k+1</m> vertices.  By <xref ref="prop-leaves-in-trees"/>, <m>T</m> has a vertex <m>v_0</m> of degree one.  Let <m>T'</m> be the tree resulting from removing <m>v_0</m> from <m>T</m> (together with its incident edge).  Since we removed a leaf, <m>T'</m> is still a tree (the unique paths between pairs of vertices in <m>T'</m> are the same as the unique paths between them in <m>T</m>). 
+        </p>
+        
+        <p permid="OUH">
+          Now <m>T'</m> has <m>k</m> vertices, so by the inductive hypothesis, has <m>k-1</m> edges.  What can we say about <m>T</m>?  Well, it has one more edge than <m>T'</m>, so it has <m>k</m> edges.  But this is exactly what we wanted: <m>v=k+1</m>, <m>e=k</m> so indeed <m>e = v-1</m>.  This completes the inductive case, and the proof.
+        </p>
+      </proof>
+    </proposition>
+    
+    <p>
+        In fact, more is true.
+    </p>
+
+    <proposition>
+        <statement>
+            <p>
+                If a connected graph <m>G</m> has <m>v</m> vertices and <m>v-1</m> edges, then <m>G</m> is a tree.
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Suppose <m>G</m> is connected, has <m>v</m> vertices, and <m>v-1</m> edges.
+                If <m>G</m> is not a tree, then it must have at least one cycle (since it's connected).
+                If we remove one edge <m>e_1</m> from its cycle, then <m>G_1 = G\setminus e_1</m> is still connected.
+                If <m>G_1</m> has a cycle, then remove <m>e_2</m> from the cycle to obtain <m>G_2</m>, which must still be connected. Continue in this way to obtain a connected graph <m>G_k</m> with no cycles, which must be a tree.
+                Additionally, <m>G_k</m> is <m>G</m> with <m>k</m> edges removed, so it has <m>v-1-k</m> edges.
+                However, since <m>G_k</m> has <m>v</m> vertices and is a tree, <xref ref="prop-tree-edge-vertex" />  must have <m>v-1</m> edges, which is a contradiction unless <m>k=0</m>, in which case <m>G</m> had no cycles to begin with.
+                Thus, <m>G</m> is a tree.
+            </p>
+
+        </proof>
+
+    </proposition>
+    
+    
+
+    
+    </subsubsection>
+
+  
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+  
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
@@ -6771,21 +10012,573 @@
         <title>Week 14: Apr. 12-Apr. 16</title>
         
         <section xml:id="Apr-12">
-          <title>Apr. 12</title>
+          <title>Apr. 12: Trees II</title>
+          
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>#</li>
+	  <li></li>
+	  <li></li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_trees.html">Section 4.2</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Rooted Trees</title>
+    
+    <idx><h>rooted tree</h></idx>
+    <idx><h>tree</h><h>rooted</h></idx>
+    <p permid="jxs">
+      So far, we have thought of trees only as a particular kind of graph.
+      However, it is often useful to add additional structure to trees to help solve problems.
+      Data is often structured like a tree.
+      This book, for example, has a tree structure:
+      draw a vertex for the book itself.
+      Then draw vertices for each chapter,
+      connected to the book vertex.
+      Under each chapter, draw a vertex for each section,
+      connecting it to the chapter it belongs to.
+      The graph will not have any cycles; it will be a tree.
+      But a tree with clear hierarchy which is not present if we don't identify the book vertex as the <q>top</q>.
+    </p>
+    
+    <p permid="PEB">
+      <idx><h>root (in a tree)</h></idx>
+      As soon as one vertex of a tree is designated as the <term>root</term>, then every other vertex on the tree can be characterized by its position relative to the root.  This works because there is a unique path between any two vertices in a tree.  So from any vertex, we can travel back to the root in exactly one way.  This also allows us to describe how distinct vertices in a rooted tree are related.
+    </p>
+    
+    <p permid="vLK">
+      <idx><h>parent (in a rooted tree)</h></idx>
+      <idx><h>child (in a rooted tree)</h></idx>
+      If two vertices are adjacent, then we say one of them is the <term>parent</term> of the other, which is called the <term>child</term> of the parent.  Of the two, the parent is the vertex that is closer to the root.  Thus the root of a tree is a parent, but is not the child of any vertex (and is unique in this respect: all non-root vertices have <em>exactly one</em> parent).  
+    </p>
+    
+    <p permid="bST">
+      <idx><h>descendant (in a rooted tree)</h></idx>
+      <idx><h>ancestor (in a rooted tree)</h></idx>
+      Not surprisingly, the child of a child of a vertex is called the <term>grandchild</term> of the vertex (and it is the <term>grandparent</term>).  More in general, we say that a vertex <m>v</m> is a <term>descendent</term> of a vertex <m>u</m> provided <m>u</m> is a vertex on the path from <m>v</m> to the root.  Then we would call <m>u</m> an <term>ancestor</term> of <m>v</m>.
+    </p>
+    
+    <p permid="Iac">
+      <idx><h>sibling (in a rooted tree)</h></idx>
+      For most trees (in fact, all except paths with one end the root), there will be pairs of vertices neither of which is a descendant of the other.  We might call these cousins or siblings.  In fact, vertices <m>u</m> and <m>v</m> are called <term>siblings</term> provided they have the same parent.  Note that siblings are never adjacent (do you see why?).
+    </p>
+    
+    <example permid="pId">
+      <statement>
+        <p permid="TEA">
+          Consider the tree below.
+        </p>
+        
+        <sidebyside width="35%" permid="BWv">
+          <image xml:id="img-labeled-tree" permid="dIg" source="./img/img-labeled-tree.svg" />
+        </sidebyside>
+        <p permid="zLJ">
+          If we designate vertex <m>f</m> as the root, then <m>e</m>, <m>h</m>, and <m>i</m> are the children of <m>f</m>, and are siblings of each other.  Among the other things we cay say are that <m>a</m> is a child of <m>c</m>, and a descendant of <m>f</m>.  The vertex <m>g</m> is a descendant of <m>f</m>, in fact, is a grandchild of <m>f</m>.  Vertices <m>g</m> and <m>d</m> are siblings, since they have the common parent <m>e</m>.
+        </p>
+        
+        <p permid="fSS">
+          Notice how this changes if we pick a different vertex for the root.  If <m>a</m> is the root, then its lone child is <m>c</m>, which also has only one child, namely <m>e</m>.  We would then have <m>f</m> the child of <m>e</m> (instead of the other way around), and <m>f</m> is the descendant of <m>a</m>, instead of the ancestor.  <m>f</m> and <m>g</m> are now siblings.
+        </p>
+      </statement>
+    </example>
+    
+    <example permid="VPm">
+      <statement>
+        <p permid="Mab">
+          Explain why every tree is a bipartite graph.
+        </p>
+      </statement>
+      <solution permid="rxq">
+        <p permid="UJT">
+          To show that a graph is bipartite, we must divide the vertices into two sets <m>A</m> and <m>B</m> so that no two vertices in the same set are adjacent.  Here is an algorithm that does just this.
+        </p>
+        
+        <p permid="ARc">
+          Designate any vertex as the root.  Put this vertex in set <m>A</m>.  Now put all of the children of the root in set <m>B</m>.  None of these children are adjacent (they are siblings), so we are good so far.  Now put into <m>A</m> every child of every vertex in <m>B</m> (i.e., every grandchild of the root).  Keep going until all vertices have been assigned one of the sets, alternating between <m>A</m> and <m>B</m> every <q>generation.</q>  That is, a vertex is in set <m>B</m> if and only if it is the child of a vertex in set <m>A</m>.
+        </p>
+      </solution>
+    </example>
+    
+    <p permid="Uou">
+      <idx><h>breadth first search</h></idx>
+      <idx><h>search</h><h>breadth first</h></idx>
+      The key to how we partitioned the tree in the example was to know which vertex to assign to a set next.  We chose to visit all vertices in the same generation before any vertices of the next generation.  This is usually called a <term>breadth first search</term> (we say <q>search</q> because you often traverse a tree looking for vertices with certain properties).  
+    </p>
+    
+    <p permid="AvD">
+      <idx><h>depth first search</h></idx>
+      <idx><h>search</h><h>depth first</h></idx>
+      In contrast, we could also have partitioned the tree in a different order.  Start with the root, put it in <m>A</m>.  Then look for one child of the root to put in <m>B</m>.  Then find a child of that vertex, into <m>A</m>, and then find its child, into <m>B</m>, and so on.  When you get to a vertex with no children, retreat to its parent and see if the parent has any other children.  So we travel as far from the root as fast as possible, then backtrack until we can move forward again.  This is called <term>depth first search</term>.
+    </p>
+    
+    <theorem>
+        <statement>
+        <p permid="tpq">
+          Give a careful proof by induction on the number of vertices, that every tree is bipartite.
+        </p>
+      </statement>
+      <hint permid="yQh">
+        <p permid="LsU">
+          You will need to remove a vertex of degree one, apply the inductive hypothesis to the result, and then say which set the degree one vertex to.
+        </p>
+      </hint>
+      <proof>
+      </proof>
+</theorem>
+
+            
+    
+    
+</subsubsection>
+
+<subsubsection>
+    <title>Spanning Trees</title>
+    
+    <assemblage xml:id="assemblage-spanningtree" permid="ERb">
+    <idx>
+      <h>spanning tree</h>
+    </idx>
+    <idx>
+      <h>tree</h>
+      <h>spanning</h>
+    </idx>
+      <title>Spanning tree</title>
+      <p permid="BAW">
+        Given a connected graph <m>G</m>, a <term>spanning tree</term> of <m>G</m> is a subgraph of <m>G</m> which is a tree and includes all the vertices of <m>G</m>. 
+      </p>
+      
+     
+    </assemblage>
+    
+    <proposition>
+        <statement>
+             <p permid="hIf">
+        Every connected graph has a spanning tree.
+      </p>
+        </statement>
+        <proof>
+            <p permid="YYn">
+      How do we know?  We can give an algorithm for <em>finding</em> a spanning tree!  Start with a connected graph <m>G</m>.  If there is no cycle, then <m>G</m> is already a tree and we are done.  If there is a cycle, let <m>e</m> be any edge in that cycle and consider the new graph <m>G_1 = G - e</m> (i.e., the graph you get by deleting <m>e</m>).  This tree is still connected since <m>e</m> belonged to a cycle, there were at least two paths between its incident vertices.  Now repeat: if <m>G_1</m> has no cycles, we are done, otherwise define <m>G_2</m> to be <m>G_1 - e_1</m>, where <m>e_1</m> is an edge in a cycle in <m>G_1</m>.  Keep going.  This process must eventually stop, since there are only a finite number of edges to remove.  The result will be a tree, and since we never removed any vertex, a <em>spanning</em> tree.
+    </p>
+    </proof>
+</proposition>
+
+<exploration>
+    <statement>
+        <p permid="xZj">
+        Find all spanning trees of the graph below.
+        How many different spanning trees are there?
+        How many different spanning trees are there
+        <em>up to isomorphism</em> (that is,
+        if you grouped all the spanning trees by which are isomorphic,
+        how many groups would you have)?
+      </p>
+      <image width="40%" source="./img/img-114.svg" />
+      </statement>
+    </exploration>
+
+
+
+    
+    
+    
+    
+</subsubsection>
+
+
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+    
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
         
         
         <section xml:id="Apr-14">
-          <title>Apr. 14</title>
+          <title>Apr. 14: Planarity</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>What is a planar graph?</li>
+	  <li>What types of graphs are not planar?</li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_planar.html">Section 4.3</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Planar Graphs</title>
+    
+    <investigation permid="Mhf">
+    <idx><h>planar graph</h></idx>
+    <idx><h>face (planar graph)</h></idx>
+      <p permid="FmA">
+        When a connected graph can be drawn without any edges crossing,
+        it is called <term>planar</term>.
+        When a planar graph is drawn in this way,
+        it divides the plane into regions called <term>faces</term>.
+
+        <ol permid="QQY">
+          <li permid="dfq">
+            <p permid="BIa">
+              Draw, if possible,
+              two different planar graphs with the same number of vertices, edges,
+              and faces.
+            </p>
+          </li>
+
+          <li permid="Jmz">
+            <p permid="hPj">
+              Draw, if possible,
+              two different planar graphs with the same number of vertices and edges,
+              but a different number of faces.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    
+     <p permid="ltJ">
+      <idx><h>planar graph</h></idx>
+      When is it possible to draw a graph so that none of the edges cross?
+      If this <em>is</em> possible,
+      we say the graph is <term>planar</term>
+      (since you can draw it on the <em>plane</em>).
+    </p>
+    
+    <p permid="JWt">
+      <idx><h>face (planar graph)</h></idx>
+      <idx><h>planar region</h><see>face (planar graph)</see></idx>
+      <idx><h>region (graph)</h><see>face (planar graph)</see></idx>
+      When a planar graph is drawn without edges crossing,
+      the edges and vertices of the graph divide the plane into regions.
+      We will call each region a <term>face</term>.
+      The graph above has 3 faces
+      (yes, we <em>do</em> include the
+      <q>outside</q> region as a face).
+      The number of faces does not change no matter how you draw the graph
+      (as long as you do so without the edges crossing),
+      so it makes sense to ascribe the number of faces as a property of the planar graph.
+    </p>
+    
+    <p permid="qdC">
+      WARNING: you can only count faces when the graph is drawn in a planar way.
+    </p>
+    
+    <p permid="CrU">
+      There is a connection between the number of vertices (<m>v</m>),
+      the number of edges (<m>e</m>) and the number of faces (<m>f</m>) in any connected planar graph.
+      This relationship is called Euler's formula.
+    </p>
+
+    <theorem permid="lPi">
+      <title>Euler's Formula for Planar Graphs</title>
+      <idx><h>Euler's formula for planar graphs</h></idx>
+      <statement>
+      <p permid="izd">
+        For any connected planar graph with <m>v</m> vertices,
+        <m>e</m> edges and <m>f</m> faces, we have
+        <me permid="htK">
+          v-e + f = 2
+        </me>.
+      </p>
+      </statement>
+      <proof>
+        <p>
+            Begin with our graph <m>G</m> and identify a spanning tree <m>T</m> of <m>G</m>. Let <m>v_T, e_T,  f_T</m> denote the corresponding number of each object of <m>T</m>.
+            </p>
+        <p>
+            Observe that each time that we remove an edge of <m>G</m> not in <m>T</m>, two faces merge.
+            When we break all cycles of <m>G</m> (leaving us with a tree), we have a single face.
+            Thus, we remove <m>f-1</m> edges from <m>G</m> to achieve <m>T</m>, i.e., <me xml:id="eq-euler-formula-proof1">e - (f-1) = e_T</me>.
+            Since <m>T</m> is a tree, we know that <m>e_T = v_T - 1</m>, so <m>v_T - e_T = 1</m>.
+            The spanning tree has exactly one face, so <m>f_T = 1</m>, and adding these two together give us <m>v_T - e_T + f_T = 2</m>. Moreover, since <m>T</m> is a spanning tree, <m>v_T = v</m>. Substituting this and <xref ref="eq-euler-formula-proof1" /> into <m>v_T - e_T + f_T = 2</m> we have <m>v - (e-(f-1))+f_T = 2</m>, which simplifies to our desired result as <m>f_T = 1</m>.
+        </p>
+        </proof>
+
+    </theorem>
+    
+    
+</subsubsection>
+
+<subsubsection>
+    <title>Non-planar graphs</title>
+    
+    <idx><h>non-planar graph</h></idx>
+    <idx><h>planar graph</h><h>non-planar graph</h></idx>
+    <investigation permid="qzb">
+      <p permid="niW">
+        For the complete graphs <m>K_n</m>,
+        we would like to be able to say something about the number of vertices,
+        edges, and
+        (if the graph is planar)
+        faces.
+        Let's first consider <m>K_3</m>:
+
+        <ol permid="wYh">
+          <li permid="ptI">
+            <p permid="NWs">
+              How many vertices does <m>K_3</m> have?
+              How many edges?
+            </p>
+          </li>
+
+          <li permid="VAR">
+            <p permid="udB">
+              If <m>K_3</m> is planar, how many faces should it have?
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p permid="Tqf">
+        Repeat parts (1) and (2) for <m>K_4</m>,
+        <m>K_5</m>, and <m>K_{23}</m>.
+      </p>
+
+      <p permid="zxo">
+        What about complete bipartite graphs?
+        How many vertices, edges, and faces
+        (if it were planar)
+        does <m>K_{7,4}</m> have?
+        For which values of <m>m</m> and <m>n</m> are <m>K_n</m> and <m>K_{m,n}</m> planar?
+      </p>
+    </investigation>
+    
+    
+    <theorem permid="RWr">
+      <statement>
+        <idx><h>non-planar graph</h><h sortby="k5"><m>K_5</m></h></idx>
+        <idx><h>planar graph</h><h>non-planar graph</h><h sortby="k5"><m>K_5</m></h></idx>
+        <p permid="gJQ">
+          <m>K_5</m> is not planar.
+        </p>
+      </statement>
+      <proof permid="Yvx">
+      <p permid="mzc">
+        The proof is by contradiction.
+        So assume that <m>K_5</m> is planar.
+        Then the graph must satisfy Euler's formula for planar graphs. <m>K_5</m> has 5 vertices and 10 edges,
+        so we get
+        <me permid="NAT">
+          5 - 10 + f = 2
+        </me>,
+        which says that if the graph is drawn without any edges crossing,
+        there would be <m>f = 7</m> faces.
+      </p>
+
+      <p permid="SGl">
+        Now consider how many edges surround each face.
+        Each face must be surrounded by at least 3 edges.
+        Let <m>B</m> be the total number of <em>boundaries</em>
+        around all the faces in the graph.
+        Thus we have that <m>3f \le B</m>.
+        But also <m>B = 2e</m>,
+        since each edge is used as a boundary exactly twice.
+        Putting this together we get
+        <me permid="tIc">
+          3f \le 2e
+        </me>.
+      </p>
+
+      <p permid="yNu">
+        But this is impossible,
+        since we have already determined that <m>f = 7</m> and <m>e = 10</m>,
+        and <m>21 \not\le 20</m>.
+        This is a contradiction so in fact <m>K_5</m> is not planar.
+      </p>
+    </proof>
+    </theorem>
+
+
+<p permid="Ehh">
+      The other simplest graph which is not planar is <m>K_{3,3}</m>
+    </p>
+
+    <sidebyside width="20%" permid="KrS">
+
+      <image permid="TZZ">
+
+  <latex-image>\begin{tikzpicture}[yscale=1.2]
+          \draw (-1,1) \v -- (-1,0)\v  -- (0,1) \v -- (0,0) \v -- (1,1) \v -- (1,0) \v -- (0,1) -- (-1,0) -- (1,1) (1,0) -- (-1,1) -- (0,0);
+        \end{tikzpicture}</latex-image>
+      </image>
+
+    </sidebyside>
+
+    <p permid="koq">
+      Proving that <m>K_{3,3}</m> is not planar answers the houses and utilities puzzle:
+      it is not possible to connect each of three houses to each of three utilities without the lines crossing.
+    </p>
+
+    <theorem permid="ydA">
+      <idx>
+        <h>non-planar graph</h>
+        <h sortby="k33">
+          <m>K_{3,3}</m>
+        </h>
+      </idx>
+      <idx>
+        <h>planar graph</h>
+        <h>non-planar graph</h>
+        <h sortby="k33">
+          <m>K_{3,3}</m>
+        </h>
+      </idx>
+      <statement>
+        <p permid="MQZ">
+          <m>K_{3,3}</m> is not planar.
+        </p>
+      </statement>
+      <proof permid="ECG">
+      <p permid="eUD">
+        Again, we proceed by contradiction.
+        Suppose <m>K_{3,3}</m> were planar.
+        Then by Euler's formula there will be 5 faces,
+        since <m>v = 6</m>, <m>e = 9</m>, and <m>6 - 9 + f = 2</m>.
+      </p>
+
+      <p permid="LbM">
+        How many boundaries surround these 5 faces?
+        Let <m>B</m> be this number.
+        Since each edge is used as a boundary twice, we have <m>B = 2e</m>.
+        Also, <m>B \ge 4f</m> since each face is surrounded by 4 or more boundaries.
+        We know this is true because <m>K_{3,3}</m> is bipartite,
+        so does not contain any 3-edge cycles.
+        Thus
+        <me permid="ZPl">
+          4f \le 2e
+        </me>.
+      </p>
+
+      <p permid="riV">
+        But this would say that <m>20 \le 18</m>, which is clearly false.
+        Thus <m>K_{3,3}</m> is not planar.
+      </p>
+    </proof>
+    </theorem>
+    
+    <theorem>
+        <creator>Kuratowski (1930)</creator>
+        <statement>
+            <p>
+                A finite graph is planar if and only if it does not contain a subgraph that is a subdivision<aside>Subdivision is the process of replacing an edge <m>e</m> in a graph with a new vertex <q>in between</q> the vertices incident to the two ends of <m>e</m>, and new edges incident to the new vertex and the ends of <m>e</m>.</aside> of <m>K_5</m> or <m>K_{3,3}</m>.
+            </p>
+        </statement>
+    </theorem>
+
+
+    
+    
+    
+</subsubsection>
+
+
+  
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+  
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
         
         
         <section xml:id="Apr-16">
-          <title>Apr. 16</title>
+          <title>Apr. 16: Independent Portfolio Work Day</title>
+            
           
           
         </section>
@@ -6798,7 +10591,584 @@
         <title>Week 15: Apr. 19-Apr. 23</title>
         
         <section xml:id="Apr-19">
-          <title>Apr. 19</title>
+          <title>Apr. 19: Graph Coloring</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>What is the chromatic number of a graph?</li>
+	  <li>How many colors are required to properly color a map?</li>
+	  <li>What is the chromatic index of a graph? Can we estimate it?</li>
+	  <li>What is Ramsey Theory?</li>
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+
+  
+  
+ 
+</introduction>
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_coloring.html">Section 4.4</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Chromatic Number</title>
+    
+    
+    <p>
+        A famous problem in graph theory is as follows:
+    </p>
+
+    <blockquote permid="NWf">
+      <p permid="XpR">
+        Given any map of countries, states, counties,
+        etc., how many colors are needed to color each region on the map so that neighboring regions are colored differently?
+      </p>
+    </blockquote>
+    
+    <p permid="Zfe">
+      <idx><h>vertex coloring</h></idx>
+      <idx><h>coloring</h><h>vertices</h></idx>
+      <idx><h>graph</h><h>vertex coloring</h></idx>
+      <idx><h>chromatic number</h></idx>
+      <idx><h>graph</h><h>chromatic number</h></idx>
+      In general, given any graph <m>G</m>,
+      a coloring of the vertices is called
+      (not surprisingly)
+      a <term>vertex coloring</term>.
+      If the vertex coloring has the property that adjacent vertices are colored differently,
+      then the coloring is called <term>proper</term>.
+      Every graph has a proper vertex coloring.
+      For example,
+      you could color every vertex with a different color.
+      But often you can do better.
+      The smallest number of colors needed to get a proper vertex coloring is called the
+      <term>chromatic number</term>
+      of the graph, written <m>\chi(G)</m>
+
+      <notation>
+        <usage>\chi(G)</usage>
+        <description>the chromatic number of <m>G</m></description>
+      </notation>
+
+      .
+    </p>
+    
+    <example permid="kJC">
+      <statement>
+        <p permid="bZK">
+          Find the chromatic number of the graphs below.
+        </p>
+
+        <sidebyside widths="20% 20% 30%" margins="auto" valign="middle" permid="wXU">
+
+          <image permid="wCv">
+
+	<latex-image>\begin{tikzpicture}
+	      \foreach \x in {0,...,6}
+	      \draw  (\x*60:1) \v -- (\x*60+60:1) -- (\x*60+180:1) -- cycle;
+	    \end{tikzpicture}</latex-image>
+          </image>
+
+          <image permid="cJE">
+
+	<latex-image>\begin{tikzpicture}[yscale=.8]
+	      \draw  (-1,0) \v -- (0,0) \v -- (1,0) \v -- (.5,1) \v -- (0,0) -- (-.5,1) \v -- (0,2) \v -- (.5,1) -- (-.5,1) -- (-1,0);
+	    \end{tikzpicture}</latex-image>
+          </image>
+
+          <image permid="IQN">
+
+	<latex-image>\begin{tikzpicture}[yscale=.8, xscale=1.5]
+	 \draw  (-1, 0) \v -- (-.5,2) \v -- (0,0) \v -- (.5, 2) \v -- (1,0) \v -- (-.5,2) (.5,2) -- (-1,0);
+	  \end{tikzpicture}</latex-image>
+          </image>
+
+        </sidebyside>
+      </statement>
+      <solution permid="VAE">
+        <p permid="udo">
+          The graph on the left is <m>K_6</m>.
+          The only way to properly color the graph is to give every vertex a different color
+          (since every vertex is adjacent to every other vertex).
+          Thus the chromatic number is 6.
+        </p>
+
+        <p permid="akx">
+          The middle graph can be properly colored with just 3 colors (Red, Blue,
+          and Green).
+          For example:
+        </p>
+
+        <sidebyside width="25%" permid="dfd">
+
+          <image permid="oXW">
+
+	<latex-image>\begin{tikzpicture}[yscale=.8]
+	      \draw  (-1,0) \vb{R} -- (0,0) \vb{B} -- (1,0) \vb{G} -- (.5,1) \vr{R} -- (0,0) -- (-.5,1) \vl{G} -- (0,2) \va{B} -- (.5,1) -- (-.5,1) -- (-1,0);
+	    \end{tikzpicture}</latex-image>
+          </image>
+
+        </sidebyside>
+
+        <p permid="GrG">
+          There is no way to color it with just two colors,
+          since there are three vertices mutually adjacent (i.e., a triangle).
+          Thus the chromatic number is 3.
+        </p>
+
+        <p permid="myP">
+          The graph on the right is just <m>K_{2,3}</m>.
+          As with all bipartite graphs,
+          this graph has chromatic number 2:
+          color the vertices on the top row red and the vertices on the bottom row blue.
+        </p>
+      </solution>
+    </example>  
+    
+    <p permid="Fmn">
+      It appears that there is no limit to how large chromatic numbers can get.
+      It should not come as a surprise that <m>K_n</m> has chromatic number <m>n</m>.
+      So how could there possibly be an answer to the original map coloring question?
+      If the chromatic number of graph can be arbitrarily large,
+      then it seems like there would be no upper bound to the number of colors needed for any map.
+      But there is.
+    </p>
+
+    <p permid="ltw">
+      The key observation is that while it is true that for any number <m>n</m>,
+      there is a graph with chromatic number <m>n</m>,
+      only some graphs arrive as representations of maps.
+      If you convert a map to a graph,
+      the edges between vertices correspond to borders between the countries.
+      So you should be able to connect vertices in such a way where the edges do not cross.
+      In other words,
+      the graphs representing maps are all <em>planar</em>!
+    </p>
+
+    <p permid="RAF">
+      So the question is,
+      what is the largest chromatic number of any planar graph?
+      The answer is the best known theorem of graph theory:
+    </p>
+
+    <theorem permid="ECt" xml:id="thm-four-color">
+      <idx><h>Four Color Theorem</h></idx>
+      <idx><h>graph</h><h>chromatic number</h></idx>
+      <idx><h>planar graph</h><h>chromatic number of</h></idx>
+      <title>The Four Color Theorem</title>
+      <statement>
+        <p permid="Dxa">
+          If <m>G</m> is a planar graph,
+          then the chromatic number of <m>G</m> is less than or equal to 4.
+          Thus any map can be properly colored with 4 or fewer colors.
+        </p>
+      </statement>
+    </theorem>
+
+    <p permid="xHO">
+      We will not prove this theorem.
+      Really.
+      Even though the theorem is easy to state and understand,
+      the proof is not.
+      In fact, there is currently no <q>easy</q>
+      known proof of the theorem.
+      The current best proof still requires powerful computers to check an
+      <em>unavoidable set</em>
+      of 633 <em>reducible configurations</em>.
+      The idea is that every graph must contain one of these reducible configurations
+      (this fact also needs to be checked by a computer)
+      and that reducible configurations can, in fact,
+      be colored in 4 or fewer colors.
+    </p>
+    
+  </subsubsection>
+  
+  
+  <subsubsection>
+    <title>Coloring in General</title>
+    
+    <investigation permid="zSA">
+      <p permid="dOX">
+        The math department plans to offer 10 classes next semester.
+        Some classes cannot run at the same time
+        (perhaps they are taught by the same professor,
+        or are required for seniors).
+      </p>
+
+      <sidebyside permid="HwZ">
+
+        <tabular permid="tHP">
+          <col right="minor" halign="center"/>
+          <col/>
+          <row bottom="minor">
+            <cell>Class:</cell>
+            <cell>Conflicts with:</cell>
+          </row>
+          <row>
+            <cell>A</cell>
+            <cell>D I</cell>
+          </row>
+          <row>
+            <cell>B</cell>
+            <cell>D I J</cell>
+          </row>
+          <row>
+            <cell>C</cell>
+            <cell>E F I</cell>
+          </row>
+          <row>
+            <cell>D</cell>
+            <cell>A B F</cell>
+          </row>
+          <row>
+            <cell>E</cell>
+            <cell>C H I</cell>
+          </row>
+          <row>
+            <cell>F</cell>
+            <cell>C D I</cell>
+          </row>
+          <row>
+            <cell>G</cell>
+            <cell>J</cell>
+          </row>
+          <row>
+            <cell>H</cell>
+            <cell>E I J</cell>
+          </row>
+          <row>
+            <cell>I</cell>
+            <cell>A B C E F H</cell>
+          </row>
+          <row>
+            <cell>J</cell>
+            <cell>B G H</cell>
+          </row>
+        </tabular>
+
+      </sidebyside>
+
+      <p permid="JWg">
+        How many different time slots are needed to teach these classes (and which should be taught at the same time)?
+        More importantly,
+        how could we use graph coloring to answer this question?
+      </p>
+    </investigation>
+    
+    <p>
+    	The upshot is that when you wish to partition some objects so that related objects are not in the same set, you can model the problem with graph coloring.
+    </p>
+    
+    
+    <p permid="uNi">
+      While we might not be able to find the exact chromatic number of graph easily,
+      we can often give a reasonable range for the chromatic number.
+      In other words,
+      we can give upper and lower bounds for chromatic number.
+    </p>
+
+    <p permid="aUr">
+      This is actually not very difficult:
+      for every graph <m>G</m>,
+      the chromatic number of <m>G</m> is at least 1 and at most the number of vertices of <m>G</m>.
+    </p>
+
+    <p permid="HbA">
+      What?
+      You want <em>better</em> bounds on the chromatic number?
+      Well you are in luck.
+    </p>
+
+    <p permid="niJ">
+      <idx><h>clique</h></idx>
+      <idx><h>graph</h><h>clique</h></idx>
+      A <term>clique</term>
+      in a graph is a set of vertices all of which are pairwise adjacent.
+      In other words,
+      a clique of size <m>n</m> is just a copy of the complete graph <m>K_n</m>.
+      We define the <term>clique number</term>
+      of a graph to be the largest <m>n</m> for which the graph contains a clique of size <m>n</m>.
+      Any clique of size <m>n</m> cannot be colored with fewer than <m>n</m> colors,
+      so we have a nice lower bound:
+    </p>
+
+    <theorem permid="Pby">
+      <statement>
+        <p permid="jEj">
+          The chromatic number of a graph <m>G</m> is at least the clique number of <m>G</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p permid="TpS">
+      <idx><h>perfect graph</h></idx>
+      <idx><h>graph</h><h>perfect</h></idx>
+      <idx><h>chordal graph</h></idx>
+      <idx><h>graph</h><h>chordal</h></idx>
+      There are times when the chromatic number of <m>G</m> is
+      <em>equal</em> to the clique number.
+      These graphs have a special name;
+      they are called <term>perfect</term>.
+      If you know that a graph is perfect,
+      then finding the chromatic number is simply a matter of searching for the largest clique.<fn>
+      There are special classes of graphs which can be proved to be perfect.
+      One such class is the set of <term>chordal</term> graphs,
+      which have the property that every cycle in the graph contains a
+      <term>chord</term><mdash/>an edge between two vertices in of the cycle which are not adjacent in the cycle.
+      </fn> However, not all graphs are perfect.
+    </p>
+
+    <p permid="zxb">
+      <idx><h>maximum degree</h></idx>
+      <idx><h>graph</h><h>maximum degree</h></idx>
+      <idx><h>degree</h><h>maximum</h></idx>
+      For an upper bound, we can improve on
+      <q>the number of vertices</q>
+      by looking to the degrees of vertices.
+      Let <m>\Delta(G)</m>
+
+      <notation>
+        <usage>\Delta(G)</usage>
+        <description>the maximum degree in <m>G</m></description>
+      </notation>
+
+      be the largest degree of any vertex in the graph <m>G</m>.
+      One reasonable guess for an upper bound on the chromatic number is <m>\chi(G) \le \Delta(G) + 1</m>.
+      Why is this reasonable?
+      Starting with any vertex,
+      it together with all of its neighbors can always be colored in <m>\Delta(G) + 1</m> colors,
+      since at most we are talking about
+      <m>\Delta(G) + 1</m> vertices in this set.
+      Now fan out!
+      At any point, if you consider an already colored vertex,
+      some of its neighbors might be colored, some might not.
+      But no matter what,
+      that vertex and its neighbors could all be colored distinctly,
+      since there are at most <m>\Delta(G)</m> neighbors,
+      plus the one vertex being considered.
+    </p>
+
+    <p permid="fEk">
+      In fact, there are examples of graphs for which <m>\chi(G) = \Delta(G) + 1</m>.
+      For any <m>n</m>,
+      the complete graph <m>K_n</m> has chromatic number <m>n</m>,
+      but <m>\Delta(K_n) = n-1</m>
+      (since every vertex is adjacent to every <em>other</em> vertex).
+      Additionally,
+      any <em>odd</em> cycle will have chromatic number 3, but the degree of every vertex in a cycle is 2.
+      It turns out that these are the only two types of examples where we get equality,
+      a result known as Brooks' Theorem.
+    </p>
+
+    <theorem permid="viH">
+      <title>Brooks' Theorem</title>
+      <idx><h>Brooks' Theorem</h></idx>
+      <statement>
+        <p permid="PLs">
+          Any graph <m>G</m> satisfies <m>\chi(G) \le \Delta(G)</m>,
+          unless <m>G</m> is a complete graph or an odd cycle,
+          in which case <m>\chi(G) = \Delta(G) + 1</m>.
+        </p>
+      </statement>
+     
+
+    </theorem>
+    
+    
+    
+
+
+    
+</subsubsection>
+
+
+  <title>Coloring Edges</title>
+    <p permid="rSC">
+      <idx><h>chromatic index</h></idx>
+      <idx><h>graph</h><h>chromatic index</h></idx>
+      The chromatic number of a graph tells us about coloring vertices,
+      but we could also ask about coloring edges.
+      Just like with vertex coloring,
+      we might insist that edges that are adjacent must be colored differently.
+      Here, we are thinking of two edges as being adjacent if they are incident to the same vertex.
+      The least number of colors required to properly color the edges of a graph <m>G</m> is called the
+      <term>chromatic index</term>
+      of <m>G</m>, written <m>\chi'(G)</m>
+
+      <notation>
+        <usage>\chi'(G)</usage>
+        <description>the chromatic index of <m>G</m></description>
+      </notation>
+
+      .
+    </p>
+
+    <example permid="MgS">
+      <statement>
+        <p permid="Uvl">
+          Six friends decide to spend the afternoon playing chess.
+          Everyone will play everyone else once.
+          They have plenty of chess sets but nobody wants to play more than one game at a time.
+          Games will last an hour
+          (thanks to their handy chess clocks).
+          How many hours will the tournament last?
+        </p>
+      </statement>
+      <solution permid="hOW">
+        <p permid="eUq">
+          Represent each player with a vertex and put an edge between two players if they will play each other.
+          In this case, we get the graph <m>K_6</m>:
+        </p>
+
+        <sidebyside width="20%" permid="Yvk">
+
+          <image permid="NAG">
+
+	<latex-image>\begin{tikzpicture}
+	\foreach \x in {0,...,5}{
+
+		\foreach \y in {1,...,5}{
+		 \draw (\x*60:1) -- (\x*60+\y*60:1);
+		}
+	\draw (\x*60:1) \v;
+	}
+	\end{tikzpicture}</latex-image>
+          </image>
+
+        </sidebyside>
+
+        <p permid="Lbz">
+          We must color the edges; each color represents a different hour.
+          Since different edges incident to the same vertex will be colored differently,
+          no player will be playing two different games (edges) at the same time.
+          Thus we need to know the chromatic index of <m>K_6</m>.
+        </p>
+
+        <p permid="riI">
+          Notice that for sure <m>\chi'(K_6) \ge 5</m>,
+          since there is a vertex of degree 5.
+          It turns out 5 colors is enough
+          (go find such a coloring).
+          Therefore the friends will play for 5 hours.
+        </p>
+      </solution>
+    </example>
+    
+    
+    <p permid="EgU">
+      In general, what can we say about chromatic index?
+      Certainly <m>\chi'(G) \ge \Delta(G)</m>.
+      But how much higher could it be?
+      Only a little higher.
+    </p>
+
+    <theorem permid="fZJ">
+      <title>Vizing's Theorem</title>
+      <idx><h>Vizing's Theorem</h></idx>
+      <statement>
+        <p permid="vSB">
+          For any graph <m>G</m>, the chromatic index <m>\chi'(G)</m> is either
+          <m>\Delta(G)</m> or <m>\Delta(G) + 1</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p permid="kod">
+      At first this theorem makes it seem like chromatic index might not be very interesting.
+      However, deciding which case a graph is in is not always easy.
+      Graphs for which <m>\chi'(G) = \Delta(G)</m> are called <em>class 1</em>,
+      while the others are called <em>class 2</em>.
+      Bipartite graphs always satisfy <m>\chi'(G) = \Delta(G)</m>,
+      so are class 1
+      (this was proved by König in 1916,
+      decades before Vizing proved his theorem in 1964).
+      In 1965 Vizing proved that all planar graphs with
+      <m>\Delta(G) \ge 8</m> are of class 1, but this does not hold for all planar graphs with <m>2 \le \Delta(G) \le 5</m>.
+      Vizing conjectured that all planar graphs with
+      <m>\Delta(G) = 6</m> or <m>\Delta(G) = 7</m> are class 1;
+      the <m>\Delta(G) = 7</m> case was proved in 2001 by Sanders and Zhao;
+      the <m>\Delta(G) = 6</m> case is still open.
+    </p>
+
+
+
+    <paragraphs permid="iUp">
+    <idx><h>Ramsey theory</h></idx>
+      <title>Ramsey Theory</title>
+      
+      
+      <p permid="qdp">
+        There is another interesting way we might consider coloring edges,
+        quite different from what we have discussed so far.
+        What if we colored every edge of a graph either red or blue.
+        Can we do so without, say, creating a <em>monochromatic</em>
+            <idx><h>monochromatic</h></idx>
+        triangle (i.e., an all red or all blue triangle)?
+        Certainly for some graphs the answer is yes.
+        Try doing so for <m>K_4</m>.
+        What about <m>K_5</m>? <m>K_6</m>?
+        How far can we go?
+      </p>
+  
+      <p permid="Wky">
+        The problem above is not too difficult and is a fun exercise.
+        We could extend the question in a variety of ways.
+        What if we had three colors?
+        What if we were trying to avoid other graphs.
+        Surprisingly, very little is known about these questions.
+        For example,
+        we know that you need to go up to <m>K_{17}</m> in order to force a monochromatic triangle using three colors,
+        but nobody knows how big you need to go with more colors.
+        Similarly, we know that using two colors <m>K_{18}</m> is the smallest graph that forces a monochromatic copy of <m>K_4</m>,
+        but the best we have to force a monochromatic <m>K_{5}</m> is a range,
+        somewhere from <m>K_{43}</m> to <m>K_{49}</m>.
+        If you are interested in these sorts of questions,
+        this area of graph theory is called Ramsey theory.
+        Check it out.
+      </p>
+    </paragraphs>
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+  
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>

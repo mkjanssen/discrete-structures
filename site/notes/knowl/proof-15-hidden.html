@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-05T15:03:40-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p xmlns:svg="http://www.w3.org/2000/svg">Begin with our graph \(G\) and identify a spanning tree \(T\) of \(G\text{.}\) Let \(v_T, e_T,  f_T\) denote the corresponding number of each object of \(T\text{.}\)</p>
+<p>Observe that each time that we remove an edge of \(G\) not in \(T\text{,}\) two faces merge. When we break all cycles of \(G\) (leaving us with a tree), we have a single face. Thus, we remove \(f-1\) edges from \(G\) to achieve \(T\text{,}\) i.e.,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+e - (f-1) = e_T\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since \(T\) is a tree, we know that \(e_T = v_T - 1\text{,}\) so \(v_T - e_T = 1\text{.}\) The spanning tree has exactly one face, so \(f_T = 1\text{,}\) and adding these two together give us \(v_T - e_T + f_T = 2\text{.}\) Moreover, since \(T\) is a spanning tree, \(v_T = v\text{.}\) Substituting this and <a href="Apr-14.html#eq-euler-formula-proof1" class="internal" title="Equation">Equation </a> into \(v_T - e_T + f_T = 2\) we have \(v - (e-(f-1))+f_T = 2\text{,}\) which simplifies to our desired result as \(f_T = 1\text{.}\)</p></article></body>
+</html>

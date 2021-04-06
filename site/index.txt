@@ -177,4 +177,4 @@ I aim to build a dynamic classroom; as such, the schedule below may be changed a
 | 16     | [26-Apr](notes/Apr-26.html) | **Reading discussion**; 5.1: Generating Functions     | Portfolio Problem IX                                |
 | 16     | [28-Apr](notes/Apr-28.html) | 5.1: Generating Functions                             |                                                     |
 | 16     | [30-Apr](notes/Apr-30.html) | **Midterm II**                                        |                                                     |
-| Finals |                             | Portfolio                                             |                                                     |
+| Finals |  6-May, 1:15pm                           | **Final Draft of Portfolio**                                             |                                                     |

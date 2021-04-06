@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-01T12:27:12-06:00       *-->
+<!--*       on 2021-04-05T11:29:32-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -228,41 +228,41 @@ MathJax.Hub.Config({
 </li>
 <li class="link">
 <a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
-<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15</a></li>
-<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17</a></li>
-<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19</a></li>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15: Recurrence Relations</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17: Induction I</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19: Induction II</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
-<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22</a></li>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22: Propositional Logic I</a></li>
 <li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
-<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26: Direct Proofs</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
-<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29</a></li>
-<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31</a></li>
-<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 02</a></li>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29: Proof by Contradiction</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31: Other Types of Proof</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 2: Intro to Graph Theory</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
-<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5</a></li>
-<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09</a></li>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5: Further Background in Graph Theory</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09: Trees I</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
-<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12</a></li>
-<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14</a></li>
-<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16</a></li>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12: Trees II</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14: Planarity</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16: Independent Portfolio Work Day</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
-<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19</a></li>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
 <li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
 <li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
 </ul>
@@ -293,9 +293,9 @@ MathJax.Hub.Config({
 </h2>
 <section class="introduction" id="introduction-29"><article class="assemblage assemblage-like" id="assemblage-54"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
 <p id="p-376">Here are some questions we'll consider. <ol class="decimal">
-<li id="li-454">What are arithmetic and geometric sequences?</li>
-<li id="li-455">How can we use the well-understood structure of arithmetic and geometric sequences to find closed forms and sum the first \(n\) terms?</li>
-<li id="li-456">How can sequences of partial sums allow us to sum sequences which are neither geometric nor arithmetic?</li>
+<li id="li-453">What are arithmetic and geometric sequences?</li>
+<li id="li-454">How can we use the well-understood structure of arithmetic and geometric sequences to find closed forms and sum the first \(n\) terms?</li>
+<li id="li-455">How can sequences of partial sums allow us to sum sequences which are neither geometric nor arithmetic?</li>
 </ol></p></article></section><section class="subsection" id="subsection-60"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.2.1</span> <span class="title">Outline</span>
 </h3>
@@ -306,7 +306,10 @@ MathJax.Hub.Config({
 <article class="exploration project-like" id="exploration-40"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-378">Let's do the <a class="external" href="./Activity07-DotsToSequences.pdf" target="_blank">dots activity</a>.</p></article><article class="assemblage assemblage-like" id="KlB"><h6 class="heading"><span class="title">Arithmetic Sequences.</span></h6>
+<p id="p-378">Let's do the <a class="external" href="./Activity07-DotsToSequences.pdf" target="_blank">dots activity</a>.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><a class="external" href="./Activity07-DotsToSequences-solutions.pdf" target="_blank">Solutions here</a></div></div>
+</div></article><article class="assemblage assemblage-like" id="KlB"><h6 class="heading"><span class="title">Arithmetic Sequences.</span></h6>
 <p id="jcG">If the terms of a sequence differ by a constant, we say the sequence is <dfn class="terminology">arithmetic</dfn>. If the initial term (\(a_0\)) of the sequence is \(a\) and the <dfn class="terminology">common difference</dfn> is \(d\text{,}\) then we have,</p>
 <p id="PjP">Recursive definition: \(a_n = a_{n-1} + d\) with \(a_0 = a\text{.}\)</p>
 <p id="vqY">Closed formula: \(a_n = a + dn\text{.}\)</p></article><article class="example example-like" id="kDy"><h6 class="heading">
@@ -361,7 +364,22 @@ MathJax.Hub.Config({
 </li>
 <li id="sRR"><p id="dIT">What if the candy machine gives 7 Skittles to the first customer who put in a quarter, 10 to the second, 13 to the third, 16 to the fourth, etc. How many Skittles has the machine given out after 20 quarters are put into the machine?</p></li>
 <li id="YZa"><p id="JQc">Now, what if the machine gives 4 Skittles to the first customer, 7 to the second, 12 to the third, 19 to the fourth, etc. How many Skittles has the machine given out after 20 quarters are put into the machine?</p></li>
-</ol></article><p id="p-399">Some sequences, like the triangular numbers, are neither arithmetic nor geometric. However, the <em class="emphasis">differences</em> in the terms form an arithmetic sequence, so we can think of \(T_n\) as the <dfn class="terminology">sequence of partial sums</dfn> of the sequence \(1, 2, 3, \ldots\text{.}\)</p>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><ol class="decimal">
+<li id="li-469">510 skittles; Yes? After 93 quarters?</li>
+<li id="li-470">This seems to be an arithmetic sequence: \(s_n = 3n+4, n \ge 1\text{.}\) We can add to get \(\frac{(7+3\cdot 20+4)\cdot 20}{2} = 710\) skittles given out. Since there are only 650 skittles to give away, they are all gone.</li>
+<li id="li-471">This one is trickier! Notice that the terms themselves are each \(a_n  = 3 + \sum_{k=1}^n (2k-1), n\ge 1\text{.}\) Obviously, 20 3's is 60, so we need the sum<div class="displaymath">
+\begin{equation*}
+\sum\limits_{n=1}^{20} \left(\sum\limits_{k=1}^n 2k-1\right).
+\end{equation*}
+</div>Consider the sum \(S_n = \sum\limits_{k=1}^n 2k-1 = 1 + 3 + 5 + \cdots + 2n-1\text{.}\) Then<div class="displaymath">
+\begin{equation*}
+2S_n = \underbrace{2n+2n+2n+\cdots+2n}_{\text{n times}} = 2n^2,
+\end{equation*}
+</div>so \(S_n = n^2\text{.}\) Thus, we want to find \(60 + \sum\limits_{n=1}^{20} n^2 = 60 + 2870 = 2930\text{.}\)</li>
+</ol></div></div>
+</div></article><p id="p-399">Some sequences, like the triangular numbers, are neither arithmetic nor geometric. However, the <em class="emphasis">differences</em> in the terms form an arithmetic sequence, so we can think of \(T_n\) as the <dfn class="terminology">sequence of partial sums</dfn> of the sequence \(1, 2, 3, \ldots\text{.}\)</p>
 <p id="p-400">We can find the sum of an arithmetic sequence using the <dfn class="terminology">reverse and add</dfn> strategy.</p>
 <article class="example example-like" id="WzT"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
@@ -370,7 +388,7 @@ MathJax.Hub.Config({
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-tXk" id="tXk"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-tXk"><div class="solution solution-like">
 <p id="isM">The idea is to mimic how we found the formula for triangular numbers. If we add the first and last terms, we get 472. The second term and second-to-last term also add up to 472. To keep track of everything, we might express this as follows. Call the sum \(S\text{.}\) Then,</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="jMA">
 <tr>
 <td class="r m b0 r0 l0 t0 lines">\(S  =\)</td>
 <td class="c m b0 r0 l0 t0 lines">\(2\)</td>
@@ -381,7 +399,7 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">\(+ \cdots +\)</td>
 <td class="c m b0 r0 l0 t0 lines">\(467\)</td>
 <td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">470</td>
+<td class="c m b0 r0 l0 t0 lines">470</td>
 </tr>
 <tr>
 <td class="r m b1 r0 l0 t0 lines">\(+ \quad S  =\)</td>
@@ -393,7 +411,7 @@ MathJax.Hub.Config({
 <td class="c m b1 r0 l0 t0 lines">\(+ \cdots +\)</td>
 <td class="c m b1 r0 l0 t0 lines">\(5\)</td>
 <td class="c m b1 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b1 r0 l0 t0 lines" data-braille="last-cell">2</td>
+<td class="c m b1 r0 l0 t0 lines">2</td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines">\(2S  =\)</td>
@@ -405,7 +423,7 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">\(+ \cdots +\)</td>
 <td class="c m b0 r0 l0 t0 lines">\(472\)</td>
 <td class="c m b0 r0 l0 t0 lines">\(+\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(472\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(472\)</td>
 </tr>
 </table></div></div></div>
 <p id="OzV">To find \(2S\) then we add 472 to itself a number of times. What number? We need to decide how many terms (<dfn class="terminology">summands</dfn>) are in the sum. Since the terms form an arithmetic sequence, the \(n\)th term in the sum (counting \(2\) as the 0th term) can be expressed as \(2 + 3n\text{.}\) If \(2 + 3n = 470\) then \(n = 156\text{.}\) So \(n\) ranges from 0 to 156, giving 157 terms in the sum. This is the number of 472's in the sum for \(2S\text{.}\) Thus</p>
@@ -431,19 +449,21 @@ S = 74104/2 = 37052\text{.}
 </div></article><p id="p-408">Perhaps you've used something similar before.</p>
 <article class="example example-like" id="example-15"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.5</span><span class="period">.</span>
-</h6>\(0.\overline{9} = 1.\)</article></section></section><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
+</h6>
+<p id="p-409">\(0.\overline{9} = 1.\)</p></article></section></section><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.2.2</span> <span class="title">Today's Screencast</span>
 </h3>
-<article class="insight remark-like" id="insight-21"><h6 class="heading">
+<article class="insight remark-like" id="insight-22"><h6 class="heading">
 <span class="type">Screencast</span><span class="space"> </span><span class="codenumber">9.2.6</span><span class="period">.</span>
-</h6></article></section><section class="subsection" id="subsection-62"><h3 class="heading hide-type">
+</h6>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-21" class="video" allowfullscreen="" src="https://expl.ai/tvcanrd?mode=embed"></iframe></div></article></section><section class="subsection" id="subsection-62"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.2.3</span> <span class="title">If you missed class today</span>
 </h3>
 <ol class="decimal">
-<li id="li-470">Work through today's outline and read the marked pages in the book.</li>
-<li id="li-471">Watch the screencast above.</li>
-<li id="li-472">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
-<li id="li-473">
+<li id="li-472">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-473">Watch the screencast above.</li>
+<li id="li-474">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-475">
 <a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
 </ol></section></section></div></main>
 </div>
