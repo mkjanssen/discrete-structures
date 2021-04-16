@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-15T11:18:30-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">First, a bit of terminology. We say that a matching \(M\) <dfn class="terminology">saturates</dfn> a vertex \(v\) if there is an edge in \(M\) incident to \(v\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Assume now that some matching \(M\) saturates every vertex of \(A\text{.}\) Let \(W\subseteq A\) be arbitrary and let \(M(W)\) denote the set of all vertices in \(B\) matched by \(M\) to \(W\text{.}\) By the definition of a matching, \(|M(W)| = |W|\text{.}\) But \(M(W)\subseteq N(W)\text{,}\) since all elements of \(M(W)\) are neighbors of \(W\text{.}\) So, \(|N(W)| \ge | M(W)| = |W|\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Now assume that there is no matching of \(A\) and we'll show that Hall's condition is violated for at least one subset \(W\subseteq A\text{.}\) Let \(M\) be a maximum matching and \(u\in A\) not saturated by \(M\text{.}\) Consider all <em class="emphasis">alternating paths</em> (paths in \(G\) alternately using edges outside and inside \(M\)) starting from \(u\text{.}\) Let the set of all points in \(B\) connected to \(u\) by these alternating paths be \(Z\) and the set of all points in \(A\) connected to \(u\) be these alternating paths (including \(u\) itself) be \(W\text{.}\) No maximal alternating path can end in a vertex in \(B\text{,}\) lest it would be an <em class="emphasis">augmenting path</em>, so that we could augment \(M\) to a strictly larger matching by toggling the status (belongs to \(M\) or not) of all the edges of the path. Thus every vertex in \(Z\) is matched by \(M\) to a vertex in \(W\setminus \set{u}\text{.}\) Conversely, every vertex \(v\in W\setminus\set{u}\) is matched by \(M\) to a vertex in \(Z\) (namely, the vertex preceding \(v\) on an alternating path ending at \(v\)). Thus, \(M\) provides a bijection of \(W\setminus \set{u}\) and \(Z\text{,}\) which implies that \(|W| = |Z| + 1\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">On the other hand, \(N(W)\subseteq Z\text{,}\) so let \(v\in B\) be connected to a vertex \(w\in W\text{.}\) The edge \(wv\) must be in \(M\text{,}\) otherwise \(u\) reaches \(w\) via an alternating path not containing \(v\text{,}\) and we could take this alternating path ending in \(w\) and extend it with \(v\text{,}\) getting an augmenting path (which would again contradict the maximality of \(M\)). Hence \(v\in Z\text{,}\) and so \(|N(W)| \le |Z| = |W| - 1 \lt |W|\text{.}\)</p></article><span class="incontext"><a href="Apr-23.html#proof-21">in-context</a></span>
+</body>
+</html>

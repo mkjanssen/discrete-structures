@@ -149,6 +149,5 @@
   *{file}   {mt-msa.cfg}  {2006/02/04 v1.1}
   *{file}   {mt-msb.cfg}  {2005/06/01 v1.0}
   *{file}   {mt-euf.cfg}  {2006/07/03 v1.1}
-  *{file}   {./img/arrow-diagrams.png}{0000/00/00 v0.0}
   *{file}   {discrete-structures.ptx.ind}{0000/00/00 v0.0}
 }

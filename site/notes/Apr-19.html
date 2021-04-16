@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-05T15:03:24-05:00       *-->
+<!--*       on 2021-04-15T11:18:17-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -264,8 +264,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
 <li><a href="Apr-19.html" data-scroll="Apr-19" class="active">Apr. 19: Graph Coloring</a></li>
-<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
-<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
 </ul>
 </li>
 <li class="link">
@@ -293,7 +293,7 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">15.1</span> <span class="title">Apr. 19: Graph Coloring</span>
 </h2>
 <section class="introduction" id="introduction-42"><article class="assemblage assemblage-like" id="assemblage-79"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
-<p id="p-761">Here are some questions we'll consider. <ol class="decimal">
+<p id="p-762">Here are some questions we'll consider. <ol class="decimal">
 <li id="li-648">What is the chromatic number of a graph?</li>
 <li id="li-649">How many colors are required to properly color a map?</li>
 <li id="li-650">What is the chromatic index of a graph? Can we estimate it?</li>
@@ -301,11 +301,11 @@ MathJax.Hub.Config({
 </ol></p></article></section><section class="subsection" id="subsection-102"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.1.1</span> <span class="title">OutlineColoring Edges</span>
 </h3>
-<p id="p-762">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_coloring.html" target="_blank">Section 4.4</a> of the book. You're encouraged to read it before coming to class.</p>
+<p id="p-763">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_coloring.html" target="_blank">Section 4.4</a> of the book. You're encouraged to read it before coming to class.</p>
 <section class="subsubsection" id="subsubsection-75"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber">15.1.1.1</span> <span class="title">Chromatic Number</span>
 </h4>
-<p id="p-763">A famous problem in graph theory is as follows:</p>
+<p id="p-764">A famous problem in graph theory is as follows:</p>
 <blockquote class="blockquote" id="NWf"><p id="XpR">Given any map of countries, states, counties, etc., how many colors are needed to color each region on the map so that neighboring regions are colored differently?</p></blockquote>
 <p id="Zfe"> In general, given any graph \(G\text{,}\) a coloring of the vertices is called (not surprisingly) a <dfn class="terminology">vertex coloring</dfn>. If the vertex coloring has the property that adjacent vertices are colored differently, then the coloring is called <dfn class="terminology">proper</dfn>. Every graph has a proper vertex coloring. For example, you could color every vertex with a different color. But often you can do better. The smallest number of colors needed to get a proper vertex coloring is called the <dfn class="terminology">chromatic number</dfn> of the graph, written \(\chi(G)\)  .</p>
 <article class="example example-like" id="kJC"><h6 class="heading">
@@ -313,15 +313,15 @@ MathJax.Hub.Config({
 </h6>
 <p id="bZK">Find the chromatic number of the graphs below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
-<div class="sbspanel" style="width:22.2222222222222%;justify-content:center;"><img src="images/image-25.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:22.2222222222222%;justify-content:center;"><img src="images/image-26.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><img src="images/image-27.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel middle" style="width:22.2222222222222%;"><img src="images/image-25.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel middle" style="width:22.2222222222222%;"><img src="images/image-26.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel middle" style="width:33.3333333333333%;"><img src="images/image-27.svg" role="img" class="contained" alt=""></div>
 </div></div>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-VAE" id="VAE"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-VAE"><div class="solution solution-like">
 <p id="udo">The graph on the left is \(K_6\text{.}\) The only way to properly color the graph is to give every vertex a different color (since every vertex is adjacent to every other vertex). Thus the chromatic number is 6.</p>
 <p id="akx">The middle graph can be properly colored with just 3 colors (Red, Blue, and Green). For example:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-28.svg" role="img" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/image-28.svg" role="img" class="contained" alt=""></div></div></div>
 <p id="GrG">There is no way to color it with just two colors, since there are three vertices mutually adjacent (i.e., a triangle). Thus the chromatic number is 3.</p>
 <p id="myP">The graph on the right is just \(K_{2,3}\text{.}\) As with all bipartite graphs, this graph has chromatic number 2: color the vertices on the top row red and the vertices on the bottom row blue.</p>
 </div></div>
@@ -338,7 +338,7 @@ MathJax.Hub.Config({
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">15.1.1</span><span class="period">.</span>
 </h6>
 <p id="dOX">The math department plans to offer 10 classes next semester. Some classes cannot run at the same time (perhaps they are taught by the same professor, or are required for seniors).</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="tHP">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="tHP">
 <tr>
 <td class="c m b1 r1 l0 t0 lines">Class:</td>
 <td class="l m b1 r0 l0 t0 lines">Conflicts with:</td>
@@ -384,7 +384,7 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines">B G H</td>
 </tr>
 </table></div></div></div>
-<p id="JWg">How many different time slots are needed to teach these classes (and which should be taught at the same time)? More importantly, how could we use graph coloring to answer this question?</p></article><p id="p-778">The upshot is that when you wish to partition some objects so that related objects are not in the same set, you can model the problem with graph coloring.</p>
+<p id="JWg">How many different time slots are needed to teach these classes (and which should be taught at the same time)? More importantly, how could we use graph coloring to answer this question?</p></article><p id="p-779">The upshot is that when you wish to partition some objects so that related objects are not in the same set, you can model the problem with graph coloring.</p>
 <p id="uNi">While we might not be able to find the exact chromatic number of graph easily, we can often give a reasonable range for the chromatic number. In other words, we can give upper and lower bounds for chromatic number.</p>
 <p id="aUr">This is actually not very difficult: for every graph \(G\text{,}\) the chromatic number of \(G\) is at least 1 and at most the number of vertices of \(G\text{.}\)</p>
 <p id="HbA">What? You want <em class="emphasis">better</em> bounds on the chromatic number? Well you are in luck.</p>
@@ -392,8 +392,8 @@ MathJax.Hub.Config({
 <article class="theorem theorem-like" id="Pby"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.1.3</span><span class="period">.</span>
 </h6>
-<p id="jEj">The chromatic number of a graph \(G\) is at least the clique number of \(G\text{.}\)</p></article><p id="TpS"> There are times when the chromatic number of \(G\) is <em class="emphasis">equal</em> to the clique number. These graphs have a special name; they are called <dfn class="terminology">perfect</dfn>. If you know that a graph is perfect, then finding the chromatic number is simply a matter of searching for the largest clique.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a> However, not all graphs are perfect.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">There are special classes of graphs which can be proved to be perfect. One such class is the set of <dfn class="terminology">chordal</dfn> graphs, which have the property that every cycle in the graph contains a <dfn class="terminology">chord</dfn>—an edge between two vertices in of the cycle which are not adjacent in the cycle.</div></div>
+<p id="jEj">The chromatic number of a graph \(G\) is at least the clique number of \(G\text{.}\)</p></article><p id="TpS"> There are times when the chromatic number of \(G\) is <em class="emphasis">equal</em> to the clique number. These graphs have a special name; they are called <dfn class="terminology">perfect</dfn>. If you know that a graph is perfect, then finding the chromatic number is simply a matter of searching for the largest clique.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 1 </sup></a> However, not all graphs are perfect.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">There are special classes of graphs which can be proved to be perfect. One such class is the set of <dfn class="terminology">chordal</dfn> graphs, which have the property that every cycle in the graph contains a <dfn class="terminology">chord</dfn>—an edge between two vertices in of the cycle which are not adjacent in the cycle.</div></div>
 <p id="zxb"> For an upper bound, we can improve on “the number of vertices” by looking to the degrees of vertices. Let \(\Delta(G)\)  be the largest degree of any vertex in the graph \(G\text{.}\) One reasonable guess for an upper bound on the chromatic number is \(\chi(G) \le \Delta(G) + 1\text{.}\) Why is this reasonable? Starting with any vertex, it together with all of its neighbors can always be colored in \(\Delta(G) + 1\) colors, since at most we are talking about \(\Delta(G) + 1\) vertices in this set. Now fan out! At any point, if you consider an already colored vertex, some of its neighbors might be colored, some might not. But no matter what, that vertex and its neighbors could all be colored distinctly, since there are at most \(\Delta(G)\) neighbors, plus the one vertex being considered.</p>
 <p id="fEk">In fact, there are examples of graphs for which \(\chi(G) = \Delta(G) + 1\text{.}\) For any \(n\text{,}\) the complete graph \(K_n\) has chromatic number \(n\text{,}\) but \(\Delta(K_n) = n-1\) (since every vertex is adjacent to every <em class="emphasis">other</em> vertex). Additionally, any <em class="emphasis">odd</em> cycle will have chromatic number 3, but the degree of every vertex in a cycle is 2. It turns out that these are the only two types of examples where we get equality, a result known as Brooks' Theorem.</p>
 <article class="theorem theorem-like" id="viH"><h6 class="heading">
@@ -407,7 +407,7 @@ MathJax.Hub.Config({
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-hOW" id="hOW"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-hOW"><div class="solution solution-like">
 <p id="eUq">Represent each player with a vertex and put an edge between two players if they will play each other. In this case, we get the graph \(K_6\text{:}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-29.svg" role="img" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel top" style="width:100%;"><img src="images/image-29.svg" role="img" class="contained" alt=""></div></div></div>
 <p id="Lbz">We must color the edges; each color represents a different hour. Since different edges incident to the same vertex will be colored differently, no player will be playing two different games (edges) at the same time. Thus we need to know the chromatic index of \(K_6\text{.}\)</p>
 <p id="riI">Notice that for sure \(\chi'(K_6) \ge 5\text{,}\) since there is a vertex of degree 5. It turns out 5 colors is enough (go find such a coloring). Therefore the friends will play for 5 hours.</p>
 </div></div>
@@ -416,9 +416,9 @@ MathJax.Hub.Config({
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Vizing's Theorem.</span>
 </h6>
 <p id="vSB">For any graph \(G\text{,}\) the chromatic index \(\chi'(G)\) is either \(\Delta(G)\) or \(\Delta(G) + 1\text{.}\)</p></article><p id="kod">At first this theorem makes it seem like chromatic index might not be very interesting. However, deciding which case a graph is in is not always easy. Graphs for which \(\chi'(G) = \Delta(G)\) are called <em class="emphasis">class 1</em>, while the others are called <em class="emphasis">class 2</em>. Bipartite graphs always satisfy \(\chi'(G) = \Delta(G)\text{,}\) so are class 1 (this was proved by König in 1916, decades before Vizing proved his theorem in 1964). In 1965 Vizing proved that all planar graphs with \(\Delta(G) \ge 8\) are of class 1, but this does not hold for all planar graphs with \(2 \le \Delta(G) \le 5\text{.}\) Vizing conjectured that all planar graphs with \(\Delta(G) = 6\) or \(\Delta(G) = 7\) are class 1; the \(\Delta(G) = 7\) case was proved in 2001 by Sanders and Zhao; the \(\Delta(G) = 6\) case is still open.</p>
-<article class="paragraphs" id="iUp"><h5 class="heading"><span class="title">Ramsey Theory.</span></h5>
+<section class="paragraphs" id="iUp"><h5 class="heading"><span class="title">Ramsey Theory.</span></h5>
 <p id="qdp">There is another interesting way we might consider coloring edges, quite different from what we have discussed so far. What if we colored every edge of a graph either red or blue. Can we do so without, say, creating a <em class="emphasis">monochromatic</em>  triangle (i.e., an all red or all blue triangle)? Certainly for some graphs the answer is yes. Try doing so for \(K_4\text{.}\) What about \(K_5\text{?}\) \(K_6\text{?}\) How far can we go?</p>
-<p id="Wky">The problem above is not too difficult and is a fun exercise. We could extend the question in a variety of ways. What if we had three colors? What if we were trying to avoid other graphs. Surprisingly, very little is known about these questions. For example, we know that you need to go up to \(K_{17}\) in order to force a monochromatic triangle using three colors, but nobody knows how big you need to go with more colors. Similarly, we know that using two colors \(K_{18}\) is the smallest graph that forces a monochromatic copy of \(K_4\text{,}\) but the best we have to force a monochromatic \(K_{5}\) is a range, somewhere from \(K_{43}\) to \(K_{49}\text{.}\) If you are interested in these sorts of questions, this area of graph theory is called Ramsey theory. Check it out.</p></article></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
+<p id="Wky">The problem above is not too difficult and is a fun exercise. We could extend the question in a variety of ways. What if we had three colors? What if we were trying to avoid other graphs. Surprisingly, very little is known about these questions. For example, we know that you need to go up to \(K_{17}\) in order to force a monochromatic triangle using three colors, but nobody knows how big you need to go with more colors. Similarly, we know that using two colors \(K_{18}\) is the smallest graph that forces a monochromatic copy of \(K_4\text{,}\) but the best we have to force a monochromatic \(K_{5}\) is a range, somewhere from \(K_{43}\) to \(K_{49}\text{.}\) If you are interested in these sorts of questions, this area of graph theory is called Ramsey theory. Check it out.</p></section></section><section class="subsection" id="subsection-103"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.1.2</span> <span class="title">Today's Screencast</span>
 </h3>
 <article class="insight remark-like" id="insight-36"><h6 class="heading">

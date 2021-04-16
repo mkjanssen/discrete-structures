@@ -146,7 +146,7 @@
               Permission is granted to copy and (re)distribute this material in any format and/or adapt it (even commercially) under the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.  The work may be used for free in any way by any party so long as attribution is given to the author(s) and if the material is modified, the resulting contributions are distributed under the same license as this original.  All trademarks<trademark /> are the registered<registered /> marks of their respective owners. The graphic
         
               <sidebyside width="25%" permid="RTE">
-                <image xml:id="CC-BY-SA-license" source="./img/CC-BY-SA-license.svg" />
+                <image xml:id="CC-BY-SA-license" source="./images/CC-BY-SA-license.svg" />
               </sidebyside>
         
               that may appear in other locations in the text shows that the work is licensed with the Creative Commons and that the work may be used for free by any party so long as attribution is given to the author(s) and if the material is modified, the resulting contributions are distributed under the same license as this original. Full details may be found by visiting <url href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</url>  or sending a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
@@ -1991,7 +1991,7 @@
                       Which of the arrow diagrams given represent functions <m>A\to B</m>, with <m>A = \set{1,2,3,4}</m> and <m>B = \set{a,b,c}</m>? Explain. For those that are functions, determine the range of the function.
                     </p>
                     
-                    <image xml:id="img-arrow-diagrams" width="80%" source="./img/arrow-diagrams.png" />
+                    <image xml:id="images-arrow-diagrams" width="80%" source="./images/arrow-diagrams.png" />
                   </statement>
                   </exploration>
                 
@@ -3059,7 +3059,7 @@
             
                   <sidebyside width="50%" permid="dVO">
             
-                    <image xml:id="chessboard" permid="AXG" source="./img/chessboard.svg" />
+                    <image xml:id="chessboard" permid="AXG" source="./images/chessboard.svg" />
             
                     <!-- <latex-image>
             
@@ -3134,12 +3134,12 @@
                 </p>
             
                 <sidebyside width="30%" margins="auto" permid="Fte">
-                  <image xml:id="lattice-path-1" permid="heP" source="./img/lattice-path-1.svg" />
+                  <image xml:id="lattice-path-1" permid="heP" source="./images/lattice-path-1.svg" />
                   
             
-                  <image xml:id="lattice-path-2" permid="NlY" source="./img/lattice-path-2.svg" />
+                  <image xml:id="lattice-path-2" permid="NlY" source="./images/lattice-path-2.svg" />
             
-                  <image xml:id="lattice-path-3" permid="tth" source="./img/lattice-path-3.svg" />
+                  <image xml:id="lattice-path-3" permid="tth" source="./images/lattice-path-3.svg" />
             
                 </sidebyside>
                 
@@ -3313,7 +3313,7 @@
             
                 <sidebyside width="70%" permid="RHw">
             
-                  <image xml:id="pascal-nCk" permid="FHz" source="./img/pascal-nCk.svg" />
+                  <image xml:id="pascal-nCk" permid="FHz" source="./images/pascal-nCk.svg" />
             
                       <!-- <latex-image>
                         \begin{tikzpicture}
@@ -3347,7 +3347,7 @@
             
                 <sidebyside width="100%" permid="xOF">
             
-                  <image xml:id="pascal-large" permid="lOI" source="./img/pascal-large.svg" />
+                  <image xml:id="pascal-large" permid="lOI" source="./images/pascal-large.svg" />
                         <!-- <latex-image>
                           \begin{tikzpicture}
                         \def\r{.55}
@@ -3846,7 +3846,7 @@
                       <p>
                         Recall Pascal's triangle:
                       </p>
-                      <image xml:id="pascal-large2" source="./img/pascal-large.svg" />
+                      <image xml:id="pascal-large2" source="./images/pascal-large.svg" />
                       <p permid="nLm">
                         There are lots of patterns hidden away in the triangle,
                         enough to fill a reasonably sized book.
@@ -6227,11 +6227,11 @@
 
       <sidebyside widths="8% 18% 26%" valigns="bottom bottom bottom" margins="auto" permid="EzP">
 
-        <image source="./img/image-58.svg" />
+        <image source="./images/image-58.svg" />
         
-         <image  source="./img/image-59.svg" />
+         <image  source="./images/image-59.svg" />
          
-          <image  source="./img/image-60.svg" />
+          <image  source="./images/image-60.svg" />
 
 
       </sidebyside>
@@ -9761,7 +9761,7 @@ How can we verify that these are valid modes of reasoning? With truth tables!
       </p>
       
       <sidebyside width="35%" permid="azf">
-        <image permid="RtO" source="./img/image-107.svg" />
+        <image permid="RtO" source="./images/image-107.svg" />
           
       </sidebyside>
       <p permid="EvC">
@@ -9984,7 +9984,7 @@ How can we verify that these are valid modes of reasoning? With truth tables!
   
   
   <insight>
-  
+    <video ee="kwvpjfa" />
   </insight>
   
 </subsection>
@@ -10093,7 +10093,27 @@ How can we verify that these are valid modes of reasoning? With truth tables!
         </p>
         
         <sidebyside width="35%" permid="BWv">
-          <image xml:id="img-labeled-tree" permid="dIg" source="./img/img-labeled-tree.svg" />
+          <image xml:id="img-labeled-tree" permid="dIg">
+            <latex-image>
+              \begin{tikzpicture}
+                {\footnotesize
+                  \coordinate (a) at (0,0);
+                  \coordinate (b) at (1,1);
+                  \coordinate (c) at (1,0);
+                  \coordinate (d) at (1,-1);
+                  \coordinate (e) at (2,0);
+                  \coordinate (f) at (3,1);
+                  \coordinate (g) at (3,-1);
+                  \coordinate (h) at (4,1);
+                  \coordinate (i) at (4,0);
+                  \draw (a) -- (c) -- (e) -- (g) (b) -- (e) (d) -- (e) -- (f) -- (h) (f) -- (i);
+                  \foreach \x in {a,...,i}{
+                  \draw (\x) \vb{\footnotesize $\x$};
+                  }
+                }
+              \end{tikzpicture}
+            </latex-image>
+          </image>
         </sidebyside>
         <p permid="zLJ">
           If we designate vertex <m>f</m> as the root, then <m>e</m>, <m>h</m>, and <m>i</m> are the children of <m>f</m>, and are siblings of each other.  Among the other things we cay say are that <m>a</m> is a child of <m>c</m>, and a descendant of <m>f</m>.  The vertex <m>g</m> is a descendant of <m>f</m>, in fact, is a grandchild of <m>f</m>.  Vertices <m>g</m> and <m>d</m> are siblings, since they have the common parent <m>e</m>.
@@ -10196,11 +10216,40 @@ How can we verify that these are valid modes of reasoning? With truth tables!
         if you grouped all the spanning trees by which are isomorphic,
         how many groups would you have)?
       </p>
-      <image width="40%" source="./img/img-114.svg" />
+      <sidebyside width="30%" permid="bsQ">
+
+        <image permid="CJc">
+
+          <latex-image>
+            \begin{tikzpicture}
+              \footnotesize{
+              \draw (0,0) -- (-1,.75) \vl{$a$} -- (-1,-.75) \vl{$b$} -- (0,0) \vb{$c$} -- (1,1) \vb{$d$} -- (2,0) \vr{$e$} -- (1,-1) \va{$f$} -- (0,0) -- (2,0);
+              }
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+
+      </sidebyside>
       </statement>
     </exploration>
 
+<p permid="lmF">
+    <idx>
+      <h>spanning tree</h><h>minimum</h>
+    </idx>
+    <idx>
+      <h>minimum spanning tree</h>
+    </idx>
 
+      Although we will not consider this in detail, these algorithms are usually applied to <em>weighted</em> graphs.  Here every edge has some weight or cost assigned to it.  The goal is to find a spanning tree that has the smallest possible combined weight.  Such a tree is called a <term>minimum spanning tree</term>.  Finding the minimum spanning tree uses basically the same algorithms as we described above, but when picking an edge to add, you always pick the smallest (or when removing an edge, you always remove the largest).<fn>
+      <idx>
+        <h>Prim's algorithm</h>
+      </idx>
+      <idx>
+        <h>Kruskal's algorithm</h>
+      </idx>
+      If you add the smallest edge adjacent to edges you have already added, you are doing <em>Prim's algorithm</em>.  If you add the smallest edge in the entire graph, you are following <em>Kruskal's algorithm</em>.</fn>
+    </p>
 
     
     
@@ -10554,7 +10603,7 @@ How can we verify that these are valid modes of reasoning? With truth tables!
   
   
   <insight>
-  
+    <video ee="fzyslvk" />
   </insight>
   
 </subsection>
@@ -11175,14 +11224,691 @@ How can we verify that these are valid modes of reasoning? With truth tables!
         
         
         <section xml:id="Apr-21">
-          <title>Apr. 21</title>
+          <title>Apr. 21: Euler Paths and Circuits</title>
+          
+                    <introduction>
+
+<assemblage>
+  <title>Motivating Questions</title>
+  <p>
+  <statement>
+	Here are some questions we'll consider.
+	<ol>
+	  <li>What is an Euler path? An Euler circuit? </li>
+	  <li>What is a Hamiltonian path? Circuit?</li>
+
+	</ol>
+  </statement>
+  </p>
+  
+</assemblage>
+
+</introduction>
+
+
+
+
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_paths.html">Section 4.5</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+<subsubsection>
+<title>Euler Paths and Circuits</title>
+    <idx><h>path</h><h>Euler</h></idx>
+  <idx><h>path</h><h>Hamilton</h></idx>
+  <idx><h>circuit</h><h>Euler</h></idx>
+  <idx><h>cycle</h><h>Hamilton</h></idx>
+  <idx><h>Euler path</h></idx>
+  <idx><h>Euler circuit</h></idx>
+  <idx><h>Hamilton path</h></idx>
+  <idx><h>Hamilton cycle</h></idx>
+  <idx><h>trail</h><h>Euler</h><see>Euler path</see></idx>
+  <idx><h>walk</h><h>Euler</h><see>Euler path</see></idx>
+  <idx><h>tour, Euler</h><see>Euler circuit</see></idx>
+
+    <investigation permid="jqb">
+
+      <p permid="ikI">
+        An <term>Euler path</term>, in a graph or multigraph,
+        is a walk through the graph which uses every edge exactly once.
+        An <term>Euler circuit</term> is an Euler path which starts and stops at the same vertex.
+        Our goal is to find a quick way to check whether a graph
+        (or multigraph)
+        has an Euler path or circuit.
+
+        <ol permid="bLC">
+          <li permid="Uhd">
+            <p permid="YQW">
+              Which of the graphs below have Euler paths?
+              Which have Euler circuits?
+            </p>
+
+            <sidebyside widths="18% 18% 36% 22%" margins="auto" valign="middle" permid="eGi">
+
+              <image permid="jZV">
+
+  <latex-image>\begin{tikzpicture}[scale=0.9]
+    \draw (-1,0) \v -- (1,0)\v -- (1,2) \v -- (-1, 2) \v -- (-1,0) -- (1,2) (-1,2) -- (1,0) (0,1) \v;
+    \draw (-1,2) -- (0,3) \v -- (1,2);
+  \end{tikzpicture}</latex-image>
+              </image>
+
+              <image permid="Qhe">
+
+  <latex-image>\begin{tikzpicture}[scale=0.9]
+    \draw (-1,0) \v -- (1,0)\v -- (1,2) \v -- (-1, 2) \v -- (-1,0) -- (1,2) (-1,2) -- (1,0) (0,1) \v;
+  \end{tikzpicture}</latex-image>
+              </image>
+
+              <image permid="won">
+
+  <latex-image>\begin{tikzpicture}[scale=0.9]
+    \draw (-1,0) \v -- (1,0)\v -- (1,2) \v -- (-1, 2) \v -- (-1,0) -- (1,2) (-1,2) -- (1,0) (0,1) \v;
+    \draw (-1,0) -- (-2,1) \v -- (-1,2) (1,2) -- (2,1) \v -- (1,0);
+  \end{tikzpicture}</latex-image>
+              </image>
+
+              <image permid="cvw">
+
+  <latex-image>\begin{tikzpicture}[yscale=.45]
+   \draw (-1,-2) \v to [out=120, in=240] (-1,0) \v to [out=120, in=240] (-1,2) \v to [out=300, in=60] (-1,0) to [out=300, in=60] (-1,-2);
+    \draw (1,0) \v -- (-1,2) (-1,0) -- (1,0) -- (-1,-2);
+    \end{tikzpicture}</latex-image>
+              </image>
+
+            </sidebyside>
+
+          </li>
+
+          <li permid="Aom">
+            <p permid="EYf">
+              List the degrees of each vertex of the graphs above.
+              Is there a connection between degrees and the existence of Euler paths and circuits?
+            </p>
+          </li>
+
+          <li permid="gvv">
+            <p permid="lfo">
+              Is it possible for a graph with a degree 1 vertex to have an Euler circuit?
+              If so, draw one.
+              If not, explain why not.
+              What about an Euler path?
+            </p>
+          </li>
+
+          <li permid="MCE">
+            <p permid="Rmx">
+              What if every vertex of the graph has degree 2.
+              Is there an Euler path?
+              An Euler circuit?
+              Draw some graphs.
+            </p>
+          </li>
+
+          <li permid="sJN">
+            <p permid="xtG">
+              Below is <em>part</em> of a graph.
+              Even though you can only see some of the vertices,
+              can you deduce whether the graph will have an Euler path or circuit?
+            </p>
+
+            <sidebyside width="54%" permid="KNr">
+
+              <image permid="ICF">
+
+  <latex-image>\begin{tikzpicture}[scale=0.9]
+    \draw (-2,0) \v -- (0,1) \v -- (2,0) \v;
+    \draw (-2,0) -- (-2.5, -.5) (-2,0) -- (-2, -.5) (-2,0) -- (-1.5,-.5);
+    \draw[dashed] (-2.5, -.5) -- (-3, -1) (-2,-.5) -- (-2,-1) (-1.5,-.5) -- (-1,-1);
+      \draw (2,0) -- (2.5, -.5) (2,0) -- (2, -.5) (2,0) -- (1.5,-.5);
+    \draw[dashed] (2.5, -.5) -- (3, -1) (2,-.5) -- (2,-1) (1.5,-.5) -- (1,-1);
+      \draw (0,1) -- (-.25, 0) (0,1) -- (0, 0) (0,1) -- (.25,0);
+    \draw[dashed] (-.25, 0) -- (-.5, -1) (0,0) -- (0,-1) (.25,0) -- (.5,-1);
+   \end{tikzpicture}</latex-image>
+              </image>
+
+            </sidebyside>
+
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    
+    <p>
+        There is a nice result which determines when a graph has a Euler path or circuit.
+        To prove it, we need a bit more background.
+    </p>
+
+    <definition>
+        <idx>cut vertex</idx>
+        <idx>cut edge</idx>
+        <statement>
+            <p>
+                Let <m>G</m> be a graph.
+                A vertex <m>v\in V(G)$</m> is called a <term>cut vertex of <m>G</m></term> provided <m>G\setminus v</m> (that is, <m>G</m> with <m>v</m> and any incident edges removed) has more components than <m>G</m>.
+            </p>
+            <p>
+                Similarly, an edge <m>e\in E(G)</m> is called a <term>cut edge of <m>G</m></term> provided <m>G\setminus e</m> has more components than <m>G</m>.
+            </p>
+        </statement>
+    </definition>
+    <p>
+        In other words, cut vertices an edges disconnect existing connected components of the graph.
+    </p>
+    
+    <lemma xml:id="lem-even-deg-cut-edge">
+        <statement>
+            <p>
+                Let <m>G</m> be a connected graph all of whose vertices have even degree.
+                Then no edge of <m>G</m> is a cut edge.
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Suppose that <m>e=xy</m> is a cut edge of such a graph.
+                Then <m>G\setminus e</m> has two components, and each of these components contain exactly one vertex of odd degree, contradicting the handshake lemma.
+            </p>
+        </proof>
+    </lemma>
+    
+    <lemma xml:id="lem-two-odd-cut-edge">
+        <statement>
+            <p>
+                Let <m>G</m> be a connected graph with exactly two vertices of odd degree.
+                Let <m>a</m> be a vertex of odd degree and suppose <m>d(a)\ne 1</m>.
+                Then at least one of the edges incident with <m>a</m> is not a cut edge.
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Suppose for a contradiction that all edges incident with <m>a</m> are cut edges.
+                Let <m>b</m> be the other vertex of odd degree in <m>G</m>.
+            </p>
+            <p>
+                Since <m>G</m> is connected, there is a path <m>P</m> from <m>a</m> to <m>b</m>.
+                Exactly one edge incident to <m>a</m> is traversed by <m>P</m>.
+                Let <m>e</m> be any other edge incident at <m>a</m>.
+            </p>
+            <p>
+                Now consider the graph <m>G' = G\setminus e</m>.
+                This graph has exactly two components.
+                Since the path <m>P</m> does not use <m>e</m>, vertices <m>a</m> and <m>b</m> are in the same component.
+                Notice also that, in <m>G'</m>, vertex <m>a</m> has even degree, and all other vertices in its component have not changed degree.
+                This means that, in  <m>G'</m>, there is exactly one vertex of odd degree, which is a contradiction.
+            </p>
+        </proof>
+    </lemma>
+    
+    <theorem>
+        <statement>
+            <p>
+                Let <m>G</m> be a connected graph.
+                If every vertex of <m>G</m> has even degree, then for any <m>v\in V(G)</m>, there is an Euler circuit that begins and ends at <m>v</m>.
+                Alternatively, if <m>G</m> has exactly two vertices of odd degree, say <m>a</m> and <m>b</m>, there is an Euler path that begins at <m>a</m> and ends at <m>b</m>.
+            </p>
+        </statement>
+        <proof>
+            <p>
+                We go by induction on the number <m>e</m> of edges of <m>G</m>
+            </p>
+            <p>
+                When <m>e=0</m>, have only vertices of even degree and a trivial Euler circuit, so the statement is true.
+            </p>
+            <p>
+                For the induction hypothesis, suppose <m>G</m> has <m>m</m> edges and satisfies the theorem.
+            </p>
+            <p>
+                Now suppose that <m>G</m> is connected with <m>m+1</m> edges.
+            </p>
+            <p>
+                <em>Suppose all of the vertices of <m>G</m> have even degree.</em>
+                Let <m>v\in V(G)</m> be arbitrary and let <m>w</m> be a neighbor of <m>v</m>.
+                Consider the graph <m>G' = G\setminus vw</m>.
+                By <xref ref="lem-even-deg-cut-edge" />, <m>G'</m> is connected and has exactly two vertices of odd degree.
+                By induction, there is an Euler path from <m>v</m> to <m>w</m>.
+                If we add <m>vw</m> to the end of this path, we have found an Euler circuit of <m>G</m> that begins and ends at <m>w</m>.
+            </p>
+            <p>
+                <em>Now suppose that <m>G</m> has exactly two vertices of odd degree, say <m>a</m> and <m>b</m>.</em>
+                We seek an Euler path that begins at <m>a</m> and ends at <m>b</m>.
+            </p>
+            <p>
+                Suppose first that <m>d(a) = 1</m>.
+                In this case, <m>a</m> has exactly one neighbor, <m>x</m>.
+                It is possible that <m>x = b</m> or <m>x\ne b</m>; we'll check both possibilities.
+                First, let <m>G' = G\setminus a</m>.
+                Notice that <m>d(x)</m> drops by 1, while all other vertices have the same degree as before.
+                Also note that <m>G</m> has <m>m</m> edges and is connected.
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        If <m>x=b</m>, then all vertices in <m>G'</m> have even degree.
+                        Therefore, by induction, <m>G'</m> has an Euler circuit <m>W</m> that begins and ends at <m>b</m>.
+                        If we insert the edge <m>ab</m> at the beginning of <m>W</m>, we have constructed an Euler path that begins at <m>a</m> and ends at <m>b</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>x\ne b</m>, then <m>G'</m> has exactly two vertices of odd degree (<m>x</m> and <m>b</m>) and <m>m</m> edges. Thus by induction there is an Euler path <m>W</m> that begins at <m>x</m> and ends at <m>b</m>. If we prepend the edge <m>ax</m> to the beginning of <m>W</m> we have an Euler path that begins at <m>a</m> and ends at <m>b</m>.                    
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Now suppose that <m>d(a) \gt 1</m>.
+                Since <m>d(a)</m> is odd, we have <m>d(a) \ge 3</m>.
+                By <xref ref="lem-two-odd-cut-edge" />, there is an edge <m>ax</m> that is not a cut edge.
+                Let <m>G' = G\setminus ax</m>.
+                As before, we consider the possibilities <m>x = b</m> and <m>x\ne b</m>.
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        If <m>x=b</m>, then as before all vertices in <m>G'</m> have even degree, and we can form, by induction, an Euler circuit in <m>G'</m> that begins/ends at <m>b</m> and then prepend the edge <m>ab</m> to form the desired Euler path.                        
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>x\ne b</m>, then as before we have exactly two vertices of odd degree in <m>G'</m>, namely <m>x</m> and <m>b</m>.
+                        By induction, form in <m>G'</m> an Euler path that starts at <m>x</m> and ends at <m>b</m>.
+                        We prepend the edge <m>ax</m> to complete the requisite Euler path in <m>G</m>.
+                    </p>
+                </li>
+            </ul>
+        </proof>
+    </theorem>
+
+
+
+                
+
+
+
+
+
+
+</subsubsection>
+
+<subsubsection>
+    <title>Hamilton Paths</title>
+    <p permid="XLD">
+      <idx><h>Hamilton path</h></idx>
+      <idx><h>path</h><h>Hamilton</h></idx>
+      <idx><h>Hamilton cycle</h></idx>
+      <idx><h>cycle</h><h>Hamilton</h></idx>
+      Suppose you wanted to tour Königsberg in such a way that you visit each land mass
+      (the two islands and both banks)
+      exactly once.
+      This can be done.
+      In graph theory terms,
+      we are asking whether there is a path which visits every vertex exactly once.
+      Such a path is called a <term>Hamilton path</term>
+      (or <term>Hamiltonian path</term>).
+      We could also consider <term>Hamilton cycles</term>,
+      which are Hamilton paths which start and stop at the same vertex.
+    </p>
+
+    <example permid="mkH">
+      <statement>
+        <p permid="Cdz">
+          Determine whether the graphs below have a Hamilton path.
+        </p>
+
+        <sidebyside widths="20% 20%" margins="auto" permid="SrQ">
+
+          <image permid="AYg">
+
+        <latex-image>
+
+          \begin{tikzpicture}[scale=.5]
+          \draw  (18:2) -- (90:2) -- (162:2)  -- (234:2) -- (306:2) -- cycle;
+          \draw  (18:1) --  (162:1)  -- (306:1) -- (90:1) -- (234:1) --cycle;
+          \foreach \x in {18, 90, 162, 234, 306}
+          \draw  (\x:1) \v -- (\x:2) \v;
+          \end{tikzpicture}
+
+        </latex-image>
+          </image>
+
+          <image permid="hfp">
+
+        <latex-image>
+
+          \begin{tikzpicture}{scale=.5}
+          \draw  (18:1) -- (90:1) -- (162:1)  -- (234:1) -- (306:1) -- cycle;
+          \draw  (18:1) --  (162:1)  -- (306:1) -- (90:1) -- (234:1) --cycle;
+          \foreach \x in {18, 90, 162, 234, 306}
+          \draw  (\x:1) \v -- (\x:2) \v;
+          \end{tikzpicture}
+
+        </latex-image>
+          </image>
+
+        </sidebyside>
+      </statement>
+      <solution permid="Pxk">
+        <p permid="pPh">
+          The graph on the left has a Hamilton path
+          (many different ones, actually),
+          as shown here:
+        </p>
+
+        <sidebyside width="20%" permid="yyZ">
+
+          <image permid="Nmy">
+
+        <latex-image>
+
+          \begin{tikzpicture}[scale=.5]
+          \draw[very thick, -&gt;-] (90:2) -- (90:1) (90:1) -- (234:1) (234:1)  -- (234:2) -- (162:2) -- (162:1) -- (18:1) -- (18:2) -- (306:2) -- (306:1);
+          \draw  (18:2) -- (90:2) -- (162:2)  -- (234:2) -- (306:2) -- cycle;
+          \draw  (18:1) --  (162:1)  -- (306:1) -- (90:1) -- (234:1) --cycle;
+          \foreach \x in {18, 90, 162, 234, 306}
+          \draw  (\x:1) \v -- (\x:2) \v;
+          \end{tikzpicture}
+
+        </latex-image>
+          </image>
+
+        </sidebyside>
+
+        <p permid="VWq">
+          The graph on the right does not have a Hamilton path.
+          You would need to visit each of the
+          <q>outside</q> vertices,
+          but as soon as you visit one, you get stuck.
+          Note that this graph does not have an Euler path,
+          although there are graphs with Euler paths but no Hamilton paths.
+        </p>
+      </solution>
+    </example>
+
+    <p permid="DSM">
+      <idx><h>NP-complete</h></idx>
+      It appears that finding Hamilton paths would be easier because graphs often have more edges than vertices,
+      so there are fewer requirements to be met.
+      However, nobody knows whether this is true.
+      There is no known simple test for whether a graph has a Hamilton path.
+      For small graphs this is not a problem,
+      but as the size of the graph grows,
+      it gets harder and harder to check wither there is a Hamilton path.
+      In fact, this is an example of a question which as far as we know is too difficult for computers to solve;
+      it is an example of a problem which is NP-complete.
+    </p>
+
+</subsubsection>
+
+
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+  
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>
         
         
         <section xml:id="Apr-23">
-          <title>Apr. 23</title>
+          <title>Apr. 23: Matching in Bipartite Graphs</title>
+          
+                   
+
+<subsection>
+  <title>Outline</title>
+  
+  <p>
+	Today's material comes from <url href="http://discrete.openmathbooks.org/dmoi3/sec_matchings.html">Section 4.6</url> of the book. You're encouraged to read it before coming to class.
+  </p>
+  
+  <subsubsection>
+    <title>Matching in Bipartite Graphs</title>
+  <idx>
+    <h>matching</h>
+  </idx>
+  <idx>
+    <h>graph</h>
+    <h>matching</h>
+  </idx>
+  <idx>
+    <h>perfect matching</h>
+    <see>matching</see>
+  </idx>
+  <idx><h>marriage problem</h><see>matching</see></idx>
+  <investigation permid="iGh">
+    <p permid="Txj">
+      Given a bipartite graph,
+      a <term>matching</term> is a subset of the edges for which every vertex belongs to exactly one of the edges.
+      Our goal in this activity is to discover some criterion for when a bipartite graph has a matching.
+    </p>
+
+    <p permid="zEs">
+      Does the graph below contain a matching?
+      If so, find one.
+    </p>
+
+    <sidebyside width="50%" permid="CyY">
+
+      <image permid="NHX">
+
+  <latex-image>\begin{tikzpicture}
+  \foreach \x in {0,...,5} {
+   \coordinate (a\x) at (\x,0);
+   \coordinate (b\x) at (\x,2);
+   \draw (a\x) \v (b\x) \v;
+   }
+  \draw (a0) -- (b0) (a0) -- (b1) (a0) -- (b5);
+  \draw (a1) -- (b0) (a1) -- (b3);
+  \draw (a2) -- (b1) (a2) -- (b2) (a2) -- (b3);
+  \draw (a3) -- (b0) (a3) -- (b5);
+  \draw (a4) -- (b2) (a4) -- (b3) (a4) -- (b4) (a4) -- (b5);
+  \draw (a5) -- (b4);
+  \end{tikzpicture}</latex-image>
+      </image>
+
+    </sidebyside>
+
+    <p permid="fLB">
+      Not all bipartite graphs have matchings.
+      Draw as many fundamentally different examples of bipartite graphs which do NOT have matchings.
+      Your goal is to find all the possible obstructions to a graph having a perfect matching.
+      Write down the <em>necessary</em>
+      conditions for a graph to have a matching
+      (that is, fill in the blank: If a graph has a matching,
+      then <fillin/>).
+      Then ask yourself whether these conditions are sufficient
+      (is it true that if <fillin/>, then the graph has a matching?).
+    </p>
+  </investigation>
+  
+  
+  <p permid="Yhc">
+    <idx><h>matching</h></idx>
+    <idx><h>graph</h><h>matching</h></idx>
+    Suppose you have a bipartite graph <m>G</m>.
+    This will consist of two sets of vertices <m>A</m> and <m>B</m> with some edges connecting some vertices of <m>A</m> to some vertices in <m>B</m>
+    (but of course,
+    no edges between two vertices both in <m>A</m> or both in <m>B</m>).
+    A <term>matching of <m>A</m></term>
+    is a subset of the edges for which each vertex of <m>A</m> belongs to exactly one edge of the subset,
+    and no vertex in <m>B</m> belongs to more than one edge in the subset.
+    In practice we will assume that <m>|A| = |B|</m>
+    (the two sets have the same number of vertices)
+    so this says that every vertex in the graph belongs to exactly one edge in the matching.<fn>
+    Note: what we are calling a <em>matching</em>
+    is sometimes called a <em>perfect matching</em>
+    or <em>complete matching</em>.
+    This is because in it interesting to look at non-perfect matchings as well.
+    We will call those <em>partial</em> matchings.
+    </fn></p>
+
+  <p permid="Eol">
+    Some context might make this easier to understand.
+    Think of the vertices in <m>A</m> as representing students in a class,
+    and the vertices in <m>B</m> as representing presentation topics.
+    We put an edge from a vertex <m>a \in A</m> to a vertex <m>b \in B</m> if student <m>a</m> would like to present on topic <m>b</m>.
+    Of course, some students would want to present on more than one topic,
+    so their vertex would have degree greater than 1.
+    As the teacher,
+    you want to assign each student their own unique topic.
+    Thus you want to find a matching of <m>A</m>:
+    you pick some subset of the edges so that each student gets matched up with exactly one topic,
+    and no topic gets matched to two students.
+    </p>
+  
+    <p permid="QCD">
+    One way <m>G</m> could not have a matching is if there is a vertex in <m>A</m> not adjacent to any vertex in <m>B</m>
+    (so having degree 0).
+    What else?
+    What if two students both like the same one topic, and no others?
+    Then after assigning that one topic to the first student,
+    there is nothing left for the second student to like,
+    so it is very much as if the second student has degree 0.
+    Or what if three students like only two topics between them.
+    Again, after assigning one student a topic,
+    we reduce this down to the previous case of two students liking only one topic.
+    We can continue this way with more and more students.
+<!-- \todo{write exercise asking for a proof by induction for this} -->
+  </p>
+
+  <p permid="wJM">
+    It should be clear at this point that if there is every a group of <m>n</m> students who as a group like <m>n-1</m> or fewer topics,
+    then no matching is possible.
+    This is true for any value of <m>n</m>,
+    and any group of <m>n</m> students.
+  </p>
+
+  <p permid="cQV">
+    <idx><h>neighbors of vertices</h></idx>
+    <idx><h>graph</h><h>neighbors</h></idx>
+    To make this more graph-theoretic,
+    say you have a set <m>S \subseteq A</m> of vertices.
+    Define <m>N(S)</m>
+
+    <notation>
+      <usage>N(S)</usage>
+      <description>the set of neighbors of <m>S</m>.</description>
+    </notation>
+
+    to be the set of all the <term>neighbors</term>
+    of vertices in <m>S</m>.
+    That is, <m>N(S)</m> contains all the vertices
+    (in <m>B</m>)
+    which are adjacent to at least one of the vertices in <m>S</m>. (In the student/topic graph,
+    <m>N(S)</m> is the set of topics liked by the students of <m>S</m>.) Our discussion above can be summarized as follows:
+  </p>
+
+  <assemblage permid="Kdx">
+    <title>Matching Condition</title>
+      <idx><h>matching condition</h></idx>
+      <idx><h>graph</h><h>matching</h></idx>
+      <idx><h>neighbors of verties</h></idx>
+      <idx><h>graph</h><h>neighbors</h></idx>
+    <p permid="LSK">
+      If a bipartite graph <m>G = \{A, B\}</m> has a matching of <m>A</m>, then
+      <me permid="BtF">
+        |N(S)| \ge |S|
+      </me>
+      for all <m>S \subseteq A</m>.
+    </p>
+  </assemblage>
+  
+  <theorem>
+    <author>Hall (1935)</author>
+    <statement>
+        <p>
+            A bipartite graph <m>G = \set{A,B}</m> has a matching of <m>A</m> if and only if <m>|N(S)| \ge |S|</m> for all <m>S\subseteq A</m>.
+        </p>
+    </statement>
+    <proof>
+        <p>
+            First, a bit of terminology.
+            We say that a matching <m>M</m> <term>saturates</term> a vertex <m>v</m> if there is an edge in <m>M</m> incident to <m>v</m>.
+        </p>
+        <p>
+            Assume now that some matching <m>M</m> saturates every vertex of <m>A</m>.
+            Let <m>W\subseteq A</m> be arbitrary and let <m>M(W)</m> denote the set of all vertices in <m>B</m> matched by <m>M</m> to <m>W</m>.
+            By the definition of a matching, <m>|M(W)| = |W|</m>.
+            But <m>M(W)\subseteq N(W)</m>, since all elements of <m>M(W)</m> are neighbors of <m>W</m>.
+            So, <m>|N(W)| \ge | M(W)| = |W|</m>.
+        </p>
+        <p>
+            Now assume that there is no matching of <m>A</m> and we'll show that Hall's condition is violated for at least one subset <m>W\subseteq A</m>.
+            Let <m>M</m> be a maximum matching and <m>u\in A</m> not saturated by <m>M</m>.
+            Consider all <em>alternating paths</em> (paths in <m>G</m> alternately using edges outside and inside <m>M</m>) starting from <m>u</m>.
+            Let the set of all points in <m>B</m> connected to <m>u</m> by these alternating paths be <m>Z</m> and the set of all points in <m>A</m> connected to <m>u</m> be these alternating paths (including <m>u</m> itself) be <m>W</m>.
+            No maximal alternating path can end in a vertex in <m>B</m>, lest it would be an <em>augmenting path</em>, so that we could augment <m>M</m> to a strictly larger matching by toggling the status (belongs to <m>M</m> or not) of all the edges of the path.
+            Thus every vertex in <m>Z</m> is matched by <m>M</m> to a vertex in <m>W\setminus \set{u}</m>.
+            Conversely, every vertex <m>v\in W\setminus\set{u}</m> is matched by <m>M</m> to a vertex in <m>Z</m> (namely, the vertex preceding <m>v</m> on an alternating path ending at <m>v</m>).
+            Thus, <m>M</m> provides a bijection of <m>W\setminus \set{u}</m> and <m>Z</m>, which implies that <m>|W| = |Z| + 1</m>.
+        </p>
+        <p>
+            On the other hand, <m>N(W)\subseteq Z</m>, so let <m>v\in B</m> be connected to a vertex <m>w\in W</m>.
+            The edge <m>wv</m> must be in <m>M</m>, otherwise <m>u</m> reaches <m>w</m> via an alternating path not containing <m>v</m>, and we could take this alternating path ending in <m>w</m> and extend it with <m>v</m>, getting an augmenting path (which would again contradict the maximality of <m>M</m>).
+            Hence <m>v\in Z</m>, and so <m>|N(W)| \le |Z| = |W| - 1 \lt |W|</m>.
+            </p>
+
+    </proof>
+   </theorem>
+
+  
+  
+  </subsubsection>
+
+  
+  
+  
+  
+  
+</subsection>
+
+<subsection>
+  <title>Today's Screencast</title>
+  
+  
+  <insight>
+  
+  </insight>
+  
+</subsection>
+
+
+<subsection>
+  <title>If you missed class today</title>
+  
+  <ol>
+	<li>Work through today's outline and read the marked pages in the book.</li>
+	<li>Watch the screencast above.</li>
+	<li>Submit any homework/assignments due today (check our <url href="https://dordt.instructure.com/courses/3110050">Canvas course</url> or the <url href="https://prof.mkjanssen.org/ds/index.html#schedule">syllabus schedule</url> to see what's due).</li>
+	<li><url href="mailto:mike.janssen@dordt.edu">Send Dr. Janssen an email</url> or <url href="https://calendly.com/mkjanssen/student-hours">set up a student hours appointment</url> if you have any questions!</li>
+  </ol>
+  
+</subsection>
           
           
         </section>

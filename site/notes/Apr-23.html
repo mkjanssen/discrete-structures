@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-05T15:03:24-05:00       *-->
+<!--*       on 2021-04-15T11:18:17-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Apr. 23</title>
+<title>Apr. 23: Matching in Bipartite Graphs</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -264,8 +264,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
 <li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
-<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
-<li><a href="Apr-23.html" data-scroll="Apr-23" class="active">Apr. 23</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23" class="active">Apr. 23: Matching in Bipartite Graphs</a></li>
 </ul>
 </li>
 <li class="link">
@@ -290,8 +290,52 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Apr-23"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">15.3</span> <span class="title">Apr. 23</span>
-</h2></section></div></main>
+<span class="type">Section</span> <span class="codenumber">15.3</span> <span class="title">Apr. 23: Matching in Bipartite Graphs</span>
+</h2>
+<section class="subsection" id="subsection-108"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.3.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-835">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_matchings.html" target="_blank">Section 4.6</a> of the book. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-79"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">15.3.1.1</span> <span class="title">Matching in Bipartite Graphs</span>
+</h4>
+<article class="investigation project-like" id="iGh"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">15.3.1</span><span class="period">.</span>
+</h6>
+<p id="Txj">Given a bipartite graph, a <dfn class="terminology">matching</dfn> is a subset of the edges for which every vertex belongs to exactly one of the edges. Our goal in this activity is to discover some criterion for when a bipartite graph has a matching.</p>
+<p id="zEs">Does the graph below contain a matching? If so, find one.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/image-38.svg" role="img" class="contained" alt=""></div></div></div>
+<p id="fLB">Not all bipartite graphs have matchings. Draw as many fundamentally different examples of bipartite graphs which do NOT have matchings. Your goal is to find all the possible obstructions to a graph having a perfect matching. Write down the <em class="emphasis">necessary</em> conditions for a graph to have a matching (that is, fill in the blank: If a graph has a matching, then <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>). Then ask yourself whether these conditions are sufficient (is it true that if <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>, then the graph has a matching?).</p></article><p id="Yhc"> Suppose you have a bipartite graph \(G\text{.}\) This will consist of two sets of vertices \(A\) and \(B\) with some edges connecting some vertices of \(A\) to some vertices in \(B\) (but of course, no edges between two vertices both in \(A\) or both in \(B\)). A <dfn class="terminology">matching of \(A\)</dfn> is a subset of the edges for which each vertex of \(A\) belongs to exactly one edge of the subset, and no vertex in \(B\) belongs to more than one edge in the subset. In practice we will assume that \(|A| = |B|\) (the two sets have the same number of vertices) so this says that every vertex in the graph belongs to exactly one edge in the matching.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 1 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">Note: what we are calling a <em class="emphasis">matching</em> is sometimes called a <em class="emphasis">perfect matching</em> or <em class="emphasis">complete matching</em>. This is because in it interesting to look at non-perfect matchings as well. We will call those <em class="emphasis">partial</em> matchings.</div></div>
+<p id="Eol">Some context might make this easier to understand. Think of the vertices in \(A\) as representing students in a class, and the vertices in \(B\) as representing presentation topics. We put an edge from a vertex \(a \in A\) to a vertex \(b \in B\) if student \(a\) would like to present on topic \(b\text{.}\) Of course, some students would want to present on more than one topic, so their vertex would have degree greater than 1. As the teacher, you want to assign each student their own unique topic. Thus you want to find a matching of \(A\text{:}\) you pick some subset of the edges so that each student gets matched up with exactly one topic, and no topic gets matched to two students.</p>
+<p id="QCD">One way \(G\) could not have a matching is if there is a vertex in \(A\) not adjacent to any vertex in \(B\) (so having degree 0). What else? What if two students both like the same one topic, and no others? Then after assigning that one topic to the first student, there is nothing left for the second student to like, so it is very much as if the second student has degree 0. Or what if three students like only two topics between them. Again, after assigning one student a topic, we reduce this down to the previous case of two students liking only one topic. We can continue this way with more and more students. </p>
+<p id="wJM">It should be clear at this point that if there is every a group of \(n\) students who as a group like \(n-1\) or fewer topics, then no matching is possible. This is true for any value of \(n\text{,}\) and any group of \(n\) students.</p>
+<p id="cQV"> To make this more graph-theoretic, say you have a set \(S \subseteq A\) of vertices. Define \(N(S)\)  to be the set of all the <dfn class="terminology">neighbors</dfn> of vertices in \(S\text{.}\) That is, \(N(S)\) contains all the vertices (in \(B\)) which are adjacent to at least one of the vertices in \(S\text{.}\) (In the student/topic graph, \(N(S)\) is the set of topics liked by the students of \(S\text{.}\)) Our discussion above can be summarized as follows:</p>
+<article class="assemblage assemblage-like" id="Kdx"><h6 class="heading"><span class="title">Matching Condition.</span></h6>
+<p id="LSK">If a bipartite graph \(G = \{A, B\}\) has a matching of \(A\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+|N(S)| \ge |S|
+\end{equation*}
+</div>
+<p class="continuation">for all \(S \subseteq A\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-17"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-845">A bipartite graph \(G = \set{A,B}\) has a matching of \(A\) if and only if \(|N(S)| \ge |S|\) for all \(S\subseteq A\text{.}\)</p></article></section></section><section class="subsection" id="subsection-109"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.3.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-38"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">15.3.2</span><span class="period">.</span>
+</h6></article></section><section class="subsection" id="subsection-110"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.3.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-671">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-672">Watch the screencast above.</li>
+<li id="li-673">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-674">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
 </div>
 </body>
 </html>

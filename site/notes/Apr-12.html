@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-05T15:03:23-05:00       *-->
+<!--*       on 2021-04-15T11:18:16-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -264,8 +264,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
 <li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
-<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
-<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
 </ul>
 </li>
 <li class="link">
@@ -313,7 +313,7 @@ MathJax.Hub.Config({
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">14.1.1</span><span class="period">.</span>
 </h6>
 <p id="TEA">Consider the tree below.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="./img/img-labeled-tree.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/img-labeled-tree.svg" role="img" class="contained" alt=""></div></div></div>
 <p id="zLJ">If we designate vertex \(f\) as the root, then \(e\text{,}\) \(h\text{,}\) and \(i\) are the children of \(f\text{,}\) and are siblings of each other.  Among the other things we cay say are that \(a\) is a child of \(c\text{,}\) and a descendant of \(f\text{.}\)  The vertex \(g\) is a descendant of \(f\text{,}\) in fact, is a grandchild of \(f\text{.}\)  Vertices \(g\) and \(d\) are siblings, since they have the common parent \(e\text{.}\)</p>
 <p id="fSS">Notice how this changes if we pick a different vertex for the root.  If \(a\) is the root, then its lone child is \(c\text{,}\) which also has only one child, namely \(e\text{.}\)  We would then have \(f\) the child of \(e\) (instead of the other way around), and \(f\) is the descendant of \(a\text{,}\) instead of the ancestor.  \(f\) and \(g\) are now siblings.</p></article><article class="example example-like" id="VPm"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">14.1.2</span><span class="period">.</span>
@@ -341,7 +341,8 @@ MathJax.Hub.Config({
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">14.1.1</span><span class="period">.</span>
 </h6>
 <p id="xZj">Find all spanning trees of the graph below. How many different spanning trees are there? How many different spanning trees are there <em class="emphasis">up to isomorphism</em> (that is, if you grouped all the spanning trees by which are isomorphic, how many groups would you have)?</p>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="./img/img-114.svg" style="width: 100%; height: auto;" alt=""></div></article></section></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="images/image-23.svg" role="img" class="contained" alt=""></div></div></div></article><p id="lmF"> Although we will not consider this in detail, these algorithms are usually applied to <em class="emphasis">weighted</em> graphs.  Here every edge has some weight or cost assigned to it.  The goal is to find a spanning tree that has the smallest possible combined weight.  Such a tree is called a <dfn class="terminology">minimum spanning tree</dfn>.  Finding the minimum spanning tree uses basically the same algorithms as we described above, but when picking an edge to add, you always pick the smallest (or when removing an edge, you always remove the largest).<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"> If you add the smallest edge adjacent to edges you have already added, you are doing <em class="emphasis">Prim's algorithm</em>.  If you add the smallest edge in the entire graph, you are following <em class="emphasis">Kruskal's algorithm</em>.</div></div></section></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">14.1.2</span> <span class="title">Today's Screencast</span>
 </h3>
 <article class="insight remark-like" id="insight-34"><h6 class="heading">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-05T15:03:22-05:00       *-->
+<!--*       on 2021-04-15T11:18:16-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -264,8 +264,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
 <li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
-<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
-<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
 </ul>
 </li>
 <li class="link">
@@ -341,8 +341,8 @@ V_2 = \{u,v,w\} \text{ and }E_2 = \{\{u,v\}, \{u,w\}, \{v,w\}\}.
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-DLv" id="DLv"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-DLv"><div class="solution solution-like">
 <p id="vLx">The two graphs are NOT equal. It is enough to notice that \(V_1 \ne V_2\) since \(a \in V_1\) but \(a \notin V_2\text{.}\) However, both of these graphs consist of three vertices with edges connecting every pair of vertices. We can draw them as follows:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
-<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-end;"><img src="images/image-13.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-end;"><img src="images/image-14.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel bottom" style="width:33.3333333333333%;"><img src="images/image-13.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel bottom" style="width:33.3333333333333%;"><img src="images/image-14.svg" role="img" class="contained" alt=""></div>
 </div></div>
 <p id="bSG">Clearly we want to say these graphs are basically the same, so while they are not equal, they will be <em class="emphasis">isomorphic</em>. We can rename the vertices of one graph and get the second graph as the result.</p>
 </div></div>
@@ -362,8 +362,8 @@ V_2 = \{u,v,w\} \text{ and }E_2 = \{\{u,v\}, \{u,w\}, \{v,w\}\}.
 f(c)\} = \{b,d\}\text{,}\) but here we have a problem. There is no edge between \(b\) and \(d\) in \(G_2\text{.}\) Thus \(f\) is NOT an isomorphism.</p>
 <p id="Uoh">Not all hope is lost, however. Just because \(f\) is not an isomorphism does not mean that there is no isomorphism at all. We can try again. At this point it might be helpful to draw the graphs to see how they should match up.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:13.5%;margin-right:13.5%;">
-<div class="sbspanel" style="width:31.5068493150685%;justify-content:flex-end;"><img src="images/image-15.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:31.5068493150685%;justify-content:flex-end;"><img src="images/image-16.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel bottom" style="width:31.5068493150685%;"><img src="images/image-15.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel bottom" style="width:31.5068493150685%;"><img src="images/image-16.svg" role="img" class="contained" alt=""></div>
 </div></div>
 <p id="Avq">Alternatively, notice that in \(G_1\text{,}\) the vertex \(a\) is adjacent to every other vertex. In \(G_2\text{,}\) there is also a vertex with this property: \(c\text{.}\) So build the bijection \(g:V_1 \to V_2\) by defining \(g(a) = c\) to start with. Next, where should we send \(b\text{?}\) In \(G_1\text{,}\) the vertex \(b\) is only adjacent to vertex \(a\text{.}\) There is exactly one vertex like this in \(G_2\text{,}\) namely \(d\text{.}\) So let \(g(b) = d\text{.}\) As for the last two, in this example, we have a free choice: let \(g(c) = b\) and \(g(d) = a\) (switching these would be fine as well).</p>
 <p id="gCz">We should check that this really is an isomorphism. It is definitely a bijection. We must make sure that the edges are respected. The four edges in \(G_1\) are</p>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-05T15:03:28-05:00       *-->
+<!--*       on 2021-04-15T11:18:21-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -264,8 +264,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
 <li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
-<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
-<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
 </ul>
 </li>
 <li class="link">
@@ -356,13 +356,16 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">child (in a rooted tree)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-716.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">chordal graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-784.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">chordal graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">chromatic index<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-788.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">chromatic index<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-789.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">chromatic number<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">chromatic number<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-766.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">clique<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-782.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">circuit</div>
+<div class="subindexitem">Euler<span class="indexknowl">, <a href="Apr-21.html#subsubsection-77" class="internal" title="Subsubsection 15.2.1.1: Euler Paths and Circuits">Subsubsection</a></span>
+</div>
+<div class="indexitem">clique<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-783.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">closed formula<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-51.html" title="Assemblage: Closed formula">Assemblage</a></span>
 </div>
@@ -371,7 +374,7 @@ MathJax.Hub.Config({
 <div class="subindexitem">for geometric sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-56.html" title="Assemblage: Geometric Sequences">Assemblage</a></span>
 </div>
 <div class="indexitem">coloring</div>
-<div class="subindexitem">vertices<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">vertices<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-766.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">combination</div>
 <div class="subindexitem">closed formula for<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-44.html" title="Assemblage: Closed formula for \({n \choose k}\)">Assemblage</a></span>
@@ -401,7 +404,13 @@ MathJax.Hub.Config({
 <div class="indexitem">counting</div>
 <div class="subindexitem">edges in a graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/lem-handshake.html" title="Lemma 13.1.2: Handshake Lemma">Lemma</a></span>
 </div>
+<div class="indexitem">cut edge<span class="indexknowl">, <a class="xref" data-knowl="./knowl/definition-7.html" title="Definition 15.2.1">Definition</a></span>
+</div>
+<div class="indexitem">cut vertex<span class="indexknowl">, <a class="xref" data-knowl="./knowl/definition-7.html" title="Definition 15.2.1">Definition</a></span>
+</div>
 <div class="indexitem">cycle</div>
+<div class="subindexitem">Hamilton<span class="indexknowl">, <a href="Apr-21.html#subsubsection-77" class="internal" title="Subsubsection 15.2.1.1: Euler Paths and Circuits">Subsubsection</a> <a class="xref" data-knowl="./knowl/p-830.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="subindexitem">type of graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
 </div>
 </div>
@@ -410,7 +419,7 @@ MathJax.Hub.Config({
 </div>
 <div class="subindexitem">degree sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-659.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">maximum<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">maximum<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-786.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">sum formula<span class="indexknowl">, <a class="xref" data-knowl="./knowl/lem-handshake.html" title="Lemma 13.1.2: Handshake Lemma">Lemma</a></span>
 </div>
@@ -434,13 +443,17 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">equality of graphs<span class="indexknowl">, <a class="xref" data-knowl="./knowl/example-34.html" title="Example 12.3.2">Example</a></span>
 </div>
+<div class="indexitem">Euler circuit<span class="indexknowl">, <a href="Apr-21.html#subsubsection-77" class="internal" title="Subsubsection 15.2.1.1: Euler Paths and Circuits">Subsubsection</a></span>
+</div>
+<div class="indexitem">Euler path<span class="indexknowl">, <a href="Apr-21.html#subsubsection-77" class="internal" title="Subsubsection 15.2.1.1: Euler Paths and Circuits">Subsubsection</a></span>
+</div>
 <div class="indexitem">Euler's formula for planar graphs<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-8.html" title="Theorem 14.2.1: Euler's Formula for Planar Graphs">Theorem</a></span>
 </div>
 <div class="indexitem">existential quantifier<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-7.html" title="Assemblage: Universal and Existential Quantifiers">Assemblage</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-f">
-<div class="indexitem">face (planar graph)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-19.html" title="Investigation 14.2.1">Investigation</a> <a class="xref" data-knowl="./knowl/p-739.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">face (planar graph)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-19.html" title="Investigation 14.2.1">Investigation</a> <a class="xref" data-knowl="./knowl/p-740.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">factorial<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-219.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -463,13 +476,13 @@ MathJax.Hub.Config({
 </div>
 <div class="subindexitem">bipartite<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-669.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">chordal<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-784.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">chordal<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">chromatic index<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-788.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">chromatic index<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-789.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">chromatic number<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/thm-four-color.html" title="Theorem 15.1.2: The Four Color Theorem">Theorem</a></span>
+<div class="subindexitem">chromatic number<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-766.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/thm-four-color.html" title="Theorem 15.1.2: The Four Color Theorem">Theorem</a></span>
 </div>
-<div class="subindexitem">clique<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-782.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">clique<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-783.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">complete<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-651.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
 </div>
@@ -489,20 +502,28 @@ MathJax.Hub.Config({
 </div>
 <div class="subindexitem">isomorphic (precise definition)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-72.html" title="Assemblage: Isomorphic Graphs">Assemblage</a></span>
 </div>
-<div class="subindexitem">maximum degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">matching<span class="indexknowl">, <a href="Apr-23.html#subsubsection-79" class="internal" title="Subsubsection 15.3.1.1: Matching in Bipartite Graphs">Subsubsection</a> <a class="xref" data-knowl="./knowl/p-839.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/assemblage-81.html" title="Assemblage: Matching Condition">Assemblage</a></span>
+</div>
+<div class="subindexitem">maximum degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-786.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">neighbors<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-843.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/assemblage-81.html" title="Assemblage: Matching Condition">Assemblage</a></span>
 </div>
 <div class="subindexitem">path<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
 </div>
-<div class="subindexitem">perfect<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-784.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">perfect<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">subgraph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-73.html" title="Assemblage: Subgraphs">Assemblage</a></span>
 </div>
 <div class="subindexitem">vertex<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-71.html" title="Assemblage: Graph Definition">Assemblage</a></span>
 </div>
-<div class="subindexitem">vertex coloring<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">vertex coloring<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-766.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-h">
+<div class="indexitem">Hamilton cycle<span class="indexknowl">, <a href="Apr-21.html#subsubsection-77" class="internal" title="Subsubsection 15.2.1.1: Euler Paths and Circuits">Subsubsection</a> <a class="xref" data-knowl="./knowl/p-830.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">Hamilton path<span class="indexknowl">, <a href="Apr-21.html#subsubsection-77" class="internal" title="Subsubsection 15.2.1.1: Euler Paths and Circuits">Subsubsection</a> <a class="xref" data-knowl="./knowl/p-830.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">handshake lemma<span class="indexknowl">, <a class="xref" data-knowl="./knowl/lem-handshake.html" title="Lemma 13.1.2: Handshake Lemma">Lemma</a></span>
 </div>
 <div class="indexitem">hypothesis<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-3.html" title="Assemblage: Implications">Assemblage</a></span>
@@ -558,6 +579,8 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">knights and knaves<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-15.html" title="Investigation 11.1.1">Investigation</a></span>
 </div>
+<div class="indexitem">Kruskal's algorithm<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-733.html" title="Paragraph">Paragraph</a></span>
+</div>
 </div>
 <div class="indexletter" id="indexletter-l">
 <div class="indexitem">lattice path<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-196.html" title="Paragraph">Paragraph</a></span>
@@ -572,7 +595,15 @@ MathJax.Hub.Config({
 </div>
 </div>
 <div class="indexletter" id="indexletter-m">
-<div class="indexitem">maximum degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">marriage problem<span class="indexknowl">. <span class="see"><em>See</em> matching</span></span>
+</div>
+<div class="indexitem">matching<span class="indexknowl">, <a href="Apr-23.html#subsubsection-79" class="internal" title="Subsubsection 15.3.1.1: Matching in Bipartite Graphs">Subsubsection</a> <a class="xref" data-knowl="./knowl/p-839.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">matching condition<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-81.html" title="Assemblage: Matching Condition">Assemblage</a></span>
+</div>
+<div class="indexitem">maximum degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-786.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">minimum spanning tree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-733.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">molecular statement<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-9.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -591,11 +622,17 @@ MathJax.Hub.Config({
 <div class="indexitem">negation</div>
 <div class="subindexitem">interaction with quantifiers<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-8.html" title="Assemblage: Quantifiers and Negation">Assemblage</a></span>
 </div>
+<div class="indexitem">neighbors of vertices<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-843.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">neighbors of verties<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-81.html" title="Assemblage: Matching Condition">Assemblage</a></span>
+</div>
 <div class="indexitem">non-planar graph<span class="indexknowl">, <a href="Apr-14.html#subsubsection-74" class="internal" title="Subsubsection 14.2.1.2: Non-planar graphs">Subsubsection</a></span>
 </div>
 <div class="subindexitem">\(K_{3,3}\)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-10.html" title="Theorem 14.2.3">Theorem</a></span>
 </div>
 <div class="subindexitem">\(K_5\)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-9.html" title="Theorem 14.2.2">Theorem</a></span>
+</div>
+<div class="indexitem">NP-complete<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-834.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-p">
@@ -604,9 +641,15 @@ MathJax.Hub.Config({
 <div class="indexitem">Pascal's triangle<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-208.html" title="Paragraph">Paragraph</a> <a class="xref" data-knowl="./knowl/li-488.html" title="Item 4">Item</a></span>
 </div>
 <div class="indexitem">path</div>
+<div class="subindexitem">Euler<span class="indexknowl">, <a href="Apr-21.html#subsubsection-77" class="internal" title="Subsubsection 15.2.1.1: Euler Paths and Circuits">Subsubsection</a></span>
+</div>
+<div class="subindexitem">Hamilton<span class="indexknowl">, <a href="Apr-21.html#subsubsection-77" class="internal" title="Subsubsection 15.2.1.1: Euler Paths and Circuits">Subsubsection</a> <a class="xref" data-knowl="./knowl/p-830.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="subindexitem">type of graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/paragraphs-1.html" title="Paragraphs: Named Graphs">Paragraphs</a></span>
 </div>
-<div class="indexitem">perfect graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-784.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">perfect graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-785.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">perfect matching<span class="indexknowl">. <span class="see"><em>See</em> matching</span></span>
 </div>
 <div class="indexitem">permutation<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-43.html" title="Assemblage: \(k\)-permutations of \(n\) elements">Assemblage</a></span>
 </div>
@@ -614,7 +657,7 @@ MathJax.Hub.Config({
 </div>
 <div class="subindexitem">vs combination<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-229.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">planar graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-19.html" title="Investigation 14.2.1">Investigation</a> <a class="xref" data-knowl="./knowl/p-738.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">planar graph<span class="indexknowl">, <a class="xref" data-knowl="./knowl/investigation-19.html" title="Investigation 14.2.1">Investigation</a> <a class="xref" data-knowl="./knowl/p-739.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">chromatic number of<span class="indexknowl">, <a class="xref" data-knowl="./knowl/thm-four-color.html" title="Theorem 15.1.2: The Four Color Theorem">Theorem</a></span>
 </div>
@@ -629,6 +672,8 @@ MathJax.Hub.Config({
 <div class="indexitem">power set<span class="indexknowl">, <a class="xref" data-knowl="./knowl/li-94.html" title="Item: \(\pow(A)\)">Item</a> <a class="xref" data-knowl="./knowl/li-94.html" title="Item: \(\pow(A)\)">Item</a> <a class="xref" data-knowl="./knowl/assemblage-13.html" title="Assemblage: Subset and Power Set">Assemblage</a></span>
 </div>
 <div class="indexitem">powers of 2<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-commonsequences.html" title="Assemblage: Common Sequences">Assemblage</a> <a class="xref" data-knowl="./knowl/example-10.html" title="Example 9.1.2">Example</a></span>
+</div>
+<div class="indexitem">Prim's algorithm<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-733.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">prime numbers<span class="indexknowl">, <a class="xref" data-knowl="./knowl/example-23.html" title="Example 10.3.1">Example</a></span>
 </div>
@@ -736,6 +781,8 @@ MathJax.Hub.Config({
 </div>
 <div class="indexitem">spanning tree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-spanningtree.html" title="Assemblage: Spanning tree">Assemblage</a></span>
 </div>
+<div class="subindexitem">minimum<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-733.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">square numbers<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-commonsequences.html" title="Assemblage: Common Sequences">Assemblage</a></span>
 </div>
 <div class="indexitem">stars and bars</div>
@@ -752,6 +799,11 @@ MathJax.Hub.Config({
 </div>
 <div class="indexletter" id="indexletter-t">
 <div class="indexitem">there exists (quantifier)<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-7.html" title="Assemblage: Universal and Existential Quantifiers">Assemblage</a></span>
+</div>
+<div class="indexitem">tour, Euler<span class="indexknowl">. <span class="see"><em>See</em> Euler circuit</span></span>
+</div>
+<div class="indexitem">trail</div>
+<div class="subindexitem">Euler<span class="indexknowl"> <span class="see">(<em>see</em> Euler path)</span></span>
 </div>
 <div class="indexitem">tree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-75.html" title="Assemblage: Definition of a Tree">Assemblage</a></span>
 </div>
@@ -777,13 +829,18 @@ MathJax.Hub.Config({
 <div class="indexletter" id="indexletter-v">
 <div class="indexitem">vertex<span class="indexknowl">, <a class="xref" data-knowl="./knowl/assemblage-71.html" title="Assemblage: Graph Definition">Assemblage</a></span>
 </div>
-<div class="indexitem">vertex coloring<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-765.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">vertex coloring<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-766.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">vertex degree<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-652.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">degree sequence<span class="indexknowl">, <a class="xref" data-knowl="./knowl/p-659.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Vizing's Theorem<span class="indexknowl">, <a class="xref" data-knowl="./knowl/theorem-15.html" title="Theorem 15.1.6: Vizing's Theorem">Theorem</a></span>
+</div>
+</div>
+<div class="indexletter" id="indexletter-w">
+<div class="indexitem">walk</div>
+<div class="subindexitem">Euler<span class="indexknowl"> <span class="see">(<em>see</em> Euler path)</span></span>
 </div>
 </div></section></div></main>
 </div>

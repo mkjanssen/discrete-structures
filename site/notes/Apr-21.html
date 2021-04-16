@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-05T15:03:24-05:00       *-->
+<!--*       on 2021-04-15T11:18:17-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Apr. 21</title>
+<title>Apr. 21: Euler Paths and Circuits</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -264,8 +264,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
 <li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
-<li><a href="Apr-21.html" data-scroll="Apr-21" class="active">Apr. 21</a></li>
-<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21" class="active">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
 </ul>
 </li>
 <li class="link">
@@ -290,8 +290,88 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Apr-21"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">15.2</span> <span class="title">Apr. 21</span>
-</h2></section></div></main>
+<span class="type">Section</span> <span class="codenumber">15.2</span> <span class="title">Apr. 21: Euler Paths and Circuits</span>
+</h2>
+<section class="introduction" id="introduction-43"><article class="assemblage assemblage-like" id="assemblage-80"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
+<p id="p-799">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-656">What is an Euler path? An Euler circuit?</li>
+<li id="li-657">What is a Hamiltonian path? Circuit?</li>
+</ol></p></article></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.2.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-800">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_paths.html" target="_blank">Section 4.5</a> of the book. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-77"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">15.2.1.1</span> <span class="title">Euler Paths and Circuits</span>
+</h4>
+<article class="investigation project-like" id="jqb"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">15.2.1</span><span class="period">.</span>
+</h6>
+<p id="ikI">An <dfn class="terminology">Euler path</dfn>, in a graph or multigraph, is a walk through the graph which uses every edge exactly once. An <dfn class="terminology">Euler circuit</dfn> is an Euler path which starts and stops at the same vertex. Our goal is to find a quick way to check whether a graph (or multigraph) has an Euler path or circuit.</p>
+<ol class="decimal">
+<li id="Uhd">
+<p id="YQW">Which of the graphs below have Euler paths? Which have Euler circuits?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
+<div class="sbspanel middle" style="width:18.2741116751269%;"><img src="images/image-30.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel middle" style="width:18.2741116751269%;"><img src="images/image-31.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel middle" style="width:36.5482233502538%;"><img src="images/image-32.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel middle" style="width:22.3350253807107%;"><img src="images/image-33.svg" role="img" class="contained" alt=""></div>
+</div></div>
+</li>
+<li id="Aom"><p id="EYf">List the degrees of each vertex of the graphs above. Is there a connection between degrees and the existence of Euler paths and circuits?</p></li>
+<li id="gvv"><p id="lfo">Is it possible for a graph with a degree 1 vertex to have an Euler circuit? If so, draw one. If not, explain why not. What about an Euler path?</p></li>
+<li id="MCE"><p id="Rmx">What if every vertex of the graph has degree 2. Is there an Euler path? An Euler circuit? Draw some graphs.</p></li>
+<li id="sJN">
+<p id="xtG">Below is <em class="emphasis">part</em> of a graph. Even though you can only see some of the vertices, can you deduce whether the graph will have an Euler path or circuit?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:23%;margin-right:23%;"><div class="sbspanel top" style="width:100%;"><img src="images/image-34.svg" role="img" class="contained" alt=""></div></div></div>
+</li>
+</ol></article><p id="p-807">There is a nice result which determines when a graph has a Euler path or circuit. To prove it, we need a bit more background.</p>
+<article class="definition definition-like" id="definition-7"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">15.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-808">Let \(G\) be a graph. A vertex \(v\in V(G)$\) is called a <dfn class="terminology">cut vertex of \(G\)</dfn> provided \(G\setminus v\) (that is, \(G\) with \(v\) and any incident edges removed) has more components than \(G\text{.}\)</p>
+<p id="p-809">Similarly, an edge \(e\in E(G)\) is called a <dfn class="terminology">cut edge of \(G\)</dfn> provided \(G\setminus e\) has more components than \(G\text{.}\)</p></article><p id="p-810">In other words, cut vertices an edges disconnect existing connected components of the graph.</p>
+<article class="lemma theorem-like" id="lem-even-deg-cut-edge"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-811">Let \(G\) be a connected graph all of whose vertices have even degree. Then no edge of \(G\) is a cut edge.</p></article><article class="lemma theorem-like" id="lem-two-odd-cut-edge"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-813">Let \(G\) be a connected graph with exactly two vertices of odd degree. Let \(a\) be a vertex of odd degree and suppose \(d(a)\ne 1\text{.}\) Then at least one of the edges incident with \(a\) is not a cut edge.</p></article><article class="theorem theorem-like" id="theorem-16"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-817">Let \(G\) be a connected graph. If every vertex of \(G\) has even degree, then for any \(v\in V(G)\text{,}\) there is an Euler circuit that begins and ends at \(v\text{.}\) Alternatively, if \(G\) has exactly two vertices of odd degree, say \(a\) and \(b\text{,}\) there is an Euler path that begins at \(a\) and ends at \(b\text{.}\)</p></article></section><section class="subsubsection" id="subsubsection-78"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">15.2.1.2</span> <span class="title">Hamilton Paths</span>
+</h4>
+<p id="XLD"> Suppose you wanted to tour Königsberg in such a way that you visit each land mass (the two islands and both banks) exactly once. This can be done. In graph theory terms, we are asking whether there is a path which visits every vertex exactly once. Such a path is called a <dfn class="terminology">Hamilton path</dfn> (or <dfn class="terminology">Hamiltonian path</dfn>). We could also consider <dfn class="terminology">Hamilton cycles</dfn>, which are Hamilton paths which start and stop at the same vertex.</p>
+<article class="example example-like" id="mkH"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.2.5</span><span class="period">.</span>
+</h6>
+<p id="Cdz">Determine whether the graphs below have a Hamilton path.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel top" style="width:28.5714285714286%;"><img src="images/image-35.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel top" style="width:28.5714285714286%;"><img src="images/image-36.svg" role="img" class="contained" alt=""></div>
+</div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Pxk" id="Pxk"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Pxk"><div class="solution solution-like">
+<p id="pPh">The graph on the left has a Hamilton path (many different ones, actually), as shown here:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel top" style="width:100%;"><img src="images/image-37.svg" role="img" class="contained" alt=""></div></div></div>
+<p id="VWq">The graph on the right does not have a Hamilton path. You would need to visit each of the “outside” vertices, but as soon as you visit one, you get stuck. Note that this graph does not have an Euler path, although there are graphs with Euler paths but no Hamilton paths.</p>
+</div></div>
+</div></article><p id="DSM"> It appears that finding Hamilton paths would be easier because graphs often have more edges than vertices, so there are fewer requirements to be met. However, nobody knows whether this is true. There is no known simple test for whether a graph has a Hamilton path. For small graphs this is not a problem, but as the size of the graph grows, it gets harder and harder to check wither there is a Hamilton path. In fact, this is an example of a question which as far as we know is too difficult for computers to solve; it is an example of a problem which is NP-complete.</p></section></section><section class="subsection" id="subsection-106"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.2.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-37"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">15.2.6</span><span class="period">.</span>
+</h6></article></section><section class="subsection" id="subsection-107"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.2.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-667">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-668">Watch the screencast above.</li>
+<li id="li-669">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-670">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
 </div>
 </body>
 </html>

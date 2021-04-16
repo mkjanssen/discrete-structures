@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-05T15:03:41-05:00       *-->
+<!--*       on 2021-04-15T11:18:30-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Now consider how many edges surround each face. Each face must be surrounded by at least 3 edges. Let \(B\) be the total number of <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">boundaries</em> around all the faces in the graph. Thus we have that \(3f \le B\text{.}\) But also \(B = 2e\text{,}\) since each edge is used as a boundary exactly twice. Putting this together we get</p>
+<p>The proof is by contradiction. So assume that \(K_5\) is planar. Then the graph must satisfy Euler's formula for planar graphs. \(K_5\) has 5 vertices and 10 edges, so we get</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-3f \le 2e\text{.}
+5 - 10 + f = 2\text{,}
 \end{equation*}
 </div>
-<span class="incontext"><a href="Apr-14.html#SGl">in-context</a></span>
+<p class="continuation">which says that if the graph is drawn without any edges crossing, there would be \(f = 7\) faces.</p>
+<span class="incontext"><a href="Apr-14.html#mzc">in-context</a></span>
 </body>
 </html>

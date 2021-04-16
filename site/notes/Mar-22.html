@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-05T15:03:21-05:00       *-->
+<!--*       on 2021-04-15T11:18:15-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -264,8 +264,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
 <li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
-<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21</a></li>
-<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
 </ul>
 </li>
 <li class="link">
@@ -315,7 +315,7 @@ MathJax.Hub.Config({
 <p id="p-537">Mathematical propositions are often stated in conditional or biconditional form. However, we have seen that they can be more complicated than this. The premises or conclusion (or both!) of the proposition could have multiple substatements joined by connectives. How do we know if a given complex proposition is true? Formally, we decide the truth value of the proposition purely in terms of the truth values of the premises, conclusions, and the structure of the connectives joining them. Thus, it is helpful to understand the truth values of the logical connectives themselves.</p>
 <p id="meq">Since the truth value of a statement is completely determined by the truth values of its parts and how they are connected, all you really need to know is the truth tables for each of the logical connectives. Here they are:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
-<div class="sbspanel fixed-width" style="width:21.0526315789474%;justify-content:flex-start;"><table class="tabular" id="zcC">
+<div class="sbspanel fixed-width top" style="width:21.0526315789474%;"><table class="tabular" id="zcC">
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
@@ -342,7 +342,7 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">F</td>
 </tr>
 </table></div>
-<div class="sbspanel fixed-width" style="width:21.0526315789474%;justify-content:flex-start;"><table class="tabular" id="fjL">
+<div class="sbspanel fixed-width top" style="width:21.0526315789474%;"><table class="tabular" id="fjL">
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
@@ -369,7 +369,7 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">F</td>
 </tr>
 </table></div>
-<div class="sbspanel fixed-width" style="width:21.0526315789474%;justify-content:flex-start;"><table class="tabular" id="LqU">
+<div class="sbspanel fixed-width top" style="width:21.0526315789474%;"><table class="tabular" id="LqU">
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
@@ -396,7 +396,7 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">T</td>
 </tr>
 </table></div>
-<div class="sbspanel fixed-width" style="width:21.0526315789474%;justify-content:flex-start;"><table class="tabular" id="ryd">
+<div class="sbspanel fixed-width top" style="width:21.0526315789474%;"><table class="tabular" id="ryd">
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
@@ -425,7 +425,7 @@ MathJax.Hub.Config({
 </table></div>
 </div></div>
 <p id="Slz">The truth table for negation looks like this:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="XFm">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="XFm">
 <tr>
 <td class="c m b1 r2 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r0 l0 t0 lines">\(\neg P\)</td>
@@ -448,7 +448,7 @@ MathJax.Hub.Config({
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-QRL" id="QRL"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-QRL"><div class="solution solution-like">
 <p id="mzP">Note that this statement is not \(\neg(P \vee Q)\text{,}\) the negation belongs to \(P\) alone. Here is the truth table:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="DMv">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="DMv">
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
@@ -513,7 +513,7 @@ MathJax.Hub.Config({
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">
 <em class="emphasis">modus tollendo tollens</em>, “mode that by denying denies”</div></div>
 <article class="assemblage assemblage-like" id="assemblage-65"><h6 class="heading"><span class="title">Modus Ponens.</span></h6>
-<p id="p-549"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="Iwo">
+<p id="p-549"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="Iwo">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">\(P \imp Q\)</td>
@@ -527,7 +527,7 @@ MathJax.Hub.Config({
 <td class="c m b0 r0 l0 t0 lines">\(Q\)</td>
 </tr>
 </table></div></div></div></p></article><article class="assemblage assemblage-like" id="assemblage-66"><h6 class="heading"><span class="title">Modus Tollens.</span></h6>
-<p id="p-550"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="Iwo">
+<p id="p-550"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="Iwo">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">\(P \imp Q\)</td>
@@ -545,7 +545,7 @@ MathJax.Hub.Config({
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">11.1.3</span><span class="period">.</span>
 </h6>
 <p id="HcA">Show that</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="UKG">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="UKG">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">\(P \imp Q\)</td>
@@ -563,7 +563,7 @@ MathJax.Hub.Config({
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-VBE" id="VBE"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-VBE"><div class="solution solution-like">
 <p id="opc">We make a truth table which contains all the lines of the argument form:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="ARP">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="ARP">
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
@@ -607,7 +607,7 @@ MathJax.Hub.Config({
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">11.1.4</span><span class="period">.</span>
 </h6>
 <p id="TqS">Decide whether</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="gYY">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="gYY">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">\(P \imp R\)</td>
@@ -629,7 +629,7 @@ MathJax.Hub.Config({
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-BIN" id="BIN"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-BIN"><div class="solution solution-like">
 <p id="gKD">Let's make a truth table containing all four statements.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="Ngh">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="Ngh">
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(Q\)</td>
@@ -705,7 +705,7 @@ MathJax.Hub.Config({
 </table></div></div></div>
 <p id="MRM">Look at the second to last row. Here all three premises of the argument are true, but the conclusion is false. Thus this is not a valid deduction rule.</p>
 <p id="sYV">While we have the truth table in front of us, look at rows 1, 3, and 5. These are the only rows in which all of the statements \(P \imp R\text{,}\) \(Q \imp R\text{,}\) and \(P\vee Q\) are true. It also happens that \(R\) is true in these rows as well. Thus we have discovered a new deduction rule we know <em class="emphasis">is</em> valid:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="tnq">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="tnq">
 <tr>
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines">\(P \imp R\)</td>
@@ -767,7 +767,7 @@ MathJax.Hub.Config({
 <p id="Zge">These statements are NOT logically equivalent. To see this, we should provide an interpretation of the predicate \(P(x,y)\) which makes one of the statements true and the other false.</p>
 <p id="Fnn">Let \(P(x,y)\) be the predicate \(x \lt y\text{.}\) It is true, in the natural numbers, that for all \(x\) there is some \(y\) greater than that \(x\) (since there are infinitely many numbers). However, there is not a natural number \(y\) which is greater than every number \(x\text{.}\) Thus it is possible for \(\forall x \exists y P(x,y)\) to be true while \(\exists y \forall x P(x,y)\) is false.</p>
 <p id="luw">We cannot do the reverse of this though. If there is some \(y\) for which every \(x\) satisfies \(P(x,y)\text{,}\) then certainly for every \(x\) there is some \(y\) which satisfies \(P(x,y)\text{.}\) The first is saying we can find one \(y\) that works for every \(x\text{.}\) The second allows different \(y\)'s to work for different \(x\)'s, but there is nothing preventing us from using the same \(y\) that work for every \(x\text{.}\) In other words, while we don't have logical equivalence between the two statements, we do have a valid deduction rule:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="Zuz">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="Zuz">
 <tr>
 <td class="c m b1 r0 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines">\(\exists y \forall x P(x,y)\)</td>
