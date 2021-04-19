@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-19T14:52:34-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Apr. 26: Reading Discussion and Generating Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Learning Guides</span></a></h1>
+<p class="byline">Mike Janssen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Week-16.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Week-16.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Apr-28.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Week-16.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Week-16.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Apr-28.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-01.html" data-scroll="Week-01"><span class="codenumber">1</span> <span class="title">Week 1: Jan. 15</span></a><ul><li><a href="Jan-15.html" data-scroll="Jan-15">Jan. 15: Course Intro/Statements</a></li></ul>
+</li>
+<li class="link">
+<a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
+<li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
+<li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Negations, Sets and Relationships</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-03.html" data-scroll="Week-03"><span class="codenumber">3</span> <span class="title">Week 3: Jan. 25-29</span></a><ul>
+<li><a href="Jan-25.html" data-scroll="Jan-25">Jan. 25: Operations on Sets</a></li>
+<li><a href="Jan-27.html" data-scroll="Jan-27">Jan. 27: Set Operations, Relations, and Equivalence Relations</a></li>
+<li><a href="Jan-29.html" data-scroll="Jan-29">Jan. 29: Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-05.html" data-scroll="Week-05"><span class="codenumber">5</span> <span class="title">Week 5: Feb. 8-12</span></a><ul>
+<li><a href="Feb-08.html" data-scroll="Feb-08">Feb. 8: The Additive and Multiplicative Principles</a></li>
+<li><a href="Feb-10.html" data-scroll="Feb-10">Feb. 10: More Counting with Sets and PIE</a></li>
+<li><a href="Feb-12.html" data-scroll="Feb-12">Feb. 12: Binomial Coefficients I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-06.html" data-scroll="Week-06"><span class="codenumber">6</span> <span class="title">Week 6: Feb. 15-19</span></a><ul>
+<li><a href="Feb-17.html" data-scroll="Feb-17">Feb. 17: Bionomial Coefficients II</a></li>
+<li><a href="Feb-19.html" data-scroll="Feb-19">Feb. 19: Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-07.html" data-scroll="Week-07"><span class="codenumber">7</span> <span class="title">Week 7: Feb. 22-26</span></a><ul>
+<li><a href="Feb-22.html" data-scroll="Feb-22">Feb. 22: Combinatorial Proofs I</a></li>
+<li><a href="Feb-24.html" data-scroll="Feb-24">Feb. 24: Reading Discussion and Combinatorial Proofs II</a></li>
+<li><a href="Feb-26.html" data-scroll="Feb-26">Feb. 26: Stars and Bars</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-08.html" data-scroll="Week-08"><span class="codenumber">8</span> <span class="title">Week 8: Mar. 1-5</span></a><ul>
+<li><a href="Mar-01.html" data-scroll="Mar-01">Mar. 1: Advanced PIE</a></li>
+<li><a href="Mar-03.html" data-scroll="Mar-03">Mar. 3: Review and Catchup</a></li>
+<li><a href="Mar-05.html" data-scroll="Mar-05">Mar. 5: Exam 1</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-09.html" data-scroll="Week-09"><span class="codenumber">9</span> <span class="title">Week 9: Mar. 8-12</span></a><ul>
+<li><a href="Mar-08.html" data-scroll="Mar-08">Mar. 8: Describing Sequences</a></li>
+<li><a href="Mar-10.html" data-scroll="Mar-10">Mar. 10: Arithmetic and Geometric Sequences</a></li>
+<li><a href="Mar-12.html" data-scroll="Mar-12">Mar. 12: Polynomial Fitting</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15: Recurrence Relations</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17: Induction I</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19: Induction II</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22: Propositional Logic I</a></li>
+<li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26: Direct Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29: Proof by Contradiction</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31: Other Types of Proof</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 2: Intro to Graph Theory</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5: Further Background in Graph Theory</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09: Trees I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12: Trees II</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14: Planarity</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16: Independent Portfolio Work Day</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-16.html" data-scroll="Week-16"><span class="codenumber">16</span> <span class="title">Week 16: Apr. 26-Apr. 30</span></a><ul>
+<li><a href="Apr-26.html" data-scroll="Apr-26" class="active">Apr. 26: Reading Discussion and Generating Functions</a></li>
+<li><a href="Apr-28.html" data-scroll="Apr-28">Apr. 28</a></li>
+<li><a href="Apr-30.html" data-scroll="Apr-30">Apr. 30</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link">
+<a href="appendix-counting.html" data-scroll="appendix-counting"><span class="codenumber">A</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-45.html" data-scroll="section-45">Additive and Multiplicative Principles</a></li>
+<li><a href="section-46.html" data-scroll="section-46">PIE</a></li>
+<li><a href="section-47.html" data-scroll="section-47">Binomial Coefficients</a></li>
+<li><a href="section-48.html" data-scroll="section-48">Permutations</a></li>
+<li><a href="section-49.html" data-scroll="section-49">Stars and Bars</a></li>
+<li><a href="section-50.html" data-scroll="section-50">Anagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Apr-26"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">16.1</span> <span class="title">Apr. 26: Reading Discussion and Generating Functions</span>
+</h2>
+<section class="subsection" id="subsection-111"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">16.1.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-850">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_addtops-genfun.html" target="_blank">Section 5.1</a> of the book. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-80"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">16.1.1.1</span> <span class="title">Intro to Generating Functions</span>
+</h4>
+<article class="example example-like" id="sIN"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">16.1.1</span><span class="period">.</span>
+</h6>
+<p id="IBF">What sequence is represented by the generating series \(3 + 8x^2 + x^3 + \frac{x^5}{7} + 100x^6 + \cdots\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-EXf" id="EXf"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-EXf"><div class="solution solution-like">
+<p id="pOh">We just read off the coefficients of each \(x^n\) term. So \(a_0 = 3\) since the coefficient of \(x^0\) is 3 (\(x^0 = 1\) so this is the constant term). What is \(a_1\text{?}\) It is NOT 8, since 8 is the coefficient of \(x^2\text{,}\) so 8 is the term \(a_2\) of the sequence. To find \(a_1\) we need to look for the coefficient of \(x^1\) which in this case is 0. So \(a_1 = 0\text{.}\) Continuing, we have \(a_2 = 8\text{,}\) \(a_3 = 1\text{,}\) \(a_4 = 0\text{,}\) and \(a_5 = \frac{1}{7}\text{.}\) So we have the sequence</p>
+<div class="displaymath">
+\begin{equation*}
+3, 0, 8, 1, 0, \frac{1}{7}, 100, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="VVq">Note that when discussing generating functions, we always start our sequence with \(a_0\text{.}\)</p>
+</div></div>
+</div></article><p id="RVr">Now you might very naturally ask why we would do such a thing. One reason is that encoding a sequence with a power series helps us keep track of which term is which in the sequence. For example, if we write the sequence \(1, 3, 4, 6, 9, \ldots, 24, 41,\ldots\) it is impossible to determine which term \(24\) is (even if we agreed that the first term was supposed to be \(a_0\)). However, if we wrote the generating series instead, we would have \(1 + 3x + 4x^2 + 6x^3 + 9x^4 + \cdots + 24 x^{17} + 41 x^{18} + \cdots\text{.}\) Now it is clear that 24 is the 17th term of the sequence (that is, \(a_{17} = 24\)). Of course to get this benefit we could have displayed our sequence in any number of ways, perhaps \(\fbox{1}_0 \fbox{3}_1 \fbox{4}_2 \fbox{6}_3 \fbox{9}_4 \cdots \fbox{24}_{17}\fbox{41}_{18}\cdots\text{,}\) but we do not do this. The reason is that the generating series looks like an ordinary power series (although we are interpreting it differently) so we can do things with it that we ordinarily do with power series such as write down what it converges to.</p>
+<p id="ycA">For example, from calculus we know that the power series \(1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \cdots + \frac{x^n}{n!} + \cdots\) converges to the function \(e^x\text{.}\) So we can use \(e^x\) as a way of talking about the sequence of coefficients of the power series for \(e^x\text{.}\) When we write down a nice compact function which has an infinite power series that we view as a generating series, then we call that function a <em class="emphasis">generating function</em>. In this example, we would say</p>
+<div class="displaymath">
+\begin{equation*}
+1, 1, \frac{1}{2}, \frac{1}{6}, \frac{1}{24}, \ldots, \frac{1}{n!}, \ldots \mbox{ has generating function }  e^x\text{.}
+\end{equation*}
+</div></section><section class="subsubsection" id="subsubsection-81"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">16.1.1.2</span> <span class="title">Building Generating Functions</span>
+</h4>
+<p id="qyb">The \(e^x\) example is very specific. We have a rather odd sequence, and the only reason we know its generating function is because we happen to know the Taylor series for \(e^x\text{.}\) Our goal now is to gather some tools to build the generating function of a particular given sequence.</p>
+<p id="WFk">Let's see what the generating functions are for some very simple sequences. The simplest of all: 1, 1, 1, 1, 1, …. What does the <em class="emphasis">generating series</em> look like? It is simply \(1 + x + x^2 + x^3 + x^4 + \cdots\text{.}\) Now, can we find a closed formula for this power series? Yes! This particular series is really just a geometric series with common ratio \(x\text{.}\) So if we use our “multiply, shift and subtract” technique from <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_seq-arithgeom" missing or not unique]</code>, we have</p>
+<div class="displaymath">
+\begin{align*}
+S \amp  = 1 + x + x^2 + x^3 + \cdots\\
+\underline{-\qquad xS} \amp  \underline{\,\, = ~~~~~~ x + x^2 + x^3 + x^4 + \cdots}\\
+(1-x)S \amp  = 1
+\end{align*}
+</div>
+<p id="CMt">Therefore we see that</p>
+<div class="displaymath">
+\begin{equation*}
+1 + x + x^2 + x^3 \cdots = \dfrac{1}{1-x}\text{.}
+\end{equation*}
+</div>
+<p id="iTC">You might remember from calculus that this is only true on the interval of convergence for the power series, in this case when \(|x| \lt 1\text{.}\) That is true for us, but we don't care. We are never going to plug anything in for \(x\text{,}\) so as long as there is some value of \(x\) for which the generating function and generating series agree, we are happy. And in this case we are happy.</p>
+<article class="assemblage assemblage-like" id="bKC"><h6 class="heading"><span class="title">\(1,1,1,\ldots\).</span></h6>
+<p id="ejJ">The generating function for \(1,1,1,1,1,1,\ldots\) is \(\dfrac{1}{1-x}\)</p></article><p id="PaL">Let's use this basic generating function to find generating functions for more sequences. What if we replace \(x\) by \(-x\text{.}\) We get</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1+x} = 1 - x + x^2 - x^3 + \cdots \mbox{ which generates }  1, -1, 1, -1, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="vhU">If we replace \(x\) by \(3x\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-3x} = 1 + 3x + 9x^2 + 27x^3 + \cdots \mbox{ which generates }  1, 3, 9, 27, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="bpd">By replacing the \(x\) in \(\frac{1}{1-x}\) we can get generating functions for a variety of sequences, but not all. For example, you cannot plug in anything for \(x\) to get the generating function for \(2,2,2,2, \ldots\text{.}\) However, we are not lost yet. Notice that each term of \(2, 2, 2, 2, \ldots\) is the result of multiplying the terms of \(1, 1, 1, 1, \ldots\) by the constant 2. So multiply the generating function by 2 as well.</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{2}{1-x} = 2 + 2x + 2x^2 + 2x^3 + \cdots \mbox{ which generates }  2, 2, 2, 2, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="Hwm">Similarly, to find the generating function for the sequence \(3, 9, 27, 81, \ldots\text{,}\) we note that this sequence is the result of multiplying each term of \(1, 3, 9, 27, \ldots\) by 3. Since we have the generating function for \(1, 3, 9, 27, \ldots\) we can say</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{3}{1-3x} = 3\cdot 1 + 3\cdot 3x + 3\cdot 9x^2 + 3\cdot 27x^3 + \cdots \mbox{ which generates }  3, 9, 27, 81, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="nDv">What about the sequence \(2, 4, 10, 28, 82, \ldots\text{?}\) Here the terms are always 1 more than powers of 3. That is, we have added the sequences \(1,1,1,1,\ldots\) and \(1,3,9, 27,\ldots\) term by term. Therefore we can get a generating function by adding the respective generating functions:</p>
+<div class="displaymath">
+\begin{align*}
+2 + 4x + 10x^2 + 28x^3 + \cdots  \amp  = (1 + 1) + (1 + 3)x + (1 + 9)x^2 + (1 + 27)x^3 + \cdots\\
+\amp  = 1 + x + x^2 + x^3 + \cdots + 1 + 3x + 9x^2 + 27x^3 + \cdots\\
+\amp  = \frac{1}{1-x} + \frac{1}{1-3x}
+\end{align*}
+</div>
+<p id="TKE">The fun does not stop there: if we replace \(x\) in our original generating function by \(x^2\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-x^2} = 1 + x^2  + x^4 + x^6\cdots \mbox{ which generates }  1, 0, 1, 0, 1, 0, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="zRN">How could we get \(0,1,0,1,0,1,\ldots\text{?}\) Start with the previous sequence and <em class="emphasis">shift</em> it over by 1. But how do you do this? To see how shifting works, let's first try to get the generating function for the sequence \(0, 1, 3, 9, 27, \ldots\text{.}\) We know that \(\frac{1}{1-3x} = 1 + 3x + 9x^2 + 27x^3 + \cdots\text{.}\) To get the zero out front, we need the generating series to look like \(x + 3x^2 + 9x^3 + 27x^4+ \cdots\) (so there is no constant term). Multiplying by \(x\) has this effect. So the generating function for \(0, 1, 3, 9, 27, \ldots\) is \(\frac{x}{1-3x}\text{.}\) This will also work to get the generating function for \(0,1,0,1,0,1,\ldots\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{x}{1-x^2} = x + x^3 + x^5 + \cdots \mbox{ which generates }  0, 1, 0, 1, 0 , 1 \ldots\text{.}
+\end{equation*}
+</div>
+<p id="fYW">What if we add the sequences \(1,0,1,0,1,0,\ldots\) and \(0,1,0,1,0,1,\ldots\) term by term? We should get \(1,1,1,1,1,1\ldots\text{.}\) What happens when we add the generating functions? It works (try it)!</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-x^2} + \frac{x}{1-x^2} = \frac{1}{1-x}\text{.}
+\end{equation*}
+</div>
+<p id="Mgf">Here's a sneaky one: what happens if you take the <em class="emphasis">derivative</em> of \(\frac{1}{1-x}\text{?}\) We get \(\frac{1}{(1-x)^2}\text{.}\) On the other hand, if we differentiate term by term in the power series, we get \((1 + x + x^2 + x^3 + \cdots)' = 1 + 2x + 3x^2 + 4x^3 + \cdots\) which is the generating series for \(1, 2, 3, 4, \ldots\text{.}\) This says</p>
+<article class="assemblage assemblage-like" id="HRL"><h6 class="heading"><span class="title">\(1,2,3,\ldots\).</span></h6>
+<p id="KqS">The generating function for \(1, 2, 3, 4, 5, \ldots\) is \(\d\frac{1}{(1-x)^2}\text{.}\)</p></article><p id="sno">Take a second derivative: \(\frac{2}{(1-x)^3} = 2 + 6x + 12x^2 + 20x^3 + \cdots\text{.}\) So \(\frac{1}{(1-x)^3} = 1 + 3x + 6x^2 + 10x^3 + \cdots\) is a generating function for the triangular numbers, \(1,3,6,10\ldots\) (although here we have \(a_0 = 1\) while \(T_0 = 0\) usually).</p></section><section class="subsubsection" id="subsubsection-82"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">16.1.1.3</span> <span class="title">Differencing</span>
+</h4>
+<p id="Yux">We have seen how to find generating functions from \(\frac{1}{1-x}\) using multiplication (by a constant or by \(x\)), substitution, addition, and differentiation. To use each of these, you must notice a way to transform the sequence \(1,1,1,1,1\ldots\) into your desired sequence. This is not always easy. It is also not really the way we have analyzed sequences. One thing we have considered often is the sequence of differences between terms of a sequence. This will turn out to be helpful in finding generating functions as well. The sequence of differences is often simpler than the original sequence. So if we know a generating function for the differences, we would like to use this to find a generating function for the original sequence.</p>
+<p id="EBG">For example, consider the sequence \(2, 4, 10, 28, 82, \ldots\text{.}\) How could we move to the sequence of first differences: \(2, 6, 18, 54,\ldots\text{?}\) We want to subtract 2 from the 4, 4 from the 10, 10 from the 28, and so on. So if we subtract (term by term) the sequence \(0, 2, 4, 10, 28,\ldots\) from \(2, 4, 10, 28\ldots\text{,}\) we will be set. We can get the generating function for \(0,2,4,10,28,\ldots\) from the generating function for \(2,4,10,28\ldots\) by multiplying by \(x\text{.}\) Use \(A\) to represent the generating function for \(2, 4, 10, 28, 82, \ldots\) Then:</p>
+<div class="displaymath">
+\begin{align*}
+A \amp  = 2 + 4x + 10x^2 +28x^3 + 82x^4 + \cdots\\
+\underline{-\qquad xA} \amp  \underline{\,\,= 0 + 2x + 4x^2 + 10x^3 + 28 x^4 + 82x^5 + \cdots}\\
+(1-x)A \amp  = 2 + 2x + 6x^2 + 18x^3 + 54x^4 + \cdots
+\end{align*}
+</div>
+<p id="kIP">While we don't get exactly the sequence of differences, we do get something close. In this particular case, we already know the generating function \(A\) (we found it in the previous section) but most of the time we will use this differencing technique to <em class="emphasis">find</em> \(A\text{:}\) if we have the generating function for the sequence of differences, we can then solve for \(A\text{.}\)</p>
+<article class="example example-like" id="nYU"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">16.1.2</span><span class="period">.</span>
+</h6>
+<p id="oIO">Find a generating function for \(1, 3, 5, 7, 9,\ldots\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-leo" id="leo"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-leo"><div class="solution solution-like">
+<p id="Ccz">Notice that the sequence of differences is constant. We know how to find the generating function for any constant sequence. So denote the generating function for \(1, 3, 5, 7, 9, \ldots\) by \(A\text{.}\) We have</p>
+<div class="displaymath">
+\begin{align*}
+A \amp  = 1 + 3x + 5x^2 + 7x^3 + 9x^4 + \cdots\\
+\underline{-\qquad xA} \amp  \underline{\,\,= 0 + x + 3x^2 +  5x^3 + 7x^4 + 9x^5 + \cdots}\\
+(1-x)A \amp  = 1 + 2x + 2x^2 + 2x^3 + 2x^4 + \cdots
+\end{align*}
+</div>
+<p id="ijI">We know that \(2x + 2x^2 + 2x^3 + 2x^4 + \cdots = \dfrac{2x}{1-x}\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{equation*}
+(1-x)A = 1 + \frac{2x}{1-x}\text{.}
+\end{equation*}
+</div>
+<p id="OqR">Now solve for \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A = \frac{1}{1-x} + \frac{2x}{(1-x)^2} = \frac{1+x}{(1-x)^2}\text{.}
+\end{equation*}
+</div>
+<p id="uya">Does this makes sense? Before we simplified the two fractions into one, we were adding the generating function for the sequence \(1,1,1,1,\ldots\) to the generating function for the sequence \(0, 2, 4, 6, 8, 10, \ldots\) (remember \(\frac{1}{(1-x)^2}\) generates \(1,2,3,4,5, \ldots\text{,}\) multiplying by \(2x\) shifts it over, putting the zero out front, and doubles each term). If we add these term by term, we get the correct sequence \(1,3,5,7, 9, \ldots\text{.}\)</p>
+</div></div>
+</div></article><p id="QPY">Now that we have a generating function for the odd numbers, we can use that to find the generating function for the squares:</p>
+<article class="example example-like" id="Ugd"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">16.1.3</span><span class="period">.</span>
+</h6>
+<p id="UPX">Find the generating function for \(1, 4, 9, 16, \ldots\text{.}\) Note we take \(1 = a_0\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Rlx" id="Rlx"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Rlx"><div class="solution solution-like">
+<p id="aFj">Again we call the generating function for the sequence \(A\text{.}\) Using differencing:</p>
+<div class="displaymath">
+\begin{align*}
+A \amp  = 1 + 4x + 9x^2 + 16x^3 + \cdots\\
+\underline{-\qquad xA} \amp  \underline{\,\, = 0 + x + 4x^2 + 9x^3 + 16x^4 + \cdots}\\
+(1-x)A \amp  = 1 + 3x + 5x^2 + 7x^3 + \cdots
+\end{align*}
+</div>
+<p id="GMs">Since \(1 + 3x + 5x^2 + 7x^3 + \cdots = \d\frac{1+x}{(1-x)^2}\) we have \(A = \d\frac{1+x}{(1-x)^3}\text{.}\)</p>
+</div></div>
+</div></article><p id="wXh">In each of the examples above, we found the difference between consecutive terms which gave us a sequence of differences for which we knew a generating function. We can generalize this to more complicated relationships between terms of the sequence. For example, if we know that the sequence satisfies the recurrence relation \(a_n = 3a_{n-1} - 2a_{n-2}\text{?}\) In other words, if we take a term of the sequence and subtract 3 times the previous term and then add 2 times the term before that, we get 0 (since \(a_n - 3a_{n-1} + 2a_{n-2} = 0\)). That will hold for all but the first two terms of the sequence. So after the first two terms, the sequence of results of these calculations would be a sequence of 0's, for which we definitely know a generating function.</p>
+<article class="example example-like" id="Anm"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">16.1.4</span><span class="period">.</span>
+</h6>
+<p id="AXg">The sequence \(1, 3, 7, 15, 31, 63, \ldots\) satisfies the recurrence relation \(a_n = 3a_{n-1} - 2a_{n-2}\text{.}\) Find the generating function for the sequence.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-xsG" id="xsG"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-xsG"><div class="solution solution-like">
+<p id="mTB">Call the generating function for the sequence \(A\text{.}\) We have</p>
+<div class="displaymath">
+\begin{align*}
+A \amp  = 1 + 3x + 7x^2 + 15x^3 + 31x^4 + \cdots + a_nx^n + \cdots\\
+-3xA \amp  = 0 - 3x - 9x^2 - 21x^3 - 45x^4 - \cdots - 3a_{n-1}x^n - \cdots\\
+\underline{+~~~2x^2A_{~}^{~^{~}}} \amp  \underline{\,\, = 0 + 0x + 2x^2 + 6x^3 + 14x^4 + \cdots + 2a_{n-2}x^n + \cdots}\\
+(1-3x+2x^2)A \amp  = 1
+\end{align*}
+</div>
+<p id="TaK">We multiplied \(A\) by \(-3x\) which shifts every term over one spot and multiplies them by \(-3\text{.}\) On the third line, we multiplied \(A\) by \(2x^2\text{,}\) which shifted every term over two spots and multiplied them by 2. When we add up the corresponding terms, we are taking each term, subtracting 3 times the previous term, and adding 2 times the term before that. This will happen for each term after \(a_1\) because \(a_n - 3a_{n-1} + 2a_{n-2} = 0\text{.}\) In general, we might have two terms from the beginning of the generating series, although in this case the second term happens to be 0 as well.</p>
+<p id="zhT">Now we just need to solve for \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A = \frac{1}{1 - 3x + 2x^2}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article></section><section class="subsubsection" id="subsubsection-83"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">16.1.1.4</span> <span class="title">Multiplication and Partial Sums</span>
+</h4>
+<p id="deq">What happens to the sequences when you multiply two generating functions? Let's see: \(A = a_0 + a_1x + a_2x^2 + \cdots\) and \(B = b_0 + b_1x + b_2x^2 + \cdots\text{.}\) To multiply \(A\) and \(B\text{,}\) we need to do a lot of distributing (infinite FOIL?) but keep in mind we will group like terms and only need to write down the first few terms to see the pattern. The constant term is \(a_0b_0\text{.}\) The coefficient of \(x\) is \(a_0b_1 + a_1b_0\text{.}\) And so on. We get:</p>
+<div class="displaymath">
+\begin{equation*}
+AB = a_0b_0 + (a_0b_1 + a_1b_0)x + (a_0b_2 + a_1b_1 + a_2b_0)x^2 + (a_0b_3 + a_1b_2 + a_2b_1 + a_3b_0)x^3 + \cdots\text{.}
+\end{equation*}
+</div>
+<article class="example example-like" id="guv"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">16.1.5</span><span class="period">.</span>
+</h6>
+<p id="hep">“Multiply” the sequence \(1, 2, 3, 4, \ldots\) by the sequence \(1, 2, 4, 8, 16, \ldots\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-dzP" id="dzP"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-dzP"><div class="solution solution-like">
+<p id="fpc">The new constant term is just \(1 \cdot 1\text{.}\) The next term will be \(1\cdot 2 + 2 \cdot 1 = 4\text{.}\) The next term: \(1 \cdot 4 + 2 \cdot 2 + 3 \cdot 1 = 11\text{.}\) One more: \(1 \cdot 8 + 2 \cdot 4 + 3 \cdot 2 + 4 \cdot 1 = 26\text{.}\) The resulting sequence is</p>
+<div class="displaymath">
+\begin{equation*}
+1, 4, 11, 26, 57, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="Lwl">Since the generating function for \(1,2,3,4, \ldots\) is \(\frac{1}{(1-x)^2}\) and the generating function for \(1,2,4,8, 16, \ldots\) is \(\frac{1}{1-2x}\text{,}\) we have that the generating function for \(1,4, 11, 26, 57, \ldots\) is \(\frac{1}{(1-x)^2(1-2x)}\)</p>
+</div></div>
+</div></article><p id="Jlz">Consider the special case when you multiply a sequence by \(1, 1, 1, \ldots\text{.}\) For example, multiply \(1,1,1,\ldots\) by \(1, 2, 3, 4, 5\ldots\text{.}\) The first term is \(1\cdot 1 = 1\text{.}\) Then \(1\cdot 2 + 1 \cdot 1 = 3\text{.}\) Then \(1\cdot 3 + 1\cdot 2 + 1 \cdot 1 = 6\text{.}\) The next term will be 10. We are getting the triangular numbers. More precisely, we get the sequence of partial sums of \(1,2,3,4,5, \ldots\text{.}\) In terms of generating functions, we take \(\frac{1}{1-x}\) (generating \(1,1,1,1,1\ldots\)) and multiply it by \(\frac{1}{(1-x)^2}\) (generating \(1,2,3,4,5,\ldots\)) and this give \(\frac{1}{(1-x)^3}\text{.}\) This should not be a surprise as we found the same generating function for the triangular numbers earlier.</p>
+<p id="psI">The point is, if you need to find a generating function for the sum of the first \(n\) terms of a particular sequence, and you know the generating function for <em class="emphasis">that</em> sequence, you can multiply it by \(\frac{1}{1-x}\text{.}\) To go back from the sequence of partial sums to the original sequence, you look at the sequence of differences. When you get the sequence of differences you end up multiplying by \(1-x\text{,}\) or equivalently, dividing by \(\frac{1}{1-x}\text{.}\) Multiplying by \(\frac{1}{1-x}\) gives partial sums, dividing by \(\frac{1}{1-x}\) gives differences.</p></section><section class="subsubsection" id="subsubsection-84"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">16.1.1.5</span> <span class="title">Solving Recurrence Relations with Generating Functions</span>
+</h4>
+<p id="VzR">We conclude with an example of one of the many reasons studying generating functions is helpful. We can use generating functions to solve recurrence relations.</p>
+<article class="example example-like" id="MBE"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">16.1.6</span><span class="period">.</span>
+</h6>
+<p id="Nly">Solve the recurrence relation \(a_n = 3a_{n-1} - 2a_{n-2}\) with initial conditions \(a_0 = 1\) and \(a_1 = 3\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-JGY" id="JGY"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-JGY"><div class="solution solution-like">
+<p id="rDu">We saw in an example above that this recurrence relation gives the sequence \(1, 3, 7, 15, 31, 63, \ldots\) which has generating function \(\dfrac{1}{1 - 3x + 2x^2}\text{.}\) We did this by calling the generating function \(A\) and then computing \(A - 3xA + 2x^2A\) which was just 1, since every other term canceled out.</p>
+<p id="XKD">But how does knowing the generating function help us? First, break up the generating function into two simpler ones. For this, we can use partial fraction decomposition. Start by factoring the denominator:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-3x + 2x^2} = \frac{1}{(1-x)(1-2x)}\text{.}
+\end{equation*}
+</div>
+<p id="DRM">Partial fraction decomposition tells us that we can write this faction as the sum of two fractions (we decompose the given fraction):</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-2x)} = \frac{a}{1-x} + \frac{b}{1-2x} \text{ ~~ for some constants } a \text{ and } b\text{.}
+\end{equation*}
+</div>
+<p id="jYV">To find \(a\) and \(b\) we add the two decomposed fractions using a common denominator. This gives</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-2x)} = \frac{a(1-2x) + b(1-x)}{(1-x)(1-2x)}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">so</p>
+<div class="displaymath">
+\begin{equation*}
+1 = a(1-2x) + b(1-x)\text{.}
+\end{equation*}
+</div>
+<p id="Qge">This must be true for all values of \(x\text{.}\) If \(x = 1\text{,}\) then the equation becomes \(1 = -a\) so \(a = -1\text{.}\) When \(x = \frac{1}{2}\) we get \(1 = b/2\) so \(b = 2\text{.}\) This tells us that we can decompose the fraction like this:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-2x)} = \frac{-1}{1-x} + \frac{2}{1-2x}\text{.}
+\end{equation*}
+</div>
+<p id="wnn">This completes the partial fraction decomposition. Notice that these two fractions are generating functions we know. In fact, we should be able to expand each of them.</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{-1}{1-x} = -1 - x - x^2 -x^3 - x^4 - \cdots \mbox{ which generates }  -1, -1, -1, -1, -1, \ldots\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\frac{2}{1-2x} = 2 + 4x + 8x^2 + 16x^3 + 32x^4 + \cdots \mbox{ which generates }  2, 4, 8, 16, 32, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="cuw">We can give a closed formula for the \(n\)th term of each of these sequences. The first is just \(a_n = -1\text{.}\) The second is \(a_n = 2^{n+1}\text{.}\) The sequence we are interested in is just the sum of these, so the solution to the recurrence relation is</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = 2^{n+1} - 1\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><p id="BHa">We can now add generating functions to our list of methods for solving recurrence relations.</p></section></section><section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">16.1.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-39"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">16.1.7</span><span class="period">.</span>
+</h6></article></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">16.1.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-675">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-676">Watch the screencast above.</li>
+<li id="li-677">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-678">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
+</div>
+</body>
+</html>

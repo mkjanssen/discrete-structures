@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-19T14:52:33-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Apr. 5: Further Background in Graph Theory</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Learning Guides</span></a></h1>
+<p class="byline">Mike Janssen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Week-13.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Week-13.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Apr-09.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Week-13.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Week-13.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Apr-09.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-01.html" data-scroll="Week-01"><span class="codenumber">1</span> <span class="title">Week 1: Jan. 15</span></a><ul><li><a href="Jan-15.html" data-scroll="Jan-15">Jan. 15: Course Intro/Statements</a></li></ul>
+</li>
+<li class="link">
+<a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
+<li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
+<li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Negations, Sets and Relationships</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-03.html" data-scroll="Week-03"><span class="codenumber">3</span> <span class="title">Week 3: Jan. 25-29</span></a><ul>
+<li><a href="Jan-25.html" data-scroll="Jan-25">Jan. 25: Operations on Sets</a></li>
+<li><a href="Jan-27.html" data-scroll="Jan-27">Jan. 27: Set Operations, Relations, and Equivalence Relations</a></li>
+<li><a href="Jan-29.html" data-scroll="Jan-29">Jan. 29: Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-05.html" data-scroll="Week-05"><span class="codenumber">5</span> <span class="title">Week 5: Feb. 8-12</span></a><ul>
+<li><a href="Feb-08.html" data-scroll="Feb-08">Feb. 8: The Additive and Multiplicative Principles</a></li>
+<li><a href="Feb-10.html" data-scroll="Feb-10">Feb. 10: More Counting with Sets and PIE</a></li>
+<li><a href="Feb-12.html" data-scroll="Feb-12">Feb. 12: Binomial Coefficients I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-06.html" data-scroll="Week-06"><span class="codenumber">6</span> <span class="title">Week 6: Feb. 15-19</span></a><ul>
+<li><a href="Feb-17.html" data-scroll="Feb-17">Feb. 17: Bionomial Coefficients II</a></li>
+<li><a href="Feb-19.html" data-scroll="Feb-19">Feb. 19: Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-07.html" data-scroll="Week-07"><span class="codenumber">7</span> <span class="title">Week 7: Feb. 22-26</span></a><ul>
+<li><a href="Feb-22.html" data-scroll="Feb-22">Feb. 22: Combinatorial Proofs I</a></li>
+<li><a href="Feb-24.html" data-scroll="Feb-24">Feb. 24: Reading Discussion and Combinatorial Proofs II</a></li>
+<li><a href="Feb-26.html" data-scroll="Feb-26">Feb. 26: Stars and Bars</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-08.html" data-scroll="Week-08"><span class="codenumber">8</span> <span class="title">Week 8: Mar. 1-5</span></a><ul>
+<li><a href="Mar-01.html" data-scroll="Mar-01">Mar. 1: Advanced PIE</a></li>
+<li><a href="Mar-03.html" data-scroll="Mar-03">Mar. 3: Review and Catchup</a></li>
+<li><a href="Mar-05.html" data-scroll="Mar-05">Mar. 5: Exam 1</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-09.html" data-scroll="Week-09"><span class="codenumber">9</span> <span class="title">Week 9: Mar. 8-12</span></a><ul>
+<li><a href="Mar-08.html" data-scroll="Mar-08">Mar. 8: Describing Sequences</a></li>
+<li><a href="Mar-10.html" data-scroll="Mar-10">Mar. 10: Arithmetic and Geometric Sequences</a></li>
+<li><a href="Mar-12.html" data-scroll="Mar-12">Mar. 12: Polynomial Fitting</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15: Recurrence Relations</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17: Induction I</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19: Induction II</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22: Propositional Logic I</a></li>
+<li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26: Direct Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29: Proof by Contradiction</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31: Other Types of Proof</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 2: Intro to Graph Theory</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
+<li><a href="Apr-05.html" data-scroll="Apr-05" class="active">Apr. 5: Further Background in Graph Theory</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09: Trees I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12: Trees II</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14: Planarity</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16: Independent Portfolio Work Day</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-16.html" data-scroll="Week-16"><span class="codenumber">16</span> <span class="title">Week 16: Apr. 26-Apr. 30</span></a><ul>
+<li><a href="Apr-26.html" data-scroll="Apr-26">Apr. 26: Reading Discussion and Generating Functions</a></li>
+<li><a href="Apr-28.html" data-scroll="Apr-28">Apr. 28</a></li>
+<li><a href="Apr-30.html" data-scroll="Apr-30">Apr. 30</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link">
+<a href="appendix-counting.html" data-scroll="appendix-counting"><span class="codenumber">A</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-45.html" data-scroll="section-45">Additive and Multiplicative Principles</a></li>
+<li><a href="section-46.html" data-scroll="section-46">PIE</a></li>
+<li><a href="section-47.html" data-scroll="section-47">Binomial Coefficients</a></li>
+<li><a href="section-48.html" data-scroll="section-48">Permutations</a></li>
+<li><a href="section-49.html" data-scroll="section-49">Stars and Bars</a></li>
+<li><a href="section-50.html" data-scroll="section-50">Anagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Apr-05"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.1</span> <span class="title">Apr. 5: Further Background in Graph Theory</span>
+</h2>
+<section class="subsection" id="subsection-90"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">13.1.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-646">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_gt-intro.html" target="_blank">Section 4.1</a> of the book. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-69"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">13.1.1.1</span> <span class="title">Subgraphs</span>
+</h4>
+<article class="proposition theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">13.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-647">The relation “is isomorphic to” is an equivalence relation on the collection of all graphs.</p></article><article class="assemblage assemblage-like" id="Mvn"><h6 class="heading"><span class="title">Subgraphs.</span></h6>
+<p id="kgZ">We say that \(G' = (V', E')\) is a <dfn class="terminology">subgraph</dfn> of \(G = (V, E)\text{,}\) and write \(G' \subseteq G\text{,}\) provided \(V' \subseteq V\) and \(E' \subseteq E\text{.}\)</p>
+<p id="Qoi">We say that \(G' = (V', E')\) is an <dfn class="terminology">induced subgraph</dfn> of \(G = (V, E)\) provided \(V' \subseteq V\) and every edge in \(E\) whose vertices are still in \(V'\) is also an edge in \(E'\text{.}\)</p></article><p id="qGf">Notice that every induced subgraph is also an ordinary subgraph, but not conversely. Think of a subgraph as the result of deleting some vertices and edges from the larger graph. For the subgraph to be an induced subgraph, we can still delete vertices, but now we only delete those edges that included the deleted vertices.</p>
+<p id="PiP"> Vertices in a graph do not always have edges between them. If we add all possible edges, then the resulting graph is called <dfn class="terminology">complete</dfn>. That is, a graph is complete if every pair of vertices is connected by an edge. Since a graph is determined completely by which vertices are adjacent to which other vertices, there is only one complete graph with a given number of vertices. We give these a special name: \(K_n\)  is the complete graph on \(n\) vertices.</p>
+<p id="vpY"> Each vertex in \(K_n\) is adjacent to \(n-1\) other vertices. We call the number of edges emanating from a given vertex the <dfn class="terminology">degree</dfn> of that vertex. So every vertex in \(K_n\) has degree \(n-1\text{.}\) How many edges does \(K_n\) have? One might think the answer should be \(n(n-1)\text{,}\) since we count \(n-1\) edges \(n\) times (once for each vertex). However, each edge is incident to 2 vertices, so we counted every edge exactly twice. Thus there are \(n(n-1)/2\) edges in \(K_n\text{.}\) Alternatively, we can say there are \({n \choose 2}\) edges, since to draw an edge we must choose 2 of the \(n\) vertices.</p>
+<p id="bxh">In general, if we know the degrees of all the vertices in a graph, we can find the number of edges. The sum of the degrees of all vertices will always be <em class="emphasis">twice</em> the number of edges, since each edge adds to the degree of two vertices. Notice this means that the sum of the degrees of all vertices in any graph must be even!</p>
+<p id="HEq">This is our first example of a general result about all graphs.  It seems innocent enough, but we will use it to prove all sorts of other statements.  So let's give it a name and state it formally.</p>
+<article class="lemma theorem-like" id="EQO"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">13.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Handshake Lemma.</span>
+</h6>
+<p id="RtB">In any graph, the sum of the degrees of vertices in the graph is always twice the number of edges.</p></article><article class="hiddenproof" id="proof-7"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-656">We will use a combinatorial proof.</p>
+<p id="p-657">Suppose \(V = \set{v_1,\ldots,v_n}\text{.}\) We can create an \(n\times n\) matrix as follows: set the entry in row \(i\) and column \(j\) to 1 if \(v_i\) is adjacent to \(v_j\) and 0 otherwise. We ask: how many 1s are in this matrix? Note that for every edge there are two 1s corresponding to the end points. Thus the answer is \(2|E|\text{.}\) Consider a given row of the matrix corresponding to \(v_i\text{;}\) there is a 1 in this row for each neighbor of \(v_i\text{.}\) Thus, the number of 1s in this row is exactly \(d(v_i)\text{,}\) so the number of 1s in the entire matrix is \(\sum_{i=1}^n d(v_i)\text{.}\)</p></article></div>
+<p id="nLz">The handshake lemma<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a> is sometimes called the <em class="emphasis">degree sum formula</em>, and can be written symbolically as</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{v\in V} d(v) = 2e\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Here we are using the notation \(d(v)\) for the degree of the vertex \(v\text{.}\)</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">A <em class="emphasis">lemma</em> is a mathematical statement that is primarily of importance in that it is used to establish other results.</div></div>
+<p id="TSI"> One use for the lemma is to actually find the number of edges in a graph.  To do this, you must be given the <dfn class="terminology">degree sequence</dfn> for the graph (or be able to find it from other information).  This is a list of every degree of every vertex in the graph, generally written in non-increasing order.</p>
+<article class="example example-like" id="JAH"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.1.3</span><span class="period">.</span>
+</h6>
+<p id="aNn">How many vertices and edges must a graph have if its degree sequence is</p>
+<div class="displaymath">
+\begin{equation*}
+(4, 4, 3, 3, 3, 2, 1)\text{?}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-PZN" id="PZN"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-PZN"><div class="solution solution-like">
+<p id="sQR">The number of vertices is easy to find: it is the number of degrees in the sequence: 7.  To find the number of edges, we compute the degree sum:</p>
+<div class="displaymath">
+\begin{equation*}
+4 + 4 + 3 + 3 + 3 + 2 + 1 = 20\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so the number of edges is half this: 10.</p>
+</div></div>
+</div></article><p id="zZR">The handshake lemma also tells us what is not possible.</p>
+<article class="example example-like" id="pHQ"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.1.4</span><span class="period">.</span>
+</h6>
+<p id="GUw">At a recent math seminar, 9 mathematicians greeted each other by shaking hands. Is it possible that each mathematician shook hands with exactly 7 people at the seminar?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-wgW" id="wgW"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-wgW"><div class="solution solution-like"><p id="YYa">It seems like this should be possible. Each mathematician chooses one person to not shake hands with. But this cannot happen. We are asking whether a graph with 9 vertices can have each vertex have degree 7. If such a graph existed, the sum of the degrees of the vertices would be \(9\cdot 7 = 63\text{.}\) This would be twice the number of edges (handshakes) resulting in a graph with \(31.5\) edges. That is impossible. Thus at least one (in fact an odd number) of the mathematicians must have shaken hands with an <em class="emphasis">even</em> number of people at the seminar.</p></div></div>
+</div></article><p id="gha">We can generalize the previous example to get the following proposition.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 2 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">A <dfn class="terminology">proposition</dfn> is a general statement in mathematics, similar to a theorem, although generally of lesser importance.</div></div>
+<article class="proposition theorem-like" id="YJF"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">13.1.5</span><span class="period">.</span>
+</h6>
+<p id="lms">In any graph, the number of vertices with odd degree must be even.</p></article><article class="hiddenproof" id="rxd"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-rxd"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-rxd"><article class="hiddenproof"><p id="Ffj">Suppose there were a graph with an odd number of vertices with odd degree.  Then the sum of the degrees in the graph would be odd, which is impossible, by the handshake lemma.</p></article></div>
+<p id="Moj">We will consider further applications of the handshake lemma in the exercises.</p>
+<p id="svs"> One final definition: we say a graph is <dfn class="terminology">bipartite</dfn> if the vertices can be divided into two sets, \(A\) and \(B\text{,}\) with no two vertices in \(A\) adjacent and no two vertices in \(B\) adjacent. The vertices in \(A\) can be adjacent to some or all of the vertices in \(B\text{.}\) If each vertex in \(A\) is adjacent to all the vertices in \(B\text{,}\) then the graph is a <dfn class="terminology">complete bipartite graph</dfn>, and gets a special name: \(K_{m,n}\text{,}\) where \(|A| = m\) and \(|B| = n\text{.}\) The graph in the houses and utilities puzzle is \(K_{3,3}\text{.}\)</p>
+<section class="paragraphs" id="nSD"><h5 class="heading"><span class="title">Named Graphs.</span></h5>
+<p id="fxg">Some graphs are used more than others, and get special names.</p>
+<dl class="description-list narrow">
+<dt id="gXY">\(K_n\)</dt>
+<dd><p id="kCy">The complete graph on \(n\) vertices. </p></dd>
+<dt id="Nfh">\(K_{m,n}\)</dt>
+<dd><p id="QJH">The complete bipartite graph with sets of \(m\) and \(n\) vertices. </p></dd>
+<dt id="tmq">\(C_n\)</dt>
+<dd><p id="wQQ">The cycle on \(n\) vertices, just one big loop. </p></dd>
+<dt id="Ztz">\(P_n\)</dt>
+<dd><p id="cXZ">The path on \(n+1\) vertices (so \(n\) edges), just one long path. </p></dd>
+</dl>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.875%;margin-right:2.875%;">
+<div class="sbspanel bottom" style="width:19.0981432360743%;"><img src="images/image-17.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel bottom" style="width:21.2201591511936%;"><img src="images/image-18.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel bottom" style="width:15.9151193633952%;"><img src="images/image-19.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel bottom" style="width:25.4641909814324%;"><img src="images/image-20.svg" role="img" class="contained" alt=""></div>
+</div></div></section></section></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">13.1.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-32"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">13.1.6</span><span class="period">.</span>
+</h6>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-28" class="video" allowfullscreen="" src="https://expl.ai/lnutrbv?mode=embed"></iframe></div></article></section><section class="subsection" id="subsection-92"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">13.1.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-613">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-614">Watch the screencast above.</li>
+<li id="li-615">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-616">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
+</div>
+</body>
+</html>

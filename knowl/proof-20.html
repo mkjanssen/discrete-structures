@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-19T14:52:49-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">We go by induction on the number \(e\) of edges of \(G\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">When \(e=0\text{,}\) have only vertices of even degree and a trivial Euler circuit, so the statement is true.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">For the induction hypothesis, suppose \(G\) has \(m\) edges and satisfies the theorem.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Now suppose that \(G\) is connected with \(m+1\) edges.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="emphasis">Suppose all of the vertices of \(G\) have even degree.</em> Let \(v\in V(G)\) be arbitrary and let \(w\) be a neighbor of \(v\text{.}\) Consider the graph \(G' = G\setminus vw\text{.}\) By <a class="xref" data-knowl="./knowl/lem-even-deg-cut-edge.html" title="Lemma 15.2.2">Lemma 15.2.2</a>, \(G'\) is connected and has exactly two vertices of odd degree. By induction, there is an Euler path from \(v\) to \(w\text{.}\) If we add \(vw\) to the end of this path, we have found an Euler circuit of \(G\) that begins and ends at \(w\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="emphasis">Now suppose that \(G\) has exactly two vertices of odd degree, say \(a\) and \(b\text{.}\)</em> We seek an Euler path that begins at \(a\) and ends at \(b\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Suppose first that \(d(a) = 1\text{.}\) In this case, \(a\) has exactly one neighbor, \(x\text{.}\) It is possible that \(x = b\) or \(x\ne b\text{;}\) we'll check both possibilities. First, let \(G' = G\setminus a\text{.}\) Notice that \(d(x)\) drops by 1, while all other vertices have the same degree as before. Also note that \(G\) has \(m\) edges and is connected.</p>
+<ul class="disc">
+<li><p xmlns:svg="http://www.w3.org/2000/svg">If \(x=b\text{,}\) then all vertices in \(G'\) have even degree. Therefore, by induction, \(G'\) has an Euler circuit \(W\) that begins and ends at \(b\text{.}\) If we insert the edge \(ab\) at the beginning of \(W\text{,}\) we have constructed an Euler path that begins at \(a\) and ends at \(b\text{.}\)</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">If \(x\ne b\text{,}\) then \(G'\) has exactly two vertices of odd degree (\(x\) and \(b\)) and \(m\) edges. Thus by induction there is an Euler path \(W\) that begins at \(x\) and ends at \(b\text{.}\) If we prepend the edge \(ax\) to the beginning of \(W\) we have an Euler path that begins at \(a\) and ends at \(b\text{.}\)</p></li>
+</ul>
+<p xmlns:svg="http://www.w3.org/2000/svg">Now suppose that \(d(a) \gt 1\text{.}\) Since \(d(a)\) is odd, we have \(d(a) \ge 3\text{.}\) By <a class="xref" data-knowl="./knowl/lem-two-odd-cut-edge.html" title="Lemma 15.2.3">Lemma 15.2.3</a>, there is an edge \(ax\) that is not a cut edge. Let \(G' = G\setminus ax\text{.}\) As before, we consider the possibilities \(x = b\) and \(x\ne b\text{.}\)</p>
+<ul class="disc">
+<li><p xmlns:svg="http://www.w3.org/2000/svg">If \(x=b\text{,}\) then as before all vertices in \(G'\) have even degree, and we can form, by induction, an Euler circuit in \(G'\) that begins/ends at \(b\) and then prepend the edge \(ab\) to form the desired Euler path.</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">If \(x\ne b\text{,}\) then as before we have exactly two vertices of odd degree in \(G'\text{,}\) namely \(x\) and \(b\text{.}\) By induction, form in \(G'\) an Euler path that starts at \(x\) and ends at \(b\text{.}\) We prepend the edge \(ax\) to complete the requisite Euler path in \(G\text{.}\)</p></li>
+</ul></article><span class="incontext"><a href="Apr-21.html#proof-20">in-context</a></span>
+</body>
+</html>

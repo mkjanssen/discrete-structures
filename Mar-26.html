@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-19T14:52:32-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mar. 26: Direct Proofs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Learning Guides</span></a></h1>
+<p class="byline">Mike Janssen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Mar-24.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Week-11.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Week-12.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Mar-24.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Week-11.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Week-12.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-01.html" data-scroll="Week-01"><span class="codenumber">1</span> <span class="title">Week 1: Jan. 15</span></a><ul><li><a href="Jan-15.html" data-scroll="Jan-15">Jan. 15: Course Intro/Statements</a></li></ul>
+</li>
+<li class="link">
+<a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
+<li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
+<li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Negations, Sets and Relationships</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-03.html" data-scroll="Week-03"><span class="codenumber">3</span> <span class="title">Week 3: Jan. 25-29</span></a><ul>
+<li><a href="Jan-25.html" data-scroll="Jan-25">Jan. 25: Operations on Sets</a></li>
+<li><a href="Jan-27.html" data-scroll="Jan-27">Jan. 27: Set Operations, Relations, and Equivalence Relations</a></li>
+<li><a href="Jan-29.html" data-scroll="Jan-29">Jan. 29: Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-05.html" data-scroll="Week-05"><span class="codenumber">5</span> <span class="title">Week 5: Feb. 8-12</span></a><ul>
+<li><a href="Feb-08.html" data-scroll="Feb-08">Feb. 8: The Additive and Multiplicative Principles</a></li>
+<li><a href="Feb-10.html" data-scroll="Feb-10">Feb. 10: More Counting with Sets and PIE</a></li>
+<li><a href="Feb-12.html" data-scroll="Feb-12">Feb. 12: Binomial Coefficients I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-06.html" data-scroll="Week-06"><span class="codenumber">6</span> <span class="title">Week 6: Feb. 15-19</span></a><ul>
+<li><a href="Feb-17.html" data-scroll="Feb-17">Feb. 17: Bionomial Coefficients II</a></li>
+<li><a href="Feb-19.html" data-scroll="Feb-19">Feb. 19: Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-07.html" data-scroll="Week-07"><span class="codenumber">7</span> <span class="title">Week 7: Feb. 22-26</span></a><ul>
+<li><a href="Feb-22.html" data-scroll="Feb-22">Feb. 22: Combinatorial Proofs I</a></li>
+<li><a href="Feb-24.html" data-scroll="Feb-24">Feb. 24: Reading Discussion and Combinatorial Proofs II</a></li>
+<li><a href="Feb-26.html" data-scroll="Feb-26">Feb. 26: Stars and Bars</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-08.html" data-scroll="Week-08"><span class="codenumber">8</span> <span class="title">Week 8: Mar. 1-5</span></a><ul>
+<li><a href="Mar-01.html" data-scroll="Mar-01">Mar. 1: Advanced PIE</a></li>
+<li><a href="Mar-03.html" data-scroll="Mar-03">Mar. 3: Review and Catchup</a></li>
+<li><a href="Mar-05.html" data-scroll="Mar-05">Mar. 5: Exam 1</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-09.html" data-scroll="Week-09"><span class="codenumber">9</span> <span class="title">Week 9: Mar. 8-12</span></a><ul>
+<li><a href="Mar-08.html" data-scroll="Mar-08">Mar. 8: Describing Sequences</a></li>
+<li><a href="Mar-10.html" data-scroll="Mar-10">Mar. 10: Arithmetic and Geometric Sequences</a></li>
+<li><a href="Mar-12.html" data-scroll="Mar-12">Mar. 12: Polynomial Fitting</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15: Recurrence Relations</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17: Induction I</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19: Induction II</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22: Propositional Logic I</a></li>
+<li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26" class="active">Mar. 26: Direct Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29: Proof by Contradiction</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31: Other Types of Proof</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 2: Intro to Graph Theory</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5: Further Background in Graph Theory</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09: Trees I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12: Trees II</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14: Planarity</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16: Independent Portfolio Work Day</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-16.html" data-scroll="Week-16"><span class="codenumber">16</span> <span class="title">Week 16: Apr. 26-Apr. 30</span></a><ul>
+<li><a href="Apr-26.html" data-scroll="Apr-26">Apr. 26: Reading Discussion and Generating Functions</a></li>
+<li><a href="Apr-28.html" data-scroll="Apr-28">Apr. 28</a></li>
+<li><a href="Apr-30.html" data-scroll="Apr-30">Apr. 30</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link">
+<a href="appendix-counting.html" data-scroll="appendix-counting"><span class="codenumber">A</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-45.html" data-scroll="section-45">Additive and Multiplicative Principles</a></li>
+<li><a href="section-46.html" data-scroll="section-46">PIE</a></li>
+<li><a href="section-47.html" data-scroll="section-47">Binomial Coefficients</a></li>
+<li><a href="section-48.html" data-scroll="section-48">Permutations</a></li>
+<li><a href="section-49.html" data-scroll="section-49">Stars and Bars</a></li>
+<li><a href="section-50.html" data-scroll="section-50">Anagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Mar-26"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">11.3</span> <span class="title">Mar. 26: Direct Proofs</span>
+</h2>
+<section class="introduction" id="introduction-35"><article class="assemblage assemblage-like" id="assemblage-67"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
+<p id="p-572">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-556">What is a direct proof?</li>
+<li id="li-557">What characteristics make for a good proof?</li>
+</ol></p></article></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.3.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-573">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_logic-proofs.html" target="_blank">Section 3.2</a> of the book. You're encouraged to read it before coming to class.</p>
+<article class="investigation project-like" id="XTu"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">11.3.1</span><span class="period">.</span>
+</h6>
+<p id="mlu">Decide which of the following are valid proofs of the following statement:</p>
+<blockquote class="blockquote" id="WOb"><p id="EoY">If \(a b\) is an even number, then \(a\) or \(b\) is even.</p></blockquote>
+<ol id="SsD" class="decimal">
+<li id="bxU">
+<p id="dnh">Suppose \(a\) and \(b\) are odd. That is, \(a=2k+1\) and \(b=2m+1\) for some integers \(k\) and \(m\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+ab \amp =(2k+1)(2m+1)\\
+\amp =4km+2k+2m+1\\
+\amp =2(2km+k+m)+1\text{.}
+\end{align*}
+</div>
+<p id="Juq">Therefore \(ab\) is odd.</p>
+</li>
+<li id="HFd">
+<p id="pBz">Assume that \(a\) or \(b\) is even - say it is \(a\) (the case where \(b\) is even will be identical). That is, \(a=2k\) for some integer \(k\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+ab \amp =(2k)b\\
+\amp =2(kb)\text{.}
+\end{align*}
+</div>
+<p id="VII">Thus \(ab\) is even.</p>
+</li>
+<li id="nMm">
+<p id="BPR">Suppose that \(ab\) is even but \(a\) and \(b\) are both odd. Namely, \(ab = 2n\text{,}\) \(a=2k+1\) and \(b=2j+1\) for some integers \(n\text{,}\) \(k\text{,}\) and \(j\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+2n \amp =(2k+1)(2j+1)\\
+2n \amp =4kj+2k+2j+1\\
+n \amp = 2kj+k+j+\frac{1}{2}\text{.}
+\end{align*}
+</div>
+<p id="hXa">But since \(2kj+k+j\) is an integer, this says that the integer \(n\) is equal to a non-integer, which is impossible.</p>
+</li>
+<li id="TTv">
+<p id="Oej">Let \(ab\) be an even number, say \(ab=2n\text{,}\) and \(a\) be an odd number, say \(a=2k+1\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+ab \amp =(2k+1)b\\
+2n \amp =2kb+b\\
+2n-2kb\amp =b\\
+2(n-kb)\amp =b\text{.}
+\end{align*}
+</div>
+<p id="uls">Therefore \(b\) must be even.</p>
+</li>
+</ol></article><p id="p-585">There are three main styles of proof we'll discuss (aside from combinatorial and inductive proofs, which we've already looked at): <dfn class="terminology">direct proofs</dfn>, <dfn class="terminology">proofs by contradiction</dfn>, and <dfn class="terminology">proofs by contrapositive</dfn>. Direct proofs are the most common, while proofs by contradiction are perhaps the most fun, and proofs by contrapositive feel a bit like magic. There are other special techniques as well, and we'll discuss them as we encounter examples of them.</p>
+<p id="p-586">Before looking at some examples, let's consider two definitions.</p>
+<article class="definition definition-like" id="definition-4"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-587">Let \(a,b\in\Z\text{.}\) We say \(a\) <dfn class="terminology">divides</dfn> \(b\text{,}\) written \(a | b\text{,}\) if there exist \(c\in\Z\) such that \(ac = b\text{.}\) In this case, we say that \(b\) is a <dfn class="terminology">multiple</dfn> of \(a\) and that \(b\) is <dfn class="terminology">divisible</dfn> by \(a\text{.}\)</p></article><article class="definition definition-like" id="definition-5"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-588">We say an integer \(m\in\Z\) is <dfn class="terminology">even</dfn> if \(m\) is divisible by 2, i.e., there exists \(k\in\Z\) such that \(m = 2k\text{.}\) We say an integer \(n\in\Z\) is <dfn class="terminology">odd</dfn> if \(n\) is not divisible by 2, i.e., there exists \(j\in\Z\) such that \(n = 2j+1\text{.}\)</p></article><article class="example example-like" id="Weh"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">11.3.3</span><span class="period">.</span>
+</h6>
+<p id="cRI">Prove: For all integers \(n\text{,}\) if \(n\) is even, then \(n^2\) is even.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-EaD" id="EaD"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-EaD"><div class="solution solution-like">
+<p id="rqM">The format of the proof will be this: Let \(n\) be an arbitrary integer. Assume that \(n\) is even. Explain explain explain. Therefore \(n^2\) is even.</p>
+<p id="XxV">To fill in the details, we will basically just explain what it means for \(n\) to be even, and then see what that means for \(n^2\text{.}\) Here is a complete proof.</p>
+<article class="hiddenproof" id="khM"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-khM"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-khM"><article class="hiddenproof"><p id="DFe">Let \(n\) be an arbitrary integer. Suppose \(n\) is even. Then \(n = 2k\) for some integer \(k\text{.}\) Now \(n^2 = (2k)^2 = 4k^2 = 2(2k^2)\text{.}\) Since \(2k^2\) is an integer, \(n^2\) is even.</p></article></div>
+</div></div>
+</div></article><article class="exploration project-like" id="exploration-51"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">11.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-593">Write clear proofs of each of the following statements. Then swap yours with a friend's and offer feedback on their correctness and clarity.</p>
+<ol class="decimal">
+<li id="li-562">For all integers \(n\text{,}\) if \(n\) is odd, then \(n^2\) is odd.</li>
+<li id="li-563">For all odd integers \(m,n\text{,}\) \(m+n\) is even.</li>
+<li id="li-564">Let \(x\) be an integer. Then \(x\) is odd if and only if there exists an integer \(\ell\) for which \(x = 2\ell -1\text{.}\)</li>
+<li id="li-565">Let \(a,b,c\in\Z\) with \(a|b\) and \(a|c\text{.}\) Then \(a|(b+c)\text{.}\)</li>
+<li id="li-566">Let \(a,b,c\in\Z\) with \(a|b\) and \(a|c\text{.}\) Then \(a|bc\text{.}\)</li>
+<li id="li-567">Let \(a,b,c\in\Z\) with \(a|b\) and \(b|c\text{.}\) Then \(a|c\text{.}\)</li>
+</ol></article><article class="activity project-like" id="activity-13"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">11.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-594">Evaluate the following proofs.</p>
+<ul class="disc">
+<li id="li-568">If a proposition is false, the proposed proof, is, of course, incorrect. In this situation, find the error in the proof and then provide a counterexample showing that the proposition is false.</li>
+<li id="li-569">If a proposition is true, the proposed proof may still be incorrect. In this case, you are to determine why the proof is incorrect and then write a correct proof using the writing guidelines that have been presented in this book.</li>
+<li id="li-570">If a proposition is true and the proof is correct, you are to decide if the proof is well written or not. If it is well written, then you simply must indicate that this is an excellent proof and needs no revision. On the other hand, if the proof is not well written, then you must then revise the proof by writing it according to the guidelines presented in this text.</li>
+</ul>
+<ol class="decimal">
+<li id="li-571">
+<p id="p-595">If \(m\) is an even integer, then \(5m+4\) is an even integer.</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like"><p id="p-596">We see that \(5m+4 = 10n +4 = 2(5n+2)\text{.}\) Therefore \(5m+4\) is an even integer.</p></div></div>
+</li>
+<li id="li-572">
+<p id="p-597">For all integers \(a,b,c\text{,}\) if \(a|bc\text{,}\) then \(a|b\) or \(a|c\text{.}\)</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">
+<p id="p-598">We assume that \(a,b,c\in\Z\) and that \(a|bc\text{.}\) Then there is an integer \(k\) such that \(ak=bc\text{.}\) We now factor \(k\) as \(k=mn\text{,}\) where \(m,n\) are integers. We then see that</p>
+<div class="displaymath">
+\begin{equation*}
+bc = mna.
+\end{equation*}
+</div>
+<p class="continuation">This means that \(b=ma\) or \(c=na\) and hence, \(a|b\) or \(a|c\text{.}\)</p>
+</div></div>
+</li>
+</ol></article></section><section class="subsection" id="subsection-79"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.3.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-28"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">11.3.4</span><span class="period">.</span>
+</h6></article></section><section class="subsection" id="subsection-80"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.3.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-573">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-574">Watch the screencast above.</li>
+<li id="li-575">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-576">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
+</div>
+</body>
+</html>

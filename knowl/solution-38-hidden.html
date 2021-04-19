@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-19T14:52:44-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p xmlns:svg="http://www.w3.org/2000/svg">First, the idea: if we take some number \(n\text{,}\) maybe it is prime. If so, we are done. If not, then it is composite, so it is the product of two smaller numbers. Each of these factors is smaller than \(n\) (but at least 2), so we can repeat the argument with these numbers. We have reduced to a smaller case.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Now the formal proof:</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let \(P(n)\) be the statement, “\(n\) is either prime or can be written as the product of primes.” We will prove \(P(n)\) is true for all \(n \ge 2\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Base case: \(P(2)\) is true because \(2\) is indeed prime.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Inductive case: assume \(P(k)\) is true for all \(k \lt n\text{.}\) We want to show that \(P(n)\) is true. That is, we want to show that \(n\) is either prime or is the product of primes. If \(n\) is prime, we are done. If not, then \(n\) has more than 2 divisors, so we can write \(n = m_1 \cdot m_2\text{,}\) with \(m_1\) and \(m_2\) less than \(n\) (and greater than 1). By the inductive hypothesis, \(m_1\) and \(m_2\) are each either prime or can be written as the product of primes. In either case, we have that \(n\) is written as the product of primes.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Thus by the strong induction, \(P(n)\) is true for all \(n \ge 2\text{.}\)</p>
+</div></body>
+</html>

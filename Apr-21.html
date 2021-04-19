@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-19T14:52:33-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Apr. 21: Euler Paths and Circuits</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\({\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Learning Guides</span></a></h1>
+<p class="byline">Mike Janssen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Apr-19.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Week-15.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Apr-23.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Apr-19.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Week-15.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Apr-23.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-01.html" data-scroll="Week-01"><span class="codenumber">1</span> <span class="title">Week 1: Jan. 15</span></a><ul><li><a href="Jan-15.html" data-scroll="Jan-15">Jan. 15: Course Intro/Statements</a></li></ul>
+</li>
+<li class="link">
+<a href="Week-02.html" data-scroll="Week-02"><span class="codenumber">2</span> <span class="title">Week 2: Jan. 18-22</span></a><ul>
+<li><a href="Jan-18.html" data-scroll="Jan-18">Jan. 18: Implications</a></li>
+<li><a href="Jan-20.html" data-scroll="Jan-20">Jan. 20: Converses, Contrapositives, Predicates and Quantifiers</a></li>
+<li><a href="Jan-22.html" data-scroll="Jan-22">Jan. 22: Negations, Sets and Relationships</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-03.html" data-scroll="Week-03"><span class="codenumber">3</span> <span class="title">Week 3: Jan. 25-29</span></a><ul>
+<li><a href="Jan-25.html" data-scroll="Jan-25">Jan. 25: Operations on Sets</a></li>
+<li><a href="Jan-27.html" data-scroll="Jan-27">Jan. 27: Set Operations, Relations, and Equivalence Relations</a></li>
+<li><a href="Jan-29.html" data-scroll="Jan-29">Jan. 29: Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-04.html" data-scroll="Week-04"><span class="codenumber">4</span> <span class="title">Week 4: Feb. 1-5</span></a><ul>
+<li><a href="Feb-01.html" data-scroll="Feb-01">Feb. 1: Functions</a></li>
+<li><a href="Feb-03.html" data-scroll="Feb-03">Feb. 3: Functions and Reading Discussion</a></li>
+<li><a href="Feb-05.html" data-scroll="Feb-05">Feb. 5: Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-05.html" data-scroll="Week-05"><span class="codenumber">5</span> <span class="title">Week 5: Feb. 8-12</span></a><ul>
+<li><a href="Feb-08.html" data-scroll="Feb-08">Feb. 8: The Additive and Multiplicative Principles</a></li>
+<li><a href="Feb-10.html" data-scroll="Feb-10">Feb. 10: More Counting with Sets and PIE</a></li>
+<li><a href="Feb-12.html" data-scroll="Feb-12">Feb. 12: Binomial Coefficients I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-06.html" data-scroll="Week-06"><span class="codenumber">6</span> <span class="title">Week 6: Feb. 15-19</span></a><ul>
+<li><a href="Feb-17.html" data-scroll="Feb-17">Feb. 17: Bionomial Coefficients II</a></li>
+<li><a href="Feb-19.html" data-scroll="Feb-19">Feb. 19: Permutations and Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-07.html" data-scroll="Week-07"><span class="codenumber">7</span> <span class="title">Week 7: Feb. 22-26</span></a><ul>
+<li><a href="Feb-22.html" data-scroll="Feb-22">Feb. 22: Combinatorial Proofs I</a></li>
+<li><a href="Feb-24.html" data-scroll="Feb-24">Feb. 24: Reading Discussion and Combinatorial Proofs II</a></li>
+<li><a href="Feb-26.html" data-scroll="Feb-26">Feb. 26: Stars and Bars</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-08.html" data-scroll="Week-08"><span class="codenumber">8</span> <span class="title">Week 8: Mar. 1-5</span></a><ul>
+<li><a href="Mar-01.html" data-scroll="Mar-01">Mar. 1: Advanced PIE</a></li>
+<li><a href="Mar-03.html" data-scroll="Mar-03">Mar. 3: Review and Catchup</a></li>
+<li><a href="Mar-05.html" data-scroll="Mar-05">Mar. 5: Exam 1</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-09.html" data-scroll="Week-09"><span class="codenumber">9</span> <span class="title">Week 9: Mar. 8-12</span></a><ul>
+<li><a href="Mar-08.html" data-scroll="Mar-08">Mar. 8: Describing Sequences</a></li>
+<li><a href="Mar-10.html" data-scroll="Mar-10">Mar. 10: Arithmetic and Geometric Sequences</a></li>
+<li><a href="Mar-12.html" data-scroll="Mar-12">Mar. 12: Polynomial Fitting</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-10.html" data-scroll="Week-10"><span class="codenumber">10</span> <span class="title">Week 10: Mar. 15-19</span></a><ul>
+<li><a href="Mar-15.html" data-scroll="Mar-15">Mar. 15: Recurrence Relations</a></li>
+<li><a href="Mar-17.html" data-scroll="Mar-17">Mar. 17: Induction I</a></li>
+<li><a href="Mar-19.html" data-scroll="Mar-19">Mar. 19: Induction II</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-11.html" data-scroll="Week-11"><span class="codenumber">11</span> <span class="title">Week 11: Mar. 22-26</span></a><ul>
+<li><a href="Mar-22.html" data-scroll="Mar-22">Mar. 22: Propositional Logic I</a></li>
+<li><a href="Mar-24.html" data-scroll="Mar-24">Mar. 24</a></li>
+<li><a href="Mar-26.html" data-scroll="Mar-26">Mar. 26: Direct Proofs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-12.html" data-scroll="Week-12"><span class="codenumber">12</span> <span class="title">Week 12: Mar. 29-Apr. 2</span></a><ul>
+<li><a href="Mar-29.html" data-scroll="Mar-29">Mar. 29: Proof by Contradiction</a></li>
+<li><a href="Mar-31.html" data-scroll="Mar-31">Mar. 31: Other Types of Proof</a></li>
+<li><a href="Apr-02.html" data-scroll="Apr-02">Apr. 2: Intro to Graph Theory</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-13.html" data-scroll="Week-13"><span class="codenumber">13</span> <span class="title">Week 13: Apr. 5-Apr. 9</span></a><ul>
+<li><a href="Apr-05.html" data-scroll="Apr-05">Apr. 5: Further Background in Graph Theory</a></li>
+<li><a href="Apr-09.html" data-scroll="Apr-09">Apr. 09: Trees I</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-14.html" data-scroll="Week-14"><span class="codenumber">14</span> <span class="title">Week 14: Apr. 12-Apr. 16</span></a><ul>
+<li><a href="Apr-12.html" data-scroll="Apr-12">Apr. 12: Trees II</a></li>
+<li><a href="Apr-14.html" data-scroll="Apr-14">Apr. 14: Planarity</a></li>
+<li><a href="Apr-16.html" data-scroll="Apr-16">Apr. 16: Independent Portfolio Work Day</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-15.html" data-scroll="Week-15"><span class="codenumber">15</span> <span class="title">Week 15: Apr. 19-Apr. 23</span></a><ul>
+<li><a href="Apr-19.html" data-scroll="Apr-19">Apr. 19: Graph Coloring</a></li>
+<li><a href="Apr-21.html" data-scroll="Apr-21" class="active">Apr. 21: Euler Paths and Circuits</a></li>
+<li><a href="Apr-23.html" data-scroll="Apr-23">Apr. 23: Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Week-16.html" data-scroll="Week-16"><span class="codenumber">16</span> <span class="title">Week 16: Apr. 26-Apr. 30</span></a><ul>
+<li><a href="Apr-26.html" data-scroll="Apr-26">Apr. 26: Reading Discussion and Generating Functions</a></li>
+<li><a href="Apr-28.html" data-scroll="Apr-28">Apr. 28</a></li>
+<li><a href="Apr-30.html" data-scroll="Apr-30">Apr. 30</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link">
+<a href="appendix-counting.html" data-scroll="appendix-counting"><span class="codenumber">A</span> <span class="title">Counting Techniques</span></a><ul>
+<li><a href="section-45.html" data-scroll="section-45">Additive and Multiplicative Principles</a></li>
+<li><a href="section-46.html" data-scroll="section-46">PIE</a></li>
+<li><a href="section-47.html" data-scroll="section-47">Binomial Coefficients</a></li>
+<li><a href="section-48.html" data-scroll="section-48">Permutations</a></li>
+<li><a href="section-49.html" data-scroll="section-49">Stars and Bars</a></li>
+<li><a href="section-50.html" data-scroll="section-50">Anagrams</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Apr-21"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">15.2</span> <span class="title">Apr. 21: Euler Paths and Circuits</span>
+</h2>
+<section class="introduction" id="introduction-43"><article class="assemblage assemblage-like" id="assemblage-80"><h6 class="heading"><span class="title">Motivating Questions.</span></h6>
+<p id="p-799">Here are some questions we'll consider. <ol class="decimal">
+<li id="li-656">What is an Euler path? An Euler circuit?</li>
+<li id="li-657">What is a Hamiltonian path? Circuit?</li>
+</ol></p></article></section><section class="subsection" id="subsection-105"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.2.1</span> <span class="title">Outline</span>
+</h3>
+<p id="p-800">Today's material comes from <a class="external" href="http://discrete.openmathbooks.org/dmoi3/sec_paths.html" target="_blank">Section 4.5</a> of the book. You're encouraged to read it before coming to class.</p>
+<section class="subsubsection" id="subsubsection-77"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">15.2.1.1</span> <span class="title">Euler Paths and Circuits</span>
+</h4>
+<article class="investigation project-like" id="jqb"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">15.2.1</span><span class="period">.</span>
+</h6>
+<p id="ikI">An <dfn class="terminology">Euler path</dfn>, in a graph or multigraph, is a walk through the graph which uses every edge exactly once. An <dfn class="terminology">Euler circuit</dfn> is an Euler path which starts and stops at the same vertex. Our goal is to find a quick way to check whether a graph (or multigraph) has an Euler path or circuit.</p>
+<ol class="decimal">
+<li id="Uhd">
+<p id="YQW">Which of the graphs below have Euler paths? Which have Euler circuits?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
+<div class="sbspanel middle" style="width:18.2741116751269%;"><img src="images/image-30.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel middle" style="width:18.2741116751269%;"><img src="images/image-31.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel middle" style="width:36.5482233502538%;"><img src="images/image-32.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel middle" style="width:22.3350253807107%;"><img src="images/image-33.svg" role="img" class="contained" alt=""></div>
+</div></div>
+</li>
+<li id="Aom"><p id="EYf">List the degrees of each vertex of the graphs above. Is there a connection between degrees and the existence of Euler paths and circuits?</p></li>
+<li id="gvv"><p id="lfo">Is it possible for a graph with a degree 1 vertex to have an Euler circuit? If so, draw one. If not, explain why not. What about an Euler path?</p></li>
+<li id="MCE"><p id="Rmx">What if every vertex of the graph has degree 2. Is there an Euler path? An Euler circuit? Draw some graphs.</p></li>
+<li id="sJN">
+<p id="xtG">Below is <em class="emphasis">part</em> of a graph. Even though you can only see some of the vertices, can you deduce whether the graph will have an Euler path or circuit?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:23%;margin-right:23%;"><div class="sbspanel top" style="width:100%;"><img src="images/image-34.svg" role="img" class="contained" alt=""></div></div></div>
+</li>
+</ol></article><p id="p-807">There is a nice result which determines when a graph has a Euler path or circuit. To prove it, we need a bit more background.</p>
+<article class="definition definition-like" id="definition-7"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">15.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-808">Let \(G\) be a graph. A vertex \(v\in V(G)$\) is called a <dfn class="terminology">cut vertex of \(G\)</dfn> provided \(G\setminus v\) (that is, \(G\) with \(v\) and any incident edges removed) has more components than \(G\text{.}\)</p>
+<p id="p-809">Similarly, an edge \(e\in E(G)\) is called a <dfn class="terminology">cut edge of \(G\)</dfn> provided \(G\setminus e\) has more components than \(G\text{.}\)</p></article><p id="p-810">In other words, cut vertices an edges disconnect existing connected components of the graph.</p>
+<article class="lemma theorem-like" id="lem-even-deg-cut-edge"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-811">Let \(G\) be a connected graph all of whose vertices have even degree. Then no edge of \(G\) is a cut edge.</p></article><article class="hiddenproof" id="proof-18"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><p id="p-812">Suppose that \(e=xy\) is a cut edge of such a graph. Then \(G\setminus e\) has two components, and each of these components contain exactly one vertex of odd degree, contradicting the handshake lemma.</p></article></div>
+<article class="lemma theorem-like" id="lem-two-odd-cut-edge"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-813">Let \(G\) be a connected graph with exactly two vertices of odd degree. Let \(a\) be a vertex of odd degree and suppose \(d(a)\ne 1\text{.}\) Then at least one of the edges incident with \(a\) is not a cut edge.</p></article><article class="hiddenproof" id="proof-19"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><p id="p-814">Suppose for a contradiction that all edges incident with \(a\) are cut edges. Let \(b\) be the other vertex of odd degree in \(G\text{.}\)</p>
+<p id="p-815">Since \(G\) is connected, there is a path \(P\) from \(a\) to \(b\text{.}\) Exactly one edge incident to \(a\) is traversed by \(P\text{.}\) Let \(e\) be any other edge incident at \(a\text{.}\)</p>
+<p id="p-816">Now consider the graph \(G' = G\setminus e\text{.}\) This graph has exactly two components. Since the path \(P\) does not use \(e\text{,}\) vertices \(a\) and \(b\) are in the same component. Notice also that, in \(G'\text{,}\) vertex \(a\) has even degree, and all other vertices in its component have not changed degree. This means that, in  \(G'\text{,}\) there is exactly one vertex of odd degree, which is a contradiction.</p></article></div>
+<article class="theorem theorem-like" id="theorem-16"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-817">Let \(G\) be a connected graph. If every vertex of \(G\) has even degree, then for any \(v\in V(G)\text{,}\) there is an Euler circuit that begins and ends at \(v\text{.}\) Alternatively, if \(G\) has exactly two vertices of odd degree, say \(a\) and \(b\text{,}\) there is an Euler path that begins at \(a\) and ends at \(b\text{.}\)</p></article><article class="hiddenproof" id="proof-20"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><p id="p-818">We go by induction on the number \(e\) of edges of \(G\)</p>
+<p id="p-819">When \(e=0\text{,}\) have only vertices of even degree and a trivial Euler circuit, so the statement is true.</p>
+<p id="p-820">For the induction hypothesis, suppose \(G\) has \(m\) edges and satisfies the theorem.</p>
+<p id="p-821">Now suppose that \(G\) is connected with \(m+1\) edges.</p>
+<p id="p-822"><em class="emphasis">Suppose all of the vertices of \(G\) have even degree.</em> Let \(v\in V(G)\) be arbitrary and let \(w\) be a neighbor of \(v\text{.}\) Consider the graph \(G' = G\setminus vw\text{.}\) By <a class="xref" data-knowl="./knowl/lem-even-deg-cut-edge.html" title="Lemma 15.2.2">Lemma 15.2.2</a>, \(G'\) is connected and has exactly two vertices of odd degree. By induction, there is an Euler path from \(v\) to \(w\text{.}\) If we add \(vw\) to the end of this path, we have found an Euler circuit of \(G\) that begins and ends at \(w\text{.}\)</p>
+<p id="p-823"><em class="emphasis">Now suppose that \(G\) has exactly two vertices of odd degree, say \(a\) and \(b\text{.}\)</em> We seek an Euler path that begins at \(a\) and ends at \(b\text{.}\)</p>
+<p id="p-824">Suppose first that \(d(a) = 1\text{.}\) In this case, \(a\) has exactly one neighbor, \(x\text{.}\) It is possible that \(x = b\) or \(x\ne b\text{;}\) we'll check both possibilities. First, let \(G' = G\setminus a\text{.}\) Notice that \(d(x)\) drops by 1, while all other vertices have the same degree as before. Also note that \(G\) has \(m\) edges and is connected.</p>
+<ul class="disc">
+<li id="li-663"><p id="p-825">If \(x=b\text{,}\) then all vertices in \(G'\) have even degree. Therefore, by induction, \(G'\) has an Euler circuit \(W\) that begins and ends at \(b\text{.}\) If we insert the edge \(ab\) at the beginning of \(W\text{,}\) we have constructed an Euler path that begins at \(a\) and ends at \(b\text{.}\)</p></li>
+<li id="li-664"><p id="p-826">If \(x\ne b\text{,}\) then \(G'\) has exactly two vertices of odd degree (\(x\) and \(b\)) and \(m\) edges. Thus by induction there is an Euler path \(W\) that begins at \(x\) and ends at \(b\text{.}\) If we prepend the edge \(ax\) to the beginning of \(W\) we have an Euler path that begins at \(a\) and ends at \(b\text{.}\)</p></li>
+</ul>
+<p id="p-827">Now suppose that \(d(a) \gt 1\text{.}\) Since \(d(a)\) is odd, we have \(d(a) \ge 3\text{.}\) By <a class="xref" data-knowl="./knowl/lem-two-odd-cut-edge.html" title="Lemma 15.2.3">Lemma 15.2.3</a>, there is an edge \(ax\) that is not a cut edge. Let \(G' = G\setminus ax\text{.}\) As before, we consider the possibilities \(x = b\) and \(x\ne b\text{.}\)</p>
+<ul class="disc">
+<li id="li-665"><p id="p-828">If \(x=b\text{,}\) then as before all vertices in \(G'\) have even degree, and we can form, by induction, an Euler circuit in \(G'\) that begins/ends at \(b\) and then prepend the edge \(ab\) to form the desired Euler path.</p></li>
+<li id="li-666"><p id="p-829">If \(x\ne b\text{,}\) then as before we have exactly two vertices of odd degree in \(G'\text{,}\) namely \(x\) and \(b\text{.}\) By induction, form in \(G'\) an Euler path that starts at \(x\) and ends at \(b\text{.}\) We prepend the edge \(ax\) to complete the requisite Euler path in \(G\text{.}\)</p></li>
+</ul></article></div></section><section class="subsubsection" id="subsubsection-78"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">15.2.1.2</span> <span class="title">Hamilton Paths</span>
+</h4>
+<p id="XLD"> Suppose you wanted to tour Königsberg in such a way that you visit each land mass (the two islands and both banks) exactly once. This can be done. In graph theory terms, we are asking whether there is a path which visits every vertex exactly once. Such a path is called a <dfn class="terminology">Hamilton path</dfn> (or <dfn class="terminology">Hamiltonian path</dfn>). We could also consider <dfn class="terminology">Hamilton cycles</dfn>, which are Hamilton paths which start and stop at the same vertex.</p>
+<article class="example example-like" id="mkH"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.2.5</span><span class="period">.</span>
+</h6>
+<p id="Cdz">Determine whether the graphs below have a Hamilton path.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel top" style="width:28.5714285714286%;"><img src="images/image-35.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel top" style="width:28.5714285714286%;"><img src="images/image-36.svg" role="img" class="contained" alt=""></div>
+</div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Pxk" id="Pxk"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Pxk"><div class="solution solution-like">
+<p id="pPh">The graph on the left has a Hamilton path (many different ones, actually), as shown here:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel top" style="width:100%;"><img src="images/image-37.svg" role="img" class="contained" alt=""></div></div></div>
+<p id="VWq">The graph on the right does not have a Hamilton path. You would need to visit each of the “outside” vertices, but as soon as you visit one, you get stuck. Note that this graph does not have an Euler path, although there are graphs with Euler paths but no Hamilton paths.</p>
+</div></div>
+</div></article><p id="DSM"> It appears that finding Hamilton paths would be easier because graphs often have more edges than vertices, so there are fewer requirements to be met. However, nobody knows whether this is true. There is no known simple test for whether a graph has a Hamilton path. For small graphs this is not a problem, but as the size of the graph grows, it gets harder and harder to check wither there is a Hamilton path. In fact, this is an example of a question which as far as we know is too difficult for computers to solve; it is an example of a problem which is NP-complete.</p></section></section><section class="subsection" id="subsection-106"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.2.2</span> <span class="title">Today's Screencast</span>
+</h3>
+<article class="insight remark-like" id="insight-37"><h6 class="heading">
+<span class="type">Screencast</span><span class="space"> </span><span class="codenumber">15.2.6</span><span class="period">.</span>
+</h6></article></section><section class="subsection" id="subsection-107"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.2.3</span> <span class="title">If you missed class today</span>
+</h3>
+<ol class="decimal">
+<li id="li-667">Work through today's outline and read the marked pages in the book.</li>
+<li id="li-668">Watch the screencast above.</li>
+<li id="li-669">Submit any homework/assignments due today (check our <a class="external" href="https://dordt.instructure.com/courses/3110050" target="_blank">Canvas course</a> or the <a class="external" href="https://prof.mkjanssen.org/ds/index.html#schedule" target="_blank">syllabus schedule</a> to see what's due).</li>
+<li id="li-670">
+<a class="external" href="mailto:mike.janssen@dordt.edu" target="_blank">Send Dr. Janssen an email</a> or <a class="external" href="https://calendly.com/mkjanssen/student-hours" target="_blank">set up a student hours appointment</a> if you have any questions!</li>
+</ol></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-19T14:52:49-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p xmlns:svg="http://www.w3.org/2000/svg">We saw in an example above that this recurrence relation gives the sequence \(1, 3, 7, 15, 31, 63, \ldots\) which has generating function \(\dfrac{1}{1 - 3x + 2x^2}\text{.}\) We did this by calling the generating function \(A\) and then computing \(A - 3xA + 2x^2A\) which was just 1, since every other term canceled out.</p>
+<p>But how does knowing the generating function help us? First, break up the generating function into two simpler ones. For this, we can use partial fraction decomposition. Start by factoring the denominator:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{1-3x + 2x^2} = \frac{1}{(1-x)(1-2x)}\text{.}
+\end{equation*}
+</div>
+<p>Partial fraction decomposition tells us that we can write this faction as the sum of two fractions (we decompose the given fraction):</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-2x)} = \frac{a}{1-x} + \frac{b}{1-2x} \text{ ~~ for some constants } a \text{ and } b\text{.}
+\end{equation*}
+</div>
+<p>To find \(a\) and \(b\) we add the two decomposed fractions using a common denominator. This gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-2x)} = \frac{a(1-2x) + b(1-x)}{(1-x)(1-2x)}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1 = a(1-2x) + b(1-x)\text{.}
+\end{equation*}
+</div>
+<p>This must be true for all values of \(x\text{.}\) If \(x = 1\text{,}\) then the equation becomes \(1 = -a\) so \(a = -1\text{.}\) When \(x = \frac{1}{2}\) we get \(1 = b/2\) so \(b = 2\text{.}\) This tells us that we can decompose the fraction like this:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-2x)} = \frac{-1}{1-x} + \frac{2}{1-2x}\text{.}
+\end{equation*}
+</div>
+<p>This completes the partial fraction decomposition. Notice that these two fractions are generating functions we know. In fact, we should be able to expand each of them.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{-1}{1-x} = -1 - x - x^2 -x^3 - x^4 - \cdots \mbox{ which generates }  -1, -1, -1, -1, -1, \ldots\text{.}
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{2}{1-2x} = 2 + 4x + 8x^2 + 16x^3 + 32x^4 + \cdots \mbox{ which generates }  2, 4, 8, 16, 32, \ldots\text{.}
+\end{equation*}
+</div>
+<p>We can give a closed formula for the \(n\)th term of each of these sequences. The first is just \(a_n = -1\text{.}\) The second is \(a_n = 2^{n+1}\text{.}\) The sequence we are interested in is just the sum of these, so the solution to the recurrence relation is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a_n = 2^{n+1} - 1\text{.}
+\end{equation*}
+</div>
+</div></body>
+</html>
