@@ -1,0 +1,6 @@
+from LDK/
+*.slvr
+*.mindnode
+.nova/
+.DS_Store
+*.woff2

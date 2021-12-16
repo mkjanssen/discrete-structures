@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <docinfo>
+<macros>
+{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+
+
+</macros>
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\usepackage{pgfplots}
+</latex-image-preamble>
+<!-- <search>
+            <google>
+                <cx>017464805646507420634:civa1brpuu6</cx>
+            </google>
+        </search> -->
+<rename element="principle">Discussion</rename>
+<rename element="exploration">Problem</rename>
+<!-- <rename element="heuristic">Cube Move</rename> -->
+<rename element="insight">Order Axiom</rename>
+  </docinfo>
+  <book>
+    <title>Discrete Structures Course Notes</title>
+
+    
+      
+    <frontmatter>
+    <titlepage>
+    
+        <author>
+          <personname>Mike Janssen</personname>
+          <department>Mathematics and Statistics Department</department>
+          <institution>Dordt University</institution>
+          <email>mike.janssen@dordt.edu</email>
+        </author>
+        
+        
+        
+
+
+    
+    
+    
+        </titlepage>
+        
+        <colophon xmlns:xi="http://www.w3.org/2001/XInclude">
+        
+          
+          <website>
+            <name>https://prof.mkjanssen.org/ra/notes</name>
+            <address>https://prof.mkjanssen.org/ra/notes</address>
+          </website>
+          
+          
+          
+          
+          
+          
+        
+          <!-- <copyright>
+            <year>2021<ndash /></year>
+        
+            <minilicense>CC BY-SA 4.0 License</minilicense>
+            <shortlicense>
+              Permission is granted to copy and (re)distribute this material in any format and/or adapt it (even commercially) under the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.  The work may be used for free in any way by any party so long as attribution is given to the author(s) and if the material is modified, the resulting contributions are distributed under the same license as this original.  All trademarks<trademark /> are the registered<registered /> marks of their respective owners. The graphic
+        
+              <sidebyside width="25%" permid="RTE">
+                <image xml:id="CC-BY-SA-license" source="./img/CC-BY-SA-license.svg" />
+              </sidebyside>
+        
+              that may appear in other locations in the text shows that the work is licensed with the Creative Commons and that the work may be used for free by any party so long as attribution is given to the author(s) and if the material is modified, the resulting contributions are distributed under the same license as this original. Full details may be found by visiting <url href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</url>  or sending a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+            </shortlicense>
+        
+          </copyright> -->
+        </colophon>
+
+    <acknowledgement>
+      <p>
+        <!-- This work is based on notes <url href="http://jiblm.org/downloads/dlitem.php?id=110&category=jiblmjournal">originally published</url> by Karl-Dieter Crisman in the Journal of Inquiry-Based Learning in Mathematics, issue 46 (Oct. 2017). -->
+      </p>
+      
+      <!-- <p>
+        Per the JIBLM convention, the proper attribution is:
+      </p>
+      
+      <blockquote>
+        M. Janssen &lt; Ron Taylor
+      </blockquote> -->
+    </acknowledgement>
+
+    <!--     <preface xml:id="Sec-NoteToStudents">
+            <title>A Note to Students</title>
+      
+      
+        </preface> -->
+    </frontmatter>
+
+    <chapter xml:id="chap-logic">
+        <title>Logic</title>
+        
+        <section xml:id="sec-logic-intro">
+          <title>Introduction to Mathematical Statements</title>
+          
+          <p>
+            In order to do mathematics, we need an idea of what sorts of questions we can explore.
+            We will focus our energies on <em>statements</em>.
+            This implicitly limits the domain of mathematics, but in doing so 
+          </p>
+          
+          
+          
+          <definition xml:id="def-statement">
+            <idx>statement</idx>
+            <statement>
+              <p>
+                A <term>statement</term> is a declarative sentence that is either true or false.
+              </p>
+            </statement>
+          </definition>
+          
+          <activity>
+            <statement>
+              <p>
+                Determine whether the following are statements.
+                If so, explain why, and determine their truth value if you are able.
+                If not, explain why not.
+              </p>
+              <ol>
+                <li>Quadratic equations have at most two real solutions.</li>
+                <li>There exists a function that is differentiable at 0 but not continuous at 0.</li>
+                <li>Winter is coming.</li>
+                <li>What time is it?</li>
+                <li>The sum of the first <m>n</m> positive integers is <m>\frac{n(n+1)}{2}</m>.</li>
+                <li>That is beautiful!</li>
+                <li>A hexagon has six sides, and two distinct lines in the plane are either parallel or meet in exactly one point.</li>
+                <li>The Green Bay Packers are the worst football team.</li>
+                <li><m>3+4=7.</m></li>
+                <li>This statement is false.</li>
+              </ol>
+            </statement>
+          </activity>
+          
+          <activity>
+            <statement>
+              <p>
+                Give at least one example and one non-example of a statement.
+              </p>
+            </statement>
+          </activity>
+          
+          
+          <p>
+            Most of the statements we've explored so far might be considered <term>atomic</term> in the sense that they cannot be broken down into combinations of simpler statements.
+            In <xref ref="sec-logical-connectives-equivalence" />, we will explore ways of building more complex statements out of simpler ones via logical connectives.
+          </p>
+          
+        </section>
+        
+        
+        <section xml:id="sec-logical-connectives-equivalence">
+          <title>Logical Connectives and Equivalence</title>
+          
+          <assemblage>
+            <title>Guiding Questions</title>
+            <p>
+                <statement>
+                In this section, we'll seek to answer the questions:
+                <ul>
+                  <li>How can we combine statements into more complex statements?</li>
+                  <li>What is a truth table?</li>
+                  <li>How can we determine if two statements are logically equivalent?</li>
+                </ul>
+          
+              </statement>
+            </p>
+          </assemblage> 
+          
+          <introduction>
+            <p>
+              In this section, we will explore ways of combining statements to form new, more complex statements.
+              A hallmark of our approach is that we will <em>define</em> the truth values of the statements completely formally (though generally the way you might expect).
+              That is to say, the truth values of the combined statements will depend only on the truth values of the atomic statements of which they are composed.
+              Deeper exploration will require a clear notion of logical equivalence, established via truth tables.
+            </p>
+          </introduction>
+          
+          <subsection>
+            <title>Logical Connectives</title>
+          
+          <p>
+            We begin with negation.
+          </p>
+          
+          <definition>
+            <index>negation</index>
+            <index><h>logical connectives</h><h>negation</h></index>
+            <statement>
+            <p>
+              Suppose <m>P</m> is a statement.
+              The <term>negation</term> of <m>P</m>, denoted <m>\neg P</m> and read <q>not <m>P</m></q>, has the opposite truth value of <m>P</m> and is defined by the <em>truth table</em> found in <xref ref="table-negation" />.
+            </p>
+            
+            <table xml:id="table-negation">
+              <tabular halign="center">
+              <row bottom="medium">
+                <cell halign="left" right="medium">
+                <m>​P</m>
+                </cell>
+                <cell halign="left">
+                <m>​\neg P</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                T
+                </cell>
+                <cell>
+                F
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                F
+                </cell>
+                <cell>
+                T
+                </cell>
+              </row>
+              </tabular>
+              <title>
+              The negation of <m>P</m>, <m>\neg P</m>.
+              </title>
+            </table>
+            </statement>
+          </definition>
+          
+          <p>
+            We observe that <xref ref="table-negation" /> is our first encounter with a <em>truth table</em>.
+            A truth table lists all possible truth values for a (compound) statement given all possible combinations of truth values of its atomic statements.
+            Since there are only two possible truth values for the atomic statement <m>P</m>, there are only two rows in <xref ref="table-negation" />.
+          </p>
+          
+         
+          
+          <activity>
+            <statement>
+              <p>
+                Meaningfully negate the following propositions (without just saying "It is not the case that...").
+              </p>
+              <ol>
+                <li><m>e</m> is a negative real number.</li>
+                <li>Iowa is the tenth largest state.</li>
+                <li>17 is a prime number.</li>
+              </ol>
+              <solution>
+                <ol>
+                  <li><m>e</m> is a nonnegative real number.</li>
+                  <li>Iowa is not the tenth largest state.</li>
+                  <li>17 is a composite number.</li>
+                </ol>
+              </solution>          
+            </statement>
+          </activity>
+          
+          
+          
+          <p>
+            The next connective we introduce is the logical <term>and</term>, also known as <term>conjunction</term>.
+            Then, we'll see the logical <term>inclusive or</term>, also known as <term>disjunction</term>.
+          </p>
+          
+          <definition xml:id="def-and">
+            <index>and</index>
+            <index>conjunction</index>
+            <index><h>logical connectives</h><h>and</h></index>
+            <statement>
+            <p>
+              The <term>conjunction</term> of <m>P</m> and <m>Q</m>, denoted <m>P \land Q</m> and read <q><m>P</m> and <m>Q</m></q>, is true when both <m>P</m> and <m>Q</m> are true, and false otherwise. See <xref ref="table-and" />.
+            </p>
+            
+            <table xml:id="table-and">
+              <title>
+              The conjunction of <m>P</m> and <m>Q</m>.
+              </title>
+              <tabular halign="center">
+              <row bottom="medium">
+                <cell halign="left" right="medium">
+                <m>​P</m>
+                </cell>
+                <cell halign="left" right="medium">
+                <m>​Q</m>
+                </cell>
+                <cell halign="left">
+                <m>P \land Q​</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                T
+                </cell>
+                <cell right="medium">
+                T
+                </cell>
+                <cell>
+                T
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                T
+                </cell>
+                <cell right="medium">
+                F
+                </cell>
+                <cell>
+                F
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                F
+                </cell>
+                <cell right="medium">
+                T
+                </cell>
+                <cell>
+                F
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                F
+                </cell>
+                <cell right="medium">
+                F
+                </cell>
+                <cell>
+                F
+                </cell>
+              </row>
+              </tabular>
+            </table>
+            </statement>
+          </definition>
+          
+          
+          <definition xml:id="def-or">
+          <index>or</index>
+          <index>disjunction</index>
+          <index><h>logical connectives</h><h>or</h></index>
+          <statement>
+          
+          <p>
+            The <term>disjunction</term> of <m>P</m> and <m>Q</m>, denoted <m>P \lor Q</m> and read <q><m>P</m> or <m>Q</m></q>, is true when <m>P</m> is true, <m>Q</m> is true, or both are true, and false otherwise. See <xref ref="table-or" />.
+          </p>
+          
+          <table xml:id="table-or">
+            <title>
+            The disjunction of <m>P</m> and <m>Q</m>.
+            </title>
+            <tabular halign="center">
+            <row bottom="medium">
+              <cell halign="left" right="medium">
+              <m>​P</m>
+              </cell>
+              <cell halign="left" right="medium">
+              <m>​Q</m>
+              </cell>
+              <cell halign="left">
+              <m>P \lor Q​</m>
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              T
+              </cell>
+              <cell right="medium">
+              T
+              </cell>
+              <cell>
+              T
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              T
+              </cell>
+              <cell right="medium">
+              F
+              </cell>
+              <cell>
+              T
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              F
+              </cell>
+              <cell right="medium">
+              T
+              </cell>
+              <cell>
+              T
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              F
+              </cell>
+              <cell right="medium">
+              F
+              </cell>
+              <cell>
+              F
+              </cell>
+            </row>
+            </tabular>
+          </table>
+          
+          </statement>
+          </definition>
+          
+          
+          <exploration>
+            <statement>
+              <p>
+                Determine the truth values of the following propositions.
+              </p>
+              <ol>
+                <li>Math 212 meets on Mondays and the capital of Iowa is Des Moines.</li>
+                <li>Math 212 meets on Mondays and the capital of Minnesota is Minneapolis.</li>
+                <li>Math 212 meets on Mondays or the capital of Minnesota is Minneapolis.</li>
+                <li>Math 212 meets on Mondays or the capital of Minnesota is St. Paul.</li>
+              </ol>
+              
+          
+            </statement>
+            
+            <solution>
+              <p>We want to emphasize that the truth of the conjunction or disjunction depends <em>only on the truth of the constituent statements</em>. It doesn't matter whether it makes sense semantically to combine the constituents this way.</p>
+              
+              <ol>
+                <li>This is true, as both constituents are true.</li>
+                <li>This is false; the capital of Minnesota is St. Paul, not Minneapolis.</li>
+                <li>This is true, since it's a disjunctive statement and one of the constituents is true (Math 149 meets on Mondays).</li>
+              </ol>
+          
+            
+            </solution>
+          </exploration>
+          
+          <p>
+            Observe that the <q>or</q> connective defined in <xref ref="def-or" /> is distinct from the so-called <q>exclusive or</q> that is often used in, e.g., computer science.
+            The statement <m>P \lor Q</m> is true so long as at least one of <m>P,Q</m> is true<mdash />or both!
+          </p>
+          
+          
+          
+          <p>
+            There are two more connectives to consider.
+            As a warmup, consider the following problem.
+          </p>
+          
+          
+          
+          <exploration xml:id="expl-redblue1">
+          <statement>
+            <p>
+              A mathematician places a set of four cards on a table, each of which has a number on one side and a colored patch on the other side. She claims the following: 
+              
+              <blockquote>
+              If a card shows an even number on one face, then its opposite face is red.
+              </blockquote>
+               
+                The visible faces of the cards show 3, 8, red, and blue. Which card(s) must you turn over in order to test the truth of her claim? Carefully explain.
+            </p>
+          </statement>
+          </exploration>
+          
+          <definition xml:id="def-implications">
+                  <index>implication</index>
+                  <index>if-then</index>
+                  <index>conditional statements</index>
+                  <index><h>logical connectives</h><h>implies</h></index>
+                  <p>
+                    Let <m>P</m> and <m>Q</m> be statements.
+                    The <term>implication</term>, <q><m>P</m> implies <m>Q</m></q><fn>We sometimes say that <m>P</m> is <q>sufficient for</q> <m>Q</m>.</fn> (or <q>if <m>P</m>, then <m>Q</m></q>) is denoted <m>P\Rightarrow Q</m>, and is false only when <m>P</m> is true but <m>Q</m> is false.
+                    See <xref ref="table-implication" />.
+                  </p>
+                  
+                  <table xml:id="table-implication">
+                    <title>
+                    The implication <m>P\Rightarrow Q</m>.
+                    </title>
+                    <tabular halign="center">
+                    <row bottom="medium">
+                      <cell halign="left" right="medium">
+                      <m>​P</m>
+                      </cell>
+                      <cell halign="left" right="medium">
+                      <m>​Q</m>
+                      </cell>
+                      <cell halign="left">
+                      <m>P\Rightarrow Q​</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                      T
+                      </cell>
+                      <cell right="medium">
+                      T
+                      </cell>
+                      <cell>
+                      T
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                      T
+                      </cell>
+                      <cell right="medium">
+                      F
+                      </cell>
+                      <cell>
+                      F
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                      F
+                      </cell>
+                      <cell right="medium">
+                      T
+                      </cell>
+                      <cell>
+                      T
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                      F
+                      </cell>
+                      <cell right="medium">
+                      F
+                      </cell>
+                      <cell>
+                      T
+                      </cell>
+                    </row>
+                    </tabular>
+                  </table>
+                </definition>
+                
+                <exploration>
+                  <statement>
+                    <p>
+                      Determine the truth values of the following statements. Identify which row of <xref ref="table-implication" /> you are in.
+                    </p>
+                    <ol>
+                      <li>If <m>x</m> is a negative integer, then <m>-5\cdot x</m> is positive.</li>
+                      <li>If we have Math 212 today, then it is Wednesday.</li>
+                      <li>If <m>9 > 5</m>, then dogs do not have wings.</li>
+                      <li>If <m>2=4</m>, then Calvin Coolidge is our greatest president.</li>
+                    </ol>
+          
+                  </statement>
+                  <!-- 
+          <solution>
+                    <p>As with conjunction and disjunction, there need be no causal relationship (or any relationship at all) between the constituents in an implication. To actually deduce the implication, however, usually does require a causal link to be established.</p>
+                    <ol>
+                      <li>This is true.</li>
+                    </ol>
+          
+                  </solution>
+           -->
+          
+          
+                </exploration>
+          
+          
+                
+                <p>
+                  The formalization of mathematical logic ramps up a bit when we consider conditional statements.
+                  It is important to remember that we define the truth value of the proposition <m>P \Rightarrow Q</m> <em>formally</em> based on the structure of the conditional statement and the truth values of the constituents <m>P</m> and <m>Q</m>.
+                  That is to say that there need not be a causal relationship between <m>P</m> and <m>Q</m>!
+                </p>
+                
+                <p>
+                  The last two rows of <xref ref="table-implication" /> are also worth a moment of our time.
+                  They state that if the statement <m>P</m><fn>Often called the <em>antecedent.</em></fn> is false, then the <em>implication</em> <m>P\Rightarrow Q</m> is <em>true</em>.
+                  Note that this is different than saying that <m>Q</m><fn>Often called the <em>consequent.</em></fn> is true.
+                  When the implication <m>P\Rightarrow Q</m> is true because <m>P</m> is false, we usually say that <m>P\Rightarrow Q</m> is <term>vacuously true</term>.
+                </p>
+                
+                <exploration>
+                  <index>vacuous truth</index>
+                  <statement>
+                    <p>
+                      Suppose Dr. Janssen promises that, if everyone get an A in the class, then he will bring Defender sandwiches (on pretzel buns, with everything, as God intended) to celebrate on the last day of class<fn>This is purely hypothetical.</fn>.
+                      Unfortunately, a few students finish the course with an A<ndash />, so Dr. Janssen does not bring Defenders.
+                    </p>
+          
+                    <p>
+                      Decide the truth value of the implication <blockquote>If everyone gets an A in the class, Dr. Janssen will bring Defender sandwiches to celebrate.</blockquote>
+                      Make sure you can clearly explain your thinking and be able to give reasons for why the truth value you chose makes sense.
+                    </p>
+                    
+                    
+          
+          
+                  </statement>
+          
+                </exploration>
+                
+                <p>
+                  Our final logical connective is the <term>biconditional</term> connective.
+                </p>
+                
+                <definition xml:id="def-biconditional">
+                  <index>biconditional</index>
+                  <index>if and only if</index>
+                  <index>conditional statements</index>
+                  <index><h>logical connectives</h><h>biconditional</h></index>
+                  <statement>
+                    <p>
+                      Let <m>P</m> and <m>Q</m> be statements.
+                      The biconditional statement joining <m>P</m> and <m>Q</m>, read <q><m>P</m> if and only if <m>Q</m></q><fn>We sometimes say that <m>P</m> is <q>necessary and sufficient</q> for <m>Q</m>.</fn> and written <m>P\Leftrightarrow Q</m>, is true precisely when both <m>P</m> and <m>Q</m> are true, and false otherwise.
+                    </p>
+                  </statement>
+                </definition>
+                
+                
+                
+                <exploration>
+                        <statement>
+                          <p>
+                            First, construct a truth table for <m>P\Leftrightarrow Q</m> based on <xref ref="def-biconditional" />.
+                            Then, determine the truth values of the following statements. Identify which row of your truth table you are in.
+                          </p>
+                          <ol>
+                            <li><m>x</m> is a negative integer if and only if <m>-5\cdot x</m> is positive.</li>
+                            <li>We have Math 212 today if and only if today is Wednesday.</li>
+                            <li><m>9 > 5</m> if and only if dogs do not have wings.</li>
+                            <li><m>2=4</m> if and only if <m>\sin(\pi) = 1</m>.</li>
+                          </ol>
+                
+                        </statement>
+                        <!-- 
+                <solution>
+                          <p>As with conjunction and disjunction, there need be no causal relationship (or any relationship at all) between the constituents in an implication. To actually deduce the implication, however, usually does require a causal link to be established.</p>
+                          <ol>
+                            <li>This is true.</li>
+                          </ol>
+                
+                        </solution>
+                 -->
+                
+                
+                      </exploration>
+          
+          
+          </subsection>
+          
+          <subsection>
+            <title>Logical Equivalence</title>
+            
+            
+            
+            <p>
+              A fundamental skill in analyzing and proving mathematical statements is the ability to carefully describe their logical structure and, when appropriate, convert the statement into a <term>logically equivalent</term> statement.
+              Ideally, the new equivalent form of the statement will have a structure more amenable to a particular type of proof or solution.
+            </p>
+            
+            <definition>
+              <index>logical equivalence</index>
+              <statement>
+                <p>
+                  Two statements <m>P</m> and <m>Q</m> are said to be <term>logically equivalent</term> if they have the same truth table.
+                  In this case, we write <m>P \equiv Q</m>.
+                </p>
+              </statement>
+            </definition>
+            
+            <exploration>
+              <index>double negation</index>
+              <title>Double Negation</title>
+              <statement>
+                <p>
+                  Use a truth table to verify that <m>P\equiv \neg (\neg P)</m>.
+                </p>
+              </statement>
+            </exploration>
+            
+            
+            <exploration>
+              <statement>
+                <p>
+                  Use a truth table to determine whether the following statements are logically equivalent.
+                </p>
+                <ul>
+                  <li><m>P\Leftrightarrow Q</m></li>
+                  <li><m>(P\Rightarrow Q)\land (Q\Rightarrow P)</m></li>
+                </ul>
+              </statement>
+            </exploration>
+            
+            
+            <p>
+              Given an implication <m>P\Rightarrow Q</m>, one may construct some related statements.
+            </p>
+            
+            <definition>
+              <index>converse</index>
+              <index>contrapositive</index>
+              <index>inverse</index>
+              <index><h>implication</h><h>converse of</h></index>
+              <index><h>implication</h><h>contrapositive of</h></index>
+              <index><h>implication</h><h>inverse of</h></index>
+              <statement>
+                <p>
+                  Let <m>P</m> and <m>Q</m> be statements.
+                </p>
+                <ul>
+                  <li>The <term>converse of the statement <m>P\Rightarrow Q</m></term> is the statement <m>Q\Rightarrow P</m>.</li>
+                  <li>The <term>contrapositive of the statement <m>P\Rightarrow Q</m></term> is the statement <m>(\neg Q)\Rightarrow (\neg P)</m>.</li>
+                  <li>Thhe <term>inverse of the statement <m>P\Rightarrow Q</m></term> is the statement <m>(\neg P)\Rightarrow (\neg Q)</m>.</li>
+                </ul>
+              </statement>
+            </definition>
+            
+            
+            <activity>
+              <statement>
+                <p>
+                  Choose at least two conditional statements we've mentioned in class and state the coverse, contrapositive, and inverse of each.
+                  Based on the statements you wrote, make a conjecture<fn>A conjecture is a precise educated <q>guess</q> about what is true in general.</fn> about how the truth values of these four implications (the original conditional statement, together with its converse, contrapositive, and inverse) seem to relate.
+                </p>
+              </statement>
+            </activity>
+            
+            <exploration>
+              <statement>
+                <p>
+                  Use truth tables to identify any logical equivalences between <m>P\Rightarrow Q</m>, <m>Q\rightarrow P</m>, <m>(\neg Q)\Rightarrow (\neg P)</m>, and <m>(\neg P)\Rightarrow (\neg Q)</m>.
+                </p>
+              </statement>
+            </exploration>
+            
+            <exploration xml:id="prob-le-contradiction">
+              <statement>
+                <p>
+                  Show that <m>P\rightarrow Q \equiv (\neg P) \lor Q</m>.
+                </p>
+              </statement>
+            </exploration>
+            
+            <p>
+              The following pairs of logical equivalences, named for British mathematician <url href="https://en.wikipedia.org/wiki/Augustus_De_Morgan">Augustus De Morgan</url>, allow us to convert conjunctions to disjunctions, and vice versa.
+            </p>
+            
+            <exploration xml:id="prob-demorgan-stmt">
+              <index>De Morgan's Laws (for statements)</index>
+              <title>De Morgan's Laws</title>
+              <statement>
+                <p>
+                  Show that the following pairs of statements are logically equivalent.
+                </p>
+                <ul>
+                  <li><m>\neg (P\land Q)</m> and <m>(\neg P) \lor (\neg Q)</m></li>
+                  <li><m>\neg (P\lor Q)</m> and <m>(\neg P)\land (\neg Q)</m></li>
+                </ul>
+              </statement>
+            </exploration>
+            
+            <exploration xml:id="prob-distlaws-stmt">
+              <index>distributive laws (for statements)</index>
+              <title>Distributive Laws</title>
+              <statement>
+                <p>
+                  Let <m>P, Q, R</m> be statements.
+                  Use truth tables to verify the following equivalences, but be careful<mdash />how many rows should your truth table contain?
+                </p>
+                <ul>
+                  <li><m>P\land (Q\lor R) \equiv P\lor (Q\land R)</m></li>
+                  <li><m>P\lor (Q\land R) \equiv P \land (Q\lor R)</m></li>
+                </ul>
+              </statement>
+            </exploration>
+                  
+                  
+            <p>
+              We will often interested in proving conditional statements in which our antecdents or consequents have multiple cases.
+              The following equivalences will come in handy.
+            </p>
+            
+            <exploration>
+              <statement>
+                <p>
+                  Use truth tables to verify the following.
+                </p>
+                <ul>
+                  <li><m>P\Rightarrow (Q\land R) \equiv (P\land \neg Q)\Rightarrow R</m></li>
+                  <li><m>(P\lor Q)\Rightarrow R \equiv (P\Rightarrow R)\land (Q\Rightarrow R)</m></li>
+                </ul>
+              </statement>
+            </exploration>
+                  
+            <p>
+              To conclude this section, we mention two types of special statements: tautologies and contradictions.
+            </p>
+            
+            <definition>
+              <index>tautology</index>
+              <index>contradiction</index>
+              <statement>
+                <p>
+                  A statement is called a <term>tautology</term> if it is always true.
+                  A statement is called a <term>contradiction</term> if it is never true.
+                </p>
+              </statement>
+            </definition>
+            
+            <figure xml:id="fig-tautology-club">
+              <image xml:id="img-tautology-club" source="https://imgs.xkcd.com/comics/honor_societies.png" width="75%" />
+              <caption>
+              From <url href="https://xkcd.com/703/">XKCD 703: Honor Societies</url>
+              </caption>
+            </figure>
+            
+            <activity>
+              <statement>
+                <p>
+                  Let <m>P</m> and <m>Q</m> be statements.
+                  Determine, with proof, whether the following are tautologies, contradictions, or neither.
+                </p>
+                <ol>
+                  <li><m>P\land (\neg P)</m></li>
+                  <li><m>P\lor (\neg P)</m></li>
+                  <li><m>P\Rightarrow (P\Rightarrow (P\Rightarrow (P\Rightarrow Q)))</m></li>
+                  <li><m>P\Rightarrow (\neg P\Rightarrow (P\Rightarrow (\neg P\Rightarrow Q)))</m></li>
+                </ol>
+              </statement>
+            </activity>
+            
+            
+            
+            
+            
+            
+          </subsection>
+          
+        </section>
+        
+        
+        
+        <section xml:id="sec-quantifiers">
+          <title>Quantifiers</title>
+          
+          <assemblage>
+            <title>Guiding Questions</title>
+            <p>
+                <statement>
+                In this section, we'll seek to answer the questions:
+                <ul>
+                  <li>What is an open statement?</li>
+                  <li>What are quantifiers?</li>
+                  <li>How can we negate quantified statements?</li>
+                </ul>
+          
+              </statement>
+            </p>
+          </assemblage> 
+          
+          
+          <introduction>
+          
+          
+          </introduction>
+          
+          
+        </section>  
+      
+    
+    </chapter>
+    
+    
+    <chapter xml:id="chap-graph-intro">
+      <title>Introduction to Graphs</title>
+      
+      <section xml:id="sec-graph-definitions">
+        <title>Definitions and Examples</title>
+        
+        
+      </section>
+      
+      
+      <section xml:id="sec-first-properties">
+        <title>Elementary Properties of Graphs</title>
+        
+      </section>
+      
+      
+      <section xml:id="sec-preview">
+        <title>A Preview of Future Questions</title>
+        
+        
+      </section>
+      
+    </chapter>
+    
+    
+    <chapter xml:id="chap-proof-techninques">
+      <title>Proof Techniques</title>
+      
+      <section xml:id="sec-direct-proof">
+        <title>Direct Proof</title>
+      
+      </section>
+      
+      
+      <section xml:id="sec-contradiction">
+        <title>Proof by Contradiction</title>
+        
+      </section>
+      
+      
+      <section xml:id="sec-contrapositive">
+        <title>Proof via Contrapositive</title>
+        
+      </section>
+      
+      
+      <section xml:id="sec-cond-bicond">
+        <title>Conditional and Biconditional Proofs</title>
+        
+        
+      </section>
+      
+      
+      <section xml:id="sec-induction">
+        <title>Induction</title>
+        
+        
+      </section>
+      
+      
+    </chapter>
+    
+    <chapter xml:id="chap-set-theory">
+      <title>Set Theory</title>
+      
+      <section xml:id="sec-idea-of-sets">
+        <title>The idea of a set</title>
+        
+        
+      </section>
+      
+      <section xml:id="sec-set-operations">
+        <title>Operations with Sets</title>
+        
+      </section>
+      
+      <section xml:id="sec-familes-of-sets">
+        <title>Families of Sets</title>
+        
+        
+      </section>
+      
+      
+    </chapter>
+    
+    <chapter xml:id="chap-functions">
+      <title>Functions</title>
+      
+      <section xml:id="sec-intro-to-functions">
+        <title>Introduction to Functions</title>
+        
+      </section>
+      
+      <section xml:id="sec-properties-of-functions">
+        <title>Properties of Functions</title>
+        
+      </section>
+      
+      
+    </chapter>
+    
+    
+    <chapter xml:id="chap-more-graphs">
+      <title>Further Explorations in Graph Theory</title>
+      
+      <section xml:id="sec-trees-cycles">
+        <title>Trees and Cycles</title>
+        
+      </section>
+      
+      <section xml:id="sec-graph-isomorphisms">
+        <title>Graph Isomorphisms</title>
+        
+      </section>
+      
+      <section xml:id="sec-graph-invariants">
+        <title>Graph Invariants</title>
+        
+      </section>
+      
+      
+    </chapter>
+
+      
+      
+  
+  
+  
+    
+    
+   
+     <backmatter>
+      <index>
+        <title>Index</title>
+        <index-list />
+      </index>
+      
+
+    </backmatter>
+  </book>
+</pretext>
