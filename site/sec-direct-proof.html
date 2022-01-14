@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-13T09:36:24-06:00       *-->
+<!--*       on 2022-01-14T11:51:10-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -145,7 +145,7 @@
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-42.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-proof-techniques.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap-proof-techniques.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-contradiction.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-45.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-proof-techniques.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap-proof-techniques.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-contradiction.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -197,7 +197,7 @@
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="appendix-writing.html" data-scroll="appendix-writing"><span class="codenumber">A</span> <span class="title">On Mathematical Writing</span></a></li>
-<li class="link"><a href="index-42.html" data-scroll="index-42"><span class="title">Index</span></a></li>
+<li class="link"><a href="index-45.html" data-scroll="index-45"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-direct-proof"><h2 class="heading hide-type">
@@ -208,7 +208,120 @@
 <li id="li-84"><p id="p-derived-li-84">What is a proof?</p></li>
 <li id="li-85"><p id="p-derived-li-85">What is a direct proof?</p></li>
 <li id="li-86"><p id="p-derived-li-86">What are some ideas for getting started/unstuck when stuck on a proof?</p></li>
-</ul></p></article></section></div></main>
+</ul></p></article><section class="introduction" id="introduction-4"><p id="p-77">Unlike the natural and social sciences, which largely rely on data, experiment, and statistical analyses, mathematical knowledge proceeds deductively via proof. But what is a proof? We will consider a proof to be a “convincing argument,” written as a short essay, and adhering to the standard rules of mathematical English. But what is an argument? And whom should it convince?</p>
+<p id="p-78">As an illustration, consider a statement of the form “If <span class="process-math">\(P\text{,}\)</span> then <span class="process-math">\(Q\text{.}\)</span>” A <dfn class="terminology">direct proof</dfn> will begin with the assumption that statement <span class="process-math">\(P\)</span> is true. We will use our knowledge of what it means for <span class="process-math">\(P\)</span> to be true—using other definitions or theorems—to make a new deduction. We continue in this way until we may deduce that <span class="process-math">\(Q\)</span> is true.</p></section><p id="p-79">Before an example, we make the following definition.</p>
+<article class="definition definition-like" id="def-even-odd-integer"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+</h3>
+<p id="p-80">Let <span class="process-math">\(m\)</span> be an integer.</p>
+<ul class="disc">
+<li id="li-87"><p id="p-derived-li-87">We say that <span class="process-math">\(m\)</span> is <dfn class="terminology">even</dfn> if there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(m = 2k\text{.}\)</span></p></li>
+<li id="li-88"><p id="p-derived-li-88">We say that <span class="process-math">\(m\)</span> is <dfn class="terminology">odd</dfn> if there exists an integer <span class="process-math">\(\ell\)</span> such that <span class="process-math">\(m = 2\ell + 1\text{.}\)</span></p></li>
+</ul></article><article class="activity project-like" id="activity-10"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+</h3>
+<p id="p-81">Determine whether the following integers are even or odd by showing that they satisfy the appropriate definition.</p>
+<ol class="decimal">
+<li id="li-89"><p id="p-derived-li-89">5</p></li>
+<li id="li-90"><p id="p-derived-li-90">8</p></li>
+<li id="li-91"><p id="p-derived-li-91">0</p></li>
+<li id="li-92"><p id="p-derived-li-92">1</p></li>
+<li id="li-93"><p id="p-derived-li-93"><span class="process-math">\(\displaystyle -57\)</span></p></li>
+<li id="li-94"><p id="p-derived-li-94">8,675,309</p></li>
+</ol></article><p id="p-82">We now consider the following example proof. For the purposes of this proof and what follows, we may assume that the basic laws of arithemtic of integers are true: an integer times an integer is an integer, an integer plus an integer is an integer, etc.</p>
+<article class="theorem theorem-like" id="thm-sq-even"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
+</h3>
+<p id="p-83">Let <span class="process-math">\(m\)</span> be an even integer. Then <span class="process-math">\(m^2\)</span> is even.</p></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-84">Let <span class="process-math">\(m\)</span> be an even integer. By <a href="" class="xref" data-knowl="./knowl/def-even-odd-integer.html" title="Definition 3.1.1">Definition 3.1.1</a>, there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(m = 2k\text{.}\)</span> When we square <span class="process-math">\(m\text{,}\)</span> we obtain <span class="process-math">\(m^2 = (2k)^2 = 2^2 \cdot k^2 = 4k^2\text{.}\)</span> Observe that we may rewrite <span class="process-math">\(m^2\)</span> as</p>
+<div class="displaymath process-math">
+\begin{equation*}
+m^2 = 4k^2 = 2(2k^2).
+\end{equation*}
+</div>
+<p id="p-85">Since <span class="process-math">\(2k^2\)</span> is an integer, we have written <span class="process-math">\(m^2\)</span> as the product of 2 and an integer. Therefore, <span class="process-math">\(m^2\)</span> is even.</p></article></div>
+<article class="insight remark-like" id="insight-8"><h3 class="heading">
+<span class="type">LaTeX Code</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+</h3>
+<p id="p-86">To typeset an exponent in <span class="process-math">\(\LaTeX\text{,}\)</span> we use the carat symbol, <code class="code-inline tex2jax_ignore">^</code>, in math mode. So, <code class="code-inline tex2jax_ignore">m^2</code> produces <span class="process-math">\(m^2\text{.}\)</span> If the exponent has more than one character, enclose the expression in the exponent in curly braces; so, <code class="code-inline tex2jax_ignore">m^{n+2}</code> produces <span class="process-math">\(m^{n+2}\text{.}\)</span></p></article><p id="p-87">There are several observations that are worth a moment of our time.</p>
+<article class="assemblage assemblage-like" id="assemblage-6"><h3 class="heading"><span class="title">Observations on the Proof of Theorem 3.1.3.</span></h3>
+<p id="p-88"><ul class="disc">
+<li id="li-95"><p id="p-derived-li-95">The proof begins by restating our assumtion: that we are working with a general even integer, <span class="process-math">\(m\text{.}\)</span></p></li>
+<li id="li-96"><p id="p-derived-li-96">Note that we are <em class="emphasis">not</em> considering a specific even integer, such as 18, and verifying that its square is even. Part of the power of mathematics is that we have tools for proving <em class="emphasis">general</em> statements about all even integers at once. Proofs are not examples, and you shouldn't treat them as such.</p></li>
+<li id="li-97"><p id="p-derived-li-97">The proof is written using complete sentences!</p></li>
+<li id="li-98"><p id="p-derived-li-98">The proof takes the reader on a journey, using plural pronouns and active language: “we may rewrite...,” etc.</p></li>
+<li id="li-99"><p id="p-derived-li-99">The proof avoids the use of pronouns to refer to a mathematical objects; we don't square “it”, we square <span class="process-math">\(m\text{.}\)</span> This keeps things clear and easy to follow.</p></li>
+<li id="li-100"><p id="p-derived-li-100">Each step follows from the one before it, though specific reasons are not always cited. Determining when it's appropriate to cite, say, a definition or theorem by number is a bit of an art form. We'll figure it out.</p></li>
+<li id="li-101"><p id="p-derived-li-101">The proof ends by clearly stating the conclusion we sought.</p></li>
+<li id="li-102"><p id="p-derived-li-102">You should consider your audience. If your audience is a group of research mathematicians, you'll write a far different proof than if you are writing for your classmates. You should write for your classmates.</p></li>
+</ul></p></article><p id="p-89">Prove the following theorems directly.</p>
+<article class="theorem theorem-like" id="theorem-2"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+</h3>
+<p id="p-90">Let <span class="process-math">\(n\)</span> be an odd integer. Then <span class="process-math">\(n^2\)</span> is an odd integer.</p></article><article class="theorem theorem-like" id="theorem-3"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
+</h3>
+<p id="p-91">The sum of two even integers is even.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-92">You should give your integers (distinct) names.</p></div></div></article><p id="p-93">For the next three theorems, finish the sentence with “even” or “odd,” then prove the theorem.</p>
+<article class="theorem theorem-like" id="theorem-4"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+</h3>
+<p id="p-94">The sum of two even integers is ....</p></article><article class="theorem theorem-like" id="theorem-5"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
+</h3>
+<p id="p-95">The sum of two odd integers is ....</p></article><article class="theorem theorem-like" id="theorem-6"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
+</h3>
+<p id="p-96">The sum of an even integer and an odd integer is ....</p></article><p id="p-97">An <dfn class="terminology">axiom</dfn> is an unproved assumption. Without axioms, we have no starting point for our explorations and deductions. However, since we do not prove our axioms, we should ensure that they are reasonable and clear. We will likely eventually prove <a href="" class="xref" data-knowl="./knowl/axiom-evenodd.html" title="Axiom 3.1.10">Axiom 3.1.10</a>, but for now we may take it as true without proof.</p>
+<article class="axiom theorem-like" id="axiom-evenodd"><h3 class="heading">
+<span class="type">Axiom</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span>
+</h3>
+<p id="p-98">Let <span class="process-math">\(m\)</span> be an integer. Then <span class="process-math">\(m\)</span> is even or odd, but not both.</p></article><p id="p-99">First, a definition.</p>
+<article class="definition definition-like" id="def-consecutiveintegers"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
+</h3>
+<p id="p-100">Let <span class="process-math">\(m,n\)</span> be integers. We say <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are consecutive integers if <span class="process-math">\(m = n+1\)</span> or <span class="process-math">\(n = m+1\text{.}\)</span></p></article><p id="p-101">Again, in the next two theorems, finish the statement with “even” or “odd”, and prove the theorem.</p>
+<article class="theorem theorem-like" id="theorem-7"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span>
+</h3>
+<p id="p-102">The product of consecutive integers is ....</p></article><article class="theorem theorem-like" id="theorem-8"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span>
+</h3>
+<p id="p-103">Let <span class="process-math">\(m\)</span> be an integer. Then <span class="process-math">\(m^2 + 13m + 42\)</span> is ....</p></article><article class="question example-like" id="question-1"><h3 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span>
+</h3>
+<p id="p-104">Of the theorems so far in this section, which are universally quantified? Which are existentially quantified? Justify your answer.</p></article><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Exploring Graphs</span>
+</h3>
+<p id="p-105">Let's prove some facts about graphs.</p>
+<article class="definition definition-like" id="def-vertex-degree"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.15</span><span class="period">.</span>
+</h4>
+<p id="p-106">Let <span class="process-math">\(v\)</span> be a vertex in a graph <span class="process-math">\(G\text{.}\)</span> The <dfn class="terminology">degree of <span class="process-math">\(v\)</span></dfn>, denoted <span class="process-math">\(d(v)\text{,}\)</span> is the number of edges incident to <span class="process-math">\(v\text{.}\)</span> We say a vertex is <dfn class="terminology">even</dfn> if its degree is an even integer, and <dfn class="terminology">odd</dfn> if its degree is an odd integer.</p></article><article class="activity project-like" id="activity-11"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.16</span><span class="period">.</span>
+</h4>
+<p id="p-107">Draw at least three examples of graphs. For each graph you draw, count the following:</p>
+<ul class="disc">
+<li id="li-103"><p id="p-derived-li-103">The number of odd vertices.</p></li>
+<li id="li-104"><p id="p-derived-li-104">The number of even vertices.</p></li>
+<li id="li-105"><p id="p-derived-li-105">The sum of all the vertex degrees.</p></li>
+</ul>
+<p id="p-108">Make a careful conjecture (that is, an educated guess) about any patterns you observe. Then prove your conjectures.</p></article><article class="definition definition-like" id="def-min-max-degree"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.17</span><span class="period">.</span>
+</h4>
+<p id="p-109">Let <span class="process-math">\(G\)</span> be a graph. The <dfn class="terminology">minimum degree</dfn> of a vertex in <span class="process-math">\(G\)</span> is denoted by <span class="process-math">\(\delta(G)\text{.}\)</span> The <dfn class="terminology">maximum degree</dfn> of a vertex in <span class="process-math">\(G\)</span> is denoted by <span class="process-math">\(\Delta(G)\text{.}\)</span></p></article><article class="insight remark-like" id="insight-9"><h4 class="heading">
+<span class="type">LaTeX Code</span><span class="space"> </span><span class="codenumber">3.1.18</span><span class="period">.</span>
+</h4>
+<p id="p-110">We typeset <span class="process-math">\(\delta(G)\)</span> in math mode using <code class="code-inline tex2jax_ignore">\delta(G)</code>. Similarly, we typeset <span class="process-math">\(\Delta(G)\)</span> in math mode using <code class="code-inline tex2jax_ignore">\Delta(G)</code>.</p></article><article class="exploration project-like" id="exploration-16"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.1.19</span><span class="period">.</span>
+</h4>
+<p id="p-111">Let <span class="process-math">\(G\)</span> be a graph with <span class="process-math">\(n\)</span> vertices. Determine, with proof, the possible values for <span class="process-math">\(\delta(G)\)</span> and <span class="process-math">\(\Delta(G)\text{.}\)</span></p></article><article class="exploration project-like" id="exploration-17"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.1.20</span><span class="period">.</span>
+</h4>
+<p id="p-112">Suppose you know that a graph <span class="process-math">\(G\)</span> has seven vertices, and <span class="process-math">\(\delta(G) = 3\)</span> and <span class="process-math">\(\Delta(G) = 5\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-106"><p id="p-derived-li-106">Prove that this graph must have at least 12 edges.</p></li>
+<li id="li-107"><p id="p-derived-li-107">Determine, with proof, the largest number of edges possible in this graph.</p></li>
+</ol></article></section></section></div></main>
 </div>
 </body>
 </html>

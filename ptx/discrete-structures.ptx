@@ -1338,6 +1338,321 @@
           </p>
         </assemblage>
         
+        <introduction>
+          <p>
+            Unlike the natural and social sciences, which largely rely on data, experiment, and statistical analyses, mathematical knowledge proceeds deductively via proof.
+            But what is a proof?
+            We will consider a proof to be a <q>convincing argument,</q> written as a short essay, and adhering to the standard rules of mathematical English.
+            But what is an argument? And whom should it convince?
+          </p>
+          <p>
+            As an illustration, consider a statement of the form <q>If <m>P</m>, then <m>Q</m>.</q>
+            A <term>direct proof</term> will begin with the assumption that statement <m>P</m> is true.
+            We will use our knowledge of what it means for <m>P</m> to be true<mdash />using other definitions or theorems<mdash />to make a new deduction.
+            We continue in this way until we may deduce that <m>Q</m> is true.
+          </p>
+        </introduction>
+        
+        <p>
+          Before an example, we make the following definition.
+        </p>
+        
+        <definition xml:id="def-even-odd-integer">
+          <idx>even integer</idx>
+          <idx>odd integer</idx>
+          <idx><h>integer</h><h>even</h></idx>
+          <idx><h>integer</h><h>odd</h></idx>
+          <statement>
+            <p>
+              Let <m>m</m> be an integer.
+            </p>
+            <ul>
+              <li>We say that <m>m</m> is <term>even</term> if there exists an integer <m>k</m> such that <m>m = 2k</m>.</li>
+              <li>We say that <m>m</m> is <term>odd</term> if there exists an integer <m>\ell</m> such that <m>m = 2\ell + 1</m>.</li>
+            </ul>
+          </statement>
+        </definition>
+        
+        <activity>
+          <statement>
+            <p>
+              Determine whether the following integers are even or odd by showing that they satisfy the appropriate definition.
+            </p>
+            <ol>
+              <li>5</li>
+              <li>8</li>
+              <li>0</li>
+              <li>1</li>
+              <li><m>-57</m></li>
+              <li>8,675,309</li>
+            </ol>
+          </statement>
+        </activity>
+        
+        <p>
+          We now consider the following example proof.
+          For the purposes of this proof and what follows, we may assume that the basic laws of arithemtic of integers are true: an integer times an integer is an integer, an integer plus an integer is an integer, etc.
+        </p>
+        
+        <theorem xml:id="thm-sq-even">
+          <statement>
+            <p>
+              Let <m>m</m> be an even integer.
+              Then <m>m^2</m> is even.
+            </p>
+          </statement>
+          <proof>
+            <p>
+              Let <m>m</m> be an even integer.
+              By <xref ref="def-even-odd-integer" />, there exists an integer <m>k</m> such that <m>m = 2k</m>.
+              When we square <m>m</m>, we obtain <m>m^2 = (2k)^2 = 2^2 \cdot k^2 = 4k^2</m>.
+              Observe that we may rewrite <m>m^2</m> as
+            </p>
+              <me>
+                m^2 = 4k^2 = 2(2k^2).
+              </me>
+            <p>
+              Since <m>2k^2</m> is an integer, we have written <m>m^2</m> as the product of 2 and an integer.
+              Therefore, <m>m^2</m> is even.
+            </p>
+          </proof>
+        </theorem>
+        
+        <insight>
+          <index><h><m>\LaTeX</m> symbols</h><h>exponents</h></index>
+          <statement>
+            <p>
+              To typeset an exponent in <m>\LaTeX</m>, we use the carat symbol, <c>^</c>, in math mode.
+              So, <c>m^2</c> produces <m>m^2</m>.
+              If the exponent has more than one character, enclose the expression in the exponent in curly braces; so, <c>m^{n+2}</c> produces <m>m^{n+2}</m>.
+            </p>
+          </statement>
+        </insight>
+        
+        <p>
+          There are several observations that are worth a moment of our time.
+        </p>
+        
+        <assemblage>
+          <title>Observations on the Proof of <xref ref="thm-sq-even" /></title>
+          <p>
+              <statement>
+              
+              <ul>
+                <li>The proof begins by restating our assumtion: that we are working with a general even integer, <m>m</m>.</li>
+                <li>Note that we are <em>not</em> considering a specific even integer, such as 18, and verifying that its square is even. Part of the power of mathematics is that we have tools for proving <em>general</em> statements about all even integers at once. Proofs are not examples, and you shouldn't treat them as such.</li>
+                <li>The proof is written using complete sentences!</li>
+                <li>The proof takes the reader on a journey, using plural pronouns and active language: <q>we may rewrite...,</q> etc.</li>
+                <li>The proof avoids the use of pronouns to refer to a mathematical objects; we don't square <q>it</q>, we square <m>m</m>. This keeps things clear and easy to follow.</li>
+                <li>Each step follows from the one before it, though specific reasons are not always cited. Determining when it's appropriate to cite, say, a definition or theorem by number is a bit of an art form. We'll figure it out.</li>
+                <li>The proof ends by clearly stating the conclusion we sought.</li>
+                <li>You should consider your audience. If your audience is a group of research mathematicians, you'll write a far different proof than if you are writing for your classmates. You should write for your classmates.</li>
+              </ul>
+        
+            </statement>
+          </p>
+        </assemblage>
+        
+        <p>
+          Prove the following theorems directly.
+        </p>
+        
+        <theorem>
+          <statement>
+            <p>
+              Let <m>n</m> be an odd integer. Then <m>n^2</m> is an odd integer.
+            </p>
+          </statement>
+        </theorem>
+        
+        <theorem>
+          <statement>
+            <p>
+              The sum of two even integers is even.
+            </p>
+          </statement>
+          <hint>
+            <p>You should give your integers (distinct) names.</p>
+          </hint>
+        </theorem>
+        
+        <p>
+          For the next three theorems, finish the sentence with <q>even</q> or <q>odd,</q> then prove the theorem.
+        </p>
+        
+        <theorem>
+          <statement>
+            <p>
+              The sum of two even integers is ....
+            </p>
+          </statement>
+        </theorem>
+        
+        
+        <theorem>
+          <statement>
+            <p>
+              The sum of two odd integers is ....
+            </p>
+          </statement>
+        </theorem>
+        
+        
+        <theorem>
+          <statement>
+            <p>
+              The sum of an even integer and an odd integer is ....
+            </p>
+          </statement>
+        </theorem>
+        
+        
+        <p>
+          An <term>axiom</term> is an unproved assumption.
+          Without axioms, we have no starting point for our explorations and deductions.
+          However, since we do not prove our axioms, we should ensure that they are reasonable and clear.
+          We will likely eventually prove <xref ref="axiom-evenodd" />, but for now we may take it as true without proof.
+        </p>
+        
+        <axiom xml:id="axiom-evenodd">
+          <statement>
+            <p>
+              Let <m>m</m> be an integer.
+              Then <m>m</m> is even or odd, but not both.
+            </p>
+          </statement>
+        </axiom>
+        
+        <p>
+          First, a definition.
+        </p>
+        
+        <definition xml:id="def-consecutiveintegers">
+          <idx><h>integer</h><h>consecutive integers</h></idx>
+          <idx>consecutive integers</idx>
+          <statement>
+            <p>
+              Let <m>m,n</m> be integers.
+              We say <m>m</m> and <m>n</m> are consecutive integers if <m>m = n+1</m> or <m>n = m+1</m>.
+            </p>
+          </statement>
+        </definition>
+        
+        <p>
+          Again, in the next two theorems, finish the statement with <q>even</q> or <q>odd</q>, and prove the theorem.
+        </p>
+        
+        <theorem>
+          <statement>
+            <p>
+              The product of consecutive integers is ....
+            </p>
+          </statement>
+        </theorem>
+        
+        
+        <theorem>
+          <statement>
+            <p>
+              Let <m>m</m> be an integer.
+              Then <m>m^2 + 13m + 42</m> is ....
+            </p>
+          </statement>
+        </theorem>
+        
+        <question>
+          <statement>
+            <p>
+              Of the theorems so far in this section, which are universally quantified?
+              Which are existentially quantified?
+              Justify your answer.
+            </p>
+          </statement>
+        </question>
+        
+        <subsection>
+          <title>Exploring Graphs</title>
+          
+          <p>
+            Let's prove some facts about graphs.
+          </p>
+          
+          <definition xml:id="def-vertex-degree">
+            <idx>degree of a vertex</idx>
+            <statement>
+              <p>
+                Let <m>v</m> be a vertex in a graph <m>G</m>.
+                The <term>degree of <m>v</m></term>, denoted <m>d(v)</m>, is the number of edges incident to <m>v</m>.
+                We say a vertex is <term>even</term> if its degree is an even integer, and <term>odd</term> if its degree is an odd integer.
+              </p>
+            </statement>
+          </definition>
+          
+          
+          
+          <activity>
+            <statement>
+              <p>
+                Draw at least three examples of graphs.
+                For each graph you draw, count the following:
+              </p>
+              <ul>
+                <li>The number of odd vertices.</li>
+                <li>The number of even vertices.</li>
+                <li>The sum of all the vertex degrees.</li>
+              </ul>
+              <p>
+                Make a careful conjecture (that is, an educated guess) about any patterns you observe.
+                Then prove your conjectures.
+              </p>
+            </statement>
+          </activity>
+          
+          <definition xml:id="def-min-max-degree">
+            <statement>
+              <p>
+                Let <m>G</m> be a graph.
+                The <term>minimum degree</term> of a vertex in <m>G</m> is denoted by <m>\delta(G)</m>.
+                The <term>maximum degree</term> of a vertex in <m>G</m> is denoted by <m>\Delta(G)</m>.
+              </p>
+            </statement>
+          </definition>
+          
+          <insight>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\delta</m></h></index>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\Delta</m></h></index>
+            <statement>
+              <p>
+                We typeset <m>\delta(G)</m> in math mode using <c>\delta(G)</c>.
+                Similarly, we typeset <m>\Delta(G)</m> in math mode using <c>\Delta(G)</c>.
+              </p>
+            </statement>
+          </insight>
+          
+          <exploration>
+            <statement>
+              <p>
+                Let <m>G</m> be a graph with <m>n</m> vertices.
+                Determine, with proof, the possible values for <m>\delta(G)</m> and <m>\Delta(G)</m>.
+              </p>
+            </statement>
+          </exploration>
+          
+          <exploration>
+            <statement>
+              <p>
+                Suppose you know that a graph <m>G</m> has seven vertices, and <m>\delta(G) = 3</m> and <m>\Delta(G) = 5</m>.
+              </p>
+              <ol>
+                <li>Prove that this graph must have at least 12 edges.</li>
+                <li>Determine, with proof, the largest number of edges possible in this graph.</li>
+              </ol>
+            </statement>
+          </exploration>
+        
+        </subsection>
+        
+        
          
       
       </section>
