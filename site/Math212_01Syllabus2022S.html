@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Math 212: Discrete Structures</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="./pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Math 212: Discrete Structures</h1>
+<p class="date">Spring 2022</p>
+</header>
+<h2 id="course-information">Course Information</h2>
+<ul>
+<li><strong>Institution</strong>: Dordt University</li>
+<li><strong>Course</strong>: Math 212-01 (3 cr.)</li>
+<li><strong>Term</strong>: Spring 2022</li>
+<li><strong>Instructor</strong>: Dr. Mike Janssen, Associate Professor of Mathematics</li>
+<li><strong>Classroom</strong>: SB 1641</li>
+<li><strong>Class time</strong>: 2:00-2:50pm MWF</li>
+<li><strong>Office</strong>: SB 1612</li>
+<li><strong>Student Hours</strong>: <a href="https://calendly.com/mkjanssen/student-hours">Make an appointment</a> or drop by</li>
+<li><strong>Course Notes</strong>: <a href="https://prof.mkjanssen.org/ds/">https://prof.mkjanssen.org/ds/</a></li>
+<li><strong>Catalog Course Description</strong>: A study of topics in discrete mathematics that are relevant to computer science and mathematics, including logic and proof, induction and recursion, elementary set theory, combinatorics, relations and functions, Boolean algebra, and introductory graph theory. Prerequisite: a grade of C- or better in Math 152.</li>
+</ul>
+<h3 id="required-resources">Required Resources</h3>
+<p>Regular access to:</p>
+<ul>
+<li>A copy of <em>Mathematics for Human Flourishing</em>, by Francis E. Su</li>
+<li>the <a href="notes/">course notes</a></li>
+<li><a href="https://dordt.instructure.com/courses/3391427">Canvas</a> to access assignments and other course information</li>
+<li><a href="https:/.www.overleaf.com/">Overleaf</a> for producing your homework</li>
+</ul>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>In this course, students will:</p>
+<ul>
+<li>be <em>communicators</em> through regular presentations to the Math 212 learning community and growing fluency in the writing of mathematical proofs. (CD)</li>
+<li>be <em>explorers</em> by engaging with in-class activities and regular work outside the classroom. (CD)</li>
+<li>be <em>connectors</em> by building relationships between real-world questions and discrete mathematical tools for answering them. (CS)</li>
+<li>be <em>learners</em> by leveraging knowledge of logic, functions, and sets to explore foundational questions in discrete mathematics. (CS)</li>
+<li>be <em>ambassadors</em> by reflecting on the ways the practice of mathematics can promote human flourishing. (RO, CD, CR)</li>
+</ul>
+<h2 id="course-liturgies">Course Liturgies</h2>
+<p>The best way to learn mathematics is to <em>do</em> mathematics. There are two main types of regular work in this course: daily work, and written work.</p>
+<h3 id="daily-work">Daily Work</h3>
+<p>The work of the course will be primarily driven by you, the student. In fact, each of you will have a job <em>every day</em> to ensure that our course meetings are productive, that mathematical questions are asked and answered, and a record of each meeting kept.</p>
+<h4 id="problems-and-presentations">Problems and Presentations</h4>
+<p>You will be assigned approximately five to six problems from the notes to work on before coming to class. You may <strong>not</strong> use any outside resources to help you solve these problems–<strong>no books, no websites, no friends who have taken this course before</strong>. Using these resources will constitute plagiarism and will be reported to the Student Life Committee. You <em>may</em> work with others currently enrolled in the course, but you will need to ensure that you can completely understand and explain the solutions and proofs you come up with.</p>
+<p>One of the main goals of this course is to improve your mathematical communication. Thus, the majority of each class period will be devoted to you <strong>presenting your work</strong> on these problems to the class. You should expect that approximately 90% of the typical class period will consist of presentations and discussion.</p>
+<p>By 12:00pm before each class, you will claim on Canvas problems whose solutions you are willing to present. In general, you will be allowed to present at most one problem per class meeting. You will earn 0.1 daily work points per problem you sign up to present, even if you are not ultimately the person to present it.</p>
+<p>You will be notified by 1:00pm on Canvas of any problems you are assigned to present.</p>
+<p>You will then write the problem and solution up on the board, highlight the main points of the proof/solution, and generally lead the class discussion. <strong>That is, merely writing the solution on the board will not be sufficient to earn full credit</strong>. The presenter will earn points as follows.</p>
+<p><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> point.</strong> The solution/proof is correct and complete, the explanation clear, and all questions are answered.</p>
+<p><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math> point.</strong> The solution/proof was prepared, but there are gaps in the solution/explanation, and/or questions that are not satisfactorily answered.</p>
+<p><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">-0.1</annotation></semantics></math> points.</strong> The solution/proof was either not prepared or is in completely the wrong direction.</p>
+<h4 id="support">Support</h4>
+<p>Of course, not everyone can be assigned the problems they sign up for. However, you may be assigned as <em>support</em> for a given problem, typically a problem you’ve indicated a willingness to present. Prior to the presentation, it is your job to make sure that the presenter’s written proof is clear. During and following the presentation, it is your job to try to answer any questions alongside the presenter. Satisfactorily engaging as a problem support person will earn you half the credit of the presenter (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">1/4</annotation></semantics></math>, or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">-0.05</annotation></semantics></math> points).</p>
+<h4 id="scribes">Scribes</h4>
+<p>Each presented problem will also have a <em>scribe</em> assigned on Canvas by 1:00pm. The first problems will be scribed (more or less) in alphabetical order by last name, and subsequent scribes will be assigned in ascending order from least daily work points to most.</p>
+<p>The scribe will have the responsibility of taking notes on the presented proof and asking questions when something is not clear. They then will write up a formal version of the proof <strong>and</strong> discussion and post it to our Overleaf document. The scribe will earn <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">1/4</annotation></semantics></math> point when a correct proof is submitted.</p>
+<h4 id="discussion-leader">Discussion Leader</h4>
+<p>Finally, you may be assigned to be one of the day’s <em>discussion leaders</em>. It will be your job to make sure that everyone has sufficient time to absorb the solution and ask any questions they might have. It is also your job to think of a question to ask <em>of each presenter</em> if your classmates do not. You will earn 1 point each time you serve as an engaged, productive discussion leader.</p>
+<h4 id="academic-integrity">Academic Integrity</h4>
+<p>This course structure effectively models the way professional mathematicians conduct and share their research. Thus, we will abide by the Policy Statement on Ethical Guidelines<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> adopted by the American Mathematical Society, in particular Section I on mathematical research and its presentation. As this statement describes, “[t]he knowing presentation of another person’s mathematical discovery as one’s own constitutes plagiarism and is a serious violation of professional ethics. Plagiarism may occur for any type of work, whether written or oral and whether published or not.” When you present your work in this class, both orally and in writing, you must cite <strong>any conversations</strong> you have had about your problem with <strong>anyone in the class</strong>. Looking to <strong>any resource</strong> outside of the people in our class for information about the problems at hand constitutes plagiarism and will be reported to the Student Life Committee.</p>
+<p>Daily work points will be monitored and factored into the <a href="#grading">final grade</a>.</p>
+<h3 id="written-work">Written Work</h3>
+<p>Roughly every other week (other than the weeks we have exams), you will be assigned three problems to solve, write up, and submit online by 5:00pm on <strong>Jan. 19, 26; Feb. 16; Mar. 2, 30; Apr. 13, 27</strong>. These will be written in LaTeX, and will generally not be problems that have been presented in class (though they may have been assigned as daily work). Each problem will be graded on a four-level scale (each explained more fully on the proof rubric distributed <a href="https://prof.mkjanssen.org/ProofRubric.pdf">here</a>) as:</p>
+<p><strong>E</strong>xceeds expectations. Dr. Janssen would be happy to post this as the official class solution.</p>
+<p><strong>M</strong>eets expectations. The logic is generally correct and it is reasonably well written, but there is room for improvement.</p>
+<p><strong>R</strong>evision needed. Some major gaps in logic, misuse of notation, or unclear communication requires revision.</p>
+<p><strong>N</strong>ot assessable. This is difficult to read, abuses notation, or contains significant mathematical flaws.</p>
+<!-- ### Exams -->
+<p>Writing proofs is as much art as science, and initially it can seem daunting and confusing. If you submit by the deadline, you will receive a first round of feedback from an experienced teaching assistant by the following Monday. You’ll then have until Friday of <em>that</em> week to submit a revised version of the homework based on the TA feedback. Dr. Janssen will then give an initial assessment and feedback which may be revised once before becoming final.</p>
+<p>In short, your submissions will go through the following workflow (with the number representing the number of days since the Wednesday submission):</p>
+<ul>
+<li>Day <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>: Initial submission due 5:00pm Wednesday</li>
+<li>Day <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>5</mn><annotation encoding="application/x-tex">5</annotation></semantics></math>: TA feedback returned by class time on Monday</li>
+<li>Day <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>9</mn><annotation encoding="application/x-tex">9</annotation></semantics></math>: Revised submission due at 5:00pm Friday</li>
+<li>Day <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mo>+</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">9+n</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">1\le n\le 7</annotation></semantics></math>: Feedback and initial assessment (EMRN) on each problem from Dr. Janssen</li>
+<li>Day <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn><mo>+</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">16+n</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">1 \le n \le 7</annotation></semantics></math>: Final version of problems submitted to Dr. Janssen, to be graded within a week.</li>
+</ul>
+<p>Work submitted late or work initially assessed at an N requires a meeting with Dr. Janssen and short accompanying reflection on why the work was assessed at an N and how such assessments will be avoided in the future. If earning an N becomes a regular occurrence on written assignments due to perceived lack of effort, you may lose the grace afforded by the submission/feedback/resubmission process and only be allowed a single submission.</p>
+<h3 id="portfolio">Portfolio</h3>
+<p>At the end of the semester, you will compile a selection of your work (both written and daily), along with 3-5 new problems, into a portfolio, due at the final exam time. More details to come.</p>
+<h3 id="reading-reflections">Reading Reflections</h3>
+<p>As we mature in our mathematical studies, we’ll consider the formative nature of mathematical practice. (Former Dordt First Mondays Speaker) Francis Su argues that mathematics can help inculcate certain virtues in its practitioners. We’ll read Su’s book in chunks, complete reflection essays, and discuss them in class. See the reflection assignments’ Canvas pages for more details.</p>
+<h3 id="exams">Exams</h3>
+<p>There will be two exams, the first in class on <strong>March 2</strong>, and the second (oral) exam during the last week of class/finals week. The first will be cumulative up to the previous class, and worth 50 points, while the second will be cumulative over the whole semester, but with an emphasis on material covered since the first exam, and worth 75 points. The first will be a written in-class exam, while the second will be an oral exam. Your exam average will be a major factor in your final grade.</p>
+<h3 id="other-polices-and-advice">Other Polices and Advice</h3>
+<ul>
+<li>I am generally fairly accepting of late work, with a built-in 24-hour grace period for any non-classroom activities (e.g., non-TA written work submissions, reflections). Additional time beyond the 24-hour grace period must be approved ahead of time.</li>
+<li>Student hours are your time to ask questions about all aspects of the class and college life. If you can’t <a href="https://calendly.com/mkjanssen/student-hours">find an appointment</a>, send me an email! I will do my very best to accommodate your schedule.</li>
+<li><strong>Email Policy</strong>: I check my email twice per school day: once in the morning, where I’ll deal with any emergencies, and once in the afternoon, when I’ll respond to other emails (including any that have come in since the morning). If you require a more immediate response, you’re welcome to come find me in my office.</li>
+</ul>
+<h2 id="grading"><a id="grading"></a>Grading</h2>
+<p>In general, your final grade will be the <strong>highest fully completed row</strong> in the following table.</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 13%" />
+<col style="width: 31%" />
+<col style="width: 20%" />
+<col style="width: 15%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Grade</th>
+<th style="text-align: center;">Daily Work</th>
+<th style="text-align: center;">Written Work (M or higher)</th>
+<th style="text-align: center;">Written Work (E)</th>
+<th style="text-align: center;">Exam Average</th>
+<th style="text-align: center;">Portfolio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">43<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td style="text-align: center;">18/19</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">87%</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">A-</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">17/19</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">84%</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">B+</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">16/19</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">80%</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">15/19</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">77%</td>
+<td style="text-align: center;">M</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">B-</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">14/19</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">74%</td>
+<td style="text-align: center;">M</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">C+</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">13/19</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">70%</td>
+<td style="text-align: center;">M</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">12/19</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">67%</td>
+<td style="text-align: center;">M</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">C-</td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">11/19</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">64%</td>
+<td style="text-align: center;">M</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">10/19</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">55%</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="additional-information">Additional Information</h3>
+<h4 id="dordt-university-students-right-to-accommodations-policy">Dordt University Student’s Right to Accommodations Policy</h4>
+<p>Dordt University is committed to providing reasonable accommodations for students with documented qualifying disabilities in accordance with federal laws and university policy. Any student who needs access to accommodations based on the impact of a documented disability should contact the Academic Enrichment Director: Sharon Rosenboom, Academic Enrichment Center, Office: L166, (712) 722-6488, Email: Sharon.Rosenboom@dordt.edu.</p>
+<h4 id="dordt-university-academic-dishonesty-policy">Dordt University Academic Dishonesty Policy</h4>
+<p>Dordt University is committed to developing a community of Christian scholars where all members accept the responsibility of practicing personal and academic integrity in obedience to biblical teaching. For students, this means not lying, cheating, or stealing others’ work to gain academic advantage; it also means opposing academic dishonesty. Students found to be academically dishonest will receive academic sanctions from their professor (from a failing grade on the particular academic task to a failing grade in the course) and will be reported to the Student Life Committee for possible institutional sanctions (from a warning to dismissal from the university). Appeals in such matters will be handled by the student disciplinary process. For more information, see the <a href="http://www.dordt.edu/campus_life/student_handbook/general_information.shtml#academic_integrity">Student Handbook</a>.</p>
+<h4 id="classroom-attendance-protocol">Classroom Attendance Protocol</h4>
+<p>As we begin the Spring 2022 semester, class attendance policies and procedures as outlined in the Student Handbook are in place. To paraphrase the Student Handbook, Dordt University as an institution remains committed to in person instruction for face-to-face courses. As a result, you are expected to be present for every class period and laboratory period. Should you need to miss class for any reason, contact your instructor as soon as possible (either prior to the absence or immediately following). Absences for Dordt-sponsored curricular or co-curricular activities will be communicated by the activity sponsor and are considered excused.</p>
+<p>Methods of making arrangements for missed work are back to normal (pre-COVID). You are responsible to contact your instructor. Your instructor is not required to provide real time (synchronous) learning for you should you be absent for class for any reason (ex. Zooming into your real time class). Your instructor is also not required to provide asynchronous virtual learning materials for you (ex. recordings of missed classes, slide decks, other materials on Canvas). While some instructors might utilize some of the synchronous/asynchronous methods of making up work on occasion, you should not expect all instructors to provide these experiences automatically. Methods of making up missed work might include: contacting a fellow student to get notes from class, extensions on assignments or labs, or other methods as determined by your instructor. Making arrangements for missed class work is your responsibility!</p>
+<p>Please see your instructor’s specific attendance policy.</p>
+<h3 id="tentative-schedule"><a id="schedule"></a>Tentative Schedule</h3>
+<p>As the course will be driven by your work and interests, it is difficult to predict the amount of time that will be spent in each section. However, here is my best guess.</p>
+<ul>
+<li>Chapter 1, Logic: January 17-January 26</li>
+<li>Chapter 2, Intro to Graphs: January 28-February 4</li>
+<li>Chapter 3, Proof Techniques: February 7-February 21</li>
+<li>Chapter 4, Set Theory: Feb 23-March 25</li>
+<li>Chapter 5, Functions: March 28-April 8</li>
+<li>Chapter 6, Graphs: April 11-May 6</li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>See <a href="http://www.ams.org/about-us/governance/policy-statements/sec-ethics">the AMS website</a> for more: .<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>The benchmark for A-level daily work was computed as follows: 12 full-credit presentations, 12 full-credit supports (6 points), 4 classes as discussion leader, 12 problems scribed (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>⋅</mo><mn>0.25</mn><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">12\cdot 0.25 = 3</annotation></semantics></math> points), 18 points of problem signups. We see <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>+</mo><mn>6</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>18</mn><mo>=</mo><mn>43</mn></mrow><annotation encoding="application/x-tex">12 + 6 + 4 + 3 + 18 = 43</annotation></semantics></math>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

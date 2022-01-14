@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}		% The percent symbol in your code starts a comment.  The comment ends at the next linebreak.
+
+\usepackage[english]{babel} 		% Packages add functionality and style conventions to your documents. Don't edit this section!
+\usepackage{fullpage}				% Eliminates wasted space
+\usepackage[utf8]{inputenc}			% Necessary for character encoding
+\usepackage{amsmath, amssymb,amsthm}% Required math packages
+\usepackage{graphicx}				% For handling graphics
+\usepackage[colorinlistoftodos]{todonotes}	% For the fancy "todo" stuff
+\usepackage{hyperref}				% For clickable links in the final PDF
+\usepackage{titling}				% To take less space at the top of the page with the title
+\setlength{\droptitle}{-2cm}
+\pretitle{\begin{flushright}\Large\scshape}
+\posttitle{\par\end{flushright}}
+\preauthor{\begin{flushright}\large\scshape}
+\postauthor{\par\end{flushright}}
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+\linespread{1.5}
+
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+
+% Type `\C' for the complex numbers, `\H' for the quarternions, etc.
+\def\C{{\mathbb C}}
+\def\H{{\mathbb H}}
+\def\Z{{\mathbb Z}}
+\def\Q{{\mathbb Q}}
+\def\R{{\mathbb R}}
+\def\N{{\mathbb N}}
+
+
+%\Alpha{homeworkresults}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}\
+\renewcommand*{\thetheorem}{\Alph{theorem}}
+%\setcounter{theorem}{2}
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{example}[theorem]{Example}
+
+
+
+
+\title{Math 311 Homework 1}
+
+\author{Your name goes here}
+
+\date{Due September 2, 2021}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Acknowledgments:} \emph{List the names of anyone with whom you discussed these problems \textbf{at all}. Leaving any name off the list constitutes academic dishonesty.}
+
+For Conjecture \ref{conj-setminus}, either prove the conjecture, or, if it is false, provide a counterexample, modify the statement to be true, and prove your modified statement.
+
+\begin{conj}\label{conj-setminus}
+	Let $A, B$, and $C$ be sets.
+	Then
+	\[
+		A\times (B\setminus C) = (A\times B)\setminus (A\times C).
+	\]
+\end{conj}
+
+\begin{proof}
+
+\end{proof}
+
+
+
+For Example \ref{example-functions}, choose one and only one statement to complete.
+
+\begin{example}\label{example-functions}
+	Give an example of one of the following, as well as a proof of the properties you claim.
+	\begin{enumerate}
+		\item A function $f : \R\to \R$ that is one-to-one but not onto.
+		\item A function $f: \R\to \R$ that is onto but not one-to-one.
+	\end{enumerate}
+\end{example}
+
+\begin{proof}
+
+\end{proof}
+
+
+
+\begin{theorem}
+	Let $f: X\to Y$ and suppose $\emptyset\subsetneq C\subseteq D\subseteq Y$.
+	then $f^{-1}(C) \subseteq f^{-1} (D)$.
+\end{theorem}
+
+\begin{proof}
+ 
+\end{proof}
+
+
+\end{document}

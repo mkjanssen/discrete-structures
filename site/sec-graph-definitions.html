@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-13T09:36:24-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Toward a Definition of a Graph</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.674</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\({\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Course Notes</span></a></h1>
+<p class="byline">Mike Janssen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-42.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-graph-intro.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap-graph-intro.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chap-proof-techniques.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chap-graph-intro.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap-graph-intro.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chap-proof-techniques.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="chap-logic.html" data-scroll="chap-logic"><span class="codenumber">1</span> <span class="title">Logic</span></a><ul>
+<li><a href="sec-logic-intro.html" data-scroll="sec-logic-intro">Introduction to Mathematical Statements</a></li>
+<li><a href="sec-logical-connectives-equivalence.html" data-scroll="sec-logical-connectives-equivalence">Logical Connectives and Equivalence</a></li>
+<li><a href="sec-quantifiers.html" data-scroll="sec-quantifiers">Quantifiers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-graph-intro.html" data-scroll="chap-graph-intro"><span class="codenumber">2</span> <span class="title">Introduction to Graphs</span></a><ul><li><a href="sec-graph-definitions.html" data-scroll="sec-graph-definitions" class="active">Toward a Definition of a Graph</a></li></ul>
+</li>
+<li class="link">
+<a href="chap-proof-techniques.html" data-scroll="chap-proof-techniques"><span class="codenumber">3</span> <span class="title">Proof Techniques</span></a><ul>
+<li><a href="sec-direct-proof.html" data-scroll="sec-direct-proof">Direct Proof</a></li>
+<li><a href="sec-contradiction.html" data-scroll="sec-contradiction">Proof by Contradiction</a></li>
+<li><a href="sec-contrapositive.html" data-scroll="sec-contrapositive">Proof via Contrapositive</a></li>
+<li><a href="sec-induction.html" data-scroll="sec-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-set-theory.html" data-scroll="chap-set-theory"><span class="codenumber">4</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="sec-idea-of-sets.html" data-scroll="sec-idea-of-sets">The idea of a set</a></li>
+<li><a href="sec-set-operations.html" data-scroll="sec-set-operations">Operations with Sets</a></li>
+<li><a href="sec-familes-of-sets.html" data-scroll="sec-familes-of-sets">Families of Sets</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-functions.html" data-scroll="chap-functions"><span class="codenumber">5</span> <span class="title">Functions</span></a><ul>
+<li><a href="sec-intro-to-functions.html" data-scroll="sec-intro-to-functions">Introduction to Functions</a></li>
+<li><a href="sec-properties-of-functions.html" data-scroll="sec-properties-of-functions">Properties of Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-more-graphs.html" data-scroll="chap-more-graphs"><span class="codenumber">6</span> <span class="title">Further Explorations in Graph Theory</span></a><ul>
+<li><a href="sec-trees-cycles.html" data-scroll="sec-trees-cycles">Trees and Cycles</a></li>
+<li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Graph Isomorphisms</a></li>
+<li><a href="sec-graph-invariants.html" data-scroll="sec-graph-invariants">Graph Invariants</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-writing.html" data-scroll="appendix-writing"><span class="codenumber">A</span> <span class="title">On Mathematical Writing</span></a></li>
+<li class="link"><a href="index-42.html" data-scroll="index-42"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-graph-definitions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Toward a Definition of a Graph</span>
+</h2>
+<article class="assemblage assemblage-like" id="assemblage-4"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
+<p id="p-67">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-78"><p id="p-derived-li-78">How is mathematical knowledge developed?</p></li>
+<li id="li-79"><p id="p-derived-li-79">What is a graph?</p></li>
+<li id="li-80"><p id="p-derived-li-80">How can we represent graphs?</p></li>
+</ul></p></article><section class="introduction" id="introduction-3"><p id="p-68">Influenced by the ancient mathematician Euclid of Alexandria, mathematical knowledge has traditionally been developed via a careful litany of <em class="emphasis">definition</em>, <em class="emphasis">theorem</em>, and <em class="emphasis">proof</em>. The word <dfn class="terminology">definition</dfn> means more or less what you expect: it is a precise description of the meaning of a term. The mathematical version places an emphasis on clarity and concision. This does not always make the definition of a mathematical term easy to parse, but <em class="emphasis">should</em> make it clear to <em class="emphasis">apply</em>.</p>
+<p id="p-69">A <dfn class="terminology">theorem</dfn> is a true mathematical statement. If you read enough mathematics, you will also see words like <em class="emphasis">proposition</em>, <em class="emphasis">lemma</em>, and <em class="emphasis">corollary</em>. These are all true mathematical statements as well, but have slightly different connotations.</p>
+<ul class="disc">
+<li id="li-81"><p id="p-derived-li-81">A proposition is a true mathematical statement which is not perceived to be important enough to be called a theorem.</p></li>
+<li id="li-82"><p id="p-derived-li-82">A lemma is a true mathematical statement which may be somewhat technical to write, but is used to prove a theorem or proposition. One often has the experience of proving a theorem and realizing that a portion of the proof is substantive enough that it can be pulled out and written as the proof of a lemma, to which you can then refer to complete the proof of the theorem.</p></li>
+<li id="li-83"><p id="p-derived-li-83">A corollary is a true mathematical statement that follows immediately from the proof of a theorem<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 1 </sup></a>.</p></li>
+</ul>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn">For instance, suppose you've proved that all rectangles in the plane contain only right angles. A corollary to this theorem is that all squares in the plane contain only right angles.</div></div>
+<p id="p-70">How is the truth of a mathematical statement ascertained? Via <em class="emphasis">proof</em>. One of the goals of this course is develop proficiency writing proofs, and we will explore techniques for doing so in more detail in <a href="chap-proof-techniques.html" class="internal" title="Chapter 3: Proof Techniques">Chapter 3</a>.</p>
+<p id="p-71">For now, we will focus on the first part of the mathematical litany: definitions. Theorems (and their accompanying proofs) must be about <em class="emphasis">something</em>, so in this section, we introduce one of the basic ideas of the course: the <dfn class="terminology">graph</dfn>.</p></section><article class="exploration project-like" id="expl-graph-def-first-attempt"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h3>
+<p id="p-72">Below there are several examples of objects called <em class="emphasis">graphs</em>. Develop a clear, concise definition of the word <dfn class="terminology">graph</dfn> and explain why each of the objects below meets your definition. For the sake of consistency, we'll call the circles <dfn class="terminology">vertices</dfn> (or <dfn class="terminology">nodes</dfn>), and the lines connecting them <dfn class="terminology">edges</dfn>.</p>
+<figure class="figure figure-like" id="fig-graph-example01"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-example01.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.2<span class="period">.</span></span><span class="space"> </span>A graph.</figcaption></figure><figure class="figure figure-like" id="fig-graph-example02"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-example02.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.3<span class="period">.</span></span><span class="space"> </span>A second graph.</figcaption></figure><figure class="figure figure-like" id="fig-graph-example03"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-example03.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.4<span class="period">.</span></span><span class="space"> </span>A third graph.</figcaption></figure><figure class="figure figure-like" id="fig-graph-example04"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-example04.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.5<span class="period">.</span></span><span class="space"> </span>A fourth graph.</figcaption></figure><figure class="figure figure-like" id="fig-graph-example05"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-example05.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.6<span class="period">.</span></span><span class="space"> </span>A fifth graph.</figcaption></figure><figure class="figure figure-like" id="fig-graph-example06"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-example06.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.7<span class="period">.</span></span><span class="space"> </span>A sixth graph (no, this is not a mistake).</figcaption></figure></article><article class="exploration project-like" id="expl-graph-def-second-attempt"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span>
+</h3>
+<p id="p-73">Below there are several examples of objects that are <em class="emphasis">not</em> graphs. If necessary, modify your definition from <a href="" class="xref" data-knowl="./knowl/expl-graph-def-first-attempt.html" title="Problem 2.1.1">Problem 2.1.1</a>, and explain why the objects below do not meet your (possibly new) definition—but make sure the objects in <a href="" class="xref" data-knowl="./knowl/expl-graph-def-first-attempt.html" title="Problem 2.1.1">Problem 2.1.1</a> still do!</p>
+<figure class="figure figure-like" id="fig-graph-nonexample01"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-nonexample01.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.9<span class="period">.</span></span><span class="space"> </span>Not a graph.</figcaption></figure><figure class="figure figure-like" id="fig-graph-nonexample02"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-nonexample02.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.10<span class="period">.</span></span><span class="space"> </span>Not a graph.</figcaption></figure><figure class="figure figure-like" id="fig-graph-nonexample03"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="./fig/graph-nonexample03.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.11<span class="period">.</span></span><span class="space"> </span>(Still) Not a graph.</figcaption></figure></article><article class="definition definition-like" id="def-graph"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span>
+</h3>
+<p id="p-74">A <dfn class="terminology">graph</dfn> is ....</p></article><article class="activity project-like" id="activity-9"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.13</span><span class="period">.</span>
+</h3>
+<p id="p-75">Given the definition of a graph that we've come up with, exhibit two additional examples of a graph, as well as two non-examples.</p></article></section></div></main>
+</div>
+</body>
+</html>

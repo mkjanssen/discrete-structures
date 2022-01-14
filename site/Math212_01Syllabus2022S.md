@@ -33,8 +33,7 @@ header-includes: |
 * **Class time**: 2:00-2:50pm MWF
 * **Office**: SB 1612
 * **Student Hours**: [Make an appointment](https://calendly.com/mkjanssen/student-hours) or drop by
-* **Course Notes**: [\texttt{https://prof.mkjanssen.org/ds/notes/}](https://prof.mkjanssen.org/ds/notes/)
-* **Course website**: [\texttt{https://prof.mkjanssen.org/ds/}](https://prof.mkjanssen.org/ds/)
+* **Course Notes**: [https://notes.mkjanssen.org/ds/](https://notes.mkjanssen.org/ds/)
 * **Catalog Course Description**: A study of topics in discrete mathematics that are relevant to computer science and mathematics, including logic and proof, induction and recursion, elementary set theory, combinatorics, relations and functions, Boolean algebra, and introductory graph theory. Prerequisite: a grade of C- or better in Math 152.
 
 
@@ -51,7 +50,7 @@ Regular access to:
 
 ## Learning Objectives
 
-In this course, students will:
+
 
 In this course, students will:
 
@@ -73,7 +72,7 @@ The work of the course will be primarily driven by you, the student. In fact, ea
 
 #### Problems and Presentations
 
-You will be assigned approximately five to six problems from the book to work on before coming to class. **You may not use any outside resources to help you solve these problems--no books, no websites, no friends who have taken this course before**. Using these resources will constitute plagiarism and will be reported to the Student Life Committee. You _may_ work with others currently enrolled in the course, but you will need to ensure that you can completely understand and explain the solutions and proofs you come up with.
+You will be assigned approximately five to six problems from the notes to work on before coming to class. You may **not** use any outside resources to help you solve these problems--**no books, no websites, no friends who have taken this course before**. Using these resources will constitute plagiarism and will be reported to the Student Life Committee. You _may_ work with others currently enrolled in the course, but you will need to ensure that you can completely understand and explain the solutions and proofs you come up with.
 
 One of the main goals of this course is to improve your mathematical communication. Thus, the majority of each class period will be devoted to you **presenting your work** on these problems to the class. You should expect that approximately 90% of the typical class period will consist of presentations and discussion. 
 
@@ -85,23 +84,24 @@ You will be notified by 1:00pm on Canvas of any problems you are assigned to pre
 You will then write the problem and solution up on the board, highlight the main points of the proof/solution, and generally lead the class discussion. **That is, merely writing the solution on the board will not be sufficient to earn full credit**. The presenter will earn points as follows.
 
 
-**$1$ point.** The solution/proof is correct and complete, and all questions are answered.
+**$1$ point.** The solution/proof is correct and complete, the explanation clear, and all questions are answered.
 
-**$1/2$ point.** The solution/proof was prepared, but there are gaps and/or questions that are not satisfactorily answered.
+**$1/2$ point.** The solution/proof was prepared, but there are gaps in the solution/explanation, and/or questions that are not satisfactorily answered.
 
 **$-0.1$ points.** The solution/proof was either not prepared or is in completely the wrong direction.
 
 
 #### Support
 
-Of course, not everyone can be assigned the problems they sign up for. However, you may be assigned as _support_ for a given problem, typically a problem you've indicated a willingness to present. Prior to the presentation, it is your job to make sure that the presenter's written proof is clear. During and following the presentation, it is your job to try to answer any questions the presenter cannot. Satisfactorily engaging as a problem support person will earn you half the credit of the presenter.
+Of course, not everyone can be assigned the problems they sign up for. However, you may be assigned as _support_ for a given problem, typically a problem you've indicated a willingness to present. Prior to the presentation, it is your job to make sure that the presenter's written proof is clear. During and following the presentation, it is your job to try to answer any questions alongside the presenter. Satisfactorily engaging as a problem support person will earn you half the credit of the presenter ($1/2$, $1/4$, or $-0.05$ points).
 
 
 #### Scribes
 
 
-Each presented problem will also have a _scribe_ assigned on Canvas by 1:00pm. The first problems will be scribed in alphabetical order by last name, and subsequent scribes will be assigned in ascending order from least daily work points to most.
-The scribe will have the responsibility of taking notes on the presented proof and asking questions when something is not clear. They then will write up a formal version of the proof and discussion and post it to our Overleaf document. The scribe will earn 1/4 point when a correct proof is submitted.
+Each presented problem will also have a _scribe_ assigned on Canvas by 1:00pm. The first problems will be scribed (more or less) in alphabetical order by last name, and subsequent scribes will be assigned in ascending order from least daily work points to most.
+
+The scribe will have the responsibility of taking notes on the presented proof and asking questions when something is not clear. They then will write up a formal version of the proof **and** discussion and post it to our Overleaf document. The scribe will earn $1/4$ point when a correct proof is submitted.
 
 
 #### Discussion Leader
@@ -112,7 +112,7 @@ Finally, you may be assigned to be one of the day's _discussion leaders_. It wil
 #### Academic Integrity
 
 This course structure effectively models the way professional mathematicians conduct and share their research. 
-Thus, we will abide by the Policy Statement on Ethical Guidelines[^1] adopted by the American Mathematical Society, in particular Section I on mathematical research and its presentation. As this statement describes, "[t]he knowing presentation of another person's mathematical discovery as one's own constitutes plagiarism and is a serious violation of professional ethics. Plagiarism may occur for any type of work, whether written or oral and whether published or not." When you present your work in this class, both orally and in writing, you must cite **any conversations** you have had about this problem with **anyone in the class**. Looking to **any resource** outside of the people in our class for information about the problems at hand constitutes plagiarism and will be reported to the Student Life Committee.
+Thus, we will abide by the Policy Statement on Ethical Guidelines[^1] adopted by the American Mathematical Society, in particular Section I on mathematical research and its presentation. As this statement describes, "[t]he knowing presentation of another person's mathematical discovery as one's own constitutes plagiarism and is a serious violation of professional ethics. Plagiarism may occur for any type of work, whether written or oral and whether published or not." When you present your work in this class, both orally and in writing, you must cite **any conversations** you have had about your problem with **anyone in the class**. Looking to **any resource** outside of the people in our class for information about the problems at hand constitutes plagiarism and will be reported to the Student Life Committee.
 
 [^1]: See [the AMS website](http://www.ams.org/about-us/governance/policy-statements/sec-ethics) for more: \texttt{http://www.ams.org/about-us/governance/policy-statements/sec-ethics}.
 
@@ -145,9 +145,9 @@ In short, your submissions will go through the following workflow (with the numb
 
 * Day $0$: Initial submission due 5:00pm Wednesday
 * Day $5$: TA feedback returned by class time on Monday
-* Day $10$: Revised submission due at 5:00pm Friday
-* Day $10+n$, $1\le n\le 7$: Feedback and initial assessment (EMRN) on each problem from Dr. Janssen
-* Day $17+n$, $1 \le n \le 7$: Final version of problems submitted to Dr. Janssen, to be graded within a week.
+* Day $9$: Revised submission due at 5:00pm Friday
+* Day $9+n$, $1\le n\le 7$: Feedback and initial assessment (EMRN) on each problem from Dr. Janssen
+* Day $16+n$, $1 \le n \le 7$: Final version of problems submitted to Dr. Janssen, to be graded within a week.
 
 Work submitted late or work initially assessed at an N requires a meeting with Dr. Janssen and short accompanying reflection on why the work was assessed at an N and how such assessments will be avoided in the future. If earning an N becomes a regular occurrence on written assignments due to perceived lack of effort, you may lose the grace afforded by the submission/feedback/resubmission process and only be allowed a single submission.
 
@@ -157,7 +157,7 @@ At the end of the semester, you will compile a selection of your work (both writ
 
 ### Reading Reflections
 
-As we mature in our mathematical studies, we'll consider the formative nature of mathematical practice. (Former Dordt First Mondays Speaker) Francis Su argues that mathematics can help inculcate certain virtues in its practitioners. We'll read Su's book in chunks, complete reflection essays, and discuss them in class. See the [schedule](#schedule) and the reflection assignments' Canvas pages for more details.
+As we mature in our mathematical studies, we'll consider the formative nature of mathematical practice. (Former Dordt First Mondays Speaker) Francis Su argues that mathematics can help inculcate certain virtues in its practitioners. We'll read Su's book in chunks, complete reflection essays, and discuss them in class. See the reflection assignments' Canvas pages for more details.
 
 
 ### Exams
@@ -195,14 +195,14 @@ In general, your final grade will be the **highest fully completed row** in the 
 |   D   |     25     |            10/19           |         0        |      55%     |    -    |
 
 
-[^2]: The benchmark for A-level daily work was computed as follows: 12 full-credit presentations, 6 full-credit supports, 4 classes as discussion leader, 12 problems scribed ($12\cdot 0.25 = 3$ points), 18 points of problem signups. We see $12 + 6 + 4 + 3 + 18 = 43$.
+[^2]: The benchmark for A-level daily work was computed as follows: 12 full-credit presentations, 12 full-credit supports (6 points), 4 classes as discussion leader, 12 problems scribed ($12\cdot 0.25 = 3$ points), 18 points of problem signups. We see $12 + 6 + 4 + 3 + 18 = 43$.
 
 
 ### Additional Information
 
 #### Dordt University Student’s Right to Accommodations Policy
 
-Dordt University is committed to providing reasonable accommodations for students with documented qualifying disabilities in accordance with federal laws and university policy.  Any student who needs access to accommodations based on the impact of a documented disability should contact the Coordinator of Services for Students with Disabilities (CSSD): Sharon Rosenboom, Academic Enrichment Center, Office: L168, (712) 722-6490, Email: Sharon.Rosenboom@dordt.edu.
+Dordt University is committed to providing reasonable accommodations for students with documented qualifying disabilities in accordance with federal laws and university policy.  Any student who needs access to accommodations based on the impact of a documented disability should contact the Academic Enrichment Director: Sharon Rosenboom, Academic Enrichment Center, Office: L166, (712) 722-6488, Email: Sharon.Rosenboom@dordt.edu.
 
 
 #### Dordt University Academic Dishonesty Policy

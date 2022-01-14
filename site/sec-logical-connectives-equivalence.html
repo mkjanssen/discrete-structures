@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-13T09:36:24-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logical Connectives and Equivalence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.674</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\({\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\imp{\to}
+\def\iff{\leftrightarrow}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\ran{\text{ran}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\U{{\mathcal U}}
+\def\pow{{\mathcal P}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+
+\renewcommand{\d}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\B}{\mathbf B}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathcal U}
+\newcommand{\pow}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\isom}{\cong}
+
+\renewcommand{\bar}{\overline}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Discrete Structures Course Notes</span></a></h1>
+<p class="byline">Mike Janssen</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-42.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-logic-intro.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap-logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-quantifiers.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-logic-intro.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap-logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-quantifiers.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="chap-logic.html" data-scroll="chap-logic"><span class="codenumber">1</span> <span class="title">Logic</span></a><ul>
+<li><a href="sec-logic-intro.html" data-scroll="sec-logic-intro">Introduction to Mathematical Statements</a></li>
+<li><a href="sec-logical-connectives-equivalence.html" data-scroll="sec-logical-connectives-equivalence" class="active">Logical Connectives and Equivalence</a></li>
+<li><a href="sec-quantifiers.html" data-scroll="sec-quantifiers">Quantifiers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-graph-intro.html" data-scroll="chap-graph-intro"><span class="codenumber">2</span> <span class="title">Introduction to Graphs</span></a><ul><li><a href="sec-graph-definitions.html" data-scroll="sec-graph-definitions">Toward a Definition of a Graph</a></li></ul>
+</li>
+<li class="link">
+<a href="chap-proof-techniques.html" data-scroll="chap-proof-techniques"><span class="codenumber">3</span> <span class="title">Proof Techniques</span></a><ul>
+<li><a href="sec-direct-proof.html" data-scroll="sec-direct-proof">Direct Proof</a></li>
+<li><a href="sec-contradiction.html" data-scroll="sec-contradiction">Proof by Contradiction</a></li>
+<li><a href="sec-contrapositive.html" data-scroll="sec-contrapositive">Proof via Contrapositive</a></li>
+<li><a href="sec-induction.html" data-scroll="sec-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-set-theory.html" data-scroll="chap-set-theory"><span class="codenumber">4</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="sec-idea-of-sets.html" data-scroll="sec-idea-of-sets">The idea of a set</a></li>
+<li><a href="sec-set-operations.html" data-scroll="sec-set-operations">Operations with Sets</a></li>
+<li><a href="sec-familes-of-sets.html" data-scroll="sec-familes-of-sets">Families of Sets</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-functions.html" data-scroll="chap-functions"><span class="codenumber">5</span> <span class="title">Functions</span></a><ul>
+<li><a href="sec-intro-to-functions.html" data-scroll="sec-intro-to-functions">Introduction to Functions</a></li>
+<li><a href="sec-properties-of-functions.html" data-scroll="sec-properties-of-functions">Properties of Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-more-graphs.html" data-scroll="chap-more-graphs"><span class="codenumber">6</span> <span class="title">Further Explorations in Graph Theory</span></a><ul>
+<li><a href="sec-trees-cycles.html" data-scroll="sec-trees-cycles">Trees and Cycles</a></li>
+<li><a href="sec-graph-isomorphisms.html" data-scroll="sec-graph-isomorphisms">Graph Isomorphisms</a></li>
+<li><a href="sec-graph-invariants.html" data-scroll="sec-graph-invariants">Graph Invariants</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="appendix-writing.html" data-scroll="appendix-writing"><span class="codenumber">A</span> <span class="title">On Mathematical Writing</span></a></li>
+<li class="link"><a href="index-42.html" data-scroll="index-42"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-logical-connectives-equivalence"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Logical Connectives and Equivalence</span>
+</h2>
+<article class="assemblage assemblage-like" id="assemblage-2"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
+<p id="p-7">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-14"><p id="p-derived-li-14">How can we combine statements into more complex statements?</p></li>
+<li id="li-15"><p id="p-derived-li-15">What is a truth table?</p></li>
+<li id="li-16"><p id="p-derived-li-16">How can we determine if two statements are logically equivalent?</p></li>
+</ul></p></article><section class="introduction" id="introduction-1"><p id="p-8">In this section, we will explore ways of combining statements to form new, more complex statements. A hallmark of our approach is that we will <em class="emphasis">define</em> the truth values of the statements completely formally (though generally the way you might expect). That is to say, the truth values of the combined statements will depend only on the truth values of the atomic statements of which they are composed. Deeper exploration will require a clear notion of logical equivalence, established via truth tables.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Logical Connectives</span>
+</h3>
+<p id="p-9">We begin with negation.</p>
+<article class="definition definition-like" id="definition-2"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h4>
+<p id="p-10">Suppose <span class="process-math">\(P\)</span> is a statement. The <dfn class="terminology">negation</dfn> of <span class="process-math">\(P\text{,}\)</span> denoted <span class="process-math">\(\neg P\)</span> and read “not <span class="process-math">\(P\)</span>”, has the opposite truth value of <span class="process-math">\(P\)</span> and is defined by the <em class="emphasis">truth table</em> found in <a href="" class="xref" data-knowl="./knowl/table-negation.html" title="Table 1.2.2: The negation of P \neg P">Table 1.2.2</a>.</p>
+<figure class="table table-like" id="table-negation"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span>The negation of <span class="process-math">\(P\text{,}\)</span> <span class="process-math">\(\neg P\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(​P\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(​\neg P\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure></article><article class="insight remark-like" id="insight-1"><h4 class="heading">
+<span class="type">LaTeX Code</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h4>
+<p id="p-11">To typeset <span class="process-math">\(\neg P\)</span> in <span class="process-math">\(\LaTeX\text{,}\)</span> use <code class="code-inline tex2jax_ignore">\neg P</code> in math mode.</p></article><p id="p-12">We observe that <a href="" class="xref" data-knowl="./knowl/table-negation.html" title="Table 1.2.2: The negation of P \neg P">Table 1.2.2</a> is our first encounter with a <em class="emphasis">truth table</em>. A truth table lists all possible truth values for a (compound) statement given all possible combinations of truth values of its atomic statements. Since there are only two possible truth values for the atomic statement <span class="process-math">\(P\text{,}\)</span> there are only two rows in <a href="" class="xref" data-knowl="./knowl/table-negation.html" title="Table 1.2.2: The negation of P \neg P">Table 1.2.2</a>.</p>
+<article class="activity project-like" id="activity-3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h4>
+<p id="p-13">Meaningfully negate the following propositions (without just saying "It is not the case that...").</p>
+<ol class="decimal">
+<li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(e\)</span> is a negative real number.</p></li>
+<li id="li-18"><p id="p-derived-li-18">Iowa is the tenth largest state.</p></li>
+<li id="li-19"><p id="p-derived-li-19">17 is a prime number.</p></li>
+</ol></article><p id="p-14">The next connective we introduce is the logical <dfn class="terminology">and</dfn>, also known as <dfn class="terminology">conjunction</dfn>. Then, we'll see the logical <dfn class="terminology">inclusive or</dfn>, also known as <dfn class="terminology">disjunction</dfn>.</p>
+<article class="definition definition-like" id="def-and"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h4>
+<p id="p-15">The <dfn class="terminology">conjunction</dfn> of <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> denoted <span class="process-math">\(P \land Q\)</span> and read “<span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span>”, is true when both <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are true, and false otherwise. See <a href="" class="xref" data-knowl="./knowl/table-and.html" title="Table 1.2.6: The conjunction of P and Q">Table 1.2.6</a>.</p>
+<figure class="table table-like" id="table-and"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.6<span class="period">.</span></span><span class="space"> </span>The conjunction of <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(​P\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(​Q\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(P \land Q​\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></figure></article><article class="insight remark-like" id="insight-2"><h4 class="heading">
+<span class="type">LaTeX Code</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+</h4>
+<p id="p-16">To typeset <span class="process-math">\(P \land Q\)</span> in <span class="process-math">\(\LaTeX\text{,}\)</span> use <code class="code-inline tex2jax_ignore">P \land Q</code> in math mode.</p></article><article class="definition definition-like" id="def-or"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+</h4>
+<p id="p-17">The <dfn class="terminology">disjunction</dfn> of <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> denoted <span class="process-math">\(P \lor Q\)</span> and read “<span class="process-math">\(P\)</span> or <span class="process-math">\(Q\)</span>”, is true when <span class="process-math">\(P\)</span> is true, <span class="process-math">\(Q\)</span> is true, or both are true, and false otherwise. See <a href="" class="xref" data-knowl="./knowl/table-or.html" title="Table 1.2.9: The disjunction of P and Q">Table 1.2.9</a>.</p>
+<figure class="table table-like" id="table-or"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.9<span class="period">.</span></span><span class="space"> </span>The disjunction of <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(​P\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(​Q\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(P \lor Q​\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></figure></article><article class="insight remark-like" id="insight-3"><h4 class="heading">
+<span class="type">LaTeX Code</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+</h4>
+<p id="p-18">To typeset <span class="process-math">\(P \lor Q\)</span> in <span class="process-math">\(\LaTeX\text{,}\)</span> use <code class="code-inline tex2jax_ignore">P \lor Q</code> in math mode.</p></article><article class="exploration project-like" id="exploration-1"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span>
+</h4>
+<p id="p-19">Determine the truth values of the following propositions.</p>
+<ol class="decimal">
+<li id="li-23"><p id="p-derived-li-23">Math 212 meets on Mondays and the capital of Iowa is Des Moines.</p></li>
+<li id="li-24"><p id="p-derived-li-24">Math 212 meets on Mondays and the capital of Minnesota is Minneapolis.</p></li>
+<li id="li-25"><p id="p-derived-li-25">Math 212 meets on Mondays or the capital of Minnesota is Minneapolis.</p></li>
+<li id="li-26"><p id="p-derived-li-26">Math 212 meets on Mondays or the capital of Minnesota is St. Paul.</p></li>
+</ol></article><p id="p-21">Observe that the “or” connective defined in <a href="" class="xref" data-knowl="./knowl/def-or.html" title="Definition 1.2.8">Definition 1.2.8</a> is distinct from the so-called “exclusive or” that is often used in, e.g., computer science. The statement <span class="process-math">\(P \lor Q\)</span> is true so long as at least one of <span class="process-math">\(P,Q\)</span> is true—or both!</p>
+<p id="p-22">There are two more connectives to consider. As a warmup, consider the following problem.</p>
+<article class="exploration project-like" id="expl-redblue1"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span>
+</h4>
+<p id="p-23">A mathematician<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> places a set of four cards on a table, each of which has a number on one side and a colored patch on the other side. She claims the following: <blockquote class="blockquote" id="blockquote-1">If a card shows an even number on one face, then its opposite face is red.</blockquote> The visible faces of the cards show 3, 8, red, and blue. Which card(s) must you turn over in order to test the truth of her claim? Carefully explain.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">This exploration due to Dr. L. Keough.</div></div></article><article class="definition definition-like" id="def-implications"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span>
+</h4>
+<p id="p-24">Let <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> be statements. The <dfn class="terminology">implication</dfn>, “<span class="process-math">\(P\)</span> implies <span class="process-math">\(Q\)</span>”<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a> (or “if <span class="process-math">\(P\text{,}\)</span> then <span class="process-math">\(Q\)</span>”) is denoted <span class="process-math">\(P\Rightarrow Q\text{,}\)</span> and is false only when <span class="process-math">\(P\)</span> is true but <span class="process-math">\(Q\)</span> is false. See <a href="" class="xref" data-knowl="./knowl/table-implication.html" title="Table 1.2.14: The implication P\Rightarrow Q">Table 1.2.14</a>.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">We sometimes say that <span class="process-math">\(P\)</span> is “sufficient for” <span class="process-math">\(Q\text{.}\)</span>
+</div></div>
+<figure class="table table-like" id="table-implication"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.14<span class="period">.</span></span><span class="space"> </span>The implication <span class="process-math">\(P\Rightarrow Q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(​P\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(​Q\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(P\Rightarrow Q​\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure></article><article class="insight remark-like" id="insight-4"><h4 class="heading">
+<span class="type">LaTeX Code</span><span class="space"> </span><span class="codenumber">1.2.15</span><span class="period">.</span>
+</h4>
+<p id="p-25">To typeset <span class="process-math">\(P \Rightarrow Q\)</span> in <span class="process-math">\(\LaTeX\text{,}\)</span> use <code class="code-inline tex2jax_ignore">P \Rightarrow Q</code> in math mode.</p></article><article class="exploration project-like" id="exploration-3"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.16</span><span class="period">.</span>
+</h4>
+<p id="p-26">Determine the truth values of the following statements. Identify which row of <a href="" class="xref" data-knowl="./knowl/table-implication.html" title="Table 1.2.14: The implication P\Rightarrow Q">Table 1.2.14</a> you are in.</p>
+<ol class="decimal">
+<li id="li-30"><p id="p-derived-li-30">If <span class="process-math">\(x\)</span> is a negative integer, then <span class="process-math">\(-5\cdot x\)</span> is positive.</p></li>
+<li id="li-31"><p id="p-derived-li-31">If we have Math 212 today, then it is Wednesday.</p></li>
+<li id="li-32"><p id="p-derived-li-32">If <span class="process-math">\(9 &gt; 5\text{,}\)</span> then dogs do not have wings.</p></li>
+<li id="li-33"><p id="p-derived-li-33">If <span class="process-math">\(2=4\text{,}\)</span> then Calvin Coolidge is our greatest president.</p></li>
+</ol></article><p id="p-27">The formalization of mathematical logic ramps up a bit when we consider conditional statements. It is important to remember that we define the truth value of the proposition <span class="process-math">\(P \Rightarrow Q\)</span> <em class="emphasis">formally</em> based on the structure of the conditional statement and the truth values of the constituents <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{.}\)</span> That is to say that there need not be a causal relationship between <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{!}\)</span></p>
+<p id="p-28">The last two rows of <a href="" class="xref" data-knowl="./knowl/table-implication.html" title="Table 1.2.14: The implication P\Rightarrow Q">Table 1.2.14</a> are also worth a moment of our time. They state that if the statement <span class="process-math">\(P\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a> is false, then the <em class="emphasis">implication</em> <span class="process-math">\(P\Rightarrow Q\)</span> is <em class="emphasis">true</em>. Note that this is different than saying that <span class="process-math">\(Q\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a> is true. When the implication <span class="process-math">\(P\Rightarrow Q\)</span> is true because <span class="process-math">\(P\)</span> is false, we usually say that <span class="process-math">\(P\Rightarrow Q\)</span> is <dfn class="terminology">vacuously true</dfn>.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">Often called the <em class="emphasis">antecedent.</em>
+</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Often called the <em class="emphasis">consequent.</em>
+</div></div>
+<article class="exploration project-like" id="exploration-4"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.17</span><span class="period">.</span>
+</h4>
+<p id="p-29">Suppose Dr. Janssen promises that, if everyone get an A in the class, then he will bring Defender sandwiches (on pretzel buns, with everything, as God intended) to celebrate on the last day of class<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a>. Unfortunately, a few students finish the course with an A–, so Dr. Janssen does not bring Defenders.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">This is purely hypothetical.</div></div>
+<p id="p-30">Decide the truth value of the implication <blockquote class="blockquote" id="blockquote-2">If everyone gets an A in the class, Dr. Janssen will bring Defender sandwiches to celebrate.</blockquote> Make sure you can clearly explain your thinking and be able to give reasons for why the truth value you chose makes sense.</p></article><p id="p-31">Our final logical connective is the <dfn class="terminology">biconditional</dfn> connective.</p>
+<article class="definition definition-like" id="def-biconditional"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.18</span><span class="period">.</span>
+</h4>
+<p id="p-32">Let <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> be statements. The biconditional statement joining <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> read “<span class="process-math">\(P\)</span> if and only if <span class="process-math">\(Q\)</span>”<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a> and written <span class="process-math">\(P\Leftrightarrow Q\text{,}\)</span> is true precisely when both <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are true, and false otherwise.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">We sometimes say that <span class="process-math">\(P\)</span> is “necessary and sufficient” for <span class="process-math">\(Q\text{.}\)</span>
+</div></div></article><article class="insight remark-like" id="insight-5"><h4 class="heading">
+<span class="type">LaTeX Code</span><span class="space"> </span><span class="codenumber">1.2.19</span><span class="period">.</span>
+</h4>
+<p id="p-33">To typeset <span class="process-math">\(P \Leftrightarrow Q\)</span> in <span class="process-math">\(\LaTeX\text{,}\)</span> use <code class="code-inline tex2jax_ignore">P \Leftrightarrow Q</code> in math mode.</p></article><article class="exploration project-like" id="exploration-5"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.20</span><span class="period">.</span>
+</h4>
+<p id="p-34">First, construct a truth table for <span class="process-math">\(P\Leftrightarrow Q\)</span> based on <a href="" class="xref" data-knowl="./knowl/def-biconditional.html" title="Definition 1.2.18">Definition 1.2.18</a>. Then, determine the truth values of the following statements. Identify which row of your truth table you are in.</p>
+<ol class="decimal">
+<li id="li-34"><p id="p-derived-li-34"><span class="process-math">\(x\)</span> is a negative integer if and only if <span class="process-math">\(-5\cdot x\)</span> is positive.</p></li>
+<li id="li-35"><p id="p-derived-li-35">We have Math 212 today if and only if today is Wednesday.</p></li>
+<li id="li-36"><p id="p-derived-li-36"><span class="process-math">\(9 &gt; 5\)</span> if and only if dogs do not have wings.</p></li>
+<li id="li-37"><p id="p-derived-li-37"><span class="process-math">\(2=4\)</span> if and only if <span class="process-math">\(\sin(\pi) = 1\text{.}\)</span></p></li>
+</ol></article></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Logical Equivalence</span>
+</h3>
+<p id="p-35">A fundamental skill in analyzing and proving mathematical statements is the ability to carefully describe their logical structure and, when appropriate, convert the statement into a <dfn class="terminology">logically equivalent</dfn> statement. Ideally, the new equivalent form of the statement will have a structure more amenable to a particular type of proof or solution.</p>
+<article class="definition definition-like" id="definition-7"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.21</span><span class="period">.</span>
+</h4>
+<p id="p-36">Two statements <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are said to be <dfn class="terminology">logically equivalent</dfn> if they have the same truth table. In this case, we write <span class="process-math">\(P \equiv Q\text{.}\)</span></p></article><article class="exploration project-like" id="exploration-6"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.22</span><span class="period">.</span><span class="space"> </span><span class="title">Double Negation.</span>
+</h4>
+<p id="p-37">Use a truth table to verify that <span class="process-math">\(P\equiv \neg (\neg P)\text{.}\)</span></p></article><article class="exploration project-like" id="exploration-7"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.23</span><span class="period">.</span>
+</h4>
+<p id="p-38">Use a truth table to determine whether the following statements are logically equivalent.</p>
+<ul class="disc">
+<li id="li-38"><p id="p-derived-li-38"><span class="process-math">\(\displaystyle P\Leftrightarrow Q\)</span></p></li>
+<li id="li-39"><p id="p-derived-li-39"><span class="process-math">\(\displaystyle (P\Rightarrow Q)\land (Q\Rightarrow P)\)</span></p></li>
+</ul></article><p id="p-39">Given an implication <span class="process-math">\(P\Rightarrow Q\text{,}\)</span> one may construct some related statements.</p>
+<article class="definition definition-like" id="definition-8"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.24</span><span class="period">.</span>
+</h4>
+<p id="p-40">Let <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> be statements.</p>
+<ul class="disc">
+<li id="li-40"><p id="p-derived-li-40">The <dfn class="terminology">converse of the statement <span class="process-math">\(P\Rightarrow Q\)</span></dfn> is the statement <span class="process-math">\(Q\Rightarrow P\text{.}\)</span></p></li>
+<li id="li-41"><p id="p-derived-li-41">The <dfn class="terminology">contrapositive of the statement <span class="process-math">\(P\Rightarrow Q\)</span></dfn> is the statement <span class="process-math">\((\neg Q)\Rightarrow (\neg P)\text{.}\)</span></p></li>
+<li id="li-42"><p id="p-derived-li-42">Thhe <dfn class="terminology">inverse of the statement <span class="process-math">\(P\Rightarrow Q\)</span></dfn> is the statement <span class="process-math">\((\neg P)\Rightarrow (\neg Q)\text{.}\)</span></p></li>
+</ul></article><article class="activity project-like" id="activity-4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.25</span><span class="period">.</span>
+</h4>
+<p id="p-41">Choose at least two conditional statements we've mentioned in class and state the coverse, contrapositive, and inverse of each. Based on the statements you wrote, make a conjecture<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a> about how the truth values of these four implications (the original conditional statement, together with its converse, contrapositive, and inverse) seem to relate.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">A conjecture is a precise educated “guess” about what is true in general.</div></div></article><article class="exploration project-like" id="exploration-8"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.26</span><span class="period">.</span>
+</h4>
+<p id="p-42">Use truth tables to identify any logical equivalences between <span class="process-math">\(P\Rightarrow Q\text{,}\)</span> <span class="process-math">\(Q\rightarrow P\text{,}\)</span> <span class="process-math">\((\neg Q)\Rightarrow (\neg P)\text{,}\)</span> and <span class="process-math">\((\neg P)\Rightarrow (\neg Q)\text{.}\)</span></p></article><article class="exploration project-like" id="prob-le-contradiction"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.27</span><span class="period">.</span>
+</h4>
+<p id="p-43">Show that <span class="process-math">\(P\rightarrow Q \equiv (\neg P) \lor Q\text{.}\)</span></p></article><p id="p-44">The following pairs of logical equivalences, named for British mathematician <a class="external" href="https://en.wikipedia.org/wiki/Augustus_De_Morgan" target="_blank">Augustus De Morgan</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a>, allow us to convert conjunctions to disjunctions, and vice versa.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Augustus_De_Morgan</code></div></div>
+<article class="exploration project-like" id="prob-demorgan-stmt"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.28</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's Laws.</span>
+</h4>
+<p id="p-45">Show that the following pairs of statements are logically equivalent.</p>
+<ul class="disc">
+<li id="li-43"><p id="p-derived-li-43"><span class="process-math">\(\neg (P\land Q)\)</span> and <span class="process-math">\((\neg P) \lor (\neg Q)\)</span></p></li>
+<li id="li-44"><p id="p-derived-li-44"><span class="process-math">\(\neg (P\lor Q)\)</span> and <span class="process-math">\((\neg P)\land (\neg Q)\)</span></p></li>
+</ul></article><article class="exploration project-like" id="prob-distlaws-stmt"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.29</span><span class="period">.</span><span class="space"> </span><span class="title">Distributive Laws.</span>
+</h4>
+<p id="p-46">Let <span class="process-math">\(P, Q, R\)</span> be statements. Use truth tables to verify the following equivalences, but be careful—how many rows should your truth table contain?</p>
+<ul class="disc">
+<li id="li-45"><p id="p-derived-li-45"><span class="process-math">\(\displaystyle P\land (Q\lor R) \equiv P\lor (Q\land R)\)</span></p></li>
+<li id="li-46"><p id="p-derived-li-46"><span class="process-math">\(\displaystyle P\lor (Q\land R) \equiv P \land (Q\lor R)\)</span></p></li>
+</ul></article><p id="p-47">We will often interested in proving conditional statements in which our antecdents or consequents have multiple cases. The following equivalences will come in handy.</p>
+<article class="exploration project-like" id="exploration-12"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.30</span><span class="period">.</span>
+</h4>
+<p id="p-48">Use truth tables to verify the following.</p>
+<ul class="disc">
+<li id="li-47"><p id="p-derived-li-47"><span class="process-math">\(\displaystyle P\Rightarrow (Q\land R) \equiv (P\land \neg Q)\Rightarrow R\)</span></p></li>
+<li id="li-48"><p id="p-derived-li-48"><span class="process-math">\(\displaystyle (P\lor Q)\Rightarrow R \equiv (P\Rightarrow R)\land (Q\Rightarrow R)\)</span></p></li>
+</ul></article><p id="p-49">To conclude this section, we mention two types of special statements: tautologies and contradictions.</p>
+<article class="definition definition-like" id="definition-9"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.31</span><span class="period">.</span>
+</h4>
+<p id="p-50">A statement is called a <dfn class="terminology">tautology</dfn> if it is always true. A statement is called a <dfn class="terminology">contradiction</dfn> if it is never true.</p></article><figure class="figure figure-like" id="fig-tautology-club"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="https://imgs.xkcd.com/comics/honor_societies.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.32<span class="period">.</span></span><span class="space"> </span>From <a class="external" href="https://xkcd.com/703/" target="_blank">XKCD 703: Honor Societies</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a></figcaption></figure><div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">https://xkcd.com/703/</code></div></div>
+<article class="activity project-like" id="activity-5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.33</span><span class="period">.</span>
+</h4>
+<p id="p-51">Let <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> be statements. Determine, with proof, whether the following are tautologies, contradictions, or neither.</p>
+<ol class="decimal">
+<li id="li-49"><p id="p-derived-li-49"><span class="process-math">\(\displaystyle P\land (\neg P)\)</span></p></li>
+<li id="li-50"><p id="p-derived-li-50"><span class="process-math">\(\displaystyle P\lor (\neg P)\)</span></p></li>
+<li id="li-51"><p id="p-derived-li-51"><span class="process-math">\(\displaystyle P\Rightarrow (P\Rightarrow (P\Rightarrow (P\Rightarrow Q)))\)</span></p></li>
+<li id="li-52"><p id="p-derived-li-52"><span class="process-math">\(\displaystyle P\Rightarrow (\neg P\Rightarrow (P\Rightarrow (\neg P\Rightarrow Q)))\)</span></p></li>
+</ol></article></section></section></div></main>
+</div>
+</body>
+</html>

@@ -30,6 +30,8 @@ This file is the "publication file" for producing standard html
     <numbering>
 	    <projects level="0" />
 	    <blocks level="0" />
+		<theorems level="0" />
+		<definitions level="0" />
 	</numbering>
 
 

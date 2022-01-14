@@ -110,7 +110,7 @@
 <rename element="principle">Discussion</rename>
 <rename element="exploration">Problem</rename>
 <!-- <rename element="heuristic">Cube Move</rename> -->
-<rename element="insight">Order Axiom</rename>
+<rename element="insight">LaTeX Code</rename>
   </docinfo>
   <book>
     <title>Discrete Structures Course Notes</title>
@@ -167,19 +167,12 @@
           </copyright> -->
         </colophon>
 
-    <acknowledgement>
+    <!--<acknowledgement>
       <p>
-        <!-- This work is based on notes <url href="http://jiblm.org/downloads/dlitem.php?id=110&category=jiblmjournal">originally published</url> by Karl-Dieter Crisman in the Journal of Inquiry-Based Learning in Mathematics, issue 46 (Oct. 2017). -->
+        This work is based on notes <url href="http://jiblm.org/downloads/dlitem.php?id=110&category=jiblmjournal">originally published</url> by Karl-Dieter Crisman in the Journal of Inquiry-Based Learning in Mathematics, issue 46 (Oct. 2017). 
       </p>
       
-      <!-- <p>
-        Per the JIBLM convention, the proper attribution is:
-      </p>
-      
-      <blockquote>
-        M. Janssen &lt; Ron Taylor
-      </blockquote> -->
-    </acknowledgement>
+       -->
 
     <!--     <preface xml:id="Sec-NoteToStudents">
             <title>A Note to Students</title>
@@ -193,6 +186,21 @@
         
         <section xml:id="sec-logic-intro">
           <title>Introduction to Mathematical Statements</title>
+          
+          <assemblage>
+            <title>Guiding Questions</title>
+            <p>
+                <statement>
+                In this section, we'll seek to answer the questions:
+                <ul>
+                  <li>What is a statement?</li>
+                  <li>What are some examples and non-examples of statements?</li>
+                  <li>What is an atomic statement?</li>
+                </ul>
+          
+              </statement>
+            </p>
+          </assemblage> 
           
           <p>
             In order to do mathematics, we need an idea of what sorts of questions we can explore.
@@ -326,6 +334,12 @@
             </table>
             </statement>
           </definition>
+          <insight>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\neg</m></h></index>
+            <p>
+              To typeset <m>\neg P</m> in <m>\LaTeX</m>, use <c>\neg P</c> in math mode.
+            </p>
+          </insight>
           
           <p>
             We observe that <xref ref="table-negation" /> is our first encounter with a <em>truth table</em>.
@@ -344,15 +358,15 @@
                 <li><m>e</m> is a negative real number.</li>
                 <li>Iowa is the tenth largest state.</li>
                 <li>17 is a prime number.</li>
-              </ol>
-              <solution>
-                <ol>
-                  <li><m>e</m> is a nonnegative real number.</li>
-                  <li>Iowa is not the tenth largest state.</li>
-                  <li>17 is a composite number.</li>
-                </ol>
-              </solution>          
+              </ol>                         
             </statement>
+            <solution>
+              <ol>
+                <li><m>e</m> is a nonnegative real number.</li>
+                <li>Iowa is not the tenth largest state.</li>
+                <li>17 is a composite number.</li>
+              </ol>
+            </solution>
           </activity>
           
           
@@ -436,6 +450,13 @@
             </statement>
           </definition>
           
+          <insight>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\land</m></h></index>
+            <p>
+              To typeset <m>P \land Q</m> in <m>\LaTeX</m>, use <c>P \land Q</c> in math mode.
+            </p>
+          </insight>
+          
           
           <definition xml:id="def-or">
           <index>or</index>
@@ -513,6 +534,13 @@
           </statement>
           </definition>
           
+          <insight>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\lor</m></h></index>
+            <p>
+              To typeset <m>P \lor Q</m> in <m>\LaTeX</m>, use <c>P \lor Q</c> in math mode.
+            </p>
+          </insight>
+          
           
           <exploration>
             <statement>
@@ -559,7 +587,7 @@
           <exploration xml:id="expl-redblue1">
           <statement>
             <p>
-              A mathematician places a set of four cards on a table, each of which has a number on one side and a colored patch on the other side. She claims the following: 
+              A mathematician<fn>This exploration due to Dr. L. Keough.</fn> places a set of four cards on a table, each of which has a number on one side and a colored patch on the other side. She claims the following: 
               
               <blockquote>
               If a card shows an even number on one face, then its opposite face is red.
@@ -645,6 +673,13 @@
                   </table>
                 </definition>
                 
+                <insight>
+                  <index><h><m>\LaTeX</m> symbols</h><h><m>\Rightarrow</m></h></index>
+                  <p>
+                    To typeset <m>P \Rightarrow Q</m> in <m>\LaTeX</m>, use <c>P \Rightarrow Q</c> in math mode.
+                  </p>
+                </insight>
+                
                 <exploration>
                   <statement>
                     <p>
@@ -722,6 +757,13 @@
                     </p>
                   </statement>
                 </definition>
+                
+                <insight>
+                  <index><h><m>\LaTeX</m> symbols</h><h><m>\Leftrightarrow</m></h></index>
+                  <p>
+                    To typeset <m>P \Leftrightarrow Q</m> in <m>\LaTeX</m>, use <c>P \Leftrightarrow Q</c> in math mode.
+                  </p>
+                </insight>
                 
                 
                 
@@ -966,10 +1008,152 @@
           </assemblage> 
           
           
+          
+          
           <introduction>
-          
-          
+            <p>
+              Many reasonable mathematical sentences do not meet our <xref ref="def-statement" text="custom">definition of a statement</xref>.
+              For instance, <m>x + 5 = 7</m> is a declarative sentence, but its truth value depends on <m>x</m>; when <m>x = 2</m>, the statement is true, and when <m>x = 57</m> it is not.
+              We say that such a sentence is <term>open</term>.
+            </p>
           </introduction>
+          
+          <definition xml:id="def-open-sentence">
+            <index>open sentence</index>
+            <statement>
+              <p>
+                An <term>open sentence</term> (or <term>predicate</term>) is a sentence <m>P(x_1, x_2, \ldots, x_n)</m> depending on variables <m>x_1, x_2, \ldots, x_n</m> with the property that the sentence becomes a statement when values are assigned to the variables, or a <term>domain</term> is specified for each variable.
+              </p>
+            </statement>
+          </definition>
+          
+          <p>
+            That is to say, we can turn an open sentence into a statement in one of two ways.
+            First, we could assign <em>specific</em> values to the variables.
+            However, our typical approach will be to <em>quantify</em> the variables by assigning them to a particular domain, such as the real numbers or positive integers, and making one of two assertions: that the quantified statement is true <em>for every</em> object in the domain, or <em>for some</em> object in the domain.
+          </p>
+          
+          <definition xml:id="def-quantifiers">
+            <index><h>quantifiers</h><h>existential quantifier, <m>\exists</m></h></index>
+            <index><h>quantifiers</h><h>universal quantifier, <m>\forall</m></h></index>
+            <statement>
+              <p>
+                The <term>existential quantifier</term>, denoted with the symbol <m>\exists</m>, is the phrase <q>there exists</q> (or equivalent).
+                The <term>universal quantifier</term>, denoted with the symbol <m>\forall</m>, is the phrase <q>for every</q> (or equivalent).
+              </p>
+            </statement>
+          </definition>
+          
+          <insight>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\exists</m></h></index>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\forall</m></h></index>
+            <statement>
+              <p>
+                To typeset the existential quantifier, <m>\exists</m>, use the command <c>\exists</c> in math mode.
+                To typeset the universal quantifier, <m>\forall</m>, use the command <c>\forall</c> in math mode.
+              </p>
+            </statement>
+          </insight>
+          
+          <p>
+            When writing a careful mathematical statement, it is often helpful to use quantifiers and mathematical symbols to clearly and concisely communicate an idea, such as
+          </p>
+          <me>
+            (\forall x \in \R) (x^2 \ge 0),
+          </me>
+          <p>
+            which states that for every real number <m>x</m>, the square of <m>x</m> is nonnegative.<aside>More on these symbols in <xref ref="chap-set-theory" />!</aside>
+            It can also be tempting to use the quantifier notation as an abbreviation when working through the scratchwork necessary to solve a problem.
+            As a rule, however, one should <em>not</em> use quantifier notation in a final write-up for a problem <em>unless the problem is about quantifiers</em>.
+          </p>
+          <p>
+            Finding the right balance between mathematical symbols and ordinary writing takes time and practice.
+            For more suggetions, see <xref ref="appendix-writing" />.
+          </p>
+            
+          
+          
+          <activity xml:id="act-quantifier-to-english">
+            <statement>
+              <p>
+                Translate each quantified statement below to English. 
+                As best you can tell, is the statement true or false? Why?
+              </p>
+              <ol>
+                <li><m>(\exists a\in\Z ) (2\cdot a = 2)</m> (note that the symbols <q><m>a\in \Z</m></q> means that <m>a</m> is in the set <m>\Z</m> of integers, i.e., positive and negative whole numbers, and 0)</li>
+                <li><m>(\forall a\in \Z) (2\cdot a = 2)</m></li>
+                <li><m>(\forall x\in \Z, \exists y\in\Z)(x+y=0)</m></li>
+                <li><m>(\exists y\in \Z, \forall x\in \Z)(x+y=0)</m></li>
+              </ol>
+            </statement>
+          </activity>
+          
+          <insight>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\Z</m></h></index>
+            <index><h><m>\LaTeX</m> symbols</h><h><m>\R</m></h></index>
+            <statement>
+              <p>
+                To typeset <m>\Z</m> or <m>\R</m> in <m>\LaTeX</m>, load the <c>amsmath</c> package using <c>\usepackage{amsmath}</c> in the preamble, and then type <c>\mathbb{Z}</c> or <c>\mathbb{R}</c>.
+              </p>
+            </statement>
+          </insight>
+          
+          <activity>
+            <statement>
+              <p>
+                Translate the following from English to use mathematical notation in the style of <xref ref="act-quantifier-to-english" />.
+                Choose variables as appropriate.
+              </p>
+              <ol>
+                <li>The square of every nonzero integer is greater than or equal to 1.</li>
+                <li>There exists a real number whose square is 2.</li>
+                <li>The cube of every positive integer <m>m</m> is greater than its square.</li>
+                <li>There is an integer <m>x</m> for which there is an integer <m>y</m> such that <m>x\cdot y = -1</m>.</li>
+                <li>Every real number is positive, negative, or zero.</li>
+              </ol>
+            </statement>
+          </activity>
+          
+          
+          
+          <p>
+            We will often find ourselves needing to negate quantified statements.
+            This should be done with care, especially as the statements get more complicated.
+          </p>
+          
+          <exploration xml:id="expl-negating-quantified-statements">
+            <statement>
+              <ol>
+                <li>Consider the statement <q>Every integer is positive.</q> One way to negate this statement is to say <q>It is not the case that every integer is positive,</q> but this style of negation is somewhat clumsy. Find a better way to negate the statement.</li>
+                <li>What does your answer to the previous question suggest about how to negate a universally quantified statement? Test your hypothesis on another univerally quantified statement of your own choosing.</li>
+                <li>Find an elegant negation of the statement <q>There is an integer <m>x</m> satisfying <m>2x = 1</m></q> that uses a univeral quantifier.</li>
+                <li>Can the negation of any existentially quantified statement be written in terms of a universal quantifier?</li>
+              </ol>
+            </statement>
+          </exploration>
+          
+          <p>
+            Let's put our discoveries from <xref ref="expl-negating-quantified-statements" /> to the test.
+          </p>
+          
+          <activity>
+            <statement>
+              <p>
+                Negate the following statements. As best you can tell, is the statement true or false? Why?
+              </p>
+              <ol>
+                <li><m>(\exists a\in\Z ) (2\cdot a = 2)</m></li>
+                <li>The square of every nonzero integer is greater than or equal to 1.</li>
+                <li><m>(\forall a\in \Z) (2\cdot a = 2)</m></li>
+                <li>The cube of every positive integer <m>m</m> is greater than its square.</li>
+                <li><m>(\forall x\in \Z, \exists y\in\Z)(x+y=0)</m></li>
+                <li>There exists a real number whose square is 2.</li>                
+                <li>There is an integer <m>x</m> for which there is an integer <m>y</m> such that <m>x\cdot y = -1</m>.</li>
+                <li><m>(\exists y\in \Z, \forall x\in \Z)(x+y=0)</m></li>
+                <li>Every real number is positive, negative, or zero.</li>
+              </ol>
+            </statement>
+          </activity>
           
           
         </section>  
@@ -982,13 +1166,143 @@
       <title>Introduction to Graphs</title>
       
       <section xml:id="sec-graph-definitions">
-        <title>Definitions and Examples</title>
+        <title>Toward a Definition of a Graph</title>
+        
+        
+        <assemblage>
+          <title>Guiding Questions</title>
+          <p>
+              <statement>
+              In this section, we'll seek to answer the questions:
+              <ul>
+                <li>How is mathematical knowledge developed?</li>
+                <li>What is a graph?</li>
+                <li>How can we represent graphs?</li>
+              </ul>
+        
+            </statement>
+          </p>
+        </assemblage> 
+        
+        
+        <introduction>
+          <p>
+            Influenced by the ancient mathematician Euclid of Alexandria, mathematical knowledge has traditionally been developed via a careful litany of <em>definition</em>, <em>theorem</em>, and <em>proof</em>.
+            The word <term>definition</term> means more or less what you expect: it is a precise description of the meaning of a term.
+            The mathematical version places an emphasis on clarity and concision.
+            This does not always make the definition of a mathematical term easy to parse, but <em>should</em> make it clear to <em>apply</em>.
+          </p>
+          <p>
+            A <term>theorem</term> is a true mathematical statement.
+            If you read enough mathematics, you will also see words like <em>proposition</em>, <em>lemma</em>, and <em>corollary</em>.
+            These are all true mathematical statements as well, but have slightly different connotations.
+            <ul>
+              <li>A proposition is a true mathematical statement which is not perceived to be important enough to be called a theorem.</li>
+              <li>A lemma is a true mathematical statement which may be somewhat technical to write, but is used to prove a theorem or proposition. One often has the experience of proving a theorem and realizing that a portion of the proof is substantive enough that it can be pulled out and written as the proof of a lemma, to which you can then refer to complete the proof of the theorem.</li>
+              <li>A corollary is a true mathematical statement that follows immediately from the proof of a theorem<fn>For instance, suppose you've proved that all rectangles in the plane contain only right angles. A corollary to this theorem is that all squares in the plane contain only right angles.</fn>.</li>
+            </ul>
+          </p>
+          <p>
+            How is the truth of a mathematical statement ascertained?
+            Via <em>proof</em>.
+            One of the goals of this course is develop proficiency writing proofs, and we will explore techniques for doing so in more detail in <xref ref="chap-proof-techniques" />.
+          </p>
+          <p>
+            For now, we will focus on the first part of the mathematical litany: definitions.
+            Theorems (and their accompanying proofs) must be about <em>something</em>, so in this section, we introduce one of the basic ideas of the course: the <term>graph</term>.
+          </p>
+        </introduction>
+        
+        
+        
+        <exploration xml:id="expl-graph-def-first-attempt">
+          <statement>
+            <p>
+              Below there are several examples of objects called <em>graphs</em>.
+              Develop a clear, concise definition of the word <term>graph</term> and explain why each of the objects below meets your definition.
+              For the sake of consistency, we'll call the circles <term>vertices</term> (or <term>nodes</term>), and the lines connecting them <term>edges</term>.
+            </p>
+            <figure xml:id="fig-graph-example01">
+              <image source="./fig/graph-example01.svg" width="25%" />
+              <caption>A graph.</caption>
+            </figure>
+            <figure xml:id="fig-graph-example02">
+              <image source="./fig/graph-example02.svg" width="25%" />
+              <caption>A second graph.</caption>
+            </figure>
+            <figure xml:id="fig-graph-example03">
+              <image source="./fig/graph-example03.svg" width="25%" />
+              <caption>A third graph.</caption>
+            </figure>
+            <figure xml:id="fig-graph-example04">
+              <image source="./fig/graph-example04.svg" width="25%" />
+              <caption>A fourth graph.</caption>
+            </figure>
+            <figure xml:id="fig-graph-example05">
+              <image source="./fig/graph-example05.svg" width="25%" />
+              <caption>A fifth graph.</caption>
+            </figure>
+            <figure xml:id="fig-graph-example06">
+              <image source="./fig/graph-example06.svg" width="25%" />
+              <caption>A sixth graph (no, this is not a mistake).</caption>
+            </figure>
+          </statement>
+        </exploration>
+        
+        <exploration xml:id="expl-graph-def-second-attempt">
+          <statement>
+            <p>
+              Below there are several examples of objects that are <em>not</em> graphs.
+              If necessary, modify your definition from <xref ref="expl-graph-def-first-attempt" />, and explain why the objects below do not meet your (possibly new) definition<mdash />but make sure the objects in <xref ref="expl-graph-def-first-attempt" /> still do!
+            </p>
+            <figure xml:id="fig-graph-nonexample01">
+              <image source="./fig/graph-nonexample01.svg" width="25%" />
+              <caption>Not a graph.</caption>
+            </figure>
+            <figure xml:id="fig-graph-nonexample02">
+              <image source="./fig/graph-nonexample02.svg" width="25%" />
+              <caption>Not a graph.</caption>
+            </figure>
+            <figure xml:id="fig-graph-nonexample03">
+              <image source="./fig/graph-nonexample03.svg" width="25%" />
+              <caption>(Still) Not a graph.</caption>
+            </figure>
+          </statement>
+        </exploration>
+        
+        
+        <definition xml:id="def-graph">
+          <idx>graph</idx>
+          <statement>
+            <p>
+              A <term>graph</term> is ....
+            </p>
+          </statement>
+        </definition>
+        
+        
+        
+        
+        <activity>
+          <statement>
+            <p>
+              Given the definition of a graph that we've come up with, exhibit two additional examples of a graph, as well as two non-examples.
+            </p>
+          </statement>
+        </activity>
+        
+        
+        
+        
+        
+        
+        
         
         
       </section>
       
       
-      <section xml:id="sec-first-properties">
+<!--       <section xml:id="sec-first-properties">
         <title>Elementary Properties of Graphs</title>
         
       </section>
@@ -998,16 +1312,33 @@
         <title>A Preview of Future Questions</title>
         
         
-      </section>
+      </section> -->
       
     </chapter>
     
     
-    <chapter xml:id="chap-proof-techninques">
+    <chapter xml:id="chap-proof-techniques">
       <title>Proof Techniques</title>
       
       <section xml:id="sec-direct-proof">
         <title>Direct Proof</title>
+        
+        <assemblage>
+          <title>Guiding Questions</title>
+          <p>
+              <statement>
+              In this section, we'll seek to answer the questions:
+              <ul>
+                <li>What is a proof?</li>
+                <li>What is a direct proof?</li>
+                <li>What are some ideas for getting started/unstuck when stuck on a proof?</li>
+              </ul>
+        
+            </statement>
+          </p>
+        </assemblage>
+        
+         
       
       </section>
       
@@ -1024,11 +1355,11 @@
       </section>
       
       
-      <section xml:id="sec-cond-bicond">
+<!--       <section xml:id="sec-cond-bicond">
         <title>Conditional and Biconditional Proofs</title>
         
         
-      </section>
+      </section> -->
       
       
       <section xml:id="sec-induction">
@@ -1110,10 +1441,18 @@
     
    
      <backmatter>
+     
+      <appendix xml:id="appendix-writing">
+        <title>On Mathematical Writing</title>
+        
+        
+      </appendix>
+     
       <index>
         <title>Index</title>
         <index-list />
       </index>
+      
       
 
     </backmatter>
