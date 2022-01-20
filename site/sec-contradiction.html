@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-14T11:51:10-06:00       *-->
+<!--*       on 2022-01-20T14:10:16-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -202,7 +202,69 @@
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-contradiction"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Proof by Contradiction</span>
-</h2></section></div></main>
+</h2>
+<article class="assemblage assemblage-like" id="assemblage-7"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
+<p id="p-113">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-108"><p id="p-derived-li-108">What is a proof by contradiction?</p></li>
+<li id="li-109"><p id="p-derived-li-109">Why is a proof by contradiction valid?</p></li>
+<li id="li-110"><p id="p-derived-li-110">What are some examples of proof by contradiction, and why might we want to use this technique?</p></li>
+</ul></p></article><section class="introduction" id="introduction-5"><p id="p-114">Another proof technique relies on the assumption that a statement <span class="process-math">\(Q\)</span> cannot be both true and false. The technique we describe in this section is an example of <dfn class="terminology">indirect proof</dfn> known as <dfn class="terminology">proof by contradiction</dfn>.</p></section><article class="assemblage assemblage-like" id="assemblage-8"><h3 class="heading"><span class="title">Proof by Contradiction.</span></h3>
+<p id="p-115">To prove the statement <span class="process-math">\(P\Rightarrow Q\)</span> by contradiction, we assume <span class="process-math">\(P\)</span> and <span class="process-math">\(\neg Q\)</span> (which places us in row 2 of <a href="" class="xref" data-knowl="./knowl/table-implication.html" title="Table 1.2.14: The implication P\Rightarrow Q">Table 1.2.14</a>), and thus that <span class="process-math">\(P\Rightarrow Q\)</span> is false. We proceed deductively until we contradict some assumption or known fact. Thus, our original assumption of <span class="process-math">\(\neg Q\)</span> is false, which means <span class="process-math">\(Q\)</span> and thus <span class="process-math">\(P\Rightarrow Q\)</span> are both true.</p></article><p id="p-116">We'll begin with an example.</p>
+<article class="theorem theorem-like" id="thm-ducks-in-ponds"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="space"> </span><span class="creator">(<a class="external" href="http://toroidalsnark.net/dmwd.html" target="_blank">sarah-marie belcastro</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 1 </sup></a>)</span><span class="period">.</span>
+</h3>
+<p id="p-117">If ten ducks are paddling in four ponds, then some pond must contain at least three paddling ducks.</p></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-118">Suppose ten ducks are paddling in four ponds, but no pond contains at least three paddling ducks. This means that each of the four ponds contains at most two ducks. <aside class="aside aside-like" id="aside-2"><p id="p-119">Why?</p></aside> That is, the first pond contains at most two ducks, the second pond contains at most two ducks, the third pond contains at most two ducks, and the fourth pond contains at most two ducks, for a total of (at most!) <span class="process-math">\(2+2+2+2 = 8\)</span> ducks. This contradicts the given assumption that ten ducks are paddling in four ponds. Thus, there must be a pond with at least three ducks.</p></article></div>
+<p id="p-120">Let's consider a different example now, where a direct proof would be extremely difficult (or impossible). <a href="" class="xref" data-knowl="./knowl/thm-root2-irrational.html" title="Theorem 3.2.2">Theorem 3.2.2</a>, which was known to the <a class="external" href="https://en.wikipedia.org/wiki/Pythagoreanism" target="_blank">Pythagoreans</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 2 </sup></a>, states that <span class="process-math">\(\sqrt{2}\)</span> is irrational, i.e., that there are no integers <span class="process-math">\(p\)</span> and <span class="process-math">\(q\ne 0\)</span> such that <span class="process-math">\(\sqrt{2} = \frac{p}{q}\text{.}\)</span></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Pythagoreanism</code></div></div>
+<article class="theorem theorem-like" id="thm-root2-irrational"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+</h3>
+<p id="p-121">The real number <span class="process-math">\(\sqrt{2}\)</span> is irrational.</p></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-122">Suppose that <span class="process-math">\(\sqrt{2}\)</span> is rational, i.e., there exist integers <span class="process-math">\(p, q\)</span> with <span class="process-math">\(q\ne 0\)</span> such that <span class="process-math">\(p,q\)</span> have no common factors (i.e,. <span class="process-math">\(p/q\)</span> is in “lowest terms”) and <span class="process-math">\(\sqrt{2} = p/q\text{.}\)</span></p>
+<p id="p-123">Begin by squaring both sides to obtain <span class="process-math">\(2 = \frac{p^2}{q^2}\text{,}\)</span> which we may rewrite as <span class="process-math">\(2q^2 = p^2\text{.}\)</span> Since <span class="process-math">\(q^2\)</span> is an integer, this means that <span class="process-math">\(p^2\)</span> is even. We may conclude (with a nod to <a href="" class="xref" data-knowl="./knowl/thm-sq-even.html" title="Theorem 3.1.3">Theorem 3.1.3</a> and <a href="" class="xref" data-knowl="./knowl/thm-sq-odd.html" title="Theorem 3.1.5">Theorem 3.1.5</a>) that <span class="process-math">\(p\)</span> is even, and write <span class="process-math">\(p = 2k\)</span> for some <span class="process-math">\(k\in\Z\text{.}\)</span> We thus obtain</p>
+<div class="displaymath process-math">
+\begin{equation*}
+2q^2 = (2k)^2 = 4k^2,
+\end{equation*}
+</div>
+<p id="p-124">and canceling a 2 from each side yields <span class="process-math">\(q^2 = 2k^2\text{.}\)</span> By an argument similar to the above, <span class="process-math">\(q\)</span> is even. But here arises a contradiction, as we assumed <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors, yet we have proved they are both divisible by 2.</p>
+<p id="p-125">Therefore, no such <span class="process-math">\(p/q\)</span> exists, and <span class="process-math">\(\sqrt{2}\)</span> is irrational.</p></article></div>
+<p id="p-126">Establish the following theorems via a proof by contradiction.</p>
+<article class="theorem theorem-like" id="theorem-11"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+</h3>
+<p id="p-127">Suppose <span class="process-math">\(m,n\in\Z\)</span> such that <span class="process-math">\(m\cdot n\)</span> is odd. Then both <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are odd.</p></article><article class="theorem theorem-like" id="theorem-12"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="space"> </span><span class="creator">(Dirichlet)</span><span class="period">.</span><span class="space"> </span><span class="title">The Pigeonhole Principle.</span>
+</h3>
+<p id="p-128">Suppose <span class="process-math">\(n+1\)</span> pieces of mail are delivered to <span class="process-math">\(n\)</span> mailboxes. Then there is a mailbox that contains at least two pieces of mail.</p></article><article class="theorem theorem-like" id="theorem-13"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
+</h3>
+<p id="p-129">There is no rational number <span class="process-math">\(r\)</span> such that <span class="process-math">\(r^2 = 3\text{.}\)</span></p></article><p id="p-130">Proofs by contradiction are fun! But sometimes they can get a bit ... silly.</p>
+<article class="theorem theorem-like" id="thm-sq-even2"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
+</h3>
+<p id="p-131">Let <span class="process-math">\(m\)</span> be an even integer. Then <span class="process-math">\(m^2\)</span> is even.</p></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-132">Suppose <span class="process-math">\(m\)</span> is even but, for a contradiction, that <span class="process-math">\(m^2\)</span> is odd. Then there exist integers <span class="process-math">\(j,k\)</span> such that <span class="process-math">\(m = 2j\)</span> and <span class="process-math">\(m^2 = 2k+1\text{.}\)</span> We observe that <span class="process-math">\(m^2 = m\cdot m = (2j) \cdot (2j) = 2(2j^2) = 2k+1\text{.}\)</span> Thus, <span class="process-math">\(m^2\)</span> is both even and odd, in clear violation of <a href="" class="xref" data-knowl="./knowl/axiom-evenodd.html" title="Axiom 3.1.10">Axiom 3.1.10</a>. We therefore find that <span class="process-math">\(m^2\)</span> cannot be odd, and must be even.</p></article></div>
+<article class="activity project-like" id="activity-12"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
+</h3>
+<p id="p-133">Critique <a href="" class="xref" data-knowl="./knowl/thm-sq-even2.html" title="Theorem 3.2.6">Theorem 3.2.6</a>.</p></article><p id="p-134">Proofs by contradition are useful when showing that something cannot exist: you assume that it does, and reach a contradiction.</p>
+<article class="theorem theorem-like" id="theorem-15"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="space"> </span><span class="creator">(Ted Sundstrom)</span><span class="period">.</span>
+</h3>
+<p id="p-135">There do not exist integers <span class="process-math">\(a,b\)</span> such that <span class="process-math">\(b^2 = 4a + 2\text{.}\)</span></p></article><p id="p-136">For our last examples, we recall <a href="" class="xref" data-knowl="./knowl/def-vertex-degree.html" title="Definition 3.1.15">Definition 3.1.15</a> and make a new definition.</p>
+<article class="definition definition-like" id="definition-17"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span>
+</h3>
+<p id="p-137">The <dfn class="terminology">degree sequence</dfn> of a graph is a sequence of the degrees of the vertices in the graph, including any repetitions, and listed in decreasing order.</p></article><p id="p-138">For example, the degree sequence of the graph in <a href="" class="xref" data-knowl="./knowl/fig-graph-example01.html" title="Figure 2.1.2">Figure 2.1.2</a> is <span class="process-math">\((2,2,1,1)\text{,}\)</span> while the degree sequence of the graph in <a href="" class="xref" data-knowl="./knowl/fig-graph-example02.html" title="Figure 2.1.3">Figure 2.1.3</a> is <span class="process-math">\((2,2,2,0)\text{.}\)</span></p>
+<article class="theorem theorem-like" id="theorem-16"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span>
+</h3>
+<p id="p-139">There is no graph with the degree sequence <span class="process-math">\((5,5,5,4,4,3,3)\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-17"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span>
+</h3>
+<p id="p-140">There is no graph with the degree sequence <span class="process-math">\((7,6,5,4,3,2,1)\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-18"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span>
+</h3>
+<p id="p-141">There is no graph with the degree sequence <span class="process-math">\((6,5,4,3,2,2,0)\text{.}\)</span></p></article></section></div></main>
 </div>
 </body>
 </html>

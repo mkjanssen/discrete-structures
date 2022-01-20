@@ -32,9 +32,9 @@
 %\Alpha{homeworkresults}
 
 \theoremstyle{definition}
-\newtheorem{theorem}{Theorem}\
+\newtheorem{theorem}{Theorem}
 \renewcommand*{\thetheorem}{\Alph{theorem}}
-%\setcounter{theorem}{2}
+%\setcounter{theorem}{3}
 \newtheorem{conj}[theorem]{Conjecture}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{prop}[theorem]{Proposition}
@@ -43,58 +43,72 @@
 
 
 
-
-\title{Math 311 Homework 1}
+\title{Math 212 Homework 1}
 
 \author{Your name goes here}
 
-\date{Due September 2, 2021}
+\date{Due January 26, 2022}
+
 
 \begin{document}
+
+
+
 \maketitle
 
 \noindent\textbf{Acknowledgments:} \emph{List the names of anyone with whom you discussed these problems \textbf{at all}. Leaving any name off the list constitutes academic dishonesty.}
 
-For Conjecture \ref{conj-setminus}, either prove the conjecture, or, if it is false, provide a counterexample, modify the statement to be true, and prove your modified statement.
 
-\begin{conj}\label{conj-setminus}
-	Let $A, B$, and $C$ be sets.
-	Then
+\begin{example}
+	Let $P$ and $Q$ be statements.
+	Construct a truth table for the statement
 	\[
-		A\times (B\setminus C) = (A\times B)\setminus (A\times C).
+		[P \land (P \land (P\land Q) \land Q)] \lor Q.
 	\]
-\end{conj}
-
-\begin{proof}
-
-\end{proof}
-
-
-
-For Example \ref{example-functions}, choose one and only one statement to complete.
-
-\begin{example}\label{example-functions}
-	Give an example of one of the following, as well as a proof of the properties you claim.
-	\begin{enumerate}
-		\item A function $f : \R\to \R$ that is one-to-one but not onto.
-		\item A function $f: \R\to \R$ that is onto but not one-to-one.
-	\end{enumerate}
 \end{example}
 
-\begin{proof}
-
-\end{proof}
+\noindent\textbf{Solution.}
 
 
+\begin{table}[htdp]
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{c|c|c|c|c|c|c}
 
-\begin{theorem}
-	Let $f: X\to Y$ and suppose $\emptyset\subsetneq C\subseteq D\subseteq Y$.
-	then $f^{-1}(C) \subseteq f^{-1} (D)$.
-\end{theorem}
+$P$ & $Q$ & $P\land Q$ & $P\land (P\land Q)$ & $P \land (P\land Q) \land Q$ & $P \land (P \land (P\land Q) \land Q)$ & $[P \land (P \land (P\land Q) \land Q)] \lor Q$ \\\hline
 
-\begin{proof}
- 
-\end{proof}
+? & ? & ? & ? & ? & ? & ? \\
+? & ? & ? & ? & ? & ? & ? \\
+? & ? & ? & ? & ? & ? & ? \\
+? & ? & ? & ? & ? & ? & ? \\
+
+\end{tabular}
+\end{center}
+\end{table}%
+
+
+\begin{example}
+	Let $S$ and $T$ be statements.
+	Formulate a statement logically equivalent to $S\land (T\lor \neg S)$ using only $S$, $T$, $\neg$, and $\lor$ (each of which you can use as many times as you want/need).
+	Explain how you arrived at your equivalent statement (possibly referring to results from Section 1.2), and then use a truth table to prove that your statement is logically equivalent. 
+	(Feel free to copy/modify the $\LaTeX$ code from Example A.)
+\end{example}
+
+
+\noindent\textbf{Solution.} \textit{Your solution goes here.}
+
+
+
+
+
+\begin{example}
+	Let $A$ and $B$ be statements.
+	Determine whether $(A\lor (\neg A \land B))$ and $\neg [ \neg A \land (A\lor \neg B)]$ are logically equivalent.
+	Justify your answer with a truth table that includes at least eight relevant columns.
+\end{example}
+
+\noindent\textbf{Solution.} \textit{Your solution goes here.}
+
 
 
 \end{document}

@@ -753,7 +753,7 @@
                   <statement>
                     <p>
                       Let <m>P</m> and <m>Q</m> be statements.
-                      The biconditional statement joining <m>P</m> and <m>Q</m>, read <q><m>P</m> if and only if <m>Q</m></q><fn>We sometimes say that <m>P</m> is <q>necessary and sufficient</q> for <m>Q</m>.</fn> and written <m>P\Leftrightarrow Q</m>, is true precisely when both <m>P</m> and <m>Q</m> are true, and false otherwise.
+                      The biconditional statement joining <m>P</m> and <m>Q</m>, read <q><m>P</m> if and only if <m>Q</m></q><fn>We sometimes say that <m>P</m> is <q>necessary and sufficient</q> for <m>Q</m>.</fn> and written <m>P\Leftrightarrow Q</m>, is true precisely when <m>P</m> and <m>Q</m> have the same truth values, and false otherwise.
                     </p>
                   </statement>
                 </definition>
@@ -877,7 +877,7 @@
             <exploration>
               <statement>
                 <p>
-                  Use truth tables to identify any logical equivalences between <m>P\Rightarrow Q</m>, <m>Q\rightarrow P</m>, <m>(\neg Q)\Rightarrow (\neg P)</m>, and <m>(\neg P)\Rightarrow (\neg Q)</m>.
+                  Use truth tables to identify any logical equivalences between <m>P\Rightarrow Q</m>, <m>Q\Rightarrow P</m>, <m>(\neg Q)\Rightarrow (\neg P)</m>, and <m>(\neg P)\Rightarrow (\neg Q)</m>.
                 </p>
               </statement>
             </exploration>
@@ -885,7 +885,7 @@
             <exploration xml:id="prob-le-contradiction">
               <statement>
                 <p>
-                  Show that <m>P\rightarrow Q \equiv (\neg P) \lor Q</m>.
+                  Show that <m>P\Rightarrow Q \equiv (\neg P) \lor Q</m>.
                 </p>
               </statement>
             </exploration>
@@ -917,8 +917,8 @@
                   Use truth tables to verify the following equivalences, but be careful<mdash />how many rows should your truth table contain?
                 </p>
                 <ul>
-                  <li><m>P\land (Q\lor R) \equiv P\lor (Q\land R)</m></li>
-                  <li><m>P\lor (Q\land R) \equiv P \land (Q\lor R)</m></li>
+                  <li><m>P\land (Q\lor R) \equiv (P\land Q) \lor (P \land R)</m></li>
+                  <li><m>P\lor (Q\land R) \equiv (P \lor Q)\land (P \lor R)</m></li>
                 </ul>
               </statement>
             </exploration>
@@ -1457,7 +1457,7 @@
           Prove the following theorems directly.
         </p>
         
-        <theorem>
+        <theorem xml:id="thm-sq-odd">
           <statement>
             <p>
               Let <m>n</m> be an odd integer. Then <m>n^2</m> is an odd integer.
@@ -1578,7 +1578,8 @@
           </p>
           
           <definition xml:id="def-vertex-degree">
-            <idx>degree of a vertex</idx>
+            <idx><h>degree</h><h>of a vertex</h></idx>
+            <idx><h>vertex</h><h>degree</h></idx>
             <statement>
               <p>
                 Let <m>v</m> be a vertex in a graph <m>G</m>.
@@ -1660,6 +1661,217 @@
       
       <section xml:id="sec-contradiction">
         <title>Proof by Contradiction</title>
+        
+        <assemblage>
+          <title>Guiding Questions</title>
+          <p>
+              <statement>
+              In this section, we'll seek to answer the questions:
+              <ul>
+                <li>What is a proof by contradiction?</li>
+                <li>Why is a proof by contradiction valid?</li>
+                <li>What are some examples of proof by contradiction, and why might we want to use this technique?</li>
+              </ul>
+        
+            </statement>
+          </p>
+        </assemblage> 
+        
+        <introduction>
+          <p>
+            Another proof technique relies on the assumption that a statement <m>Q</m> cannot be both true and false.
+            The technique we describe in this section is an example of <term>indirect proof</term> known as <term>proof by contradiction</term>.
+          </p>          
+        </introduction>
+        
+        <assemblage>
+          <title>Proof by Contradiction</title>
+          <p>
+            <statement>
+              To prove the statement <m>P\Rightarrow Q</m> by contradiction, we assume <m>P</m> and <m>\neg Q</m> (which places us in row 2 of <xref ref="table-implication" />), and thus that <m>P\Rightarrow Q</m> is false.
+              We proceed deductively until we contradict some assumption or known fact.
+              Thus, our original assumption of <m>\neg Q</m> is false, which means <m>Q</m> and thus <m>P\Rightarrow Q</m> are both true.
+            </statement>
+          </p>
+        </assemblage> 
+        
+        <p>
+          We'll begin with an example.
+        </p>
+        
+        <theorem xml:id="thm-ducks-in-ponds">
+          <creator><url href="http://toroidalsnark.net/dmwd.html">sarah-marie belcastro</url></creator>
+          <statement>
+            <p>
+              If ten ducks are paddling in four ponds, then some pond must contain at least three paddling ducks.
+            </p>
+          </statement>
+          <proof>
+            <p>
+              Suppose ten ducks are paddling in four ponds, but no pond contains at least three paddling ducks.
+              This means that each of the four ponds contains at most two ducks. <aside><p>Why?</p></aside>
+              That is, the first pond contains at most two ducks, the second pond contains at most two ducks, the third pond contains at most two ducks, and the fourth pond contains at most two ducks, for a total of (at most!) <m>2+2+2+2 = 8</m> ducks.
+              This contradicts the given assumption that ten ducks are paddling in four ponds.
+              Thus, there must be a pond with at least three ducks.
+            </p>
+          </proof>
+        </theorem>
+        
+        
+        
+        <p>
+          Let's consider a different example now, where a direct proof would be extremely difficult (or impossible).
+          <xref ref="thm-root2-irrational" />, which was known to the <url href="https://en.wikipedia.org/wiki/Pythagoreanism">Pythagoreans</url>, states that <m>\sqrt{2}</m> is irrational, i.e., that there are no integers <m>p</m> and <m>q\ne 0</m> such that <m>\sqrt{2} = \frac{p}{q}</m>.
+        </p>
+        
+        <theorem xml:id="thm-root2-irrational">
+          <statement>
+            <p>
+              The real number <m>\sqrt{2}</m> is irrational.
+            </p>
+          </statement>
+          <proof>
+            <p>
+              Suppose that <m>\sqrt{2}</m> is rational, i.e., there exist integers <m>p, q</m> with <m>q\ne 0</m> such that <m>p,q</m> have no common factors (i.e,. <m>p/q</m> is in <q>lowest terms</q>) and <m>\sqrt{2} = p/q</m>.              
+            </p>
+            <p>
+              Begin by squaring both sides to obtain <m>2 = \frac{p^2}{q^2}</m>, which we may rewrite as <m>2q^2 = p^2</m>.
+              Since <m>q^2</m> is an integer, this means that <m>p^2</m> is even.
+              We may conclude (with a nod to <xref ref="thm-sq-even" /> and <xref ref="thm-sq-odd" />) that <m>p</m> is even, and write <m>p = 2k</m> for some <m>k\in\Z</m>.
+              We thus obtain
+            </p>
+            <me>
+              2q^2 = (2k)^2 = 4k^2,
+            </me>
+            <p>
+              and canceling a 2 from each side yields <m>q^2 = 2k^2</m>.
+              By an argument similar to the above, <m>q</m> is even.
+              But here arises a contradiction, as we assumed <m>p</m> and <m>q</m> have no common factors, yet we have proved they are both divisible by 2.
+            </p>
+            <p>
+              Therefore, no such <m>p/q</m> exists, and <m>\sqrt{2}</m> is irrational.
+            </p>
+          </proof>
+        </theorem>
+        
+        
+        <p>
+          Establish the following theorems via a proof by contradiction.
+        </p>
+        
+        <theorem>
+          <statement>
+            <p>
+              Suppose <m>m,n\in\Z</m> such that <m>m\cdot n</m> is odd.
+              Then both <m>m</m> and <m>n</m> are odd.
+            </p>
+          </statement>
+        </theorem>
+        
+        <theorem>
+          <creator>Dirichlet</creator>
+          <title>The Pigeonhole Principle</title>
+          <statement>
+            <p>
+              Suppose <m>n+1</m> pieces of mail are delivered to <m>n</m> mailboxes.
+              Then there is a mailbox that contains at least two pieces of mail.
+            </p>
+          </statement>
+        </theorem>
+        
+        <theorem>
+          <statement>
+            <p>
+              There is no rational number <m>r</m> such that <m>r^2 = 3</m>.
+            </p>
+          </statement>
+        </theorem>
+        
+        <p>
+          Proofs by contradiction are fun!
+          But sometimes they can get a bit ... silly.
+        </p>
+        
+        <theorem xml:id="thm-sq-even2">
+          <statement>
+            <p>
+              Let <m>m</m> be an even integer.
+              Then <m>m^2</m> is even.
+            </p>
+          </statement>
+          <proof>
+            <p>
+              Suppose <m>m</m> is even but, for a contradiction, that <m>m^2</m> is odd.
+              Then there exist integers <m>j,k</m> such that <m>m = 2j</m> and <m>m^2 = 2k+1</m>.
+              We observe that <m>m^2 = m\cdot m = (2j) \cdot (2j) = 2(2j^2) = 2k+1</m>.
+              Thus, <m>m^2</m> is both even and odd, in clear violation of <xref ref="axiom-evenodd" />.
+              We therefore find that <m>m^2</m> cannot be odd, and must be even.
+            </p>
+          </proof>
+        </theorem>
+        
+        <activity>
+          <statement>
+            <p>
+              Critique <xref ref="thm-sq-even2" />.
+            </p>
+          </statement>
+        </activity>
+        
+        <p>
+          Proofs by contradition are useful when showing that something cannot exist: you assume that it does, and reach a contradiction.
+        </p>
+        
+        <theorem>
+          <creator>Ted Sundstrom</creator>
+          <statement>
+            <p>
+              There do not exist integers <m>a,b</m> such that <m>b^2 = 4a + 2</m>.
+            </p>
+          </statement>
+        </theorem>
+        
+        <p>
+          For our last examples, we recall <xref ref="def-vertex-degree" /> and make a new definition.
+        </p>
+        
+        <definition>
+          <idx><h>degree</h><h>sequence</h></idx>
+          <statement>
+            <p>
+              The <term>degree sequence</term> of a graph is a sequence of the degrees of the vertices in the graph, including any repetitions, and listed in decreasing order.
+            </p>
+          </statement>
+        </definition>
+        
+        <p>
+          For example, the degree sequence of the graph in <xref ref="fig-graph-example01" /> is <m>(2,2,1,1)</m>, while the degree sequence of the graph in <xref ref="fig-graph-example02" /> is <m>(2,2,2,0)</m>.
+        </p>
+        
+        <theorem>
+          <statement>
+            <p>
+              There is no graph with the degree sequence <m>(5,5,5,4,4,3,3)</m>.
+            </p>
+          </statement>
+        </theorem>
+        
+        <theorem>
+          <statement>
+            <p>
+              There is no graph with the degree sequence <m>(7,6,5,4,3,2,1)</m>.
+            </p>
+          </statement>
+        </theorem>
+        
+        <theorem>
+          <statement>
+            <p>
+              There is no graph with the degree sequence <m>(6,5,4,3,2,2,0)</m>.
+            </p>
+          </statement>
+        </theorem>
+        
         
       </section>
       

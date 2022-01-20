@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2022-01-13T09:49:29-06:00       *%
+%*       on 2022-01-19T20:30:20-06:00       *%
 %*   A recent stable commit (2020-08-09):   *%
 %* 98f21740783f166a773df4dc83cab5293ab63a4a *%
 %*                                          *%
@@ -476,6 +476,18 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \newtcolorbox[auto counter, number within=tcb@cnt@block, number freestyle={\noexpand\thetcb@cnt@block(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
 \makeatother
 %%
+%% tcolorbox, with styles, for THEOREM-LIKE
+%%
+%% theorem: fairly simple numbered block/structure
+\tcbset{ theoremstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=block]{theorem}[3]{title={{Theorem~\thetcbcounter\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, fontupper=\itshape, theoremstyle, }
+%%
+%% tcolorbox, with styles, for AXIOM-LIKE
+%%
+%% axiom: fairly simple numbered block/structure
+\tcbset{ axiomstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=block]{axiom}[3]{title={{Axiom~\thetcbcounter\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, fontupper=\itshape, axiomstyle, }
+%%
 %% tcolorbox, with styles, for DEFINITION-LIKE
 %%
 %% definition: fairly simple numbered block/structure
@@ -487,6 +499,12 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% insight: fairly simple numbered block/structure
 \tcbset{ insightstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
 \newtcolorbox[use counter from=block]{insight}[2]{title={{LaTeX Code~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, insightstyle, }
+%%
+%% tcolorbox, with styles, for EXAMPLE-LIKE
+%%
+%% question: fairly simple numbered block/structure
+\tcbset{ questionstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\square\)}, } }
+\newtcolorbox[use counter from=block]{question}[2]{title={{Question~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, questionstyle, }
 %%
 %% tcolorbox, with styles, for PROJECT-LIKE
 %%
@@ -523,6 +541,10 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% assemblage: fairly simple un-numbered block/structure
 \tcbset{ assemblagestyle/.style={size=normal, colback=white, colbacktitle=white, coltitle=black, colframe=black, rounded corners, titlerule=0.0pt, center title, fonttitle=\blocktitlefont\bfseries, blockspacingstyle, } }
 \newtcolorbox{assemblage}[2]{title={\notblank{#1}{#1}{}}, phantomlabel={#2}, breakable, parbox=false, assemblagestyle}
+%% proof: title is a replacement
+\tcbset{ proofstyle/.style={bwminimalstyle, fonttitle=\blocktitlefont\itshape, attach title to upper, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\blacksquare\)},
+} }
+\newtcolorbox{proof}[2]{title={\notblank{#1}{#1}{Proof.}}, phantom={\hypertarget{#2}{}}, breakable, parbox=false, after={\par}, proofstyle }
 %% Graphics Preamble Entries
 \usepackage{tikz}
 \usepackage{url}
@@ -657,7 +679,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\titlepagefont\centering
 \vspace*{0.14\textheight}
 %% Target for xref to top-level element is ToC
-\addtocontents{toc}{\protect\hypertarget{g:book:idp105545029978768}{}}
+\addtocontents{toc}{\protect\hypertarget{g:book:idp105545050404368}{}}
 {\Huge Discrete Structures Course Notes}\\[3\baselineskip]
 {\Large Mike Janssen}\\[0.5\baselineskip]
 {\Large Dordt University}\\}
@@ -665,7 +687,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% end:   title page
 %% begin: copyright-page
 \thispagestyle{empty}
-\hypertarget{g:colophon:idp105545029983376}{}\vspace*{\stretch{2}}
+\hypertarget{g:colophon:idp105545050341008}{}\vspace*{\stretch{2}}
 \noindent{\bfseries Website}: \href{https:\slash{}\slash{}prof.mkjanssen.org\slash{}ra\slash{}notes}{https:\slash{}\slash{}prof.mkjanssen.org\slash{}ra\slash{}notes}\par\medskip
 \vspace*{\stretch{1}}
 \null\clearpage
@@ -691,7 +713,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \typeout{************************************************}
 %
 \begin{sectionptx}{Introduction to Mathematical Statements}{}{Introduction to Mathematical Statements}{}{}{x:section:sec-logic-intro}
-\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545029970192}%
+\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545050344976}%
 In this section, we'll seek to answer the questions: %
 \begin{itemize}[label=\textbullet]
 \item{}What is a statement?%
@@ -705,7 +727,7 @@ In order to do mathematics, we need an idea of what sorts of questions we can ex
 \index{statement}%
 A \terminology{statement} is a declarative sentence that is either true or false.%
 \end{definition}
-\begin{activity}{}{g:activity:idp105545029950224}%
+\begin{activity}{}{g:activity:idp105545050348816}%
 Determine whether the following are statements. If so, explain why, and determine their truth value if you are able. If not, explain why not.%
 %
 \begin{enumerate}
@@ -721,7 +743,7 @@ Determine whether the following are statements. If so, explain why, and determin
 \item{}This statement is false.%
 \end{enumerate}
 \end{activity}%
-\begin{activity}{}{g:activity:idp105545029897744}%
+\begin{activity}{}{g:activity:idp105545050352912}%
 Give at least one example and one non-example of a statement.%
 \end{activity}%
 Most of the statements we've explored so far might be considered \terminology{atomic} in the sense that they cannot be broken down into combinations of simpler statements. In \hyperref[x:section:sec-logical-connectives-equivalence]{Section~{\xreffont\ref{x:section:sec-logical-connectives-equivalence}}}, we will explore ways of building more complex statements out of simpler ones via logical connectives.%
@@ -733,7 +755,7 @@ Most of the statements we've explored so far might be considered \terminology{at
 \typeout{************************************************}
 %
 \begin{sectionptx}{Logical Connectives and Equivalence}{}{Logical Connectives and Equivalence}{}{}{x:section:sec-logical-connectives-equivalence}
-\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545029904272}%
+\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545050355472}%
 In this section, we'll seek to answer the questions: %
 \begin{itemize}[label=\textbullet]
 \item{}How can we combine statements into more complex statements?%
@@ -751,9 +773,9 @@ In this section, we will explore ways of combining statements to form new, more 
 \typeout{Subsection 1.2.1 Logical Connectives}
 \typeout{************************************************}
 %
-\begin{subsectionptx}{Logical Connectives}{}{Logical Connectives}{}{}{g:subsection:idp105545093293456}
+\begin{subsectionptx}{Logical Connectives}{}{Logical Connectives}{}{}{g:subsection:idp105545050358416}
 We begin with negation.%
-\begin{definition}{}{g:definition:idp105545093291024}%
+\begin{definition}{}{g:definition:idp105545050359440}%
 \index{negation}%
 \index{logical connectivesnegation}%
 Suppose \(P\) is a statement. The \terminology{negation} of \(P\), denoted \(\neg P\) and read ``not \(P\)'', has the opposite truth value of \(P\) and is defined by the \emph{truth table} found in \hyperref[x:table:table-negation]{Table~{\xreffont\ref{x:table:table-negation}}}.%
@@ -768,12 +790,12 @@ Suppose \(P\) is a statement. The \terminology{negation} of \(P\), denoted \(\ne
 }%
 \end{tableptx}%
 \end{definition}
-\begin{insight}{}{g:insight:idp105545029916944}%
+\begin{insight}{}{g:insight:idp105545050369168}%
 \index{\(\LaTeX\) symbols\(\neg\)}%
 To typeset \(\neg P\) in \(\LaTeX\), use \mono{\textbackslash{}neg P} in math mode.%
 \end{insight}
 We observe that \hyperref[x:table:table-negation]{Table~{\xreffont\ref{x:table:table-negation}}} is our first encounter with a \emph{truth table}. A truth table lists all possible truth values for a (compound) statement given all possible combinations of truth values of its atomic statements. Since there are only two possible truth values for the atomic statement \(P\), there are only two rows in \hyperref[x:table:table-negation]{Table~{\xreffont\ref{x:table:table-negation}}}.%
-\begin{activity}{}{g:activity:idp105545030126224}%
+\begin{activity}{}{g:activity:idp105545050439056}%
 Meaningfully negate the following propositions (without just saying "It is not the case that...").%
 %
 \begin{enumerate}
@@ -801,7 +823,7 @@ The \terminology{conjunction} of \(P\) and \(Q\), denoted \(P \land Q\) and read
 }%
 \end{tableptx}%
 \end{definition}
-\begin{insight}{}{g:insight:idp105545093273104}%
+\begin{insight}{}{g:insight:idp105545050458128}%
 \index{\(\LaTeX\) symbols\(\land\)}%
 To typeset \(P \land Q\) in \(\LaTeX\), use \mono{P \textbackslash{}land Q} in math mode.%
 \end{insight}
@@ -823,11 +845,11 @@ The \terminology{disjunction} of \(P\) and \(Q\), denoted \(P \lor Q\) and read 
 }%
 \end{tableptx}%
 \end{definition}
-\begin{insight}{}{g:insight:idp105545093302032}%
+\begin{insight}{}{g:insight:idp105545050409488}%
 \index{\(\LaTeX\) symbols\(\lor\)}%
 To typeset \(P \lor Q\) in \(\LaTeX\), use \mono{P \textbackslash{}lor Q} in math mode.%
 \end{insight}
-\begin{exploration}{}{g:exploration:idp105545095197200}%
+\begin{exploration}{}{g:exploration:idp105545050412048}%
 Determine the truth values of the following propositions.%
 %
 \begin{enumerate}
@@ -845,7 +867,7 @@ A mathematician\footnotemark{} places a set of four cards on a table, each of wh
 If a card shows an even number on one face, then its opposite face is red.\end{quote}
  The visible faces of the cards show 3, 8, red, and blue. Which card(s) must you turn over in order to test the truth of her claim? Carefully explain.%
 \end{exploration}%
-\footnotetext[1]{This exploration due to Dr. L. Keough.\label{g:fn:idp105545095183248}}%
+\footnotetext[1]{This exploration due to Dr. L. Keough.\label{g:fn:idp105545050418960}}%
 \begin{definition}{}{x:definition:def-implications}%
 \index{implication}%
 \index{if-then}%
@@ -865,12 +887,12 @@ Let \(P\) and \(Q\) be statements. The \terminology{implication}, ``\(P\) implie
 }%
 \end{tableptx}%
 \end{definition}
-\footnotetext[2]{We sometimes say that \(P\) is ``sufficient for'' \(Q\).\label{g:fn:idp105545095173008}}%
-\begin{insight}{}{g:insight:idp105545030074512}%
+\footnotetext[2]{We sometimes say that \(P\) is ``sufficient for'' \(Q\).\label{g:fn:idp105545050423568}}%
+\begin{insight}{}{g:insight:idp105545050436240}%
 \index{\(\LaTeX\) symbols\(\Rightarrow\)}%
 To typeset \(P \Rightarrow Q\) in \(\LaTeX\), use \mono{P \textbackslash{}Rightarrow Q} in math mode.%
 \end{insight}
-\begin{exploration}{}{g:exploration:idp105545030079248}%
+\begin{exploration}{}{g:exploration:idp105545050242192}%
 Determine the truth values of the following statements. Identify which row of \hyperref[x:table:table-implication]{Table~{\xreffont\ref{x:table:table-implication}}} you are in.%
 %
 \begin{enumerate}
@@ -882,29 +904,29 @@ Determine the truth values of the following statements. Identify which row of \h
 \end{exploration}%
 The formalization of mathematical logic ramps up a bit when we consider conditional statements. It is important to remember that we define the truth value of the proposition \(P \Rightarrow Q\) \emph{formally} based on the structure of the conditional statement and the truth values of the constituents \(P\) and \(Q\). That is to say that there need not be a causal relationship between \(P\) and \(Q\)!%
 \par
-The last two rows of \hyperref[x:table:table-implication]{Table~{\xreffont\ref{x:table:table-implication}}} are also worth a moment of our time. They state that if the statement \(P\)\footnote{Often called the \emph{antecedent.}\label{g:fn:idp105545030031632}} is false, then the \emph{implication} \(P\Rightarrow Q\) is \emph{true}. Note that this is different than saying that \(Q\)\footnote{Often called the \emph{consequent.}\label{g:fn:idp105545030047504}} is true. When the implication \(P\Rightarrow Q\) is true because \(P\) is false, we usually say that \(P\Rightarrow Q\) is \terminology{vacuously true}.%
-\begin{exploration}{}{g:exploration:idp105545095231120}%
+The last two rows of \hyperref[x:table:table-implication]{Table~{\xreffont\ref{x:table:table-implication}}} are also worth a moment of our time. They state that if the statement \(P\)\footnote{Often called the \emph{antecedent.}\label{g:fn:idp105545050249360}} is false, then the \emph{implication} \(P\Rightarrow Q\) is \emph{true}. Note that this is different than saying that \(Q\)\footnote{Often called the \emph{consequent.}\label{g:fn:idp105545050251408}} is true. When the implication \(P\Rightarrow Q\) is true because \(P\) is false, we usually say that \(P\Rightarrow Q\) is \terminology{vacuously true}.%
+\begin{exploration}{}{g:exploration:idp105545050253584}%
 Suppose Dr. Janssen promises that, if everyone get an A in the class, then he will bring Defender sandwiches (on pretzel buns, with everything, as God intended) to celebrate on the last day of class\footnotemark{}. Unfortunately, a few students finish the course with an A\textendash{}, so Dr. Janssen does not bring Defenders.%
 \par
 Decide the truth value of the implication \begin{quote}%
 If everyone gets an A in the class, Dr. Janssen will bring Defender sandwiches to celebrate.\end{quote}
  Make sure you can clearly explain your thinking and be able to give reasons for why the truth value you chose makes sense.%
 \end{exploration}%
-\footnotetext[5]{This is purely hypothetical.\label{g:fn:idp105545095229968}}%
+\footnotetext[5]{This is purely hypothetical.\label{g:fn:idp105545050254352}}%
 Our final logical connective is the \terminology{biconditional} connective.%
 \begin{definition}{}{x:definition:def-biconditional}%
 \index{biconditional}%
 \index{if and only if}%
 \index{conditional statements}%
 \index{logical connectivesbiconditional}%
-Let \(P\) and \(Q\) be statements. The biconditional statement joining \(P\) and \(Q\), read ``\(P\) if and only if \(Q\)''\footnotemark{} and written \(P\Leftrightarrow Q\), is true precisely when both \(P\) and \(Q\) are true, and false otherwise.%
+Let \(P\) and \(Q\) be statements. The biconditional statement joining \(P\) and \(Q\), read ``\(P\) if and only if \(Q\)''\footnotemark{} and written \(P\Leftrightarrow Q\), is true precisely when \(P\) and \(Q\) have the same truth values, and false otherwise.%
 \end{definition}
-\footnotetext[6]{We sometimes say that \(P\) is ``necessary and sufficient'' for \(Q\).\label{g:fn:idp105545030052496}}%
-\begin{insight}{}{g:insight:idp105545030253456}%
+\footnotetext[6]{We sometimes say that \(P\) is ``necessary and sufficient'' for \(Q\).\label{g:fn:idp105545050260624}}%
+\begin{insight}{}{g:insight:idp105545050263312}%
 \index{\(\LaTeX\) symbols\(\Leftrightarrow\)}%
 To typeset \(P \Leftrightarrow Q\) in \(\LaTeX\), use \mono{P \textbackslash{}Leftrightarrow Q} in math mode.%
 \end{insight}
-\begin{exploration}{}{g:exploration:idp105545030263952}%
+\begin{exploration}{}{g:exploration:idp105545050265872}%
 First, construct a truth table for \(P\Leftrightarrow Q\) based on \hyperref[x:definition:def-biconditional]{Definition~{\xreffont\ref{x:definition:def-biconditional}}}. Then, determine the truth values of the following statements. Identify which row of your truth table you are in.%
 %
 \begin{enumerate}
@@ -921,16 +943,16 @@ First, construct a truth table for \(P\Leftrightarrow Q\) based on \hyperref[x:d
 \typeout{Subsection 1.2.2 Logical Equivalence}
 \typeout{************************************************}
 %
-\begin{subsectionptx}{Logical Equivalence}{}{Logical Equivalence}{}{}{g:subsection:idp105545030273040}
+\begin{subsectionptx}{Logical Equivalence}{}{Logical Equivalence}{}{}{g:subsection:idp105545050270224}
 A fundamental skill in analyzing and proving mathematical statements is the ability to carefully describe their logical structure and, when appropriate, convert the statement into a \terminology{logically equivalent} statement. Ideally, the new equivalent form of the statement will have a structure more amenable to a particular type of proof or solution.%
-\begin{definition}{}{g:definition:idp105545030275344}%
+\begin{definition}{}{g:definition:idp105545050271632}%
 \index{logical equivalence}%
 Two statements \(P\) and \(Q\) are said to be \terminology{logically equivalent} if they have the same truth table. In this case, we write \(P \equiv Q\).%
 \end{definition}
-\begin{exploration}{Double Negation.}{g:exploration:idp105545030279184}%
+\begin{exploration}{Double Negation.}{g:exploration:idp105545050208144}%
 Use a truth table to verify that \(P\equiv \neg (\neg P)\).%
 \end{exploration}%
-\begin{exploration}{}{g:exploration:idp105545030281232}%
+\begin{exploration}{}{g:exploration:idp105545050209552}%
 Use a truth table to determine whether the following statements are logically equivalent.%
 %
 \begin{itemize}[label=\textbullet]
@@ -939,7 +961,7 @@ Use a truth table to determine whether the following statements are logically eq
 \end{itemize}
 \end{exploration}%
 Given an implication \(P\Rightarrow Q\), one may construct some related statements.%
-\begin{definition}{}{g:definition:idp105545030223760}%
+\begin{definition}{}{g:definition:idp105545050211728}%
 \index{converse}%
 \index{contrapositive}%
 \index{inverse}%
@@ -954,17 +976,17 @@ Let \(P\) and \(Q\) be statements.%
 \item{}Thhe \terminology{inverse of the statement \(P\Rightarrow Q\)} is the statement \((\neg P)\Rightarrow (\neg Q)\).%
 \end{itemize}
 \end{definition}
-\begin{activity}{}{g:activity:idp105545030238864}%
+\begin{activity}{}{g:activity:idp105545050219664}%
 Choose at least two conditional statements we've mentioned in class and state the coverse, contrapositive, and inverse of each. Based on the statements you wrote, make a conjecture\footnotemark{} about how the truth values of these four implications (the original conditional statement, together with its converse, contrapositive, and inverse) seem to relate.%
 \end{activity}%
-\footnotetext[7]{A conjecture is a precise educated ``guess'' about what is true in general.\label{g:fn:idp105545030239504}}%
-\begin{exploration}{}{g:exploration:idp105545030241552}%
-Use truth tables to identify any logical equivalences between \(P\Rightarrow Q\), \(Q\rightarrow P\), \((\neg Q)\Rightarrow (\neg P)\), and \((\neg P)\Rightarrow (\neg Q)\).%
+\footnotetext[7]{A conjecture is a precise educated ``guess'' about what is true in general.\label{g:fn:idp105545050220176}}%
+\begin{exploration}{}{g:exploration:idp105545050220944}%
+Use truth tables to identify any logical equivalences between \(P\Rightarrow Q\), \(Q\Rightarrow P\), \((\neg Q)\Rightarrow (\neg P)\), and \((\neg P)\Rightarrow (\neg Q)\).%
 \end{exploration}%
 \begin{exploration}{}{x:exploration:prob-le-contradiction}%
-Show that \(P\rightarrow Q \equiv (\neg P) \lor Q\).%
+Show that \(P\Rightarrow Q \equiv (\neg P) \lor Q\).%
 \end{exploration}%
-The following pairs of logical equivalences, named for British mathematician \href{https://en.wikipedia.org/wiki/Augustus_De_Morgan}{Augustus De Morgan}\footnote{\nolinkurl{https://en.wikipedia.org/wiki/Augustus_De_Morgan}\label{g:fn:idp105545030251152}}, allow us to convert conjunctions to disjunctions, and vice versa.%
+The following pairs of logical equivalences, named for British mathematician \href{https://en.wikipedia.org/wiki/Augustus_De_Morgan}{Augustus De Morgan}\footnote{\nolinkurl{https://en.wikipedia.org/wiki/Augustus_De_Morgan}\label{g:fn:idp105545050224656}}, allow us to convert conjunctions to disjunctions, and vice versa.%
 \begin{exploration}{De Morgan's Laws.}{x:exploration:prob-demorgan-stmt}%
 Show that the following pairs of statements are logically equivalent.%
 %
@@ -977,12 +999,12 @@ Show that the following pairs of statements are logically equivalent.%
 Let \(P, Q, R\) be statements. Use truth tables to verify the following equivalences, but be careful\textemdash{}how many rows should your truth table contain?%
 %
 \begin{itemize}[label=\textbullet]
-\item{}\(\displaystyle P\land (Q\lor R) \equiv P\lor (Q\land R)\)%
-\item{}\(\displaystyle P\lor (Q\land R) \equiv P \land (Q\lor R)\)%
+\item{}\(\displaystyle P\land (Q\lor R) \equiv (P\land Q) \lor (P \land R)\)%
+\item{}\(\displaystyle P\lor (Q\land R) \equiv (P \lor Q)\land (P \lor R)\)%
 \end{itemize}
 \end{exploration}%
 We will often interested in proving conditional statements in which our antecdents or consequents have multiple cases. The following equivalences will come in handy.%
-\begin{exploration}{}{g:exploration:idp105545030206480}%
+\begin{exploration}{}{g:exploration:idp105545050230800}%
 Use truth tables to verify the following.%
 %
 \begin{itemize}[label=\textbullet]
@@ -991,7 +1013,7 @@ Use truth tables to verify the following.%
 \end{itemize}
 \end{exploration}%
 To conclude this section, we mention two types of special statements: tautologies and contradictions.%
-\begin{definition}{}{g:definition:idp105545030210064}%
+\begin{definition}{}{g:definition:idp105545050232464}%
 \index{tautology}%
 \index{contradiction}%
 A statement is called a \terminology{tautology} if it is always true. A statement is called a \terminology{contradiction} if it is never true.%
@@ -1002,8 +1024,8 @@ A statement is called a \terminology{tautology} if it is always true. A statemen
 \end{image}%
 \tcblower
 \end{figureptx}%
-\footnotetext[9]{\nolinkurl{https://xkcd.com/703/}\label{g:fn:idp105545030155024}}%
-\begin{activity}{}{g:activity:idp105545030156688}%
+\footnotetext[9]{\nolinkurl{https://xkcd.com/703/}\label{g:fn:idp105545050235664}}%
+\begin{activity}{}{g:activity:idp105545050236048}%
 Let \(P\) and \(Q\) be statements. Determine, with proof, whether the following are tautologies, contradictions, or neither.%
 %
 \begin{enumerate}
@@ -1022,7 +1044,7 @@ Let \(P\) and \(Q\) be statements. Determine, with proof, whether the following 
 \typeout{************************************************}
 %
 \begin{sectionptx}{Quantifiers}{}{Quantifiers}{}{}{x:section:sec-quantifiers}
-\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545030169744}%
+\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545050240144}%
 In this section, we'll seek to answer the questions: %
 \begin{itemize}[label=\textbullet]
 \item{}What is an open statement?%
@@ -1044,7 +1066,7 @@ That is to say, we can turn an open sentence into a statement in one of two ways
 \index{quantifiersuniversal quantifier, \(\forall\)}%
 The \terminology{existential quantifier}, denoted with the symbol \(\exists\), is the phrase ``there exists'' (or equivalent). The \terminology{universal quantifier}, denoted with the symbol \(\forall\), is the phrase ``for every'' (or equivalent).%
 \end{definition}
-\begin{insight}{}{g:insight:idp105545028310160}%
+\begin{insight}{}{g:insight:idp105545050319376}%
 \index{\(\LaTeX\) symbols\(\exists\)}%
 \index{\(\LaTeX\) symbols\(\forall\)}%
 To typeset the existential quantifier, \(\exists\), use the command \mono{\textbackslash{}exists} in math mode. To typeset the universal quantifier, \(\forall\), use the command \mono{\textbackslash{}forall} in math mode.%
@@ -1054,7 +1076,7 @@ When writing a careful mathematical statement, it is often helpful to use quanti
 \begin{equation*}
 (\forall x \in \R) (x^2 \ge 0),
 \end{equation*}
-which states that for every real number \(x\), the square of \(x\) is nonnegative.\begin{aside}{}{g:aside:idp105545028256400}%
+which states that for every real number \(x\), the square of \(x\) is nonnegative.\begin{aside}{}{g:aside:idp105545050325008}%
 \end{aside}
  It can also be tempting to use the quantifier notation as an abbreviation when working through the scratchwork necessary to solve a problem. As a rule, however, one should \emph{not} use quantifier notation in a final write-up for a problem \emph{unless the problem is about quantifiers}.%
 \par
@@ -1069,12 +1091,12 @@ Translate each quantified statement below to English. As best you can tell, is t
 \item{}\(\displaystyle (\exists y\in \Z, \forall x\in \Z)(x+y=0)\)%
 \end{enumerate}
 \end{activity}%
-\begin{insight}{}{g:insight:idp105545028274576}%
+\begin{insight}{}{g:insight:idp105545050330896}%
 \index{\(\LaTeX\) symbols\(\Z\)}%
 \index{\(\LaTeX\) symbols\(\R\)}%
 To typeset \(\Z\) or \(\R\) in \(\LaTeX\), load the \mono{amsmath} package using \mono{\textbackslash{}usepackage\{amsmath\}} in the preamble, and then type \mono{\textbackslash{}mathbb\{Z\}} or \mono{\textbackslash{}mathbb\{R\}}.%
 \end{insight}
-\begin{activity}{}{g:activity:idp105545028230416}%
+\begin{activity}{}{g:activity:idp105545050336144}%
 Translate the following from English to use mathematical notation in the style of \hyperref[x:activity:act-quantifier-to-english]{Activity~{\xreffont\ref{x:activity:act-quantifier-to-english}}}. Choose variables as appropriate.%
 %
 \begin{enumerate}
@@ -1096,7 +1118,7 @@ We will often find ourselves needing to negate quantified statements. This shoul
 \end{enumerate}
 \end{exploration}%
 Let's put our discoveries from \hyperref[x:exploration:expl-negating-quantified-statements]{Problem~{\xreffont\ref{x:exploration:expl-negating-quantified-statements}}} to the test.%
-\begin{activity}{}{g:activity:idp105545028237968}%
+\begin{activity}{}{g:activity:idp105545050278672}%
 Negate the following statements. As best you can tell, is the statement true or false? Why?%
 %
 \begin{enumerate}
@@ -1127,7 +1149,7 @@ Negate the following statements. As best you can tell, is the statement true or 
 \typeout{************************************************}
 %
 \begin{sectionptx}{Toward a Definition of a Graph}{}{Toward a Definition of a Graph}{}{}{x:section:sec-graph-definitions}
-\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545028253072}%
+\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545050286096}%
 In this section, we'll seek to answer the questions: %
 \begin{itemize}[label=\textbullet]
 \item{}How is mathematical knowledge developed?%
@@ -1143,7 +1165,7 @@ A \terminology{theorem} is a true mathematical statement. If you read enough mat
 \begin{itemize}[label=\textbullet]
 \item{}A proposition is a true mathematical statement which is not perceived to be important enough to be called a theorem.%
 \item{}A lemma is a true mathematical statement which may be somewhat technical to write, but is used to prove a theorem or proposition. One often has the experience of proving a theorem and realizing that a portion of the proof is substantive enough that it can be pulled out and written as the proof of a lemma, to which you can then refer to complete the proof of the theorem.%
-\item{}A corollary is a true mathematical statement that follows immediately from the proof of a theorem\footnote{For instance, suppose you've proved that all rectangles in the plane contain only right angles. A corollary to this theorem is that all squares in the plane contain only right angles.\label{g:fn:idp105545028203408}}.%
+\item{}A corollary is a true mathematical statement that follows immediately from the proof of a theorem\footnote{For instance, suppose you've proved that all rectangles in the plane contain only right angles. A corollary to this theorem is that all squares in the plane contain only right angles.\label{g:fn:idp105545050293136}}.%
 \end{itemize}
 %
 \par
@@ -1215,7 +1237,7 @@ Below there are several examples of objects that are \emph{not} graphs. If neces
 \index{graph}%
 A \terminology{graph} is ....%
 \end{definition}
-\begin{activity}{}{g:activity:idp105545028434832}%
+\begin{activity}{}{g:activity:idp105545048015888}%
 Given the definition of a graph that we've come up with, exhibit two additional examples of a graph, as well as two non-examples.%
 \end{activity}%
 \end{sectionptx}
@@ -1234,7 +1256,7 @@ Given the definition of a graph that we've come up with, exhibit two additional 
 \typeout{************************************************}
 %
 \begin{sectionptx}{Direct Proof}{}{Direct Proof}{}{}{x:section:sec-direct-proof}
-\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545028443536}%
+\begin{assemblage}{Guiding Questions.}{g:assemblage:idp105545048018832}%
 In this section, we'll seek to answer the questions: %
 \begin{itemize}[label=\textbullet]
 \item{}What is a proof?%
@@ -1243,6 +1265,140 @@ In this section, we'll seek to answer the questions: %
 \end{itemize}
 %
 \end{assemblage}
+\begin{introduction}{}%
+Unlike the natural and social sciences, which largely rely on data, experiment, and statistical analyses, mathematical knowledge proceeds deductively via proof. But what is a proof? We will consider a proof to be a ``convincing argument,'' written as a short essay, and adhering to the standard rules of mathematical English. But what is an argument? And whom should it convince?%
+\par
+As an illustration, consider a statement of the form ``If \(P\), then \(Q\).'' A \terminology{direct proof} will begin with the assumption that statement \(P\) is true. We will use our knowledge of what it means for \(P\) to be true\textemdash{}using other definitions or theorems\textemdash{}to make a new deduction. We continue in this way until we may deduce that \(Q\) is true.%
+\end{introduction}%
+Before an example, we make the following definition.%
+\begin{definition}{}{x:definition:def-even-odd-integer}%
+\index{even integer}%
+\index{odd integer}%
+\index{integer!even}%
+\index{integer!odd}%
+Let \(m\) be an integer.%
+%
+\begin{itemize}[label=\textbullet]
+\item{}We say that \(m\) is \terminology{even} if there exists an integer \(k\) such that \(m = 2k\).%
+\item{}We say that \(m\) is \terminology{odd} if there exists an integer \(\ell\) such that \(m = 2\ell + 1\).%
+\end{itemize}
+\end{definition}
+\begin{activity}{}{g:activity:idp105545048031248}%
+Determine whether the following integers are even or odd by showing that they satisfy the appropriate definition.%
+%
+\begin{enumerate}
+\item{}5%
+\item{}8%
+\item{}0%
+\item{}1%
+\item{}\(\displaystyle -57\)%
+\item{}8,675,309%
+\end{enumerate}
+\end{activity}%
+We now consider the following example proof. For the purposes of this proof and what follows, we may assume that the basic laws of arithemtic of integers are true: an integer times an integer is an integer, an integer plus an integer is an integer, etc.%
+\begin{theorem}{}{}{x:theorem:thm-sq-even}%
+Let \(m\) be an even integer. Then \(m^2\) is even.%
+\end{theorem}
+\begin{insight}{}{g:insight:idp105545048039952}%
+\index{\(\LaTeX\) symbolsexponents}%
+To typeset an exponent in \(\LaTeX\), we use the carat symbol, \mono{\textasciicircum{}}, in math mode. So, \mono{m\textasciicircum{}2} produces \(m^2\). If the exponent has more than one character, enclose the expression in the exponent in curly braces; so, \mono{m\textasciicircum{}\{n+2\}} produces \(m^{n+2}\).%
+\end{insight}
+There are several observations that are worth a moment of our time.%
+\begin{assemblage}{Observations on the Proof of Theorem~{\xreffont\ref*{x:theorem:thm-sq-even}}.}{g:assemblage:idp105545048044048}%
+%
+\begin{itemize}[label=\textbullet]
+\item{}The proof begins by restating our assumtion: that we are working with a general even integer, \(m\).%
+\item{}Note that we are \emph{not} considering a specific even integer, such as 18, and verifying that its square is even. Part of the power of mathematics is that we have tools for proving \emph{general} statements about all even integers at once. Proofs are not examples, and you shouldn't treat them as such.%
+\item{}The proof is written using complete sentences!%
+\item{}The proof takes the reader on a journey, using plural pronouns and active language: ``we may rewrite...,'' etc.%
+\item{}The proof avoids the use of pronouns to refer to a mathematical objects; we don't square ``it'', we square \(m\). This keeps things clear and easy to follow.%
+\item{}Each step follows from the one before it, though specific reasons are not always cited. Determining when it's appropriate to cite, say, a definition or theorem by number is a bit of an art form. We'll figure it out.%
+\item{}The proof ends by clearly stating the conclusion we sought.%
+\item{}You should consider your audience. If your audience is a group of research mathematicians, you'll write a far different proof than if you are writing for your classmates. You should write for your classmates.%
+\end{itemize}
+%
+\end{assemblage}
+Prove the following theorems directly.%
+\begin{theorem}{}{}{g:theorem:idp105545047984400}%
+Let \(n\) be an odd integer. Then \(n^2\) is an odd integer.%
+\end{theorem}
+\begin{theorem}{}{}{g:theorem:idp105545047985680}%
+The sum of two even integers is even.%
+\par\smallskip%
+\noindentYou should give your integers (distinct) names.%
+\end{theorem}
+For the next three theorems, finish the sentence with ``even'' or ``odd,'' then prove the theorem.%
+\begin{theorem}{}{}{g:theorem:idp105545047987600}%
+The sum of two even integers is ....%
+\end{theorem}
+\begin{theorem}{}{}{g:theorem:idp105545047988112}%
+The sum of two odd integers is ....%
+\end{theorem}
+\begin{theorem}{}{}{g:theorem:idp105545047988624}%
+The sum of an even integer and an odd integer is ....%
+\end{theorem}
+An \terminology{axiom} is an unproved assumption. Without axioms, we have no starting point for our explorations and deductions. However, since we do not prove our axioms, we should ensure that they are reasonable and clear. We will likely eventually prove \hyperref[x:axiom:axiom-evenodd]{Axiom~{\xreffont\ref{x:axiom:axiom-evenodd}}}, but for now we may take it as true without proof.%
+\begin{axiom}{}{}{x:axiom:axiom-evenodd}%
+Let \(m\) be an integer. Then \(m\) is even or odd, but not both.%
+\end{axiom}
+First, a definition.%
+\begin{definition}{}{x:definition:def-consecutiveintegers}%
+\index{integer!consecutive integers}%
+\index{consecutive integers}%
+Let \(m,n\) be integers. We say \(m\) and \(n\) are consecutive integers if \(m = n+1\) or \(n = m+1\).%
+\end{definition}
+Again, in the next two theorems, finish the statement with ``even'' or ``odd'', and prove the theorem.%
+\begin{theorem}{}{}{g:theorem:idp105545047996304}%
+The product of consecutive integers is ....%
+\end{theorem}
+\begin{theorem}{}{}{g:theorem:idp105545047996816}%
+Let \(m\) be an integer. Then \(m^2 + 13m + 42\) is ....%
+\end{theorem}
+\begin{question}{}{g:question:idp105545047998096}%
+Of the theorems so far in this section, which are universally quantified? Which are existentially quantified? Justify your answer.%
+\end{question}
+%
+%
+\typeout{************************************************}
+\typeout{Subsection 3.1.1 Exploring Graphs}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Exploring Graphs}{}{Exploring Graphs}{}{}{g:subsection:idp105545047998864}
+Let's prove some facts about graphs.%
+\begin{definition}{}{x:definition:def-vertex-degree}%
+\index{degree of a vertex}%
+Let \(v\) be a vertex in a graph \(G\). The \terminology{degree of \(v\)}, denoted \(d(v)\), is the number of edges incident to \(v\). We say a vertex is \terminology{even} if its degree is an even integer, and \terminology{odd} if its degree is an odd integer.%
+\end{definition}
+\begin{activity}{}{g:activity:idp105545048003728}%
+Draw at least three examples of graphs. For each graph you draw, count the following:%
+%
+\begin{itemize}[label=\textbullet]
+\item{}The number of odd vertices.%
+\item{}The number of even vertices.%
+\item{}The sum of all the vertex degrees.%
+\end{itemize}
+Make a careful conjecture (that is, an educated guess) about any patterns you observe. Then prove your conjectures.%
+\end{activity}%
+\begin{definition}{}{x:definition:def-min-max-degree}%
+Let \(G\) be a graph. The \terminology{minimum degree} of a vertex in \(G\) is denoted by \(\delta(G)\). The \terminology{maximum degree} of a vertex in \(G\) is denoted by \(\Delta(G)\).%
+\end{definition}
+\begin{insight}{}{g:insight:idp105545048008720}%
+\index{\(\LaTeX\) symbols\(\delta\)}%
+\index{\(\LaTeX\) symbols\(\Delta\)}%
+We typeset \(\delta(G)\) in math mode using \mono{\textbackslash{}delta(G)}. Similarly, we typeset \(\Delta(G)\) in math mode using \mono{\textbackslash{}Delta(G)}.%
+\end{insight}
+\begin{exploration}{}{g:exploration:idp105545048078352}%
+Let \(G\) be a graph with \(n\) vertices. Determine, with proof, the possible values for \(\delta(G)\) and \(\Delta(G)\).%
+\end{exploration}%
+\begin{exploration}{}{g:exploration:idp105545048080400}%
+Suppose you know that a graph \(G\) has seven vertices, and \(\delta(G) = 3\) and \(\Delta(G) = 5\).%
+%
+\begin{enumerate}
+\item{}Prove that this graph must have at least 12 edges.%
+\item{}Determine, with proof, the largest number of edges possible in this graph.%
+\end{enumerate}
+\end{exploration}%
+\end{subsectionptx}
 \end{sectionptx}
 %
 %

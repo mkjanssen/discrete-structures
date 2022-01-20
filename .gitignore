@@ -4,3 +4,5 @@ from LDK/
 .nova/
 .DS_Store
 *.woff2
+*.numbers
+M212S22Grades.numbers

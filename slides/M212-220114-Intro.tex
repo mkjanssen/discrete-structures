@@ -1,19 +1,16 @@
 \def\pgfsysdriver{pgfsys-dvipdfm.def}
-%\documentclass[aspectratio=1610]{beamer}
-\documentclass{beamer}
-\usetheme[progressbar=head, titleformat=allcaps,block=fill]{metropolis}
-\usepackage[orientation=landscape,size=custom,width=16,height=11.15,scale=.5,debug]{beamerposter}
-%\usetheme[progressbar=foot,titleformat=allcaps,block=fill]{metropolis}
+\documentclass[aspectratio=169]{beamer}
+\usetheme[progressbar=foot,titleformat=allcaps,block=fill]{metropolis}
 \usepackage{pgfpages}
+\pgfmathsetseed{\pdfuniformdeviate 10000000}
 \setbeameroption{show notes on second screen}
 \setbeamercolor{progress bar}{fg=marigold,bg=marigold!30}%{fg=manitouheights,bg=manitouheights!30}
-\setsansfont[BoldFont={Concourse 3 Caps}, ItalicFont={Concourse 3 Caps}]{Concourse 3}
+\setsansfont[BoldFont={Concourse 3 Caps}]{Concourse 3}
 %\setsansfont[BoldFont={Heliotrope 3 Caps}]{Heliotrope 3}
 %\setmathfont{Fira Math}
 %\usepackage{arevmath}
 \usepackage[euler-hat-accent]{eulervm}
 \setmonofont{Triplicate B Code}
-
 %%% PACKAGES AND INPUTS
 \usepackage{pgfopts}
 \usepackage{graphicx}
@@ -308,6 +305,20 @@
 	\item Open Door Policy
 	\item Appointments preferred: \texttt{https://calendly.com/mkjanssen/student-hours} (link on Canvas, QR code outside my door)
 	\item Masks required in student hours through the end of the month; reevaluate in February
+\end{itemize}
+
+}
+
+
+\frame{
+	\frametitle{Advertisement}
+	
+	\begin{itemize}
+	\item Get paid to do summer research in mathematics at Dordt!
+	\item Tentative dates: June 6-July 29
+	\item Success in this class would prepare you well
+	\item Applications due at the end of the month
+	\item Ask me if you have any questions
 \end{itemize}
 
 }
